@@ -1,3 +1,4 @@
 /db-postgres-data
+/db-pgadmin-data
 # misc
 .DS_Store

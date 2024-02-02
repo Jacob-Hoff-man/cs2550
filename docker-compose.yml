@@ -19,7 +19,7 @@ services:
   db-pgadmin:
     image: dpage/pgadmin4
     volumes:
-      - db-pgadmin-data:/var/lib/pgadmin
+      - ./db-pgadmin-data:/var/lib/pgadmin
     restart: always
     container_name: pgadmin
     ports:
