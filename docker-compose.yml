@@ -3,18 +3,33 @@ version: "1.0"
 services:
   db-postgres: 
     image: db-postgres
+    volumes:
+      - ./db-postgres-data:/var/lib/postgresql/data
+    restart: always
     container_name: db
     build:
       context: .
       target: db
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_DB=cs2550
+      - POSTGRES_USER=${DB_POSTGRES_USER}
+      - POSTGRES_PASSWORD=${DB_POSTGRES_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     ports:
-      - 5432:5432
-  adminer:
-    image: adminer
+      - ${DB_POSTGRES_PORT}:${DB_POSTGRES_PORT}
+  db-pgadmin:
+    image: dpage/pgadmin4
+    volumes:
+      - db-pgadmin-data:/var/lib/pgadmin
     restart: always
+    container_name: pgadmin
     ports:
-      - 8080:8080
+      - "${DB_PGADMIN_PORT}:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${DB_PGADMIN_USER}
+      PGADMIN_DEFAULT_PASSWORD: ${DB_PGADMIN_PASSWORD}
+
+volumes:
+  db-postgres-data:
+  db-pgadmin-data:
+
+  
