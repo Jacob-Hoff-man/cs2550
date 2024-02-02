@@ -1,0 +1,20 @@
+version: "1.0"
+
+services:
+  db-postgres: 
+    image: db-postgres
+    container_name: db
+    build:
+      context: .
+      target: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=cs2550
+    ports:
+      - 5432:5432
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
