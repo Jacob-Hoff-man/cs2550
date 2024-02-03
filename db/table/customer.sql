@@ -28,5 +28,5 @@ CREATE TABLE
         birth_day char(2) NOT NULL,
         email varchar(60) NOT NULL,
         CONSTRAINT pk_customer PRIMARY KEY (id) NOT DEFERRABLE,
-        CONSTRAINT uq_customer UNIQUE (email) DEFERRABLE INITIALLY IMMEDIATE
+        CONSTRAINT uq_customer UNIQUE (email) DEFERRABLE INITIALLY DEFERRED
     );

@@ -12,5 +12,5 @@ CREATE TABLE
         lat decimal(7, 2) NOT NULL,
         type store_type NOT NULL,
         CONSTRAINT pk_store PRIMARY KEY (id),
-        CONSTRAINT uq_store UNIQUE (name) DEFERRABLE INITIALLY IMMEDIATE
+        CONSTRAINT uq_store UNIQUE (name) DEFERRABLE INITIALLY DEFERRED
     );
