@@ -6,11 +6,11 @@ DROP TABLE IF EXISTS store;
 
 CREATE TABLE
     store (
-        id serial NOT NULL,
+        store_id serial NOT NULL,
         name varchar(60) NOT NULL,
-        lon decimal(7, 2) NOT NULL,
-        lat decimal(7, 2) NOT NULL,
         type store_type NOT NULL,
-        CONSTRAINT pk_store PRIMARY KEY (id),
+        gps_lon decimal(7, 2) NOT NULL,
+        gps_lat decimal(7, 2) NOT NULL,
+        CONSTRAINT pk_store PRIMARY KEY (store_id),
         CONSTRAINT uq_store UNIQUE (name) DEFERRABLE INITIALLY DEFERRED
     );

@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS coffee;
 
 CREATE TABLE
     coffee (
-        id serial NOT NULL,
+        coffee_id serial NOT NULL,
         name varchar(60) NOT NULL,
         description VARCHAR(280),
         country_of_origin varchar(60),
@@ -11,5 +11,5 @@ CREATE TABLE
             AND intensity <= 12
         ),
         price float NOT NULL CHECK (price >= 0),
-        CONSTRAINT pk_coffee PRIMARY KEY (id) NOT DEFERRABLE
+        CONSTRAINT pk_coffee PRIMARY KEY (coffee_id) NOT DEFERRABLE
     );

@@ -21,12 +21,12 @@ DROP TABLE IF EXISTS customer;
 
 CREATE TABLE
     customer (
-        id serial NOT NULL,
-        first_name varchar(60) NOT NULL,
-        last_name varchar(60) NOT NULL,
-        birth_month month_enum NOT NULL,
-        birth_day char(2) NOT NULL,
+        customer_id serial NOT NULL,
+        fname varchar(60) NOT NULL,
+        lname varchar(60) NOT NULL,
         email varchar(60) NOT NULL,
-        CONSTRAINT pk_customer PRIMARY KEY (id) NOT DEFERRABLE,
+        month_of_birth month_enum NOT NULL,
+        day_of_birth char(2) NOT NULL,
+        CONSTRAINT pk_customer PRIMARY KEY (customer_id) NOT DEFERRABLE,
         CONSTRAINT uq_customer UNIQUE (email) DEFERRABLE INITIALLY DEFERRED
     );
