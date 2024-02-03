@@ -11,5 +11,5 @@ CREATE TABLE
             AND intensity <= 12
         ),
         price float NOT NULL CHECK (price >= 0),
-        CONSTRAINT pk_coffee PRIMARY KEY (id)
+        CONSTRAINT pk_coffee PRIMARY KEY (id) NOT DEFERRABLE
     );
