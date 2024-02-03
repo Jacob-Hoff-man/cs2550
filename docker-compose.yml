@@ -14,6 +14,7 @@ services:
       - POSTGRES_USER=${DB_POSTGRES_USER}
       - POSTGRES_PASSWORD=${DB_POSTGRES_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
+      - SEED_FILE_NAME=${DB_POSTGRES_SEED}
     ports:
       - ${DB_POSTGRES_PORT}:${DB_POSTGRES_PORT}
   db-pgadmin:
