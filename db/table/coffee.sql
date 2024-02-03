@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS coffee cascade;
+DROP TABLE IF EXISTS coffee;
 
 CREATE TABLE
     coffee (
@@ -11,5 +11,5 @@ CREATE TABLE
             AND intensity <= 12
         ),
         price float NOT NULL CHECK (price >= 0),
-        CONSTRAINT pk PRIMARY KEY (id),
+        CONSTRAINT pk_coffee PRIMARY KEY (id)
     );

@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
-psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f /db/table/user.sql
+# TODO: order matters here, also think of a better way of handling this
+declare -a table_names=("store" "coffee" "carries" "customer" "sale" "promotion" "promotes" "user")
+
+for name in "${table_names[@]}"
+do
+    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/table/$name.sql"
+done
+
 psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f /db/seed.sql

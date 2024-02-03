@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS sale CASCADE;
+DROP TABLE IF EXISTS sale;
 
 CREATE TABLE
   sale (
@@ -6,6 +6,6 @@ CREATE TABLE
     customer_id int NOT NULL,
     purchased_time timestamp DEFAULT CURRENT_TIMESTAMP,
     balance float,
-    CONSTRAINT pk PRIMARY KEY (id),
-    CONSTRAINT fk FOREIGN KEY (customer_id) REFERENCES customer (id) ON UPDATE CASCADE ON DELETE CASCADE
+    CONSTRAINT pk_sale PRIMARY KEY (id),
+    CONSTRAINT fk_sale FOREIGN KEY (customer_id) REFERENCES customer (id) ON UPDATE CASCADE ON DELETE CASCADE
   );

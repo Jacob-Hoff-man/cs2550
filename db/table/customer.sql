@@ -1,4 +1,4 @@
-DROP DOMAIN IF EXISTS month_enum CASCADE;
+DROP DOMAIN IF EXISTS month_enum;
 
 CREATE DOMAIN month_enum AS char(3) CONSTRAINT month_enum_value CHECK (
     VALUE in (
@@ -17,7 +17,7 @@ CREATE DOMAIN month_enum AS char(3) CONSTRAINT month_enum_value CHECK (
     )
 );
 
-DROP TABLE IF EXISTS customer CASCADE;
+DROP TABLE IF EXISTS customer;
 
 CREATE TABLE
     customer (
@@ -27,6 +27,6 @@ CREATE TABLE
         birth_month month_enum NOT NULL,
         birth_day char(2) NOT NULL,
         email varchar(32) NOT NULL,
-        CONSTRAINT pk PRIMARY KEY (id),
-        CONSTRAINT uq UNIQUE (email) DEFERRABLE INITIALLY IMMEDIATE,
+        CONSTRAINT pk_customer PRIMARY KEY (id),
+        CONSTRAINT uq_customer UNIQUE (email) DEFERRABLE INITIALLY IMMEDIATE
     );
