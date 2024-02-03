@@ -8,8 +8,8 @@ CREATE TABLE
     store (
         id serial NOT NULL,
         name varchar(60) NOT NULL,
-        lon float NOT NULL,
-        lat float NOT NULL,
+        lon decimal(7, 2) NOT NULL,
+        lat decimal(7, 2) NOT NULL,
         type store_type NOT NULL,
         CONSTRAINT pk_store PRIMARY KEY (id),
         CONSTRAINT uq_store UNIQUE (name) DEFERRABLE INITIALLY IMMEDIATE
