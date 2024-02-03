@@ -17,5 +17,5 @@
 - There are queries available in the Postgres environment that can be run.
     - Use the `run-query.sh {query-name}` script from the root directory to run a query:
         ```
-            bash run-query.sh test-query
+            bash run-query.sh test-query test-query2 ...
         ```
