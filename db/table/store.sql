@@ -1,6 +1,6 @@
 DROP DOMAIN IF EXISTS store_type;
 
-CREATE DOMAIN store_type varchar(7) CONSTRAINT store_type_value CHECK (VALUE IN ('kiosk', 'sitting'));
+CREATE DOMAIN store_type varchar(13) CONSTRAINT store_type_value CHECK (VALUE IN ('kiosk', 'sitting', 'drive-through'));
 
 DROP TABLE IF EXISTS store;
 
