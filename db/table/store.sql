@@ -7,7 +7,7 @@ DROP TABLE IF EXISTS store;
 CREATE TABLE
     store (
         id serial NOT NULL,
-        name varchar(50) NOT NULL,
+        name varchar(60) NOT NULL,
         lon float NOT NULL,
         lat float NOT NULL,
         type store_type NOT NULL,

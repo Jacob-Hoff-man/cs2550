@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS coffee;
 CREATE TABLE
     coffee (
         id serial NOT NULL,
-        name varchar(50) NOT NULL,
+        name varchar(60) NOT NULL,
         description VARCHAR(280),
         country_of_origin varchar(60),
         intensity int NOT NULL CHECK (

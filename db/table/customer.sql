@@ -22,11 +22,11 @@ DROP TABLE IF EXISTS customer;
 CREATE TABLE
     customer (
         id serial NOT NULL,
-        first_name varchar(50) NOT NULL,
-        last_name varchar(50) NOT NULL,
+        first_name varchar(60) NOT NULL,
+        last_name varchar(60) NOT NULL,
         birth_month month_enum NOT NULL,
         birth_day char(2) NOT NULL,
-        email varchar(32) NOT NULL,
+        email varchar(60) NOT NULL,
         CONSTRAINT pk_customer PRIMARY KEY (id),
         CONSTRAINT uq_customer UNIQUE (email) DEFERRABLE INITIALLY IMMEDIATE
     );

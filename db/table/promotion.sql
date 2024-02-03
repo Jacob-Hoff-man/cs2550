@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS promotion cascade;
 CREATE TABLE
     promotion (
         id serial NOT NULL,
-        name varchar(50) NOT NULL,
+        name varchar(60) NOT NULL,
         start_date date NOT NULL,
         end_date date NOT NULL,
         CONSTRAINT pk_promotion PRIMARY KEY (id),
