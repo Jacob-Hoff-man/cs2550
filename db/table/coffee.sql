@@ -4,7 +4,7 @@ CREATE TABLE
     coffee (
         id serial NOT NULL,
         name varchar(50) NOT NULL,
-        description VARCHAR(250),
+        description VARCHAR(280),
         country_of_origin varchar(60),
         intensity int NOT NULL CHECK (
             intensity >= 1
