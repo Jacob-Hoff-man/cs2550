@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # TODO: order matters here, also think of a better way of handling this
-declare -a table_names=("store" "coffee" "carries" "customer" "sale" "promotion" "promotes" "test-user")
+declare -a table_names=("store" "coffee" "customer" "carries" "sale" "promotion" "promotes")
 
 for name in "${table_names[@]}"
 do

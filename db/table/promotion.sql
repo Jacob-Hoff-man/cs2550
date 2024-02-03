@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS promotion cascade;
+DROP TABLE IF EXISTS promotion;
 
 CREATE TABLE
     promotion (

@@ -2,18 +2,18 @@ DROP DOMAIN IF EXISTS month_enum;
 
 CREATE DOMAIN month_enum AS char(3) CONSTRAINT month_enum_value CHECK (
     VALUE in (
-        'jan',
-        'feb',
-        'mar',
-        'apr',
-        'may',
-        'jun',
-        'jul',
-        'aug',
-        'sep',
-        'oct',
-        'nov',
-        'dec'
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
     )
 );
 

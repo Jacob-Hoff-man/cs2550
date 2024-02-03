@@ -3336,8 +3336,7 @@ VALUES
         0,
         'Sample Promotion #0',
         '2022-04-21',
-        '2024-04-
-24'
+        '2024-04-24'
     );
 
 INSERT INTO
@@ -3347,8 +3346,7 @@ VALUES
         1,
         'Sample Promotion #1',
         '2024-01-03',
-        '2024-11-
-29'
+        '2024-11-29'
     );
 
 INSERT INTO
@@ -3358,8 +3356,7 @@ VALUES
         2,
         'Sample Promotion #2',
         '2020-11-25',
-        '2022-06-
-20'
+        '2022-06-20'
     );
 
 INSERT INTO
@@ -3369,8 +3366,7 @@ VALUES
         3,
         'Sample Promotion #3',
         '2024-08-14',
-        '2024-08-
-29'
+        '2024-08-29'
     );
 
 INSERT INTO
@@ -3380,8 +3376,7 @@ VALUES
         4,
         'Sample Promotion #4',
         '2024-12-02',
-        '2024-12-
-29'
+        '2024-12-29'
     );
 
 INSERT INTO
@@ -3391,8 +3386,7 @@ VALUES
         5,
         'Sample Promotion #5',
         '2023-06-10',
-        '2023-12-
-05'
+        '2023-12-05'
     );
 
 INSERT INTO
@@ -3402,8 +3396,7 @@ VALUES
         6,
         'Sample Promotion #6',
         '2024-03-22',
-        '2024-10-
-09'
+        '2024-10-09'
     );
 
 INSERT INTO
@@ -3413,8 +3406,7 @@ VALUES
         7,
         'Sample Promotion #7',
         '2021-09-08',
-        '2022-07-
-29'
+        '2022-07-29'
     );
 
 INSERT INTO
@@ -3424,8 +3416,7 @@ VALUES
         8,
         'Sample Promotion #8',
         '2023-08-25',
-        '2024-01-
-01'
+        '2024-01-01'
     );
 
 INSERT INTO
@@ -3435,8 +3426,7 @@ VALUES
         9,
         'Sample Promotion #9',
         '2024-09-04',
-        '2024-12-
-19'
+        '2024-12-19'
     );
 
 INSERT INTO
@@ -3446,8 +3436,7 @@ VALUES
         10,
         'Sample Promotion #10',
         '2024-03-28',
-        '2024-10-
-14'
+        '2024-10-14'
     );
 
 INSERT INTO
@@ -3457,8 +3446,7 @@ VALUES
         11,
         'Sample Promotion #11',
         '2020-12-09',
-        '2021-04-
-17'
+        '2021-04-17'
     );
 
 INSERT INTO
@@ -3468,8 +3456,7 @@ VALUES
         12,
         'Sample Promotion #12',
         '2024-10-05',
-        '2024-11-
-27'
+        '2024-11-27'
     );
 
 INSERT INTO
@@ -3479,8 +3466,7 @@ VALUES
         13,
         'Sample Promotion #13',
         '2024-06-14',
-        '2024-09-
-24'
+        '2024-09-24'
     );
 
 INSERT INTO
@@ -3490,8 +3476,7 @@ VALUES
         14,
         'Sample Promotion #14',
         '2020-02-16',
-        '2022-11-
-22'
+        '2022-11-22'
     );
 
 INSERT INTO
@@ -3501,8 +3486,7 @@ VALUES
         15,
         'Sample Promotion #15',
         '2022-07-17',
-        '2024-12-
-15'
+        '2024-12-15'
     );
 
 INSERT INTO
@@ -3512,8 +3496,7 @@ VALUES
         16,
         'Sample Promotion #16',
         '2024-01-03',
-        '2024-04-
-06'
+        '2024-04-06'
     );
 
 INSERT INTO
@@ -3523,8 +3506,7 @@ VALUES
         17,
         'Sample Promotion #17',
         '2024-10-13',
-        '2024-12-
-02'
+        '2024-12-02'
     );
 
 INSERT INTO
@@ -3534,8 +3516,7 @@ VALUES
         18,
         'Sample Promotion #18',
         '2022-12-26',
-        '2023-06-
-20'
+        '2023-06-20'
     );
 
 INSERT INTO
@@ -3545,8 +3526,7 @@ VALUES
         19,
         'Sample Promotion #19',
         '2021-02-24',
-        '2021-07-
-31'
+        '2021-07-31'
     );
 
 INSERT INTO
@@ -3556,8 +3536,7 @@ VALUES
         20,
         'Sample Promotion #20',
         '2021-03-30',
-        '2021-06-
-16'
+        '2021-06-16'
     );
 
 INSERT INTO
@@ -3567,8 +3546,7 @@ VALUES
         21,
         'Sample Promotion #21',
         '2022-11-06',
-        '2024-01-
-12'
+        '2024-01-12'
     );
 
 INSERT INTO
@@ -3578,8 +3556,7 @@ VALUES
         22,
         'Sample Promotion #22',
         '2022-11-27',
-        '2023-01-
-12'
+        '2023-01-12'
     );
 
 INSERT INTO
@@ -3589,8 +3566,7 @@ VALUES
         23,
         'Sample Promotion #23',
         '2020-04-11',
-        '2023-09-
-20'
+        '2023-09-20'
     );
 
 INSERT INTO
@@ -3600,8 +3576,7 @@ VALUES
         24,
         'Sample Promotion #24',
         '2020-04-18',
-        '2021-11-
-01'
+        '2021-11-01'
     );
 
 INSERT INTO
@@ -3611,8 +3586,7 @@ VALUES
         25,
         'Sample Promotion #25',
         '2023-08-29',
-        '2024-04-
-07'
+        '2024-04-07'
     );
 
 INSERT INTO
@@ -3622,8 +3596,7 @@ VALUES
         26,
         'Sample Promotion #26',
         '2022-08-10',
-        '2023-10-
-23'
+        '2023-10-23'
     );
 
 INSERT INTO
@@ -3633,8 +3606,7 @@ VALUES
         27,
         'Sample Promotion #27',
         '2023-04-12',
-        '2023-05-
-12'
+        '2023-05-12'
     );
 
 INSERT INTO
@@ -3644,8 +3616,7 @@ VALUES
         28,
         'Sample Promotion #28',
         '2020-02-10',
-        '2021-12-
-27'
+        '2021-12-27'
     );
 
 INSERT INTO
@@ -3655,8 +3626,7 @@ VALUES
         29,
         'Sample Promotion #29',
         '2023-06-29',
-        '2024-01-
-01'
+        '2024-01-01'
     );
 
 INSERT INTO
@@ -3666,8 +3636,7 @@ VALUES
         30,
         'Sample Promotion #30',
         '2022-10-29',
-        '2023-09-
-11'
+        '2023-09-11'
     );
 
 INSERT INTO
@@ -3677,8 +3646,7 @@ VALUES
         31,
         'Sample Promotion #31',
         '2020-04-25',
-        '2024-07-
-27'
+        '2024-07-27'
     );
 
 INSERT INTO
@@ -3688,8 +3656,7 @@ VALUES
         32,
         'Sample Promotion #32',
         '2024-12-16',
-        '2024-12-
-22'
+        '2024-12-22'
     );
 
 INSERT INTO
@@ -3699,8 +3666,7 @@ VALUES
         33,
         'Sample Promotion #33',
         '2022-12-15',
-        '2024-08-
-01'
+        '2024-08-01'
     );
 
 INSERT INTO
@@ -3710,8 +3676,7 @@ VALUES
         34,
         'Sample Promotion #34',
         '2020-06-16',
-        '2023-05-
-15'
+        '2023-05-15'
     );
 
 INSERT INTO
@@ -3721,8 +3686,7 @@ VALUES
         35,
         'Sample Promotion #35',
         '2020-07-25',
-        '2022-11-
-05'
+        '2022-11-05'
     );
 
 INSERT INTO
@@ -3732,8 +3696,7 @@ VALUES
         36,
         'Sample Promotion #36',
         '2020-03-22',
-        '2021-12-
-14'
+        '2021-12-14'
     );
 
 INSERT INTO
@@ -3743,8 +3706,7 @@ VALUES
         37,
         'Sample Promotion #37',
         '2021-10-12',
-        '2021-12-
-01'
+        '2021-12-01'
     );
 
 INSERT INTO
@@ -3754,8 +3716,7 @@ VALUES
         38,
         'Sample Promotion #38',
         '2021-12-17',
-        '2023-02-
-15'
+        '2023-02-15'
     );
 
 INSERT INTO
@@ -3765,8 +3726,7 @@ VALUES
         39,
         'Sample Promotion #39',
         '2022-03-25',
-        '2024-04-
-19'
+        '2024-04-19'
     );
 
 -----------------------------------------------------------------------------------
