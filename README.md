@@ -8,9 +8,14 @@
         ```
 
 - The project is launched using `docker-compose`, which builds a container stack that includes a Postgres server and PgAdmin.
-    - Use the `run-rebuild.sh` script from the root directory to freshly build, launch, and seed the project:
+    - Use the `run-seed.sh` script from the root directory to freshly build, launch, and seed the project (THIS WILL DELETE ANY PERSISTED DATABASE CHANGES MADE AFTER THE LAST SEED):
         ```
-            bash run-rebuild.sh
+            bash run-seed.sh
+        ```
+
+    - Use the `run-build.sh` script from the root directory to persist the current database, but rebuild the db Docker images (use when db source code has been modified and needs updated, but not seeded):
+        ```
+            bash run-build.sh
         ```
 
 - After the containers have been spun up and initialized, the db will have been seeded with data.
