@@ -18,8 +18,10 @@
             bash run-build.sh
         ```
 
-- After the containers have been spun up and initialized, the db will have been seeded with data.
+- After the containers have been spun up and initialized for the first time, the db will have been seeded with data.
+
 - There are queries available in the Postgres environment that can be run.
+    -  In the following command, the .sql file name used under the `cs2550/db/query/` dir is `{query-name}`
     - Use the `run-query.sh {query-name}` script from the root directory to run a query:
         ```
             bash run-query.sh test-query test-query2 ...
