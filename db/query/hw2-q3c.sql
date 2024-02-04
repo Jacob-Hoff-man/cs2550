@@ -1,4 +1,4 @@
--- HW2 Q3C
+-- HW2 - Q3C
 -- List the store id, store name and store type of all stores of CoffeeDB along with the
 -- year in which the store sold the highest total quantity of coffee.
 SELECT

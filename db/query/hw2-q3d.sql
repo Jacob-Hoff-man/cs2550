@@ -1,3 +1,4 @@
+-- HW2 - Q3D
 -- Rank coffees based on the most quantity of the coffee that was sold by CoffeeDB.
 -- List: coffee id, coffee name, intensity, and rank.
 SELECT
