@@ -2,6 +2,7 @@
 -- ber of customers that each store sold coffee to during the fourth quarter of 2023 (i.e.,
 -- September 1st, 2023 to December 31, 2023). The view schema is: store id, store name,
 -- store type, and number of customers.
+CREATE VIEW last_quarter_performance AS
 SELECT
     store_id,
     name,
