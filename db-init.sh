@@ -13,4 +13,11 @@ do
     psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/view/$name.sql"
 done
 
+# TODO: order matters here, also think of a better way of handling this
+declare -a func_names=("avg-customer-per-store")
+for name in "${func_names[@]}"
+do
+    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/func/$name.sql"
+done
+
 psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f /db/seed/$SEED_FILE_NAME.sql
