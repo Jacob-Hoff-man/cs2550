@@ -1,3 +1,4 @@
+-- HW2 - Q5
 -- calculates and returns the average number of customers that 
 -- purchased coffee across all stores. The function has no input.
 CREATE

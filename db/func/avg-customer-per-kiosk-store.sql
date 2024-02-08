@@ -1,3 +1,4 @@
+-- HW2 - Q6
 -- calculates and returns the average number of customers 
 -- that purchased coffee across all kiosk stores. The function has no input.
 CREATE

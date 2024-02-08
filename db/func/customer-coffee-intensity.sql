@@ -1,3 +1,4 @@
+-- HW2 - Q7
 -- finds out whether their most recent coffee purchase had a strong coffee profile
 -- (intensity greater than 6) or not.
 -- The function inputs the customer to query: the id of the customer to be looked up.

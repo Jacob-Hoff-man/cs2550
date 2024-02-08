@@ -1,3 +1,4 @@
+-- HW2 - Q4
 -- Create a view named LAST QUARTER PERFORMACE that lists the num-
 -- ber of customers that each store sold coffee to during the fourth quarter of 2023 (i.e.,
 -- September 1st, 2023 to December 31, 2023). The view schema is: store id, store name,
