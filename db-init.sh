@@ -7,24 +7,31 @@ do
 done
 
 # TODO: order matters here, also think of a better way of handling this
-declare -a view_names=("last-quarter-performance")
+declare -a view_names=("last-quarter-performance" "customer-birthday")
 for name in "${view_names[@]}"
 do
     psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/view/$name.sql"
 done
 
 # TODO: order matters here, also think of a better way of handling this
-declare -a func_names=("avg-customer-per-store" "avg-customer-per-store" "customer-coffee-intensity")
-for name in "${func_names[@]}"
+declare -a function_names=("avg-customer-per-store" "avg-customer-per-store" "customer-coffee-intensity")
+for name in "${function_names[@]}"
 do
-    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/func/$name.sql"
+    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/function/$name.sql"
 done
 
 # TODO: order matters here, also think of a better way of handling this
-declare -a proc_names=("monthly-coffee-promotion")
-for name in "${proc_names[@]}"
+declare -a procedure_names=("monthly-coffee-promotion")
+for name in "${procedure_names[@]}"
 do
-    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/proc/$name.sql"
+    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/procedure/$name.sql"
+done
+
+# TODO: order matters here, also think of a better way of handling this
+declare -a trigger_names=("check-daily-inventory" "coffee-birthday-sale")
+for name in "${trigger_names[@]}"
+do
+    psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/trigger/$name.sql"
 done
 
 psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f /db/seed/$SEED_FILE_NAME.sql
