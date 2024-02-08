@@ -40,7 +40,7 @@ ELSE
     RAISE NOTICE 'Customer does not have a birthday today.';
 END IF;
 
-return NEW;
+RETURN NEW;
 
 END;
 $$

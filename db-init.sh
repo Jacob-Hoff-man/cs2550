@@ -7,7 +7,7 @@ do
 done
 
 # TODO: order matters here, also think of a better way of handling this
-declare -a view_names=("last-quarter-performance" "customer-birthday")
+declare -a view_names=("last-quarter-performance" "customer-birthday" "coffee-inventory")
 for name in "${view_names[@]}"
 do
     psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/view/$name.sql"
