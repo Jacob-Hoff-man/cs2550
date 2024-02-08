@@ -1,6 +1,15 @@
 -- Jacob Hoffman
 -- Jah292
 
+-- List all tables
+SELECT * FROM store;
+SELECT * FROM coffee;
+SELECT * FROM customer;
+SELECT * FROM carries;
+SELECT * FROM sale;
+SELECT * FROM promotion;
+SELECT * FROM promotes;
+
 -- HW2 - Q3A
 -- List the first name, last name, emails, and number of purchases of all customers who
 -- have made more than one coffee purchase. List them in a descending order based
@@ -18,7 +27,7 @@ WHERE
 GROUP BY
     customer_id
 ORDER BY
-    coffee_count DESC
+    coffee_count DESC;
 
 -- HW2 - Q3B
 -- List the store id, store name, store type, and number of promotions of the store(s)
@@ -46,7 +55,7 @@ FROM
 WHERE
     S.store_id = PC.store_id
 ORDER BY
-    promotion_count DESC
+    promotion_count DESC;
 
 -- HW2 - Q3C
 -- List the store id, store name and store type of all stores of CoffeeDB along with the
@@ -102,7 +111,7 @@ WHERE
             store_id ASC
     )
 ORDER BY
-    store_id ASC
+    store_id ASC;
 
 -- HW2 - Q3D
 -- Rank coffees based on the most quantity of the coffee that was sold by CoffeeDB.
@@ -127,7 +136,7 @@ FROM
             coffee_id
     ) TQ
 WHERE
-    C.coffee_id = TQ.coffee_id
+    C.coffee_id = TQ.coffee_id;
 
 -- HW2 - Q3E
 -- List the top-3 customers with the highest number of coffee purchases. List cus-
@@ -154,7 +163,7 @@ WHERE
 ORDER BY
     sum_coffee DESC
 LIMIT
-    3
+    3;
 
 -- HW2 - Q4
 -- Create a view named LAST QUARTER PERFORMACE that lists the num-
@@ -177,7 +186,7 @@ WHERE
 GROUP BY
     store_id,
     name,
-    type
+    type;
 
 -- HW2 - Q5
 -- calculates and returns the average number of customers that 
@@ -298,7 +307,7 @@ SELECT
 FROM
     coffee CF NATURAL JOIN carries CA
 WHERE
-    CF.coffee_id = CA.coffee_id
+    CF.coffee_id = CA.coffee_id;
 
 -- HW2 - Q9
 -- Create a trigger that enforces a semantic 
@@ -353,7 +362,7 @@ SELECT
     month_of_birth,
     day_of_birth
 FROM
-    customer
+    customer;
 
 -- HW2 - Q10
 -- when a coffee is sold on a customer’s birthday (i.e., a new sale is added to the
