@@ -14,7 +14,7 @@ do
 done
 
 # TODO: order matters here, also think of a better way of handling this
-declare -a func_names=("avg-customer-per-store")
+declare -a func_names=("avg-customer-per-store" "avg-customer-per-store" "customer-coffee-intensity")
 for name in "${func_names[@]}"
 do
     psql -U $POSTGRES_USER -d $POSTGRES_DB -a -f "/db/func/$name.sql"
