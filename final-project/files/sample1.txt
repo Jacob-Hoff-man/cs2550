@@ -1,0 +1,12 @@
+B 1
+R Starbucks 13
+I Starbucks (2, Caramel Macchiato, 5, Italy)
+R Starbucks 2
+M Starbucks Italy
+C
+B 1
+R Starbucks 13
+I Starbucks (2, Caramel Macchiato, 5, Italy)
+R Starbucks 2
+M Starbucks Italy
+C
