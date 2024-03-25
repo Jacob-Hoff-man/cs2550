@@ -5,8 +5,8 @@ __LOG_OUTPUT_FILE_EXTENSION__ = f'log'
 __TIME_STRING_FORMAT__ = f'%Y%m%d-%H%M%S'
 
 class Logger():
-    def config(self, file_path: str) -> None:
-        file_name = f'{file_path}{time.strftime(__TIME_STRING_FORMAT__)}.{__LOG_OUTPUT_FILE_EXTENSION__}' 
+    def config(self, file_path: str, tag: str = '') -> None:
+        file_name = f'{file_path}{time.strftime(__TIME_STRING_FORMAT__)}{tag}.{__LOG_OUTPUT_FILE_EXTENSION__}' 
         with open(file_name, 'w') as fp: 
             pass
         logging.basicConfig(
