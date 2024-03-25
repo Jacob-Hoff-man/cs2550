@@ -1,5 +1,5 @@
 /db-postgres-data
 /db-pgadmin-data
-/final-project/logs/*
+/logs/*
 # misc
 .DS_Store
