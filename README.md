@@ -1,5 +1,20 @@
 # CS2550
+## Final Project
+### How To Run
+- Phase 1:
+    - [Python must be installed on the host machine to run this project](https://www.python.org/downloads/)
 
+    - use the following command to run the phase 1 script, and then view the results in the `logs/final-project/transaction-manager/` directory:
+        ```
+            bash run-phase-1.sh
+        ```
+- Phase 2:
+    - TBD
+
+- Phase 3:
+    - TBD
+
+## HW 2
 ### How To Run
 - [Docker Engine must be installed on the host machine to run this project](https://docs.docker.com/engine/install/).
     - if using linux, try the `install-docker.sh` script from the root directory:
