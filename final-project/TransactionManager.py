@@ -5,9 +5,9 @@ import sys
 #import DeadlockDetector
 from logger import LoggerSingleton as l
 
-__LOG_TXN_MNGR_OUTPUT_FILE_PATH__ = 'logs/transaction-manager/'
+__LOG_TXN_MNGR_OUTPUT_FILE_PATH__ = 'logs/final-project/transaction-manager/'
 
-##Round Robin (which reads one line from each file at a time in turns) 
+## Round Robin (which reads one line from each file at a time in turns) 
 def round_robin(txns):
     while len(txns.keys()) > 0:
         for file_name in list(txns):
@@ -18,10 +18,7 @@ def round_robin(txns):
             else:
                 del txns[file_name]
             
-                
-
-
-##Random (which reads files in random order, and reads a random number of lines from each file).
+## Random (which reads files in random order, and reads a random number of lines from each file).
 def random_read(txns, seed = 42):
     file_names = list(txns.keys())
     random.seed(seed)
@@ -54,13 +51,16 @@ def read_files(raw_file_names):
     return txns
 
 def main():
-    l.config(__LOG_TXN_MNGR_OUTPUT_FILE_PATH__)
     #dld = DeadlockDector()
+    type = sys.argv[1]
+    txns = read_files(sys.argv[2:])
+    l.config(__LOG_TXN_MNGR_OUTPUT_FILE_PATH__, f'-{type}')
+    if type == 'rr':
+        round_robin(txns)
+    elif type == 'ran':
+        random_read(txns)
 
-    txns = read_files(sys.argv[1:])
 
-    #round_robin(txns)
-    random_read(txns, 1234)
 if __name__ == "__main__":
     main()
 
