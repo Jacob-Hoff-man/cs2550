@@ -24,7 +24,9 @@ Why is there two differnt buffers?
 
 Have a catalog that stores indexes
 catalog can store size of records and tuples in files
-
+B emode:
+    0 = begin new process?
+    1 = begin new transaction: makes sense
 R read
 I insert
 U update

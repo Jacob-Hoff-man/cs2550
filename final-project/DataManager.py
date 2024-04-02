@@ -44,7 +44,7 @@ class PageTable:
 
     def set_entry(self, v_addr, page_table_entry):
         page_table_entry.valid = True
-        _, root_idx, leaf_idx = GetParts(v_addr)
+        _, root_idx, leaf_idx = get_parts(v_addr)
 
         if self.root[root_idx] is None:
             self.root[root_idx] = [None] * 1024
