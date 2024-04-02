@@ -7,9 +7,12 @@ from logger import LoggerSingleton as l
 
 class OpType(Enum):
     B = 'B'
-    R = 'R'
-    U = 'U'
+    C = 'C'
+    A = 'A'
+    Q = 'Q'
     I = 'I'
+    U = 'U'
+    R = 'R'
     T = 'T'
     M = 'M'
     G = 'G'
