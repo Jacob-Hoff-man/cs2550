@@ -17,3 +17,10 @@ class FilterType(Enum):
 class RecOrgType(Enum):
     ROW = 0
     COLUMN = 1
+
+class RecordCoffee():
+    def __init__(self, coffee_id, coffee_name, intensity, country_of_origin) -> None:
+        self.coffee_id = coffee_id
+        self.coffee_name = coffee_name
+        self.intensity = intensity
+        self.country_of_origin = country_of_origin
