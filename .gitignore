@@ -4,3 +4,4 @@
 # misc
 .DS_Store
 /final-project/logs/*
+__pycache__
