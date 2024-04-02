@@ -1,0 +1,36 @@
+what is a column store slotted page?
+    stores (tuple, attr_val) or (PK, attr_val)
+
+How do access methods work with diff pages?
+    slots not necesarily same as row store slotted page
+    slots could be based on index such as first slot is < x 
+    next slot is < x and < y etc
+
+    index on attribute but compare on PK if necessary
+    can point to start of "USA"
+
+    intensity is hashed file w hash access 
+    but needs a b+ tree for range queries
+
+block vs page? 
+    same thing
+
+what is a row vs column operation?
+    row operations needs to be done on entire record
+    build record in column buffer, then send it to the row buffer
+
+Why is there two differnt buffers?
+    used to take advatnge of different workloads
+
+Have a catalog that stores indexes
+catalog can store size of records and tuples in files
+
+R read
+I insert
+U update
+T table scan
+
+M modify
+G count based on range
+    ie # of coffees with intensity > x
+    b+ tree

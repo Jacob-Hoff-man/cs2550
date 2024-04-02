@@ -3,3 +3,4 @@
 /logs/*
 # misc
 .DS_Store
+/final-project/logs/*
