@@ -88,7 +88,7 @@ class RowBuffer():
         # sets idx to page
         return
     def to_col(self, idx):
-        # create the record
+        # create the columns
         # return it to data manager or can send to directly to col buffer
         return
 

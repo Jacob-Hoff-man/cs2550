@@ -28,9 +28,13 @@ catalog can store size of records and tuples in files
 R read
 I insert
 U update
+    example?
 T table scan
+    example?
 
 M modify
 G count based on range
     ie # of coffees with intensity > x
     b+ tree
+    
+    example?
