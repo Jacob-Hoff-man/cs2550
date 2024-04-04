@@ -53,7 +53,7 @@ class Operation():
             case OpType.M:
                 return (elements[0], elements[1:])
             case OpType.G:
-                pass
+                return (elements[0], elements[1])
             case _:
                 quit("Op Type Not recognized...")
 
