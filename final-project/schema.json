@@ -13,7 +13,7 @@
             "auxiliary": [],
             "filter": []
         },
-        "size": 4
+        "size": 8
     },
     "intensity": {
         "primary_key": false,
@@ -29,6 +29,6 @@
             "auxiliary": [],
             "filter": []
         },
-        "size": 4
+        "size": 8
     }
 }
