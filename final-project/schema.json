@@ -1,0 +1,34 @@
+{
+    "coffee_id": {
+        "primary_key": true,
+        "access_methods": {
+            "auxiliary": [],
+            "filter": []
+        },
+        "size": 4
+    },
+    "coffee_name": {
+        "primary_key": false,
+        "access_methods": {
+            "auxiliary": [],
+            "filter": []
+        },
+        "size": 4
+    },
+    "intensity": {
+        "primary_key": false,
+        "access_methods": {
+            "auxiliary": [],
+            "filter": []
+        },
+        "size": 4
+    },
+    "country_of_origin": {
+        "primary_key": false,
+        "access_methods": {
+            "auxiliary": [],
+            "filter": []
+        },
+        "size": 4
+    }
+}
