@@ -18,6 +18,10 @@ class OpType(Enum):
     G = 'G'
 
 class Transaction():
+    def __init__(self) -> None:
+        self.id = 0
+        self.ops = []
+class Operation():
     def trim_operation_insert(self, line):
         elements = line.split('(')
         start = elements[0].split(' ')
@@ -32,12 +36,18 @@ class Transaction():
         match(elements[0]):
             case OpType.B:
                 return (elements[0], elements[1])
-            case OpType.R:
-                return (elements[0], list(elements[1:]))
-            case OpType.U:
-                return self.trim_operation_insert(line)
+            case OpType.C:
+                return (elements[0])
+            case OpType.A:
+                return (elements[0])
+            case OpType.Q:
+                return (elements[0])
             case OpType.I:
                 return self.trim_operation_insert(line)
+            case OpType.U:
+                return self.trim_operation_insert(line)
+            case OpType.R:
+                return (elements[0], list(elements[1:]))
             case OpType.T:
                 return (elements[0], elements[1])
             case OpType.M:
@@ -91,7 +101,7 @@ class TransactionManager():
                 for line in f:
                     txn.append(line.replace("\n", ""))
                     # make a new transaction
-            txns[file_name] = Transaction(txn)
+            txns[file_name] = Operation(txn)
             #txns[file_name] = txn
 
         return txns
