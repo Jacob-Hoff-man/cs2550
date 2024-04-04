@@ -109,28 +109,28 @@ class DataManager():
         # helper for each op
         return
     
-    def get_txn_ops_from_rl():
-        pass
+    def get_txn_ops_from_rl(self):
+        raise NotImplementedError
 
-    def is_op_in_page_table():
-        pass
+    def is_op_in_page_table(self):
+        raise NotImplementedError
 
-    def convert_op_to_col():
-        pass
+    def convert_op_to_col(self):
+        raise NotImplementedError
 
-    def convert_op_to_row():
-        pass
+    def convert_op_to_row(self):
+        raise NotImplementedError
 
-    def convert_row_to_col():
-        pass
+    def convert_row_to_col(self):
+        raise NotImplementedError
 
-    def convert_col_to_row():
-        pass
+    def convert_col_to_row(self):
+        raise NotImplementedError
 
-    def use_access_method():
-        pass
+    def use_access_method(self):
+        raise NotImplementedError
 
-    def insert_to_disc():
-        pass
+    def insert_to_disc(self):
+        raise NotImplementedError
 
     
