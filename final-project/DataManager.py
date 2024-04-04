@@ -96,10 +96,41 @@ class DataManager():
     def __init__(self, tb) -> None:
         self.tb = None
         self.attributes = None
+        # self.recovery_log = {}
+        # self.catalog = {}
+        # self.page_table = PageTable()
+        # self.column_buffer = {}
+        # self.row_buffer = {}
+        
         
     def do_op(self, op):
         # does an operation
         # switch case
         # helper for each op
         return
+    
+    def get_txn_ops_from_rl():
+        pass
 
+    def is_op_in_page_table():
+        pass
+
+    def convert_op_to_col():
+        pass
+
+    def convert_op_to_row():
+        pass
+
+    def convert_row_to_col():
+        pass
+
+    def convert_col_to_row():
+        pass
+
+    def use_access_method():
+        pass
+
+    def insert_to_disc():
+        pass
+
+    
