@@ -1,59 +1,58 @@
-def get_parts(v_addr):
-    offset_bits = 13
-    virtual_page_number_bits = 19
-    root_number_bits = 9
-    leaf_number_bits = 10
-    virtual_page_number = (v_addr >> offset_bits) & (
-        (1 << virtual_page_number_bits) - 1)
-    root_number = (virtual_page_number >> leaf_number_bits) & (
-        (1 << root_number_bits) - 1)
-    leaf_number = virtual_page_number & ((1 << leaf_number_bits) - 1)
-    return virtual_page_number, root_number, leaf_number
+class Page():
+    def __init__(self, _id) -> None:
+        self.id = _id
+        self.content = []
+        self.map = {} # each page has a map for getting tuples
+    def add_tuple(self, _tuple) -> None:
+        self.content.append(_tuple)# will replace this w access method or something for correct position\
 
-class ArrayEntry:
-    def __init__(self, page_num, bit):
-        self.page_num = page_num
-        self.bit = bit 
+class File():
+    def __init__(self, name) -> None:
+        self.attr = name
+        self.pages = []
+    def add_page(self) -> None:
+        _id = len(self.pages)
+        self.pages.append(Page(_id))
+    def get_page(self, _id) -> Page:
+        # do some check bounds etc
+        return self.pages[_id]
+    
+class Table():
+    def __init__(self, name, PK, attrs) -> None:
+        self.name = name
+        self.PK = PK
+        self.attrs = {}
+        for attr in attrs:
+            self.attrs[attr] = File(attr)
+
+    def get_file(self, name):
+        return self.attrs[name]
 
 class PageTableEntry:
-    def __init__(self, frame_num, next_use):
+    def __init__(self, frame_num):
         self.dirty = False
         self.refer = False
         self.valid = False
         self.frame_num = frame_num
-        self.next_use = next_use
 
 class PageTable:
     def __init__(self):
-        self.root = [None] * 512
-        self.leaves = 0
+        self.map = {}
 
-    def get_entry(self, v_addr):
-        if isinstance(v_addr, str):
-            _, root_idx, leaf_idx = get_parts(int(v_addr, 16))
+    def get_entry(self, page_num):
+        if page_num >= len(self.map.keys()): 
+            # NO MAPPING
+           return None
         else:
-            _, root_idx, leaf_idx = get_parts(v_addr)
-        # print("root, leaf_idx: ", root_idx, leaf_idx)
+            # return mapping
+            return self.map[page_num]
 
-        if self.root[root_idx] is None:
-            self.root[root_idx] = [None] * 1024
-            self.leaves += 1
-        entr = self.root[root_idx][leaf_idx]
-
-        return entr
-
-    def set_entry(self, v_addr, page_table_entry):
-        page_table_entry.valid = True
-        _, root_idx, leaf_idx = get_parts(v_addr)
-
-        if self.root[root_idx] is None:
-            self.root[root_idx] = [None] * 1024
-            self.leaves += 1
-        self.root[root_idx][leaf_idx] = page_table_entry
+    def set_entry(self, page_num, page_table_entry):
+        self.map[page_num] = page_table_entry
 
 class ColBuffer():
     def __init__(self, size) -> None:
-        self.buffer = [None] * size
+        self.buffer = []
         self.max = size - 1 # max index in buffer (used by page table)
 
     def do_op(self, op):
@@ -112,7 +111,10 @@ class DataManager():
     def get_txn_ops_from_rl(self):
         raise NotImplementedError
 
-    def is_op_in_page_table(self):
+    def is_op_in_page_table(self): # I, U, R, M
+        # get CoffeeID from Operation Args
+        # check bloom filter for CoffeeID (insert will be false unless deleting)
+        # 
         raise NotImplementedError
 
     def convert_op_to_col(self):
@@ -132,5 +134,7 @@ class DataManager():
 
     def insert_to_disc(self):
         raise NotImplementedError
+
+tbl_stb = Table("Starbucks", 'CoffeeID', ['Name', 'Intensity', 'CountryOfOrigin'])
 
     
