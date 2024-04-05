@@ -41,28 +41,28 @@ how to store different tables?
     have a database.
     each attribute in a database is a file which is a collection of pages in columnar store
     each page has tuples stored in some way (heap, ordered, cluster)
+    each table is stored seperately
 
 What does the access method tell us?
     which page and where in the page?
     or just the page?
+        to find the value depends on file organization 
 
 Should we have multiple access methods for intensity?
     need an ordered one on intensity and one on coffeeIDs
 
 Who does the operations?
-    where do we return the operation results?
-    when we search for a page do we take the whole page 
-    or can we take just the tuple we need and put it into a page in the buffer
-        I assume not because then our page table is super complicated
+    data manager does the operations then, just returns the result
+    no need for a result page frame
 
 How to do table scan?
-    you need all the pages?
+    you need all the pages
     how to get all the coffeeIDs
+        
     what to do if more pages than buffer pages?
-        batch the page requests?
+        batch the page requests
             one results buffer page and then continually read/flush pages to create result
             can deterministically determine # of batches with tuple size
-
 
 How to do M?
     table attr_val
@@ -73,6 +73,38 @@ How to do M?
         get those pages into the buffer
         then create list of the names
 
-    
+When flushing have to convert all the row buffer pages to column store 
+    can write to disc from the Row buffer for flush()
+        panos said so
+        but this requires more work as you need to check the column buffer for conflicts
+        then need to convert the record to tuples and distribute to the different attributes
+        
+        the other way is to just put the tuples into the column buffer
+            maybe if page isnt in buffer can directly flush it
+     
+Need to pull pages to col buffer then create record then propagate to the row buffer
+
+can have data structure to know which records are in the row buffer
+
+buffer size minimum of 2
+
+row buffer is constant stream of appending tuples
+    keep track of each index of the row buffer
+
+can save data structures of binary files
+    need to load on restart
+
+Could keep track of the counts of intensity
+    metadata of selection factor
+    when update, change vlaues decrement and increment
+    intensity is 0-12 (hw2)
+    this speeds up G operation
+
+Can store the opposite operations or can store the old values or new values
+    and just replace on abort
+        insert turns into a delete
+        update turns into an update of old value
+    brian thinks storing the new values is the most work
+
 
 
