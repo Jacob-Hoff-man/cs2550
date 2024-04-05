@@ -2,32 +2,32 @@
     "coffee_id": {
         "primary_key": true,
         "access_methods": {
-            "auxiliary": [],
-            "filter": []
+            "filter": 0
         },
         "size": 4
     },
     "coffee_name": {
         "primary_key": false,
+        "organization_type": 1,
         "access_methods": {
-            "auxiliary": [],
-            "filter": []
+            "auxiliary": 2
         },
         "size": 8
     },
     "intensity": {
         "primary_key": false,
+        "organization_type": 1,
         "access_methods": {
-            "auxiliary": [],
-            "filter": []
+            "auxiliary": 2,
+            "views": 1
         },
         "size": 4
     },
     "country_of_origin": {
         "primary_key": false,
+        "organization_type": 1,
         "access_methods": {
-            "auxiliary": [],
-            "filter": []
+            "auxiliary": 3
         },
         "size": 8
     }
