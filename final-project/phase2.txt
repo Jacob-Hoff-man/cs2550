@@ -30,13 +30,49 @@ B emode:
 R read
 I insert
 U update
-    example?
 T table scan
-    example?
-
-M modify
-G count based on range
+M retrieve coffee names of coffees with country of origin
+G count based on val intensity 
     ie # of coffees with intensity > x
     b+ tree
     
-    example?
+
+how to store different tables?
+    have a database.
+    each attribute in a database is a file which is a collection of pages in columnar store
+    each page has tuples stored in some way (heap, ordered, cluster)
+
+What does the access method tell us?
+    which page and where in the page?
+    or just the page?
+
+Should we have multiple access methods for intensity?
+    need an ordered one on intensity and one on coffeeIDs
+
+Who does the operations?
+    where do we return the operation results?
+    when we search for a page do we take the whole page 
+    or can we take just the tuple we need and put it into a page in the buffer
+        I assume not because then our page table is super complicated
+
+How to do table scan?
+    you need all the pages?
+    how to get all the coffeeIDs
+    what to do if more pages than buffer pages?
+        batch the page requests?
+            one results buffer page and then continually read/flush pages to create result
+            can deterministically determine # of batches with tuple size
+
+
+How to do M?
+    table attr_val
+    search country of origin for attr_val
+        get those pages, put pages in buffer
+        now get the list of those coffeeIDs
+        search Name atrtibute file for coffeeIDs
+        get those pages into the buffer
+        then create list of the names
+
+    
+
+

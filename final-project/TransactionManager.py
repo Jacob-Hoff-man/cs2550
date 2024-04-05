@@ -17,10 +17,6 @@ class OpType(Enum):
     M = 'M'
     G = 'G'
 
-class Transaction():
-    def __init__(self) -> None:
-        self.id = 0
-        self.ops = []
 class Operation():
     def trim_operation_insert(self, line):
         elements = line.split('(')
@@ -59,6 +55,16 @@ class Operation():
 
     def __init__(self, line) -> None:
         self.op, self.args = self.to_txn_tuple(line)
+
+class Transaction():
+    def __init__(self, id) -> None:
+        self.id = id
+        self.ops = []
+    def add(self, op: Operation):
+        self.ops.append(op)
+    def get(self):
+        pass
+
 
 class TransactionManager():
     def __init__(self) -> None:
