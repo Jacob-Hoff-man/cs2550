@@ -1,5 +1,7 @@
 import json
-from Common import FilterType, AuxType, ViewType
+from Common import FilterType, AuxType, ViewType, AuxiliaryStructure
+from auxs.ClusteredIndex import ClusteredIndex
+from auxs.BPlusTree import BPlusTree
 
 class Catalog():
     def __init__(self) -> None:
@@ -8,7 +10,7 @@ class Catalog():
         self.views = {}
 
 class CatalogManager():
-    def get_aux(self, table_key, column_key):
+    def get_aux(self, table_key, column_key) -> AuxiliaryStructure:
         return self.catalogs.get(table_key).auxs.get(column_key)
 
     def get_filter(self, table_key, column_key):
@@ -16,52 +18,61 @@ class CatalogManager():
 
     def get_view(self, table_key, column_key):
         return self.catalogs.get(table_key).views.get(column_key)
-    
-    def set_aux(self, aux: AuxType):
-        match aux.value:
-            case AuxType.CLUSTERED.value:
-                # TODO
-                return 'clustered_aux'
-            case AuxType.ISAM.value:
-                # TODO
-                return 'isam_aux'
-            case AuxType.R_TREE.value:
-                # TODO
-                return 'r_tree_aux'
-            case AuxType.B_PLUS_TREE.value:
-                # TODO
-                return 'b_plus_tree_aux'
-            case _:
-                return 'none'
 
-    def set_filter(self, filter: FilterType):
-        match filter.value:
-            case FilterType.BLOOM.value:
-                # TODO
-                return 'bloom_filter'
-            case _:
-                return 'none'
+    def set_aux(self, table_key, column_key, aux):
+        self.catalogs[table_key].auxs[column_key] = aux
 
-    def set_view(self, view: ViewType):
-        match view.value:
-            case ViewType.COUNT.value:
-                # TODO
-                return 'count_view'
-            case _:
-                return 'none'
+    def set_filter(self, table_key, column_key, filter):
+        self.catalogs[table_key].filters[column_key] = filter
+
+    def set_view(self, table_key, column_key, view):
+        self.catalogs[table_key].views[column_key] = view
 
     def insert_catalog(self, table_key):
+        def get_catalog_aux(aux: AuxType):
+            match aux.value:
+                case AuxType.CLUSTERED.value:
+                    return ClusteredIndex()
+                case AuxType.ISAM.value:
+                    # TODO
+                    raise NotImplementedError
+                case AuxType.R_TREE.value:
+                    # TODO
+                    raise NotImplementedError
+                case AuxType.B_PLUS_TREE.value:
+                    # TODO: fix issue with BPlusTree().set throwing error
+                    # return BPlusTree()
+                    raise NotImplementedError
+                case _:
+                    raise NotImplementedError
+
+        def get_catalog_filter(filter: FilterType):
+            match filter.value:
+                case FilterType.BLOOM.value:
+                    # TODO
+                    raise NotImplementedError
+                case _:
+                    raise NotImplementedError
+
+        def get_catalog_view(view: ViewType):
+            match view.value:
+                case ViewType.COUNT.value:
+                    # TODO
+                    raise NotImplementedError
+                case _:
+                    raise NotImplementedError
+
         catalog = Catalog()
         for column_name, column_definition in self.schema.items():
             access_methods = column_definition.get('access_methods')
             if access_methods.get('filter') != None:
-                column_filter = self.set_filter(FilterType(access_methods.get('filter')))
+                column_filter = get_catalog_filter(FilterType(access_methods.get('filter')))
                 catalog.filters[column_name] = column_filter
             if access_methods.get('auxiliary') != None:
-                column_aux = self.set_aux(AuxType(access_methods.get('auxiliary')))
+                column_aux = get_catalog_aux(AuxType(access_methods.get('auxiliary')))
                 catalog.auxs[column_name] = column_aux
             if access_methods.get('view') != None:
-                column_view = self.set_view(ViewType(access_methods.get('view')))
+                column_view = get_catalog_view(ViewType(access_methods.get('view')))
                 catalog.views[column_name] = column_view
         self.catalogs[table_key] = catalog
 
