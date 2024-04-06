@@ -19,7 +19,7 @@
         "organization_type": 1,
         "access_methods": {
             "auxiliary": 2,
-            "views": 1
+            "view": 0
         },
         "size": 4
     },
