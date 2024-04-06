@@ -1,5 +1,5 @@
 import json
-from Common import FilterType, AuxType, ViewType, AuxiliaryStructure
+from Common import FilterType, AuxType, ViewType, Auxiliary
 from auxs.ClusteredIndex import ClusteredIndex
 from auxs.BPlusTree import BPlusTree
 
@@ -10,7 +10,7 @@ class Catalog():
         self.views = {}
 
 class CatalogManager():
-    def get_aux(self, table_key, column_key) -> AuxiliaryStructure:
+    def get_aux(self, table_key, column_key) -> Auxiliary:
         return self.catalogs.get(table_key).auxs.get(column_key)
 
     def get_filter(self, table_key, column_key):
@@ -35,32 +35,32 @@ class CatalogManager():
                     return ClusteredIndex()
                 case AuxType.ISAM.value:
                     # TODO
-                    raise NotImplementedError
+                    return None
                 case AuxType.R_TREE.value:
                     # TODO
-                    raise NotImplementedError
+                    return None
                 case AuxType.B_PLUS_TREE.value:
                     # TODO: fix issue with BPlusTree().set throwing error
                     # return BPlusTree()
-                    raise NotImplementedError
+                    return None
                 case _:
-                    raise NotImplementedError
+                    return None
 
         def get_catalog_filter(filter: FilterType):
             match filter.value:
                 case FilterType.BLOOM.value:
                     # TODO
-                    raise NotImplementedError
+                    return None
                 case _:
-                    raise NotImplementedError
+                   return None
 
         def get_catalog_view(view: ViewType):
             match view.value:
                 case ViewType.COUNT.value:
                     # TODO
-                    raise NotImplementedError
+                    return None
                 case _:
-                    raise NotImplementedError
+                    return None
 
         catalog = Catalog()
         for column_name, column_definition in self.schema.items():

@@ -1,6 +1,6 @@
-from Common import AuxiliaryStructure
+from Common import Auxiliary
 
-class ClusteredIndex(AuxiliaryStructure):
+class ClusteredIndex(Auxiliary):
     def set(self, key, page_key):
         self.pages[key] = page_key
 

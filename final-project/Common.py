@@ -28,8 +28,18 @@ class RecordCoffee():
         self.intensity = intensity
         self.country_of_origin = country_of_origin
 
-class AuxiliaryStructure():
+class AccessMethod():
     def set(self, key, page_key):
-        raise NotImplementedError()
+        self.pages[key] = page_key
     def get(self, key):
-        raise NotImplementedError()
+        return self.pages.get(key)
+
+class Auxiliary(AccessMethod):
+    pass
+
+class Filter(AccessMethod):
+    pass
+
+class View(AccessMethod):
+    pass
+
