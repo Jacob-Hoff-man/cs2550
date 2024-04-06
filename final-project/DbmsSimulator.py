@@ -1,21 +1,26 @@
 #import DeadlockDetector
 from TransactionManager import TransactionManager
+from CatalogManager import CatalogManager
 import sys
-from logger import LoggerSingleton as l
+from Logger import LoggerSingleton as l
 
 __LOG_TXN_MNGR_OUTPUT_FILE_PATH__ = 'logs/final-project/transaction-manager/'
 
 def main():
     #dld = DeadlockDector()
-
-    type = sys.argv[1]
+    schema_file_name = sys.argv[1]
+    txn_processing_type = sys.argv[2]
+    file_names = sys.argv[3:]
     l.config(__LOG_TXN_MNGR_OUTPUT_FILE_PATH__, f'-{type}')
-    file_names = sys.argv[2:]
     txn_mgr = TransactionManager()
-    txns = txn_mgr.read_files(file_names)
-    if type == 'rr':
+    catalog_mgr = CatalogManager(schema_file_name)
+    catalog_mgr.insert_catalog('table_key')
+
+    # txns = txn_mgr.read_files(file_names)
+
+    if txn_processing_type == 'rr':
         txn_mgr.round_robin(txns)
-    elif type == 'ran':
+    elif txn_processing_type == 'ran':
         txn_mgr.random_read(txns)
 
 
