@@ -5,6 +5,9 @@ class OrgType(Enum):
     ORDERED = 1
     HEAP = 2
 
+class ViewType(Enum):
+    COUNT = 0
+
 class AuxType(Enum):
     B_PLUS_TREE = 0
     R_TREE = 1
