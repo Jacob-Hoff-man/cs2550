@@ -2,7 +2,7 @@ import os
 import random
 from enum import Enum
 
-from logger import LoggerSingleton as l
+from Logger import LoggerSingleton as l
 
 
 class OpType(Enum):

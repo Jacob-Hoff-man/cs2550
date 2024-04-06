@@ -27,3 +27,9 @@ class RecordCoffee():
         self.coffee_name = coffee_name
         self.intensity = intensity
         self.country_of_origin = country_of_origin
+
+class AuxiliaryStructure():
+    def set(self, key, page_key):
+        raise NotImplementedError()
+    def get(self, key):
+        raise NotImplementedError()
