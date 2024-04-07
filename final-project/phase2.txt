@@ -100,7 +100,7 @@ can save data structures of binary files
 Could keep track of the counts of intensity
     metadata of selection factor
     when update, change vlaues decrement and increment
-    intensity is 0-12 (hw2)
+    intensity is 1-12 (hw2)
     this speeds up G operation
 
 Can store the opposite operations or can store the old values or new values
@@ -108,6 +108,19 @@ Can store the opposite operations or can store the old values or new values
         insert turns into a delete
         update turns into an update of old value
     brian thinks storing the new values is the most work
+
+What is wrong with the bloom filter?
+    better to do bit map?
+    calculation is wrong?
+
+precalculate the root of the primary ISAM
+this leads to very sparse pages (lots of pages w few records)
+Is this ok? the system will be doing many evictions
+we think its the easiest wway to do it
+Without this,
+how do we arrange the index on insertion and deletion?
+Move biggest value to key of next page then put it on the next page
+make an empty page between two pages if the keys are signifcantly far apart?
 
 
 

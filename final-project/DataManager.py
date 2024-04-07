@@ -1,5 +1,8 @@
 import random
 
+from Common import Component
+from Logger import LogType
+
 blm_flt = [0]*64000
 
 class Page():
@@ -9,7 +12,7 @@ class Page():
         self.content = []
         self.map = {} # each page has a map for getting tuples
     def add_tuple(self, _tuple) -> None:
-        self.content.append(_tuple)# will replace this w access method or something for correct position\
+        self.content.append(_tuple)# will replace this w map for correct position in page
 
 class File():
     def __init__(self, name) -> None:
@@ -17,6 +20,13 @@ class File():
         self.attr = name
         self.map = {}
         self.pages = []
+    
+    def get_map(self, id):
+        if id not in self.map.keys():
+            return None
+        else:
+            return self.map[id]
+        
     def update_map(self, id, page_num):
         self.map[id] = page_num
 
@@ -27,6 +37,7 @@ class File():
         _id = len(self.pages)
         self.pages.append(Page(_id))
         return _id
+    
     def get_page(self, _id) -> Page:
         # do some check bounds etc
         return self.pages[_id]
@@ -50,6 +61,8 @@ class PageTableEntry:
         self.refer = False
         self.valid = False
         self.frame_num = frame_num
+    def __str__(self) -> str:
+        return f"{self.dirty} {self.refer} {self.valid} {self.frame_num}"
 
 class PageTable:
     def __init__(self):
@@ -75,13 +88,24 @@ class ColBuffer():
         # data manager will send ops to buffer such as flushing 
         # or sending to row buffer
         return
+    
     def flush(self, idx):
         # flushes this frame
         # if dirty need to write back/through to disc
         return
+    
     def set(self, idx, page):
         # sets idx to page
-        return
+        if not(idx >= len(self.buffer)):
+            self.buffer[idx] = page
+            return True
+        return False
+    
+    def get(self, idx):
+        if not ( idx >= len(self.buffer) ):
+            return self.buffer[idx]
+        return None
+    
     def to_row(self, idx):
         # create the record
         # return it to data manager or can send to directly to row buffer
@@ -112,15 +136,17 @@ class RowBuffer():
         # return it to data manager or can send to directly to col buffer
         return
 
-class DataManager():
-    def __init__(self, tb) -> None:
-        self.tb = None
-        self.attributes = None
+class DataManager(Component):
+    def __init__(self) -> None:
+        super().__init__(LogType.DATA_MANAGER)
+
         # self.recovery_log = {}
         # self.catalog = {}
         # self.page_table = PageTable()
         # self.column_buffer = {}
         # self.row_buffer = {}
+
+        #self.log('data manager component intialized message')
         
         
     def do_op(self, op):
@@ -161,62 +187,89 @@ def update(table, ID, tuple_i):
     return True
 
 def insert(table, ID, tuple_i):
-
+    print("inserting a tuple")
     # check bloom filter for ID
-    if blm_flt[ID] is 1: # if it is there
-        return update(table, ID, tuple_i) # Call Update
-    else: # if not
-        if tuple_i is None: # if tuple is Null
-            return 0 # no op 
+    # if blm_flt[ID] == 1: # if it is there
+    #     print("ID present in data (probably) updating...")
+    #     return update(table, ID, tuple_i) # Call Update
+    # else: # if not
+    #     print("ID not present in data")
+
+    if tuple_i == None and blm_flt[ID] == 0: # if tuple is Null
+        return 0 # no op 
 
 
     # check catalog for table
+    
     if not (table in catalog.keys()):
+        print("Create table")
         # if doesnt exist, Create
         catalog[table] = Table(table, 'CoffeeID', ['CoffeeName', 'Intensity', 'CountryOfOrigin'])
     
     # turn record into tuples
-    # name = tuple_i[0]
-    # intensity = tuple_i[1]
-    # CoI = tuple_i[2]
-    # name_tup = (ID, name)
-    # inten_tup = (ID, intensity)
-    # CoI_tup = (ID, CoI)
-
+    print("Create tuples from record")
     tuples = ( ('CoffeeName', (ID, tuple_i[0])), ('Intensity', (ID, tuple_i[1])), ('CountryOfOrigin', (ID, tuple_i[2])))
 
     # for each tuple
+    table = catalog[table]
     for attr, attr_tup in tuples:
+        print(f"on {attr} with tuple: {attr_tup}")
         # use access method to get to page num for inserting 
-        file = catalog[table].attrs[attr]
-        page_num = file.map[attr_tup[0]]
+        c_id = attr_tup[0]
+        val = attr_tup[1]
+        file = table.attrs[attr]
+        print(f"c_id: {c_id}")
+        page_num = file.get_map(c_id)
+        if page_num is None:
+            print("page num is none add a page")
+            # make a page
+            page_num = file.add_page()
+            print(f"update the map {c_id} {page_num}")
+            file.update_map(c_id, page_num)
+        
         # check page table for page num
+        print("get entry from page table")
         entry_rec = pg_tbl.get_entry(page_num)
         if entry_rec is None: # not in the buffer
             # evict a page (LRU)
+            print("evict a page")
             frame_num = LRU(col_cache)
+            print(f"evicted {frame_num}")
             # update page table w that page num and frame num
+            print("create page tbale entry")
             entry = PageTableEntry(frame_num)
+            print(f"set page table entry {page_num} {entry} ")
             pg_tbl.set_entry(page_num, entry)
             # put page in buffer at mapping
             #page = disc_mngr.get(File, page_num)
+            print(f"set page from file page num: {page_num}")
             page = file.get_page(page_num)
-            
-        else:
-
-            page.add_tuple(attr_tup)
+            print(f"set cache value {frame_num} {page_num}")
+            col_cache.set(frame_num, page)
+            if page is None:
+                quit("page is none")
+        else: 
+            print(f"get page from cache {entry_rec.frame_num}")
+            page = col_cache.get(entry_rec.frame_num)
+            if page is None:
+                quit("page is none")
         # Now page is in buffer
         # use page map to find correct position for tuple in the page
-        # insert the tuple
-        # update the map
-        # update the access method if need be 
-        
-    
 
+        # insert the tuple
+        page.add_tuple(attr_tup)
+        # update the map
+        file.update_map(c_id, page_num)
+        # update the access method if need be 
+        # update the bloom filter
+        blm_flt[c_id] = 1
     return True
 
+
+dt_mngr = DataManager()
 col_cache = ColBuffer(4)
 pg_tbl = PageTable()
 catalog = {}
 catalog['starbucks'] = Table("Starbucks", 'CoffeeID', ['CoffeeName', 'Intensity', 'CountryOfOrigin'])
     
+insert('starbucks', 0, ('latte', 5, 'USA'))
