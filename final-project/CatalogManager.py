@@ -1,7 +1,8 @@
 import json
-from Common import FilterType, AuxType, ViewType, Auxiliary
+from Common import FilterType, AuxType, ViewType, Auxiliary, Filter
 from auxs.ClusteredIndex import ClusteredIndex
 from auxs.BPlusTree import BPlusTree
+from filters.BloomFilter import BloomFilter
 
 class Catalog():
     def __init__(self) -> None:
@@ -9,11 +10,12 @@ class Catalog():
         self.filters = {}
         self.views = {}
 
+
 class CatalogManager():
     def get_aux(self, table_key, column_key) -> Auxiliary:
         return self.catalogs.get(table_key).auxs.get(column_key)
 
-    def get_filter(self, table_key, column_key):
+    def get_filter(self, table_key, column_key) -> Filter:
         return self.catalogs.get(table_key).filters.get(column_key)
 
     def get_view(self, table_key, column_key):
@@ -49,8 +51,7 @@ class CatalogManager():
         def get_catalog_filter(filter: FilterType):
             match filter.value:
                 case FilterType.BLOOM.value:
-                    # TODO
-                    return None
+                    return BloomFilter(64000, 0.02)
                 case _:
                    return None
 
