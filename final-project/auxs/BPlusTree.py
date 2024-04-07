@@ -1,7 +1,7 @@
 from bplustree import BPlusTree as Bpt
 from Common import Auxiliary
 
-class BPlusTree(AuxiliaryStructure):
+class BPlusTree(Auxiliary):
     def set(self, key, page_key):
         self.pages[key] = page_key
 

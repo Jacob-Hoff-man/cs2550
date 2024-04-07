@@ -29,13 +29,13 @@ class RecordCoffee():
         self.country_of_origin = country_of_origin
 
 class AccessMethod():
+    pass
+
+class Auxiliary(AccessMethod):
     def set(self, key, page_key):
         self.pages[key] = page_key
     def get(self, key):
         return self.pages.get(key)
-
-class Auxiliary(AccessMethod):
-    pass
 
 class Filter(AccessMethod):
     pass
