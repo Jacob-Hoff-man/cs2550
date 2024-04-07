@@ -1,21 +1,18 @@
-#import DeadlockDetector
+import sys
 from TransactionManager import TransactionManager
 from CatalogManager import CatalogManager
 from Common import Component
-import sys
-from Logger import LoggerSingleton as l
-
-__LOG_TXN_MNGR_OUTPUT_FILE_PATH__ = 'logs/final-project/transaction-manager/'
+from Logger import LogType
 
 class DbmsSimulator(Component):
     def __init__(self, schema_file_name) -> None:
-        super().__init__()    
+        super().__init__(LogType.DBMS_SIMULATOR)    
         self.tables = {}
         self.transaction_manager = TransactionManager()
         self.catalog_manager = CatalogManager(schema_file_name)
+        self.log('DBMS Simulator component initialized.')
 
 def main():
-    l.config(__LOG_TXN_MNGR_OUTPUT_FILE_PATH__, f'-{type}')
     schema_file_name = sys.argv[1]
     transaction_processing_type = sys.argv[2]
     file_names = sys.argv[3:]

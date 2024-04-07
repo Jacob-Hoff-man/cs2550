@@ -1,4 +1,5 @@
 from enum import Enum
+from Logger import LoggerSingleton as l, LogType
 
 class OrgType(Enum):
     HASH = 0
@@ -29,7 +30,11 @@ class RecordCoffee():
         self.country_of_origin = country_of_origin
 
 class Component():
-    pass
+    def __init__(self, log_type: LogType) -> None:
+        self.log_type = log_type
+    
+    def log(self, message):
+        l.log(self.log_type, message)
 
 class AccessMethod():
     pass

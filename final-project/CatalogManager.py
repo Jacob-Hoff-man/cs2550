@@ -1,5 +1,6 @@
 import json
 from Common import Component, FilterType, AuxiliaryType, AggregateType, Auxiliary, Filter
+from Logger import LogType
 from auxilaries.ClusteredIndex import ClusteredIndex
 from auxilaries.BPlusTree import BPlusTree
 from filters.BloomFilter import BloomFilter
@@ -86,9 +87,10 @@ class CatalogManager(Component):
         return data
 
     def __init__(self, file_name) -> None:
-        super().__init__()
+        super().__init__(LogType.CATALOG_MANAGER)
         schema = self.read_schema_file(file_name)
         self.schema = schema
         self.catalogs = {}
+        self.log('Catalog Manager component initialized.')
             
 

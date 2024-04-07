@@ -1,9 +1,8 @@
 import os
 import random
 from enum import Enum
-
-from Logger import LoggerSingleton as l
-
+from Common import Component
+from Logger import LogType
 
 class OpType(Enum):
     B = 'B'
@@ -98,9 +97,10 @@ class Transaction():
         return self.ops.pop(idx)
 
 
-class TransactionManager():
+class TransactionManager(Component):
     def __init__(self) -> None:
-        return
+        super().__init__(LogType.TRANSACTION_MANAGER)
+        self.log('Transaction Manager component initialized.')
 
     def round_robin(self, txns) -> dict[str, any]:
         while len(txns.keys()) > 0:
