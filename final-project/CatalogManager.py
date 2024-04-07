@@ -86,6 +86,9 @@ class CatalogManager(Component):
         f.close()
         return data
 
+    def get_column_definition(self, column_name):
+        return self.schema[column_name]
+
     def __init__(self, file_name) -> None:
         super().__init__(LogType.CATALOG_MANAGER)
         schema = self.read_schema_file(file_name)
