@@ -1,12 +1,15 @@
 import logging
-import time
 import os
 from enum import Enum
-from Constants import __LOG_CTLG_MGR_OUTPUT_FILE_PATH__, __LOG_DATA_MGR_OUTPUT_FILE_PATH__, __LOG_DBMS_SIM_OUTPUT_FILE_PATH__, __LOG_TRXN_MGR_OUTPUT_FILE_PATH__
-
-__LOG_OUTPUT_FILE_EXTENSION__ = 'log'
-__TIME_STRING_FORMAT__ = '%Y%m%d-%H%M%S'
-__TIME_INIT__ = time.strftime(__TIME_STRING_FORMAT__)
+from Constants import (
+    __LOG_CTLG_MGR_OUTPUT_FILE_PATH__,
+    __LOG_DATA_MGR_OUTPUT_FILE_PATH__,
+    __LOG_DBMS_SIM_OUTPUT_FILE_PATH__,
+    __LOG_TRXN_MGR_OUTPUT_FILE_PATH__,
+    __LOG_OUTPUT_FILE_EXTENSION__,
+    __TIME_STRING_FORMAT__,
+    __TIME_INIT__
+)
 
 class LogType(Enum):
     CATALOG_MANAGER = 'Catalog Manager'
