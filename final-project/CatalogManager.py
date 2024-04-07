@@ -1,47 +1,46 @@
 import json
-from Common import FilterType, AuxType, ViewType, Auxiliary, Filter
-from auxs.ClusteredIndex import ClusteredIndex
-from auxs.BPlusTree import BPlusTree
+from Common import Component, FilterType, AuxiliaryType, AggregateType, Auxiliary, Filter
+from auxilaries.ClusteredIndex import ClusteredIndex
+from auxilaries.BPlusTree import BPlusTree
 from filters.BloomFilter import BloomFilter
 
 class Catalog():
     def __init__(self) -> None:
-        self.auxs = {}
+        self.auxilaries = {}
         self.filters = {}
-        self.views = {}
+        self.aggregates = {}
 
-
-class CatalogManager():
-    def get_aux(self, table_key, column_key) -> Auxiliary:
-        return self.catalogs.get(table_key).auxs.get(column_key)
+class CatalogManager(Component):
+    def get_auxiliary(self, table_key, column_key) -> Auxiliary:
+        return self.catalogs.get(table_key).auxilaries.get(column_key)
 
     def get_filter(self, table_key, column_key) -> Filter:
         return self.catalogs.get(table_key).filters.get(column_key)
 
-    def get_view(self, table_key, column_key):
-        return self.catalogs.get(table_key).views.get(column_key)
+    def get_aggregate(self, table_key, column_key):
+        return self.catalogs.get(table_key).aggregates.get(column_key)
 
-    def set_aux(self, table_key, column_key, aux):
-        self.catalogs[table_key].auxs[column_key] = aux
+    def set_auxiliary(self, table_key, column_key, auxiliary):
+        self.catalogs[table_key].auxilaries[column_key] = auxiliary
 
     def set_filter(self, table_key, column_key, filter):
         self.catalogs[table_key].filters[column_key] = filter
 
-    def set_view(self, table_key, column_key, view):
-        self.catalogs[table_key].views[column_key] = view
+    def set_aggregate(self, table_key, column_key, aggregate):
+        self.catalogs[table_key].aggregates[column_key] = aggregate
 
     def insert_catalog(self, table_key):
-        def get_catalog_aux(aux: AuxType):
-            match aux.value:
-                case AuxType.CLUSTERED.value:
+        def get_catalog_auxiliary(auxiliary: AuxiliaryType):
+            match auxiliary.value:
+                case AuxiliaryType.CLUSTERED.value:
                     return ClusteredIndex()
-                case AuxType.ISAM.value:
+                case AuxiliaryType.ISAM.value:
                     # TODO
                     return None
-                case AuxType.R_TREE.value:
+                case AuxiliaryType.R_TREE.value:
                     # TODO
                     return None
-                case AuxType.B_PLUS_TREE.value:
+                case AuxiliaryType.B_PLUS_TREE.value:
                     # TODO: fix issue with BPlusTree().set throwing error
                     # return BPlusTree()
                     return None
@@ -55,9 +54,9 @@ class CatalogManager():
                 case _:
                    return None
 
-        def get_catalog_view(view: ViewType):
-            match view.value:
-                case ViewType.COUNT.value:
+        def get_catalog_aggregate(aggregate: AggregateType):
+            match aggregate.value:
+                case AggregateType.COUNT.value:
                     # TODO
                     return None
                 case _:
@@ -70,11 +69,11 @@ class CatalogManager():
                 column_filter = get_catalog_filter(FilterType(access_methods.get('filter')))
                 catalog.filters[column_name] = column_filter
             if access_methods.get('auxiliary') != None:
-                column_aux = get_catalog_aux(AuxType(access_methods.get('auxiliary')))
-                catalog.auxs[column_name] = column_aux
-            if access_methods.get('view') != None:
-                column_view = get_catalog_view(ViewType(access_methods.get('view')))
-                catalog.views[column_name] = column_view
+                column_auxiliary = get_catalog_auxiliary(AuxiliaryType(access_methods.get('auxiliary')))
+                catalog.auxilaries[column_name] = column_auxiliary
+            if access_methods.get('aggregate') != None:
+                column_aggregate = get_catalog_aggregate(AggregateType(access_methods.get('aggregate')))
+                catalog.aggregates[column_name] = column_aggregate
         self.catalogs[table_key] = catalog
 
     def delete_catalog(self, table_key):
@@ -87,9 +86,9 @@ class CatalogManager():
         return data
 
     def __init__(self, file_name) -> None:
+        super().__init__()
         schema = self.read_schema_file(file_name)
         self.schema = schema
         self.catalogs = {}
-
             
 

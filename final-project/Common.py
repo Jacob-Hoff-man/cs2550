@@ -5,10 +5,10 @@ class OrgType(Enum):
     ORDERED = 1
     HEAP = 2
 
-class ViewType(Enum):
+class AggregateType(Enum):
     COUNT = 0
 
-class AuxType(Enum):
+class AuxiliaryType(Enum):
     B_PLUS_TREE = 0
     R_TREE = 1
     ISAM = 2
@@ -17,7 +17,7 @@ class AuxType(Enum):
 class FilterType(Enum):
     BLOOM = 0
 
-class RecOrgType(Enum):
+class RecordOrganizationType(Enum):
     ROW = 0
     COLUMN = 1
 
