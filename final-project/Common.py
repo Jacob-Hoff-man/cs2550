@@ -12,8 +12,9 @@ class AggregateType(Enum):
 class AuxiliaryType(Enum):
     B_PLUS_TREE = 0
     R_TREE = 1
-    ISAM = 2
+    PRIMARY = 2
     CLUSTERED = 3
+    SECONDARY = 4
 
 class FilterType(Enum):
     BLOOM = 0

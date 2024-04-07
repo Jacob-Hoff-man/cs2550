@@ -4,6 +4,7 @@ from Logger import LogType
 from auxilaries.ClusteredIndex import ClusteredIndex
 from auxilaries.BPlusTree import BPlusTree
 from filters.BloomFilter import BloomFilter
+from aggregates.Count import Count
 
 class Catalog():
     def __init__(self) -> None:
@@ -35,7 +36,7 @@ class CatalogManager(Component):
             match auxiliary.value:
                 case AuxiliaryType.CLUSTERED.value:
                     return ClusteredIndex()
-                case AuxiliaryType.ISAM.value:
+                case AuxiliaryType.PRIMARY.value:
                     # TODO
                     return None
                 case AuxiliaryType.R_TREE.value:
@@ -58,8 +59,7 @@ class CatalogManager(Component):
         def get_catalog_aggregate(aggregate: AggregateType):
             match aggregate.value:
                 case AggregateType.COUNT.value:
-                    # TODO
-                    return None
+                    return Count()
                 case _:
                     return None
 

@@ -16,6 +16,8 @@ class BloomFilter(Filter):
         self.num_bits = self.get_num_bits(capacity, error_rate) # number of bits needed
         self.num_hashes = self.get_num_hashes(self.num_bits, capacity) # number of hash functions needed
         self.bit_array = [0] * self.num_bits # bit array to store the elements
+
+        print('@@init', self.num_hashes, self.num_bits)
         
     def add(self, key):
         for i in range(self.num_hashes):
