@@ -28,6 +28,9 @@ class RecordCoffee():
         self.intensity = intensity
         self.country_of_origin = country_of_origin
 
+class Component():
+    pass
+
 class AccessMethod():
     pass
 
@@ -40,6 +43,9 @@ class Auxiliary(AccessMethod):
 class Filter(AccessMethod):
     pass
 
-class View(AccessMethod):
-    pass
+class Aggregate(AccessMethod):
+    def set(self, key, aggregate_value):
+        self.values[key] = aggregate_value
+    def get(self, key):
+        return self.values.get(key)
 
