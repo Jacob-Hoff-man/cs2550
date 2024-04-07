@@ -10,7 +10,7 @@
         "primary_key": false,
         "organization_type": 1,
         "access_methods": {
-            "auxiliary": 2
+            "auxiliary": 0
         },
         "size": 8
     },
