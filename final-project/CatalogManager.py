@@ -52,7 +52,7 @@ class CatalogManager(Component):
         def get_catalog_filter(filter: FilterType):
             match filter.value:
                 case FilterType.BLOOM.value:
-                    return BloomFilter(64000, 0.02)
+                    return BloomFilter()
                 case _:
                    return None
 
