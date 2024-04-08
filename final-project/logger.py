@@ -1,15 +1,7 @@
 import logging
 import os
 from enum import Enum
-from Constants import (
-    __LOG_CTLG_MGR_OUTPUT_FILE_PATH__,
-    __LOG_DATA_MGR_OUTPUT_FILE_PATH__,
-    __LOG_DBMS_SIM_OUTPUT_FILE_PATH__,
-    __LOG_TRXN_MGR_OUTPUT_FILE_PATH__,
-    __LOG_OUTPUT_FILE_EXTENSION__,
-    __TIME_STRING_FORMAT__,
-    __TIME_INIT__
-)
+from Constants import *
 
 class LogType(Enum):
     CATALOG_MANAGER = 'Catalog Manager'
@@ -25,17 +17,17 @@ class Logger():
     def get_log_file_name(self, log_type: LogType):
         match log_type:
             case LogType.CATALOG_MANAGER:
-                base_file_path = __LOG_CTLG_MGR_OUTPUT_FILE_PATH__
+                base_file_path = LOG_CTLG_MGR_OUTPUT_FILE_PATH
             case LogType.DATA_MANAGER:
-                base_file_path = __LOG_DATA_MGR_OUTPUT_FILE_PATH__
+                base_file_path = LOG_DATA_MGR_OUTPUT_FILE_PATH
             case LogType.DBMS_SIMULATOR:
-                base_file_path = __LOG_DBMS_SIM_OUTPUT_FILE_PATH__
+                base_file_path = LOG_DBMS_SIM_OUTPUT_FILE_PATH
             case LogType.TRANSACTION_MANAGER:
-                base_file_path = __LOG_TRXN_MGR_OUTPUT_FILE_PATH__
+                base_file_path = LOG_TRXN_MGR_OUTPUT_FILE_PATH
             case _:
                 raise ValueError
             
-        return os.path.join(base_file_path, f'{__TIME_INIT__}.{__LOG_OUTPUT_FILE_EXTENSION__}')
+        return os.path.join(base_file_path, f'{TIME_INIT}.{LOG_OUTPUT_FILE_EXTENSION}')
         
     def get_target_logger(self, log_name, file_name, level=logging.INFO):
         handler = logging.FileHandler(file_name)
