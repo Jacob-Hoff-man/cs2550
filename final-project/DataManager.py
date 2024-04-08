@@ -5,6 +5,10 @@ from Logger import LogType
 
 blm_flt = [0]*64000
 
+global num_pages
+num_pages = 0
+
+
 class Page():
     def __init__(self, _id) -> None:
         print(f"\t\t\tMaking page {_id}")
@@ -14,11 +18,13 @@ class Page():
     def add_tuple(self, _tuple) -> None:
         self.content.append(_tuple)# will replace this w map for correct position in page
 
+
 class File():
     def __init__(self, name) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
         self.map = {}
+        self.page_map = {}
         self.pages = []
     
     def get_map(self, id):
@@ -27,20 +33,26 @@ class File():
         else:
             return self.map[id]
         
-    def update_map(self, id, page_num):
+    def update_map(self, id, page_num) -> None:
         self.map[id] = page_num
 
-    def remove_map(self, id):
+    def remove_map(self, id) -> None:
         del self.map[id]
         
     def add_page(self) -> int:
-        _id = len(self.pages)
-        self.pages.append(Page(_id))
+        global num_pages
+        print(f"num pages is {num_pages}")
+        _id = num_pages
+        num_pages += 1
+
+        new_page = Page(_id)
+        self.pages.append(new_page)
+        self.page_map[_id] = len(self.pages)-1
         return _id
     
     def get_page(self, _id) -> Page:
         # do some check bounds etc
-        return self.pages[_id]
+        return self.pages[self.page_map[_id]]
     
 class Table():
     def __init__(self, name, PK, attrs) -> None:
@@ -54,6 +66,9 @@ class Table():
 
     def get_file(self, name):
         return self.attrs[name]
+    
+    def __str__(self):
+        return ""
 
 class PageTableEntry:
     def __init__(self, frame_num):
@@ -96,14 +111,16 @@ class ColBuffer():
     
     def set(self, idx, page):
         # sets idx to page
-        if not(idx >= len(self.buffer)):
+        if idx < len(self.buffer):
             self.buffer[idx] = page
             return True
         return False
     
     def get(self, idx):
-        if not ( idx >= len(self.buffer) ):
+        print(f"getting {idx} from {len(self.buffer)} size buffer")
+        if idx < len(self.buffer):
             return self.buffer[idx]
+        print("idx out of bounds")
         return None
     
     def to_row(self, idx):
@@ -201,7 +218,7 @@ def insert(table, ID, tuple_i):
 
     # check catalog for table
     
-    if not (table in catalog.keys()):
+    if table not in catalog.keys():
         print("Create table")
         # if doesnt exist, Create
         catalog[table] = Table(table, 'CoffeeID', ['CoffeeName', 'Intensity', 'CountryOfOrigin'])
@@ -216,7 +233,7 @@ def insert(table, ID, tuple_i):
         print(f"on {attr} with tuple: {attr_tup}")
         # use access method to get to page num for inserting 
         c_id = attr_tup[0]
-        val = attr_tup[1]
+        #val = attr_tup[1]
         file = table.attrs[attr]
         print(f"c_id: {c_id}")
         page_num = file.get_map(c_id)
@@ -228,7 +245,7 @@ def insert(table, ID, tuple_i):
             file.update_map(c_id, page_num)
         
         # check page table for page num
-        print("get entry from page table")
+        print(f"get entry from page table {page_num}")
         entry_rec = pg_tbl.get_entry(page_num)
         if entry_rec is None: # not in the buffer
             # evict a page (LRU)
@@ -247,18 +264,22 @@ def insert(table, ID, tuple_i):
             print(f"set cache value {frame_num} {page_num}")
             col_cache.set(frame_num, page)
             if page is None:
-                quit("page is none")
+                quit("1: page is none")
         else: 
             print(f"get page from cache {entry_rec.frame_num}")
             page = col_cache.get(entry_rec.frame_num)
+
             if page is None:
-                quit("page is none")
+                quit("2: page is none")
         # Now page is in buffer
         # use page map to find correct position for tuple in the page
 
         # insert the tuple
+        print("insert tuple to page")
         page.add_tuple(attr_tup)
+            
         # update the map
+        print(f"update file map {c_id} {page_num}")
         file.update_map(c_id, page_num)
         # update the access method if need be 
         # update the bloom filter
@@ -273,3 +294,4 @@ catalog = {}
 catalog['starbucks'] = Table("Starbucks", 'CoffeeID', ['CoffeeName', 'Intensity', 'CountryOfOrigin'])
     
 insert('starbucks', 0, ('latte', 5, 'USA'))
+insert('starbucks', 0, ('mochiato', 10, 'France'))
