@@ -52,6 +52,50 @@ class Filter(AccessMethod):
 class Aggregate(AccessMethod):
     def set(self, key, aggregate_value):
         self.values[key] = aggregate_value
+        
     def get(self, key):
         return self.values.get(key)
 
+class Page():
+    def __init__(self, _id) -> None:
+        print(f"\t\t\tMaking page {_id}")
+        self.id = _id
+        self.content = []
+        self.map = {} # each page has a map for getting tuples
+
+    def add_tuple(self, _tuple) -> None:
+        self.content.append(_tuple)# will replace this w access method or something for correct position\
+
+
+class File():
+    def __init__(self, name) -> None:
+        print(f"\t\tmaking file: {name}")
+        self.attr = name
+        self.map = {}
+        self.pages = []
+
+    def update_map(self, id, page_num):
+        self.map[id] = page_num
+
+    def remove_map(self, id):
+        del self.map[id]
+        
+    def add_page(self) -> int:
+        _id = len(self.pages)
+        self.pages.append(Page(_id))
+        return _id
+    
+    def get_page(self, _id) -> Page:
+        # do some check bounds etc
+        return self.pages[_id]
+    
+class Table():
+    def __init__(self, table_key, attrs) -> None:
+        self.table_key = table_key
+        self.attributes = {}
+        for attribute in self.attributes:
+            print(f"\tMaking attr file: {attribute}")
+            self.attributes[attribute] = File(attribute)
+
+    def get_file(self, name):
+        return self.attributes[name]
