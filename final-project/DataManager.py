@@ -1,3 +1,4 @@
+import copy
 import random
 
 from Common import Component
@@ -8,17 +9,59 @@ blm_flt = [0]*64000
 global num_pages
 num_pages = 0
 
-
 class Page():
     def __init__(self, _id) -> None:
         print(f"\t\t\tMaking page {_id}")
         self.id = _id
         self.content = []
         self.map = {}  # each page has a map for getting tuples
+        self.max = 32
+    def full(self):
+        return len(self.content) is self.max
 
     def add_tuple(self, _tuple) -> None:
+        print("PAGE: adding a tuple")
         # will replace this w map for correct position in page
+        if _tuple[0] in self.map.keys():
+            print(f"PAGE: c_id {_tuple[0]} is in map keys: {self.map.keys()}")
+            if _tuple[1] is None:
+                print("PAGE: insert is a delete, val is none")
+                idx = self.map[_tuple[0]]
+                print(f"Mapping is from c_id {_tuple[0]} to idx {idx}")
+                del self.map[idx]
+                
+                print("PAGE: remove tuple and update maps")
+                temp = []
+                for _tup in self.content:
+                    if _tup[0] is not _tuple[0]:
+                        print(f"keep {_tup[0]}")
+                        temp.append(_tup)
+                        self.map[_tup[0]] = len(temp)
+                    else:
+                        print(f"removed {_tup[0]}")
+                self.content = copy.deepcopy(temp)
+                print(f"content after insert {self.content}")
+                return
+            else:
+                # do an update
+                idx = self.map[_tuple[0]]
+                print(f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}")
+                self.content[idx] = _tuple
+                return
+        print("searching content")
+        i = 0
+        for tuple_ent in self.content:
+            if tuple_ent[0] == _tuple[0]:
+                print(f"found tuple at {i}")
+                tuple_ent[1] = _tuple[1]
+                self.map[tuple_ent[0]] = i
+                print("update map")
+                return 
+            i += 1
+
+        self.map[_tuple[0]] = len(self.content)
         self.content.append(_tuple)
+        print(f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}")
 
     def __str__(self) -> str:
         return f"\n\t\tpage {self.id}: {self.content}"
@@ -34,6 +77,15 @@ class File():
 
     def get_map(self, id):
         if id not in self.map.keys():
+            # id is not in the file yet
+            # return the best page for it to be on
+            for page in self.pages:
+                if not page.full():
+                    print("found an empty page")
+                    # page isnt full
+                    return page.id
+            # all pages are full
+            print("all pages are full or no pages exists yet")
             return None
         else:
             return self.map[id]
@@ -107,6 +159,21 @@ class PageTable:
     def set_entry(self, page_num, page_table_entry):
         self.map[page_num] = page_table_entry
 
+def write_out(page: Page):
+
+    pg_id = page.id
+    print(f"writing out page w id {pg_id}")
+
+    for table in catalog.values():
+        for file in table.attrs.values():
+            i = 0
+            for page_ in file.pages:
+                if page_.id == pg_id:
+                    print("Found the page on disc")
+                    file.pages[i] = copy.deepcopy(page)
+                    return
+                i += 1
+    print("page wasnt found on disk")
 
 class ColBuffer():
     def __init__(self, size) -> None:
@@ -120,18 +187,26 @@ class ColBuffer():
 
     def flush(self, idx):
         # flushes this frame
-        # if dirty need to write back/through to disc
-        # how to flush:
-        # make entry invalid and then if dirty write
-        return
+        # get entry using frame num
+        print(f"Flushing frame: {idx}")
+        page = self.buffer[idx]
+        print(f"page selected is {page.id}")
+        pg_entry = pg_tbl.get_entry(page.id)
+        print(f"got entry from page table: {pg_entry}")
+        pg_entry.valid = False
+        print("make mapping false")
+        if pg_entry.dirty:
+            print("page is dirty, write it out")
+            write_out(page)
 
     def set(self, idx, page):
         # sets idx to page
+        # we're doing a shallow copy. Need a deep copy
         try:
             if len(self.buffer) < self.max:
-                self.buffer.append(page)
+                self.buffer.append(copy.deepcopy(page))
             else:
-                self.buffer[idx] = page
+                self.buffer[idx] = copy.deepcopy(page)
             print(f"COL BUFFER Successful set {idx} to {page.id}")
             return True
         except:
@@ -157,7 +232,7 @@ class ColBuffer():
         return "BUFFER: " + "".join([str(x) for x in self.buffer])
 
 
-def LRU():
+def lru():
     print(f'LRU: len: {len(col_cache.buffer)} max: {col_cache.max}')
     if len(col_cache.buffer) < col_cache.max:
         # empty slot!
@@ -299,28 +374,34 @@ def insert(table, ID, tuple_i):
         # check page table for page num
         print(f"INSERT get entry from page table for page_num {page_num}")
         entry_rec = pg_tbl.get_entry(page_num)
-        if entry_rec is None:  # not in the buffer
+        if entry_rec is None or entry_rec.valid == False:  # not in the buffer
             # evict a page (LRU)
             print("INSERT entry_rec is None\nCall LRU")
-            frame_num = LRU()
+            frame_num = lru()
             print(f"INSERT evicted {frame_num}")
             # update page table w that page num and frame num
             print("INSERT create page table entry")
             entry = PageTableEntry(frame_num)
             print(f"INSERT set page table entry {page_num} {entry} ")
             pg_tbl.set_entry(page_num, entry)
+            entry.valid = True
+            entry.dirty = True
             # put page in buffer at mapping
             # page = disc_mngr.get(File, page_num)
             print(f"INSERT set page from file page num: {page_num}")
             page = file.get_page(page_num)
             print(f"INSERT set cache value {frame_num} {page_num}")
             col_cache.set(frame_num, page)
+            # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
+            page = col_cache.get(frame_num)
             print("INSERT col cache after set: ", col_cache)
             if page is None:
                 quit("INSERT 1: page is none")
         else:
             print(f"INSERTget page from cache {entry_rec.frame_num}")
             page = col_cache.get(entry_rec.frame_num)
+            entry_rec.dirty = True
+            entry_rec.valid = True
 
             if page is None:
                 quit("INSERT 2: page is none")
@@ -355,3 +436,10 @@ print(col_cache)
 
 insert('starbucks', 0, ('mochiato', 10, 'France'))
 print(catalog['starbucks'])  # table print
+
+insert('starbucks', 1, ('nitro', 12, 'USA'))
+print(catalog['starbucks'])  # table print
+
+col_cache.flush(0)
+print(catalog['starbucks'])  # table print
+print(col_cache)
