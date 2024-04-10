@@ -1,0 +1,169 @@
+make table: Starbucks
+	TABLE Making attr file: CoffeeName
+		making file: CoffeeName
+	TABLE Making attr file: Intensity
+		making file: Intensity
+	TABLE Making attr file: CountryOfOrigin
+		making file: CountryOfOrigin
+INSERT inserting a tuple
+INSERT Create tuples from record
+
+
+INSERT on CoffeeName with tuple: (0, 'latte')
+INSERT c_id: 0
+INSERT page num is none add a page
+FILE num pages is 0
+			Making page 0
+INSERT update the map c_id: 0 to page_num: 0
+INSERT get entry from page table for page_num 0
+INSERT entry_rec is None
+Call LRU
+LRU: len: 0 max: 4
+LRU: empty slot in buffer return 0
+INSERT evicted 0
+INSERT create page table entry
+INSERT set page table entry 0 False False False 0 
+INSERT set page from file page num: 0
+INSERT set cache value 0 0
+COL BUFFER Successful set 0 to 0
+INSERT col cache after set:  BUFFER: 
+		page 0: []
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte')]
+INSERT update file map 0 0
+
+
+
+
+INSERT on Intensity with tuple: (0, 5)
+INSERT c_id: 0
+INSERT page num is none add a page
+FILE num pages is 1
+			Making page 1
+INSERT update the map c_id: 0 to page_num: 1
+INSERT get entry from page table for page_num 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 1 max: 4
+LRU: empty slot in buffer return 1
+INSERT evicted 1
+INSERT create page table entry
+INSERT set page table entry 1 False False False 1 
+INSERT set page from file page num: 1
+INSERT set cache value 1 1
+COL BUFFER Successful set 1 to 1
+INSERT col cache after set:  BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: []
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: [(0, 5)]
+INSERT update file map 0 1
+
+
+
+
+INSERT on CountryOfOrigin with tuple: (0, 'USA')
+INSERT c_id: 0
+INSERT page num is none add a page
+FILE num pages is 2
+			Making page 2
+INSERT update the map c_id: 0 to page_num: 2
+INSERT get entry from page table for page_num 2
+INSERT entry_rec is None
+Call LRU
+LRU: len: 2 max: 4
+LRU: empty slot in buffer return 2
+INSERT evicted 2
+INSERT create page table entry
+INSERT set page table entry 2 False False False 2 
+INSERT set page from file page num: 2
+INSERT set cache value 2 2
+COL BUFFER Successful set 2 to 2
+INSERT col cache after set:  BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: [(0, 5)]
+		page 2: []
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: [(0, 5)]
+		page 2: [(0, 'USA')]
+INSERT update file map 0 2
+
+
+BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: [(0, 5)]
+		page 2: [(0, 'USA')]
+Starbucks PK: CoffeeID
+	CoffeeName 
+		page 0: [(0, 'latte')]
+	Intensity 
+		page 1: [(0, 5)]
+	CountryOfOrigin 
+		page 2: [(0, 'USA')]
+BUFFER: 
+		page 0: [(0, 'latte')]
+		page 1: [(0, 5)]
+		page 2: [(0, 'USA')]
+INSERT inserting a tuple
+INSERT Create tuples from record
+
+
+INSERT on CoffeeName with tuple: (0, 'mochiato')
+INSERT c_id: 0
+INSERT get entry from page table for page_num 0
+INSERTget page from cache 0
+COL BUFFER getting 0 from 3 size buffer
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte'), (0, 'mochiato')]
+		page 1: [(0, 5)]
+		page 2: [(0, 'USA')]
+INSERT update file map 0 0
+
+
+
+
+INSERT on Intensity with tuple: (0, 10)
+INSERT c_id: 0
+INSERT get entry from page table for page_num 1
+INSERTget page from cache 1
+COL BUFFER getting 1 from 3 size buffer
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte'), (0, 'mochiato')]
+		page 1: [(0, 5), (0, 10)]
+		page 2: [(0, 'USA')]
+INSERT update file map 0 1
+
+
+
+
+INSERT on CountryOfOrigin with tuple: (0, 'France')
+INSERT c_id: 0
+INSERT get entry from page table for page_num 2
+INSERTget page from cache 2
+COL BUFFER getting 2 from 3 size buffer
+INSERT insert tuple to page
+INSERT col cache after tuple insert:  BUFFER: 
+		page 0: [(0, 'latte'), (0, 'mochiato')]
+		page 1: [(0, 5), (0, 10)]
+		page 2: [(0, 'USA'), (0, 'France')]
+INSERT update file map 0 2
+
+
+BUFFER: 
+		page 0: [(0, 'latte'), (0, 'mochiato')]
+		page 1: [(0, 5), (0, 10)]
+		page 2: [(0, 'USA'), (0, 'France')]
+Starbucks PK: CoffeeID
+	CoffeeName 
+		page 0: [(0, 'latte'), (0, 'mochiato')]
+	Intensity 
+		page 1: [(0, 5), (0, 10)]
+	CountryOfOrigin 
+		page 2: [(0, 'USA'), (0, 'France')]
