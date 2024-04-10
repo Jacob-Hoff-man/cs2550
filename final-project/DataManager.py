@@ -15,9 +15,11 @@ class Page():
         self.id = _id
         self.content = []
         self.map = {}  # each page has a map for getting tuples
-        self.max = 32
+        self.max = 2
+    
     def full(self):
-        return len(self.content) is self.max
+        print(f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}")
+        return len(self.content) == self.max
 
     def add_tuple(self, _tuple) -> None:
         print("PAGE: adding a tuple")
@@ -78,12 +80,21 @@ class File():
     def get_map(self, id):
         if id not in self.map.keys():
             # id is not in the file yet
+            print(f"id {id} is not in file map yet ")
             # return the best page for it to be on
             for page in self.pages:
-                if not page.full():
-                    print("found an empty page")
-                    # page isnt full
-                    return page.id
+                if pg_tbl.get_entry(page.id).valid:
+                    print("page found is in buffer")
+                    if not col_cache.get(pg_tbl.get_entry(page.id).frame_num).full():
+                        print("found an empty page in buffer")
+                        # page isnt full
+                        return page.id
+                else: 
+                    print("page is not in buffer")
+                    if not page.full():
+                        print("found an empty page in disk")
+                        # page isnt full
+                        return page.id
             # all pages are full
             print("all pages are full or no pages exists yet")
             return None
@@ -179,11 +190,17 @@ class ColBuffer():
     def __init__(self, size) -> None:
         self.buffer = []
         self.max = size  # max index in buffer (used by page table)
+        self.free = [x for x in range(self.max)]
 
     def do_op(self, op):
         # data manager will send ops to buffer such as flushing
         # or sending to row buffer
         return
+    def full_flush(self):
+        leng = len(self.buffer)
+        for i in range(leng):
+            self.flush(i)
+        self.free = [x for x in range(self.max)]
 
     def flush(self, idx):
         # flushes this frame
@@ -198,6 +215,8 @@ class ColBuffer():
         if pg_entry.dirty:
             print("page is dirty, write it out")
             write_out(page)
+        self.free.append(idx)
+        self.free.sort()
 
     def set(self, idx, page):
         # sets idx to page
@@ -233,12 +252,14 @@ class ColBuffer():
 
 
 def lru():
+    # need a way to know that there is an invalid mapping and can therefore be overwritten
     print(f'LRU: len: {len(col_cache.buffer)} max: {col_cache.max}')
-    if len(col_cache.buffer) < col_cache.max:
+    if len(col_cache.free) > 0:
         # empty slot!
         # fill it.
-        print(f"LRU: empty slot in buffer return {len(col_cache.buffer)}")
-        return len(col_cache.buffer)
+        idx = col_cache.free.pop(0)
+        print(f"LRU: empty slot in buffer return {idx}")
+        return idx
     try:
         evict = random.randrange(len(col_cache.buffer))
         col_cache.flush(evict)
@@ -437,9 +458,18 @@ print(col_cache)
 insert('starbucks', 0, ('mochiato', 10, 'France'))
 print(catalog['starbucks'])  # table print
 
+
 insert('starbucks', 1, ('nitro', 12, 'USA'))
 print(catalog['starbucks'])  # table print
 
 col_cache.flush(0)
 print(catalog['starbucks'])  # table print
 print(col_cache)
+
+insert('starbucks', 2, ('latte', 5, 'ITALLIIIAAA'))
+print(catalog['starbucks'])  # table print
+
+col_cache.full_flush()
+print(catalog['starbucks'])  # table print
+print(col_cache)
+
