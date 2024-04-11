@@ -2,6 +2,7 @@ import json
 from Common import Component, FilterType, AuxiliaryType, AggregateType, Auxiliary, Filter
 from Logger import LogType
 from auxilaries.ClusteredIndex import ClusteredIndex
+from auxilaries.PrimaryIndex import PrimaryIndex
 from auxilaries.BPlusTree import BPlusTree
 from filters.BloomFilter import BloomFilter
 from aggregates.Count import Count
@@ -38,7 +39,7 @@ class CatalogManager(Component):
                     return ClusteredIndex()
                 case AuxiliaryType.PRIMARY.value:
                     # TODO
-                    return None
+                    return PrimaryIndex()
                 case AuxiliaryType.R_TREE.value:
                     # TODO
                     return None
