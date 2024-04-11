@@ -250,9 +250,17 @@ class ColBuffer():
         print(f"COL BUFFER idx not in buffer: {self.buffer.keys()}")
         return None
 
-    def to_row(self, idx):
+    def to_row(self, c_id, idxs):
         # create the record
         # return it to data manager or can send to directly to row buffer
+        tuples = []
+        for idx in idxs:
+            page = col_cache.get(idx)
+            if c_id in page.map.keys():  # c_id is in the page if its not thats a weird error
+                tuples.append(page.content[page.map[c_id]])
+        tuple_r = (c_id, tuples[0][0], tuples[0][1], tuples[0][2])
+        # row_cache.add(tuple_r)
+        # add the tuple to the row buffer
         return
 
     def __str__(self) -> str:
@@ -291,8 +299,9 @@ class RowBuffer():
         # or sending to row buffer
         return
 
-    def flush(self, idx):
+    def flush(self, idx=None):
         # flushes this frame
+        # idx is None then flush whole thing?
         # if dirty need to write back/through to disc
         return
 
@@ -352,12 +361,67 @@ class DataManager(Component):
     def insert_to_disc(self):
         raise NotImplementedError
 
+# R table val: Retrieve record(s) with coffeeID = val. If table does not exist, the read is aborted.
+
+
+def read(table, ID):
+    if table not in catalog.keys() or blm_flt[ID] == 0:
+        # table does not exist or the ID is not in the bloom filter
+        return 0  # no op
+
+    table = catalog[table]
+    # for attr in attrs
+    frames = []
+    for attr in ['CoffeeName', 'Intensity', 'CountryOfOrigin']:
+        file = table.attrs[attr]
+        page_num = file.get_map(ID)
+        if page_num is None:
+            print("READ page num is none: id not in table")
+            return 0
+        entry_rec = pg_tbl.get_entry(page_num)
+        if entry_rec is None or entry_rec.valid == False:  # page not in buffer
+            # evict a page (LRU)
+            print("READ entry_rec is None\nCall LRU")
+            frame_num = lru()
+            print(f"READ evicted {frame_num}")
+            # update page table w that page num and frame num
+            print("READ create page table entry")
+            entry = PageTableEntry(frame_num)
+            print(f"READ set page table entry {page_num} {entry} ")
+            pg_tbl.set_entry(page_num, entry)
+            entry.valid = True
+            entry.dirty = True
+            # put page in buffer at mapping
+            # page = disc_mngr.get(File, page_num)
+            print(f"READ set page from file page num: {page_num}")
+            page = file.get_page(page_num)
+            print(f"READ set cache value {frame_num} {page_num}")
+            col_cache.set(frame_num, page)
+            # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
+            page = col_cache.get(frame_num)
+            print("READ col cache after set: ", col_cache)
+            if page is None:
+                quit("READ 1: page is none")
+        else:
+            print(f"READget page from cache {entry_rec.frame_num}")
+            page = col_cache.get(entry_rec.frame_num)
+            entry_rec.valid = True
+
+            if page is None:
+                quit("READ 2: page is none")
+        frames.append(entry_rec.frame_num)
+        col_cache.to_row(frames)
+        # call to_row() and append the tuple into row buffer
+        # return the tuple
+
+        # U table (ID, val): Update the intensity of the coffeeID=ID to be val. If table does not exist, it is created
+
 
 def update(table, ID, val):
-    raise NotImplementedError
+    # raise NotImplementedError
     print("UPDATE UPDATEing a tuple")
 
-    if tuple_i == None and blm_flt[ID] == 0:  # if tuple is Null
+    if val == None or blm_flt[ID] == 0:  # if tuple is Null
         return 0  # no op
 
     # check catalog for table
@@ -368,79 +432,73 @@ def update(table, ID, val):
         catalog[table] = Table(table, 'CoffeeID', [
                                'CoffeeName', 'Intensity', 'CountryOfOrigin'])
 
-    # turn record into tuples
-    print("UPDATE Create tuples from record")
-    tuples = (('CoffeeName', (ID, tuple_i[0])), ('Intensity',
-              (ID, tuple_i[1])), ('CountryOfOrigin', (ID, tuple_i[2])))
-
-    # for each tuple
     table = catalog[table]
-    for attr, attr_tup in tuples:
-        print("\n")
+    attr_tup = (ID, val)
+    print("\n")
 
-        print(f"UPDATE on {attr} with tuple: {attr_tup}")
-        # use access method to get to page num for UPDATEing
-        c_id = attr_tup[0]
-        # val = attr_tup[1]
-        file = table.attrs[attr]
-        print(f"UPDATE c_id: {c_id}")
-        page_num = file.get_map(c_id)
-        if page_num is None:
-            print("UPDATE page num is none add a page")
-            # make a page
-            page_num = file.add_page()
-            print(
-                f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
-            file.update_map(c_id, page_num)
-
-        # check page table for page num
-        print(f"UPDATE get entry from page table for page_num {page_num}")
-        entry_rec = pg_tbl.get_entry(page_num)
-        if entry_rec is None or entry_rec.valid == False:  # not in the buffer
-            # evict a page (LRU)
-            print("UPDATE entry_rec is None\nCall LRU")
-            frame_num = lru()
-            print(f"UPDATE evicted {frame_num}")
-            # update page table w that page num and frame num
-            print("UPDATE create page table entry")
-            entry = PageTableEntry(frame_num)
-            print(f"UPDATE set page table entry {page_num} {entry} ")
-            pg_tbl.set_entry(page_num, entry)
-            entry.valid = True
-            entry.dirty = True
-            # put page in buffer at mapping
-            # page = disc_mngr.get(File, page_num)
-            print(f"UPDATE set page from file page num: {page_num}")
-            page = file.get_page(page_num)
-            print(f"UPDATE set cache value {frame_num} {page_num}")
-            col_cache.set(frame_num, page)
-            # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
-            page = col_cache.get(frame_num)
-            print("UPDATE col cache after set: ", col_cache)
-            if page is None:
-                quit("UPDATE 1: page is none")
-        else:
-            print(f"UPDATEget page from cache {entry_rec.frame_num}")
-            page = col_cache.get(entry_rec.frame_num)
-            entry_rec.dirty = True
-            entry_rec.valid = True
-
-            if page is None:
-                quit("UPDATE 2: page is none")
-        # Now page is in buffer
-        # use page map to find correct position for tuple in the page
-
-        # UPDATE the tuple
-        print("UPDATE UPDATE tuple to page")
-        page.add_tuple(attr_tup)
-        print("UPDATE col cache after tuple UPDATE: ", col_cache)
-        # update the map
-        print(f"UPDATE update file map {c_id} {page_num}")
+    print(f"UPDATE on 'Intensity' with tuple: {attr_tup}")
+    # use access method to get to page num for UPDATEing
+    c_id = attr_tup[0]
+    # val = attr_tup[1]
+    file = table.attrs['Intensity']
+    print(f"UPDATE c_id: {c_id}")
+    page_num = file.get_map(c_id)
+    if page_num is None:
+        print("UPDATE page num is none add a page")
+        # make a page
+        page_num = file.add_page()
+        print(
+            f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
         file.update_map(c_id, page_num)
-        # update the access method if need be
-        # update the bloom filter
-        blm_flt[c_id] = 1
-        print("\n")
+
+    # check page table for page num
+    print(f"UPDATE get entry from page table for page_num {page_num}")
+    entry_rec = pg_tbl.get_entry(page_num)
+    if entry_rec is None or entry_rec.valid == False:  # not in the buffer
+        # evict a page (LRU)
+        print("UPDATE entry_rec is None\nCall LRU")
+        frame_num = lru()
+        print(f"UPDATE evicted {frame_num}")
+        # update page table w that page num and frame num
+        print("UPDATE create page table entry")
+        entry = PageTableEntry(frame_num)
+        print(f"UPDATE set page table entry {page_num} {entry} ")
+        pg_tbl.set_entry(page_num, entry)
+        entry.valid = True
+        entry.dirty = True
+        # put page in buffer at mapping
+        # page = disc_mngr.get(File, page_num)
+        print(f"UPDATE set page from file page num: {page_num}")
+        page = file.get_page(page_num)
+        print(f"UPDATE set cache value {frame_num} {page_num}")
+        col_cache.set(frame_num, page)
+        # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
+        page = col_cache.get(frame_num)
+        print("UPDATE col cache after set: ", col_cache)
+        if page is None:
+            quit("UPDATE 1: page is none")
+    else:
+        print(f"UPDATEget page from cache {entry_rec.frame_num}")
+        page = col_cache.get(entry_rec.frame_num)
+        entry_rec.dirty = True
+        entry_rec.valid = True
+
+        if page is None:
+            quit("UPDATE 2: page is none")
+    # Now page is in buffer
+    # use page map to find correct position for tuple in the page
+
+    # UPDATE the tuple
+    print("UPDATE UPDATE tuple to page")
+    page.add_tuple(attr_tup)
+    print("UPDATE col cache after tuple UPDATE: ", col_cache)
+    # update the map
+    print(f"UPDATE update file map {c_id} {page_num}")
+    file.update_map(c_id, page_num)
+    # update the access method if need be
+    # update the bloom filter
+    blm_flt[c_id] = 1
+    print("\n")
     print(col_cache)
     return True
 
@@ -544,6 +602,7 @@ def insert(table, ID, tuple_i):
 
 dt_mngr = DataManager()
 col_cache = ColBuffer(4)
+row_cache = RowBuffer(4)
 pg_tbl = PageTable()
 catalog = {}
 catalog['starbucks'] = Table("Starbucks", 'CoffeeID', [
@@ -561,6 +620,10 @@ insert('starbucks', 1, ('nitro', 12, 'USA'))
 print(catalog['starbucks'])  # table print
 
 col_cache.flush(0)
+print(catalog['starbucks'])  # table print
+print(col_cache)
+
+update('starbucks', 1,  3)
 print(catalog['starbucks'])  # table print
 print(col_cache)
 
