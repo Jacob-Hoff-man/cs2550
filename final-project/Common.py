@@ -66,6 +66,8 @@ class Page():
     def add_tuple(self, _tuple) -> None:
         self.content.append(_tuple)# will replace this w access method or something for correct position\
 
+    def is_page_limit_reached(self):
+        return False
 
 class File():
     def __init__(self, name) -> None:
