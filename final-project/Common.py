@@ -134,12 +134,14 @@ class Page():
 
 
 class File():
-    def __init__(self, name) -> None:
+    def __init__(self, name, page_table, col_cache) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
         self.map = {}
         self.page_map = {}
         self.pages = []
+        self.pg_tbl = page_table
+        self.col_cache = col_cache
 
     def get_map(self, id):
         if id not in self.map.keys():
@@ -147,9 +149,9 @@ class File():
             print(f"id {id} is not in file map yet ")
             # return the best page for it to be on
             for page in self.pages:
-                if pg_tbl.get_entry(page.id).valid:
+                if self.pg_tbl.get_entry(page.id).valid:
                     print("page found is in buffer")
-                    if not col_cache.get(pg_tbl.get_entry(page.id).frame_num).full():
+                    if not self.col_cache.get(self.pg_tbl.get_entry(page.id).frame_num).full():
                         print("found an empty page in buffer")
                         # page isnt full
                         return page.id
@@ -171,16 +173,16 @@ class File():
     def remove_map(self, id) -> None:
         del self.map[id]
 
-    def add_page(self) -> int:
-        global num_pages
-        print(f"FILE num pages is {num_pages}")
-        _id = num_pages
-        num_pages += 1
+    def add_page(self, id) -> int:
+        # global num_pages
+        # print(f"FILE num pages is {num_pages}")
+        # _id = num_pages
+        # num_pages += 1
 
-        new_page = Page(_id)
+        new_page = Page(id)
         self.pages.append(new_page)
-        self.page_map[_id] = len(self.pages)-1
-        return _id
+        self.page_map[id] = len(self.pages)-1
+        return id
 
     def get_page(self, _id) -> Page:
         # do some check bounds etc
@@ -191,14 +193,15 @@ class File():
 
 
 class Table():
-    def __init__(self, name, PK, attrs) -> None:
+    def __init__(self, name, PK, attrs, page_table, column_cache) -> None:
         print(f"make table: {name}")
         self.name = name
         self.PK = PK
         self.attrs = {}
+
         for attr in attrs:
             print(f"\tTABLE Making attr file: {attr}")
-            self.attrs[attr] = File(attr)
+            self.attrs[attr] = File(attr, page_table, column_cache)
 
     def get_file(self, name):
         return self.attrs[name]

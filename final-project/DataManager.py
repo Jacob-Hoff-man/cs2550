@@ -1,16 +1,16 @@
 import copy
 import random
 
-from Common import Component
+from Common import Component, Page, File, Table
+# from Common import Component
 from Logger import LogType
 
 blm_flt = [0]*64000
 
-global num_pages
 num_pages = 0
 
 
-class Page():
+class Page_old():
     def __init__(self, _id) -> None:
         print(f"\t\t\tMaking page {_id}")
         self.id = _id
@@ -73,13 +73,15 @@ class Page():
         return f"\n\t\tpage {self.id}: {self.content}"
 
 
-class File():
-    def __init__(self, name) -> None:
+class File_old():
+    def __init__(self, name, page_table, col_cache) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
         self.map = {}
         self.page_map = {}
         self.pages = []
+        self.pg_tbl = page_table
+        self.col_cache = col_cache
 
     def get_map(self, id):
         if id not in self.map.keys():
@@ -87,9 +89,9 @@ class File():
             print(f"id {id} is not in file map yet ")
             # return the best page for it to be on
             for page in self.pages:
-                if pg_tbl.get_entry(page.id).valid:
+                if self.pg_tbl.get_entry(page.id).valid:
                     print("page found is in buffer")
-                    if not col_cache.get(pg_tbl.get_entry(page.id).frame_num).full():
+                    if not self.col_cache.get(pg_tbl.get_entry(page.id).frame_num).full():
                         print("found an empty page in buffer")
                         # page isnt full
                         return page.id
@@ -130,15 +132,16 @@ class File():
         return f"\n\t{self.attr} " + "".join([str(x) for x in self.pages])
 
 
-class Table():
-    def __init__(self, name, PK, attrs) -> None:
+class Table_old():
+    def __init__(self, name, PK, attrs, page_table, column_cache) -> None:
         print(f"make table: {name}")
         self.name = name
         self.PK = PK
         self.attrs = {}
+
         for attr in attrs:
             print(f"\tTABLE Making attr file: {attr}")
-            self.attrs[attr] = File(attr)
+            self.attrs[attr] = File(attr, page_table, column_cache)
 
     def get_file(self, name):
         return self.attrs[name]
@@ -418,6 +421,7 @@ def read(table, ID):
 
 
 def update(table, ID, val):
+    global num_pages
     # raise NotImplementedError
     print("UPDATE UPDATEing a tuple")
 
@@ -430,7 +434,7 @@ def update(table, ID, val):
         print("UPDATE Create table")
         # if doesnt exist, Create
         catalog[table] = Table(table, 'CoffeeID', [
-                               'CoffeeName', 'Intensity', 'CountryOfOrigin'])
+                               'CoffeeName', 'Intensity', 'CountryOfOrigin'],  pg_tbl, col_cache)
 
     table = catalog[table]
     attr_tup = (ID, val)
@@ -446,7 +450,8 @@ def update(table, ID, val):
     if page_num is None:
         print("UPDATE page num is none add a page")
         # make a page
-        page_num = file.add_page()
+        num_pages += 1
+        page_num = file.add_page(num_pages)
         print(
             f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
         file.update_map(c_id, page_num)
@@ -504,6 +509,7 @@ def update(table, ID, val):
 
 
 def insert(table, ID, tuple_i):
+    global num_pages
     print("INSERT inserting a tuple")
     # check bloom filter for ID
     # if blm_flt[ID] == 1: # if it is there
@@ -521,7 +527,7 @@ def insert(table, ID, tuple_i):
         print("INSERT Create table")
         # if doesnt exist, Create
         catalog[table] = Table(table, 'CoffeeID', [
-                               'CoffeeName', 'Intensity', 'CountryOfOrigin'])
+                               'CoffeeName', 'Intensity', 'CountryOfOrigin'],  pg_tbl, col_cache)
 
     # turn record into tuples
     print("INSERT Create tuples from record")
@@ -543,7 +549,8 @@ def insert(table, ID, tuple_i):
         if page_num is None:
             print("INSERT page num is none add a page")
             # make a page
-            page_num = file.add_page()
+            num_pages += 1
+            page_num = file.add_page(num_pages)
             print(
                 f"INSERT update the map c_id: {c_id} to page_num: {page_num}")
             file.update_map(c_id, page_num)
@@ -606,7 +613,7 @@ row_cache = RowBuffer(4)
 pg_tbl = PageTable()
 catalog = {}
 catalog['starbucks'] = Table("Starbucks", 'CoffeeID', [
-                             'CoffeeName', 'Intensity', 'CountryOfOrigin'])
+                             'CoffeeName', 'Intensity', 'CountryOfOrigin'], pg_tbl, col_cache)
 
 insert('starbucks', 0, ('latte', 5, 'USA'))
 print(catalog['starbucks'])  # table print
