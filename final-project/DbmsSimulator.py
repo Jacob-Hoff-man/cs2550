@@ -37,23 +37,27 @@ def main():
 
 
     # Primary Index example
-    page_1 = Page('page_1')
-    page_1.content = [1,2,3,4,5,6,7,8,9]
-    page_2 = Page('page_2')
-    page_2.content = [10,20,30,40,50,60,70,80,90]
-    page_3 = Page('page_3')
-    page_3.content = [100,101,102,103,200,300,400,500,600,700,800,900]
-    page_4 = Page('page_4')
-    page_4.content = [1000,2000,3000,4000,5000,6000,7000,8000,9000]
-    page_5 = Page('page_5')
-    page_5.content = [10000,20000,30000,40000,50000,60000,70000,80000,90000]
-
+    # only need to use get and set when utilizing, it will recreate automatically
+    # if you want to delete, use set(anchor, page_number=None)
+    page_1 = (1, 20)
+    page_2 = (10, 23)
+    page_3 = (100, 41)
+    page_4 = (1000, 620)
+    page_5 = (10000, 21)
+    page_6 = (100000, 57)
     primary_index = dbms.catalog_manager.get_auxiliary('table_key_1', 'intensity')
     primary_index.recreate([page_1, page_2, page_3, page_4, page_5])
-    print('pages', primary_index.pages)
-    print('page', primary_index.get(1))
+    primary_index.set(101, 50)
+    primary_index.set(102, 50)
+    primary_index.set(103, 50)
+    print('pages', primary_index.page_numbers, primary_index.overflows)
+    primary_index.set(105, None)
+    primary_index.set(103, None)
+    primary_index.set(1000, None)
+    print('pages', primary_index.page_numbers, primary_index.overflows)
+    print('page', primary_index.get(3))
     primary_index.recreate([page_2, page_3, page_5])
-    print('pages', primary_index.pages)
+    print('pages!', primary_index.page_numbers)
     print('page', primary_index.get(101))
 
     # txns = txn_mgr.read_files(file_names)

@@ -51,11 +51,7 @@ class AccessMethod():
 
 
 class Auxiliary(AccessMethod):
-    def set(self, key, page_key):
-        self.pages[key] = page_key
-
-    def get(self, key):
-        return self.pages.get(key)
+    pass
 
 
 class Filter(AccessMethod):
