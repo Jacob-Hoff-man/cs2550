@@ -38,7 +38,6 @@ class CatalogManager(Component):
                 case AuxiliaryType.CLUSTERED.value:
                     return ClusteredIndex()
                 case AuxiliaryType.PRIMARY.value:
-                    # TODO
                     return PrimaryIndex()
                 case AuxiliaryType.R_TREE.value:
                     # TODO

@@ -1,11 +1,14 @@
 from Common import Auxiliary
 
 class ClusteredIndex(Auxiliary):
-    def set(self, key, page_key):
-        self.pages[key] = page_key
+    def set(self, anchor, page_number):
+        if page_number == None:
+            del self.page_numbers[anchor]
+        else:
+            self.page_numbers[anchor] = page_number
 
-    def get(self, key):
-        return self.pages.get(key)
+    def get(self, anchor):
+        return self.pages.get(anchor)
     
     def __init__(self) -> None:
-        self.pages = {}
+        self.page_numbers = {}
