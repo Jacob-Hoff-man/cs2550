@@ -1,7 +1,7 @@
 import copy
 import random
 
-from Common import Component, Page, File, Table
+from Common import Component, File, Page, Table
 # from Common import Component
 from Logger import LogType
 
@@ -10,7 +10,7 @@ blm_flt = [0]*64000
 num_pages = 0
 
 
-class Page_old():
+class page_old():
     def __init__(self, _id) -> None:
         print(f"\t\t\tMaking page {_id}")
         self.id = _id
@@ -73,7 +73,7 @@ class Page_old():
         return f"\n\t\tpage {self.id}: {self.content}"
 
 
-class File_old():
+class file_old():
     def __init__(self, name, page_table, col_cache) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
@@ -132,7 +132,7 @@ class File_old():
         return f"\n\t{self.attr} " + "".join([str(x) for x in self.pages])
 
 
-class Table_old():
+class table_old():
     def __init__(self, name, PK, attrs, page_table, column_cache) -> None:
         print(f"make table: {name}")
         self.name = name
@@ -263,8 +263,8 @@ class ColBuffer():
                 tuples.append(page.content[page.map[c_id]])
         tuple_r = (c_id, tuples[0][0], tuples[0][1], tuples[0][2])
         # row_cache.add(tuple_r)
+        row_cache.add(tuple_r)
         # add the tuple to the row buffer
-        return
 
     def __str__(self) -> str:
         if len(self.buffer) == 0:
@@ -296,26 +296,73 @@ class RowBuffer():
     def __init__(self, size) -> None:
         self.buffer = {}
         self.max = size
+        self.map = {} # maps CoffeeIDs to Row Buffer Pages
 
     def do_op(self, op):
         # data manager will send ops to buffer such as flushing
         # or sending to row buffer
         return
 
-    def flush(self, idx=None):
-        # flushes this frame
-        # idx is None then flush whole thing?
-        # if dirty need to write back/through to disc
-        return
+    def read(self, c_id):
+        # read a coffee id from the row buffer
+        if c_id not in self.map.keys():
+            return None
+        else: 
+            page_n = self.map[c_id]
+            page = self.buffer[page_n]
+            for tup in page.contents:
+                if tup[1][0] == c_id:
+                    return tup[0]
+            
+    def flush(self, c_id):
+        if c_id not in self.map.keys():
+            # c_id not in row buffer
+            return
+        page_n = self.map[c_id]
+        page = self.buffer[page_n]
+        del self.map[c_id]
+        
+        for tup in page.contents:
+            if tup[1][0] == c_id:
+                # found the tuple
+                table = tup[0]
+                tup = tup[1]
+                id_ = tup[0]
+                insert(table, id_, tup)
+                # for each attr get page num and insert tup to that page num
+                
+    def flush_all(self):
+        for id_ in self.map.keys():
+            self.flush(id_)
+        self.map = {}
+        self.buffer = {}  
 
     def set(self, idx, page):
         # sets idx to page
-        return
+        raise NotImplementedError
 
     def to_col(self, idx):
         # create the columns
         # return it to data manager or can send to directly to col buffer
-        return
+        raise NotImplementedError
+    
+    def add(self, table, tuple_r):
+        last = max(self.buffer.keys())
+        if self.buffer[last].full():
+            # need to add a page
+            if len(self.buffer.keys()) + 1 > self.max:
+                # cant add a page
+                self.flush_all()
+                self.buffer[0] = Page(0)
+                self.buffer[0].add_tuple(tuple_r) 
+                self.map[tuple_r[0]] = 0
+            else: 
+                idx = len(self.buffer.keys())
+                self.buffer[idx] = Page(idx)   
+                self.buffer[idx].add_tuple((table, tuple_r))
+        else: 
+            # can add to last page
+            self.buffer[last].add_tuple((table, tuple_r))
 
 
 class DataManager(Component):
@@ -363,10 +410,26 @@ class DataManager(Component):
 
     def insert_to_disc(self):
         raise NotImplementedError
+    
+#G table val: Counts the number of coffees which have val as intensity in table. If table does not exist, the group-by-count is aborted
+def g_op(table, val):
+    # return from aggregate thing on the file
+    raise NotImplementedError
+
+# M table val: Retrieve the coffee name(s) for all record(s) with countryOfOrigin=val in table. If table does not exist, the read is aborted.
+def op_m(table, val):
+    raise NotImplementedError
+
+# T table: Retrieve all the record(s) from table. If table does not exist, the read is aborted
+def table_read(table):
+    if table not in catalog.keys():
+        # table does not exist or the ID is not in the bloom filter
+        return 0  # no op
+    table = catalog[table]
+
+    # how to get all the CoffeeIDs?
 
 # R table val: Retrieve record(s) with coffeeID = val. If table does not exist, the read is aborted.
-
-
 def read(table, ID):
     if table not in catalog.keys() or blm_flt[ID] == 0:
         # table does not exist or the ID is not in the bloom filter
@@ -413,13 +476,14 @@ def read(table, ID):
             if page is None:
                 quit("READ 2: page is none")
         frames.append(entry_rec.frame_num)
-        col_cache.to_row(frames)
+        col_cache.to_row(table, frames)
         # call to_row() and append the tuple into row buffer
+        return row_cache.read(ID)
         # return the tuple
 
         # U table (ID, val): Update the intensity of the coffeeID=ID to be val. If table does not exist, it is created
 
-
+# U table (ID, val): Update the intensity of the coffeeID=ID to be val. If table does not exist, it is created
 def update(table, ID, val):
     global num_pages
     # raise NotImplementedError
@@ -507,7 +571,7 @@ def update(table, ID, val):
     print(col_cache)
     return True
 
-
+# I table (t): Insert the new record t = (coffeeID, coffeeName, intensity, countryOfOrigin) into table. If table does not exist, this operation should create that table.
 def insert(table, ID, tuple_i):
     global num_pages
     print("INSERT inserting a tuple")
