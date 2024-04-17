@@ -1,6 +1,9 @@
-from enum import Enum
-from Logger import LoggerSingleton as l, LogType
 import copy
+from enum import Enum
+
+from filters.BloomFilter import BloomFilter
+from Logger import LoggerSingleton as l
+from Logger import LogType
 
 
 class OrgType(Enum):
@@ -194,7 +197,7 @@ class Table():
         self.name = name
         self.PK = PK
         self.attrs = {}
-
+        self.blm_fltr = BloomFilter()
         for attr in attrs:
             print(f"\tTABLE Making attr file: {attr}")
             self.attrs[attr] = File(attr, page_table, column_cache)
