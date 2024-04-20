@@ -1,21 +1,25 @@
 import sys
-from TransactionManager import TransactionManager
+
 from CatalogManager import CatalogManager
-from Common import Component, Table, Page
+from Common import Component, Page, Table
+from DataManager import DataManager
 from Logger import LogType
+from TransactionManager import TransactionManager
+
 
 class DbmsSimulator(Component):
     def get_table(self, table_key):
         return self.tables.get(table_key)
     
     def set_table(self, table_key, table):
-        self.table[table_key] = table
+        self.tables[table_key] = table
 
     def __init__(self, schema_file_name) -> None:
         super().__init__(LogType.DBMS_SIMULATOR)    
         self.tables = {}
         self.transaction_manager = TransactionManager()
         self.catalog_manager = CatalogManager(schema_file_name)
+        self.data_manager = DataManager(self.catalog_manager, self.tables, 4)
         self.log('DBMS Simulator component initialized.')
 
 def main():
