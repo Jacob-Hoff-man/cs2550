@@ -1,11 +1,14 @@
 import json
-from Common import Component, FilterType, AuxiliaryType, AggregateType, Auxiliary, Filter
-from Logger import LogType
+
+from aggregates.Count import Count
+from auxilaries.BPlusTree import BPlusTree
 from auxilaries.ClusteredIndex import ClusteredIndex
 from auxilaries.PrimaryIndex import PrimaryIndex
-from auxilaries.BPlusTree import BPlusTree
+from Common import (AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
+                    FilterType)
 from filters.BloomFilter import BloomFilter
-from aggregates.Count import Count
+from Logger import LogType
+
 
 class Catalog():
     def __init__(self) -> None:

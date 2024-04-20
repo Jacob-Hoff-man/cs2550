@@ -1,7 +1,7 @@
 import copy
 from enum import Enum
 
-from filters.BloomFilter import BloomFilter
+#from filters.BloomFilter import BloomFilter
 from Logger import LoggerSingleton as l
 from Logger import LogType
 
@@ -33,7 +33,7 @@ class RecordOrganizationType(Enum):
     COLUMN = 1
 
 
-class RecordCoffee():
+class Record():
     def __init__(self, coffee_id, coffee_name, intensity, country_of_origin) -> None:
         self.coffee_id = coffee_id
         self.coffee_name = coffee_name
@@ -50,15 +50,18 @@ class Component():
 
 
 class AccessMethod():
-    pass
+    def __init__(self) -> None:
+        return
 
 
 class Auxiliary(AccessMethod):
-    pass
+    def __init__(self) -> None:
+        super().__init__()
 
 
-class Filter(AccessMethod):
-    pass
+class Filter():
+    def __init__(self) -> None:
+        return
 
 
 class Aggregate(AccessMethod):
@@ -136,8 +139,8 @@ class File():
     def __init__(self, name, page_table, col_cache) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
-        self.map = {}
-        self.page_map = {}
+        self.map = {} # c_id to page num
+        self.page_map = {} # page_num to page
         self.pages = []
         self.pg_tbl = page_table
         self.col_cache = col_cache
@@ -192,12 +195,13 @@ class File():
 
 
 class Table():
-    def __init__(self, name, PK, attrs, page_table, column_cache) -> None:
+    def __init__(self, name: str, PK: str, attrs: list, page_table, column_cache) -> None:
         print(f"make table: {name}")
         self.name = name
         self.PK = PK
         self.attrs = {}
-        self.blm_fltr = BloomFilter()
+        #self.blm_fltr = BloomFilter()
+        self.blm_fltr = [0]*64000
         for attr in attrs:
             print(f"\tTABLE Making attr file: {attr}")
             self.attrs[attr] = File(attr, page_table, column_cache)
