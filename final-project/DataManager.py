@@ -2,161 +2,12 @@ import copy
 import random
 
 from CatalogManager import CatalogManager
-from Common import Component, File, Page, Record, Table
+from Common import AuxiliaryType, Component, File, Page, Record, Table
 
 # from Common import Component
 from Logger import LogType
 
-blm_flt = [0] * 64000
-
 num_pages = 0
-
-
-class page_old:
-    def __init__(self, _id) -> None:
-        print(f"\t\t\tMaking page {_id}")
-        self.id = _id
-        self.content = []
-        self.map = {}  # each page has a map for getting tuples
-        self.max = 2
-
-    def full(self):
-        print(
-            f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}"
-        )
-        return len(self.content) == self.max
-
-    def add_tuple(self, _tuple) -> None:
-        print("PAGE: adding a tuple")
-        # will replace this w map for correct position in page
-        if _tuple[0] in self.map.keys():
-            print(f"PAGE: c_id {_tuple[0]} is in map keys: {self.map.keys()}")
-            if _tuple[1] is None:
-                print("PAGE: insert is a delete, val is none")
-                idx = self.map[_tuple[0]]
-                print(f"Mapping is from c_id {_tuple[0]} to idx {idx}")
-                del self.map[idx]
-
-                print("PAGE: remove tuple and update maps")
-                temp = []
-                for _tup in self.content:
-                    if _tup[0] is not _tuple[0]:
-                        print(f"keep {_tup[0]}")
-                        temp.append(_tup)
-                        self.map[_tup[0]] = len(temp)
-                    else:
-                        print(f"removed {_tup[0]}")
-                self.content = copy.deepcopy(temp)
-                print(f"content after insert {self.content}")
-                return
-            else:
-                # do an update
-                idx = self.map[_tuple[0]]
-                print(
-                    f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}"
-                )
-                self.content[idx] = _tuple
-                return
-        print("searching content")
-        i = 0
-        for tuple_ent in self.content:
-            if tuple_ent[0] == _tuple[0]:
-                print(f"found tuple at {i}")
-                tuple_ent[1] = _tuple[1]
-                self.map[tuple_ent[0]] = i
-                print("update map")
-                return
-            i += 1
-
-        self.map[_tuple[0]] = len(self.content)
-        self.content.append(_tuple)
-        print(
-            f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}"
-        )
-
-    def __str__(self) -> str:
-        return f"\n\t\tpage {self.id}: {self.content}"
-
-
-class file_old:
-    def __init__(self, name, page_table, col_cache) -> None:
-        print(f"\t\tmaking file: {name}")
-        self.attr = name
-        self.map = {}
-        self.page_map = {}
-        self.pages = []
-        self.pg_tbl = page_table
-        self.col_cache = col_cache
-
-    def get_map(self, id):
-        if id not in self.map.keys():
-            # id is not in the file yet
-            print(f"id {id} is not in file map yet ")
-            # return the best page for it to be on
-            for page in self.pages:
-                if self.pg_tbl.get_entry(page.id).valid:
-                    print("page found is in buffer")
-                    if not self.col_cache.get(
-                        pg_tbl.get_entry(page.id).frame_num
-                    ).full():
-                        print("found an empty page in buffer")
-                        # page isnt full
-                        return page.id
-                else:
-                    print("page is not in buffer")
-                    if not page.full():
-                        print("found an empty page in disk")
-                        # page isnt full
-                        return page.id
-            # all pages are full
-            print("all pages are full or no pages exists yet")
-            return None
-        else:
-            return self.map[id]
-
-    def update_map(self, id, page_num) -> None:
-        self.map[id] = page_num
-
-    def remove_map(self, id) -> None:
-        del self.map[id]
-
-    def add_page(self) -> int:
-        global num_pages
-        print(f"FILE num pages is {num_pages}")
-        _id = num_pages
-        num_pages += 1
-
-        new_page = Page(_id)
-        self.pages.append(new_page)
-        self.page_map[_id] = len(self.pages) - 1
-        return _id
-
-    def get_page(self, _id) -> Page:
-        # do some check bounds etc
-        return self.pages[self.page_map[_id]]
-
-    def __str__(self) -> str:
-        return f"\n\t{self.attr} " + "".join([str(x) for x in self.pages])
-
-
-class table_old:
-    def __init__(self, name, PK, attrs, page_table, column_cache) -> None:
-        print(f"make table: {name}")
-        self.name = name
-        self.PK = PK
-        self.attrs = {}
-
-        for attr in attrs:
-            print(f"\tTABLE Making attr file: {attr}")
-            self.attrs[attr] = File(attr, page_table, column_cache)
-
-    def get_file(self, name):
-        return self.attrs[name]
-
-    def __str__(self):
-        return f"{self.name} PK: {self.PK}" + "".join(
-            [str(x) for x in self.attrs.values()]
-        )
 
 
 class PageTableEntry:
@@ -187,28 +38,12 @@ class PageTable:
         self.map[page_num] = page_table_entry
 
 
-def write_out(page: Page):
-
-    pg_id = page.id
-    print(f"writing out page w id {pg_id}")
-
-    for table in catalog.values():
-        for file in table.attrs.values():
-            i = 0
-            for page_ in file.pages:
-                if page_.id == pg_id:
-                    print("Found the page on disc")
-                    file.pages[i] = copy.deepcopy(page)
-                    return
-                i += 1
-    print("page wasnt found on disk")
-
-
 class ColBuffer:
-    def __init__(self, size) -> None:
+    def __init__(self, dt_mngr, size) -> None:
         self.buffer = {}
         self.max = size  # max index in buffer (used by page table)
         self.free = [x for x in range(self.max)]
+        self.dt_mngr = dt_mngr
 
     def do_op(self, op):
         # data manager will send ops to buffer such as flushing
@@ -227,13 +62,13 @@ class ColBuffer:
         print(f"Flushing frame: {idx}")
         page = self.buffer[idx]
         print(f"page selected is {page.id}")
-        pg_entry = pg_tbl.get_entry(page.id)
+        pg_entry = self.dt_mngr.pg_tbl.get_entry(page.id)
         print(f"got entry from page table: {pg_entry}")
         pg_entry.valid = False
         print("make mapping false")
         if pg_entry.dirty:
             print("page is dirty, write it out")
-            write_out(page)
+            self.dt_mngr.write_out(page)
         print(f"deleting {idx} from {self.buffer.keys()}")
         del self.buffer[idx]
         self.free.append(idx)
@@ -270,7 +105,7 @@ class ColBuffer:
         print(f"TO ROW table: {table} c_id: {c_id}")
 
         # row_cache.add(tuple_r)
-        row_cache.add(table, record)
+        self.dt_mngr.row_cache.add(table, c_id, record)
         # add the tuple to the row buffer
 
     def __str__(self) -> str:
@@ -280,10 +115,11 @@ class ColBuffer:
 
 
 class RowBuffer:
-    def __init__(self, size) -> None:
+    def __init__(self, dt_mngr, size) -> None:
         self.buffer = {}
         self.max = size
         self.map = {}  # maps (table id, CoffeeIDs) to Row Buffer Pages
+        self.dt_mngr = dt_mngr
 
     def do_op(self, op):
         # data manager will send ops to buffer such as flushing
@@ -316,12 +152,12 @@ class RowBuffer:
                 t_id = tup[0]
                 tup = tup[1]
                 id_ = tup[1][0]
-                insert(t_id, id_, tup)
+                self.dt_mngr.insert(t_id, id_, tup)
                 # for each attr get page num and insert tup to that page num
 
     def flush_all(self):
-        for id_ in self.map.keys():
-            self.flush(id_)
+        for tu_ in self.map.keys():
+            self.flush(tu_[0], tu_[1])
         self.map = {}
         self.buffer = {}
 
@@ -334,7 +170,7 @@ class RowBuffer:
         # return it to data manager or can send to directly to col buffer
         raise NotImplementedError
 
-    def add(self, t_id, c_id, record):
+    def add(self, t_id: str, c_id: int, record: Record):
         # add the record to the buffer or update
         # if not in the buffer add it to buffer
         if (t_id, c_id) not in self.map.keys():
@@ -344,7 +180,7 @@ class RowBuffer:
             except:
                 self.buffer[0] = Page(0)
                 self.map[t_id] = {}
-                self.map[t_id][record[0]] = 0
+                self.map[t_id][record.coffee_id] = 0
                 last = 0
             if self.buffer[last].full():
                 # need to add a page
@@ -362,11 +198,23 @@ class RowBuffer:
                 # can add to last page
                 self.buffer[last].add_tuple((t_id, record))
         else:
+            # self.coffee_id = coffee_id
+            # self.coffee_name = coffee_name
+            # self.intensity = intensity
+            # self.country_of_origin = country_of_origin
             page_n = self.map[c_id]
             page = self.buffer[page_n]
             for tup in page.contents:
                 if tup[0] == t_id and tup[1][0] == c_id:
                     record_ = tup[1]
+                    # if record_.coffeeID is None:
+                    #     record_.coffeeID = record.coffeeID
+                    if record_.coffee_name is None:
+                        record_.coffee_name = record.coffee_name
+                    if record_.intensity is None:
+                        record_.intensity = record.intensity
+                    if record_.country_of_origin is None:
+                        record_.country_of_origin = record.country_of_origin
 
 
 class DataManager(Component):
@@ -378,10 +226,26 @@ class DataManager(Component):
         self.tables = tables
         self.recovery_log = {}
         self.pg_tbl = PageTable()
-        self.col_cache = ColBuffer(buff_size)
-        self.row_cache = RowBuffer(buff_size)
+        self.col_cache = ColBuffer(self, buff_size)
+        self.row_cache = RowBuffer(self, buff_size)
         self.lru_arr = []
         self.log("data manager component intialized message")
+
+    def write_out(self, page: Page):
+
+        pg_id = page.id
+        print(f"writing out page w id {pg_id}")
+
+        for table in self.tables.values():
+            for file in table.attrs.values():
+                i = 0
+                for page_ in file.pages:
+                    if page_.id == pg_id:
+                        print("Found the page on disc")
+                        file.pages[i] = copy.deepcopy(page)
+                        return
+                    i += 1
+        print("page wasnt found on disk")
 
     def get_table(self, table_key: str) -> Table:
         return self.tables.get(table_key)
@@ -456,7 +320,6 @@ class DataManager(Component):
     # T table: Retrieve all the record(s) from table. If table does not exist, the read is aborted
     def table_read(self, table_id: str):
         if table_id not in self.catalog_manager.catalogs.keys():
-
             # table does not exist
             return 0  # no op
         table = self.get_table(table_id)
@@ -511,19 +374,21 @@ class DataManager(Component):
         return str_r
 
     # R table val: Retrieve record(s) with coffeeID = val. If table does not exist, the read is aborted.
-    def read(self, table_id: str, ID):
+    def read(self, table_id: str, ID: int):
         if table_id not in self.catalog_manager.catalogs.keys():
 
             # table does not exist
             return 0  # no op
         table = self.get_table(table_id)
-        if table.blm_fltr[ID] == 0:  # if tuple is Null
+        blm_fltr = self.catalog_manager.get_filter(table_id, "coffee_id")
+        if ID in blm_fltr:  # if tuple is Null
+            print("READ ID IS NOT IN THE TABLE")
             return 0  # no op
         # for attr in attrs
-        frames = []
-        for attr in ["CoffeeName", "Intensity", "CountryOfOrigin"]:
+        for attr in ["coffee_name", "intensity", "country_of_origin"]:
             file = table.attrs[attr]
-            page_num = file.get_map(ID)
+            acc_m = self.catalog_manager.get_auxiliary(table_id, attr)
+            page_num = acc_m.get(ID)
             if page_num is None:
                 print("READ page num is none: id not in table")
                 return 0
@@ -554,7 +419,7 @@ class DataManager(Component):
                 if page is None:
                     quit("READ 1: page is none")
             else:
-                print(f"READget page from cache {entry_rec.frame_num}")
+                print(f"READ get page from cache {entry_rec.frame_num}")
                 page = self.col_cache.get(entry_rec.frame_num)
                 entry_rec.valid = True
                 if page_num in self.lru_arr:
@@ -562,10 +427,16 @@ class DataManager(Component):
                 self.lru_arr.append(page_num)
                 if page is None:
                     quit("READ 2: page is none")
+            tuple_ = page.get_tuple(ID)
+            match (attr):
+                case "coffee_name":
+                    record = Record(ID, tuple_[1], None, None)
+                case "intensity":
+                    record = Record(ID, None, tuple_[1], None)
+                case "country_of_origin":
+                    record = Record(ID, None, None, tuple_[1])
 
-            self.col_cache.to_row(table_id, ID, frames)
-            frames.append(entry_rec.frame_num)
-        print(frames)
+            self.col_cache.to_row(table_id, ID, record)
 
         # call to_row() and append the tuple into row buffer
         return self.row_cache.read(table_id, ID)
@@ -576,8 +447,8 @@ class DataManager(Component):
         global num_pages
         # raise NotImplementedError
         print("UPDATE UPDATEing a tuple")
-
-        if val == None or blm_flt[ID] == 0:  # if tuple is Null
+        table = self.get_table(table_id)
+        if val == None or table.blm_fltr[ID] == 0:  # if tuple is Null
             return 0  # no op
 
         # check catalog for table
@@ -606,7 +477,7 @@ class DataManager(Component):
         # use access method to get to page num for UPDATEing
         c_id = attr_tup[0]
         # val = attr_tup[1]
-        file = table.attrs["Intensity"]
+        file = table.attrs["intensity"]
         print(f"UPDATE c_id: {c_id}")
         page_num = file.get_map(c_id)
         if page_num is None:
@@ -615,7 +486,8 @@ class DataManager(Component):
             num_pages += 1
             page_num = file.add_page(num_pages)
             print(f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
-            file.update_map(c_id, page_num)
+            acc_m = self.catalog_manager.get_auxiliary(table_id, "intensity")
+            acc_m.set(c_id, page_num)
 
         # check page table for page num
         print(f"UPDATE get entry from page table for page_num {page_num}")
@@ -668,21 +540,95 @@ class DataManager(Component):
         file.update_map(c_id, page_num)
         # update the access method if need be
         # update the bloom filter
-        blm_flt[c_id] = 1
+        table = self.get_table(table_id)
+        table.blm_fltr[c_id] = 1
         print("\n")
         print(self.col_cache)
         return True
+
+    def insert_name_tuple(self, t_id, c_id, val):
+        global num_pages
+        table = self.get_table(t_id)
+        file = table.attrs["coffee_name"]
+        acc_m = self.catalog_manager.get_auxiliary(t_id, "coffee_name")
+
+        try:
+            page_anchor, page_num = acc_m.get(c_id)
+        except:
+            # return was none
+            # create a new page where c_id will be the anchor
+            # then recreate the acc_m
+
+            # make a page
+            num_pages += 1
+            page_num = file.add_page(num_pages)
+            page_anchor = c_id
+            index = acc_m.get_index()
+            recreate_page_numbers = [(page_anchor, page_num)]
+            for index_anchor in index:
+                index_page_number = acc_m.page_numbers.get(index_anchor)
+                recreate_page_numbers.append((index_anchor, index_page_number))
+            acc_m.recreate(recreate_page_numbers)
+
+            print(f"INSERT get entry from page table for page_num {page_num}")
+            entry_rec = self.pg_tbl.get_entry(page_num)
+            if entry_rec is None or entry_rec.valid == False:  # not in the buffer
+                # evict a page (LRU)
+                print("INSERT entry_rec is None\nCall LRU")
+                frame_num = self.lru()
+                print(f"INSERT evicted {frame_num}")
+                # update page table w that page num and frame num
+                print("INSERT create page table entry")
+                entry = PageTableEntry(frame_num)
+                print(f"INSERT set page table entry {page_num} {entry} ")
+                self.pg_tbl.set_entry(page_num, entry)
+                entry.valid = True
+                entry.dirty = True
+                if page_num in self.lru_arr:
+                    self.lru_arr.remove(page_num)
+                self.lru_arr.append(page_num)
+                # put page in buffer at mapping
+                # page = disc_mngr.get(File, page_num)
+                print(f"INSERT set page from file page num: {page_num}")
+                page = file.get_page(page_num)
+                print(f"INSERT set cache value {frame_num} {page_num}")
+                self.col_cache.set(frame_num, page)
+                # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
+                page = self.col_cache.get(frame_num)
+                print("INSERT col cache after set: ", self.col_cache)
+                if page is None:
+                    quit("INSERT 1: page is none")
+            else:
+                print(f"INSERT get page from cache {entry_rec.frame_num}")
+                page = self.col_cache.get(entry_rec.frame_num)
+                entry_rec.dirty = True
+                entry_rec.valid = True
+                if page_num in self.lru_arr:
+                    self.lru_arr.remove(page_num)
+                self.lru_arr.append(page_num)
+
+                if page is None:
+                    quit("INSERT 2: page is none")
+            # Now page is in buffer
+            # use page map to find correct position for tuple in the page
+
+            # insert the tuple
+            print("INSERT insert tuple to page")
+            page.add_tuple((c_id, val))
+        return
+
+    def insert_intensity_tuple(self, t_id, c_id, val):
+        acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
+        return
+
+    def insert_coo_tuple(self, t_id, c_id, val):
+        acc_m = self.catalog_manager.get_auxiliary(t_id, "country_of_origin")
+        return
 
     # I table (t): Insert the new record t = (coffeeID, coffeeName, intensity, countryOfOrigin) into table. If table does not exist, this operation should create that table.
     def insert(self, table_id, ID, tuple_i):
         global num_pages
         print("INSERT inserting a tuple")
-        # check bloom filter for ID
-        # if blm_flt[ID] == 1: # if it is there
-        #     print("ID present in data (probably) updating...")
-        #     return update(table, ID, tuple_i) # Call Update
-        # else: # if not
-        #     print("ID not present in data")
 
         # check catalog for table
         if table_id not in self.catalog_manager.catalogs.keys():
@@ -701,8 +647,8 @@ class DataManager(Component):
             self.set_table(table_id, table_new)
 
         table = self.get_table(table_id)
-
-        if tuple_i == None and table.blm_fltr[ID] == 0:  # if tuple is Null
+        blm_fltr = self.catalog_manager.get_filter(table_id, "coffee_id")
+        if tuple_i == None and ID in blm_fltr:  # if tuple is Null
             return 0  # no op
         # turn record into tuples
         print("INSERT Create tuples from record")
@@ -720,17 +666,39 @@ class DataManager(Component):
             print(f"INSERT on {attr} with tuple: {attr_tup}")
             # use access method to get to page num for inserting
             c_id = attr_tup[0]
+            val = attr_tup[1]
+            match (attr):
+                case "coffee_name":
+                    self.insert_name_tuple(table_id, c_id, val)
+                case "intensity":
+                    self.insert_intensity_tuple(table_id, c_id, val)
+                case "country_of_origin":
+                    self.insert_coo_tuple(table_id, c_id, val)
+
             # val = attr_tup[1]
             file = table.attrs[attr]
             print(f"INSERT c_id: {c_id}")
-            page_num = file.get_map(c_id)
+            acc_m = self.catalog_manager.get_auxiliary(table_id, attr)
+            match (acc_m_type):
+                case AuxiliaryType.PRIMARY.value:
+                    anchor, page_num = acc_m.get(ID)
+                case AuxiliaryType.CLUSTERED.value:
+                    page_num = acc_m.get(attr_tup[1])
+
             if page_num is None:
                 print("INSERT page num is none add a page")
                 # make a page
                 num_pages += 1
                 page_num = file.add_page(num_pages)
                 print(f"INSERT update the map c_id: {c_id} to page_num: {page_num}")
-                file.update_map(c_id, page_num)
+                match (acc_m_type):
+                    case AuxiliaryType.PRIMARY.value:
+                        anchor = ID
+                        acc_m.set(anchor, page_num)
+                    case AuxiliaryType.CLUSTERED.value:
+                        key = attr_tup[1]
+
+                acc_m.set(c_id, page_num)
 
             # check page table for page num
             print(f"INSERT get entry from page table for page_num {page_num}")
@@ -762,8 +730,8 @@ class DataManager(Component):
                 if page is None:
                     quit("INSERT 1: page is none")
             else:
-                print(f"INSERTget page from cache {entry_rec.frame_num}")
-                page = self.fcol_cache.get(entry_rec.frame_num)
+                print(f"INSERT get page from cache {entry_rec.frame_num}")
+                page = self.col_cache.get(entry_rec.frame_num)
                 entry_rec.dirty = True
                 entry_rec.valid = True
                 if page_num in self.lru_arr:
@@ -782,16 +750,32 @@ class DataManager(Component):
             print("INSERT col cache after tuple insert: ", self.col_cache)
             # update the map
             print(f"INSERT update file map {c_id} {page_num}")
+            acc_m = self.catalog_manager.get_auxiliary(table_id, attr)
+            acc_m_type = self.catalog_manager.get_column_definition(
+                attr
+            ).access_methods.auxillary
+
+            match (acc_m_type):
+                case AuxiliaryType.PRIMARY.value:
+                    anchor = page.content[0]
+                    acc_m.set(anchor, page.id)
+                case AuxiliaryType.CLUSTERED.value:
+                    return
+
+            acc_m.set()
             file.update_map(c_id, page_num)
             # update the access method if need be
             # update the bloom filter
-            blm_flt[c_id] = 1
+            table = self.get_table(table_id)
+            table.blm_fltr[c_id] = 1
             print("\n")
         print(self.col_cache)
         return True
 
 
-dt_mngr = DataManager(4)
+ctlg_mngr = CatalogManager("final-project/schema.json")
+tables = {}
+dt_mngr = DataManager(ctlg_mngr, tables, 4)
 
 dt_mngr.insert("starbucks", 0, ("latte", 5, "USA"))
 print(dt_mngr.get_table("starbucks"))  # table print
@@ -813,15 +797,18 @@ print(dt_mngr.get_table("starbucks"))  # table print
 print(dt_mngr.col_cache)
 
 print("\nSTART READ")
-print(dt_mngr.read("starbucks", 1))
+x = dt_mngr.read("starbucks", 1)
+print("OUTPUT: ", x)
+print("END READ")
 
 dt_mngr.insert("starbucks", 2, ("latte", 5, "ITALLIIIAAA"))
 print(dt_mngr.get_table("starbucks"))  # table print
 print(dt_mngr.col_cache)
 
 print("START TABLE READ")
-print(dt_mngr.table_read("starbucks"))
-
+x = dt_mngr.table_read("starbucks")
+print("OUTPUT: ", x)
+print("END TABLE READ")
 
 dt_mngr.col_cache.full_flush()
 print(dt_mngr.get_table("starbucks"))  # table print

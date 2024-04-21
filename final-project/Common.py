@@ -1,7 +1,7 @@
 import copy
 from enum import Enum
 
-#from filters.BloomFilter import BloomFilter
+# from filters.BloomFilter import BloomFilter
 from Logger import LoggerSingleton as l
 from Logger import LogType
 
@@ -33,7 +33,7 @@ class RecordOrganizationType(Enum):
     COLUMN = 1
 
 
-class Record():
+class Record:
     def __init__(self, coffee_id, coffee_name, intensity, country_of_origin) -> None:
         self.coffee_id = coffee_id
         self.coffee_name = coffee_name
@@ -41,7 +41,7 @@ class Record():
         self.country_of_origin = country_of_origin
 
 
-class Component():
+class Component:
     def __init__(self, log_type: LogType) -> None:
         self.log_type = log_type
 
@@ -49,7 +49,7 @@ class Component():
         l.log(self.log_type, message)
 
 
-class AccessMethod():
+class AccessMethod:
     def __init__(self) -> None:
         return
 
@@ -59,7 +59,7 @@ class Auxiliary(AccessMethod):
         super().__init__()
 
 
-class Filter():
+class Filter:
     def __init__(self) -> None:
         return
 
@@ -72,7 +72,7 @@ class Aggregate(AccessMethod):
         return self.values.get(key)
 
 
-class Page():
+class Page:
     def __init__(self, _id) -> None:
         print(f"\t\t\tMaking page {_id}")
         self.id = _id
@@ -82,8 +82,17 @@ class Page():
 
     def full(self):
         print(
-            f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}")
+            f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}"
+        )
         return len(self.content) == self.max
+
+    def get_tuple(self, c_id):
+        if c_id in self.map.keys():
+            idx = self.map[c_id]
+            print(f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            return self.content[idx]
+        else:
+            print(f"coffee id {c_id} not in page")
 
     def add_tuple(self, _tuple) -> None:
         print("PAGE: adding a tuple")
@@ -112,7 +121,8 @@ class Page():
                 # do an update
                 idx = self.map[_tuple[0]]
                 print(
-                    f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}")
+                    f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}"
+                )
                 self.content[idx] = _tuple
                 return
         print("searching content")
@@ -129,61 +139,26 @@ class Page():
         self.map[_tuple[0]] = len(self.content)
         self.content.append(_tuple)
         print(
-            f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}")
+            f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}"
+        )
 
     def __str__(self) -> str:
         return f"\n\t\tpage {self.id}: {self.content}"
 
 
-class File():
+class File:
     def __init__(self, name, page_table, col_cache) -> None:
         print(f"\t\tmaking file: {name}")
         self.attr = name
-        self.map = {} # c_id to page num
-        self.page_map = {} # page_num to page
+        self.page_map = {}  # page_num to page
         self.pages = []
         self.pg_tbl = page_table
         self.col_cache = col_cache
 
-    def get_map(self, id):
-        if id not in self.map.keys():
-            # id is not in the file yet
-            print(f"id {id} is not in file map yet ")
-            # return the best page for it to be on
-            for page in self.pages:
-                if self.pg_tbl.get_entry(page.id).valid:
-                    print("page found is in buffer")
-                    if not self.col_cache.get(self.pg_tbl.get_entry(page.id).frame_num).full():
-                        print("found an empty page in buffer")
-                        # page isnt full
-                        return page.id
-                else:
-                    print("page is not in buffer")
-                    if not page.full():
-                        print("found an empty page in disk")
-                        # page isnt full
-                        return page.id
-            # all pages are full
-            print("all pages are full or no pages exists yet")
-            return None
-        else:
-            return self.map[id]
-
-    def update_map(self, id, page_num) -> None:
-        self.map[id] = page_num
-
-    def remove_map(self, id) -> None:
-        del self.map[id]
-
     def add_page(self, id) -> int:
-        # global num_pages
-        # print(f"FILE num pages is {num_pages}")
-        # _id = num_pages
-        # num_pages += 1
-
         new_page = Page(id)
         self.pages.append(new_page)
-        self.page_map[id] = len(self.pages)-1
+        self.page_map[id] = len(self.pages) - 1
         return id
 
     def get_page(self, _id) -> Page:
@@ -194,14 +169,14 @@ class File():
         return f"\n\t{self.attr} " + "".join([str(x) for x in self.pages])
 
 
-class Table():
-    def __init__(self, name: str, PK: str, attrs: list, page_table, column_cache) -> None:
+class Table:
+    def __init__(
+        self, name: str, PK: str, attrs: list, page_table, column_cache
+    ) -> None:
         print(f"make table: {name}")
         self.name = name
         self.PK = PK
         self.attrs = {}
-        #self.blm_fltr = BloomFilter()
-        self.blm_fltr = [0]*64000
         for attr in attrs:
             print(f"\tTABLE Making attr file: {attr}")
             self.attrs[attr] = File(attr, page_table, column_cache)
@@ -210,4 +185,6 @@ class Table():
         return self.attrs[name]
 
     def __str__(self):
-        return f"{self.name} PK: {self.PK}" + "".join([str(x) for x in self.attrs.values()])
+        return f"{self.name} PK: {self.PK}" + "".join(
+            [str(x) for x in self.attrs.values()]
+        )
