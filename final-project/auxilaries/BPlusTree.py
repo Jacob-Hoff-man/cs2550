@@ -1,5 +1,6 @@
-from bplustree import BPlusTree as Bpt
+# from bplustree import BPlusTree as Bpt
 from Common import Auxiliary
+
 
 class BPlusTree(Auxiliary):
     def set(self, key, page_key):
@@ -7,6 +8,7 @@ class BPlusTree(Auxiliary):
 
     def get(self, key):
         return self.pages.get(key)
-    
+
     def __init__(self) -> None:
-        self.pages = Bpt('/tmp/bplustree.db', order=50)
+        # self.pages = Bpt('/tmp/bplustree.db', order=50)
+        return
