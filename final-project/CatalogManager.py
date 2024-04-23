@@ -1,7 +1,6 @@
 import json
 
 from aggregates.Count import Count
-from auxilaries.BPlusTree import BPlusTree
 from auxilaries.ClusteredIndex import ClusteredIndex
 from auxilaries.PrimaryIndex import PrimaryIndex
 from Common import (AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
@@ -9,13 +8,11 @@ from Common import (AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
 from filters.BloomFilter import BloomFilter
 from Logger import LogType
 
-
 class Catalog():
     def __init__(self) -> None:
         self.auxilaries = {}
         self.filters = {}
         self.aggregates = {}
-
 
 class CatalogManager(Component):
     def get_auxiliary(self, table_key, column_key) -> Auxiliary:
