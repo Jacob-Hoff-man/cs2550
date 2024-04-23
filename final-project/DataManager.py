@@ -289,7 +289,8 @@ class DataManager(Component):
 
     def lru(self):
         # need a way to know that there is an invalid mapping and can therefore be overwritten
-        print(f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
+        print(
+            f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
         if len(self.col_cache.free) > 0:
             # empty slot!
             # fill it.
@@ -308,7 +309,51 @@ class DataManager(Component):
             print(f"LRU: chose {evict} to evict")
             return evict
 
+    def get_page_to_buffer(self, page_num, file):
+        print(f"INSERT get entry from page table for page_num {page_num}")
+        entry_rec = self.pg_tbl.get_entry(page_num)
+        if entry_rec is None or entry_rec.valid == False:  # not in the buffer
+            # evict a page (LRU)
+            print("INSERT entry_rec is None\nCall LRU")
+            frame_num = self.lru()
+            print(f"INSERT evicted {frame_num}")
+            # update page table w that page num and frame num
+            print("INSERT create page table entry")
+            entry = PageTableEntry(frame_num)
+            print(f"INSERT set page table entry {page_num} {entry} ")
+            self.pg_tbl.set_entry(page_num, entry)
+            entry.valid = True
+            entry.dirty = True
+            if page_num in self.lru_arr:
+                self.lru_arr.remove(page_num)
+            self.lru_arr.append(page_num)
+            # put page in buffer at mapping
+            # page = disc_mngr.get(File, page_num)
+            print(f"INSERT set page from file page num: {page_num}")
+            page = file.get_page(page_num)
+            print(f"INSERT set cache value {frame_num} {page_num}")
+            self.col_cache.set(frame_num, page)
+            # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
+            page = self.col_cache.get(frame_num)
+            print("INSERT col cache after set: ", self.col_cache)
+            if page is None:
+                quit("INSERT 1: page is none")
+        else:
+            print(f"INSERT get page from cache {entry_rec.frame_num}")
+            page = self.col_cache.get(entry_rec.frame_num)
+            entry_rec.dirty = True
+            entry_rec.valid = True
+            if page_num in self.lru_arr:
+                self.lru_arr.remove(page_num)
+            self.lru_arr.append(page_num)
+
+            if page is None:
+                quit("INSERT 2: page is none")
+        return page
+        # Now page is in buffer
+        # use page map to find correct position for tuple in the page
     # G table val: Counts the number of coffees which have val as intensity in table. If table does not exist, the group-by-count is aborted
+
     def g_op(self, table_id: str, val):
         # return from aggregate thing on the file
         raise NotImplementedError
@@ -485,7 +530,8 @@ class DataManager(Component):
             # make a page
             num_pages += 1
             page_num = file.add_page(num_pages)
-            print(f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
+            print(
+                f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
             acc_m = self.catalog_manager.get_auxiliary(table_id, "intensity")
             acc_m.set(c_id, page_num)
 
@@ -570,59 +616,88 @@ class DataManager(Component):
                 recreate_page_numbers.append((index_anchor, index_page_number))
             acc_m.recreate(recreate_page_numbers)
 
-            print(f"INSERT get entry from page table for page_num {page_num}")
-            entry_rec = self.pg_tbl.get_entry(page_num)
-            if entry_rec is None or entry_rec.valid == False:  # not in the buffer
-                # evict a page (LRU)
-                print("INSERT entry_rec is None\nCall LRU")
-                frame_num = self.lru()
-                print(f"INSERT evicted {frame_num}")
-                # update page table w that page num and frame num
-                print("INSERT create page table entry")
-                entry = PageTableEntry(frame_num)
-                print(f"INSERT set page table entry {page_num} {entry} ")
-                self.pg_tbl.set_entry(page_num, entry)
-                entry.valid = True
-                entry.dirty = True
-                if page_num in self.lru_arr:
-                    self.lru_arr.remove(page_num)
-                self.lru_arr.append(page_num)
-                # put page in buffer at mapping
-                # page = disc_mngr.get(File, page_num)
-                print(f"INSERT set page from file page num: {page_num}")
-                page = file.get_page(page_num)
-                print(f"INSERT set cache value {frame_num} {page_num}")
-                self.col_cache.set(frame_num, page)
-                # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
-                page = self.col_cache.get(frame_num)
-                print("INSERT col cache after set: ", self.col_cache)
-                if page is None:
-                    quit("INSERT 1: page is none")
-            else:
-                print(f"INSERT get page from cache {entry_rec.frame_num}")
-                page = self.col_cache.get(entry_rec.frame_num)
-                entry_rec.dirty = True
-                entry_rec.valid = True
-                if page_num in self.lru_arr:
-                    self.lru_arr.remove(page_num)
-                self.lru_arr.append(page_num)
+        page = self.get_page_to_buffer(page_num, file)
+        # insert the tuple
+        print("INSERT insert tuple to page")
+        page.add_tuple((c_id, val))
 
-                if page is None:
-                    quit("INSERT 2: page is none")
-            # Now page is in buffer
-            # use page map to find correct position for tuple in the page
-
-            # insert the tuple
-            print("INSERT insert tuple to page")
-            page.add_tuple((c_id, val))
         return
 
     def insert_intensity_tuple(self, t_id, c_id, val):
         acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
+        global num_pages
+        table = self.get_table(t_id)
+        file = table.attrs["intensity"]
+        acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
+
+        try:
+            page_anchor, page_num = acc_m.get(c_id)
+        except:
+            # return was none
+            # create a new page where c_id will be the anchor
+            # then recreate the acc_m
+
+            # make a page
+            num_pages += 1
+            page_num = file.add_page(num_pages)
+            page_anchor = c_id
+            index = acc_m.get_index()
+            recreate_page_numbers = [(page_anchor, page_num)]
+            for index_anchor in index:
+                index_page_number = acc_m.page_numbers.get(index_anchor)
+                recreate_page_numbers.append((index_anchor, index_page_number))
+            acc_m.recreate(recreate_page_numbers)
+
+        page = self.get_page_to_buffer(page_num, file)
+        # use page map to find correct position for tuple in the page
+
+        # insert the tuple
+        print("INSERT insert tuple to page")
+        page.add_tuple((c_id, val))
         return
 
     def insert_coo_tuple(self, t_id, c_id, val):
+        global num_pages
+        table = self.get_table(t_id)
+        file = table.attrs["country_of_origin"]
         acc_m = self.catalog_manager.get_auxiliary(t_id, "country_of_origin")
+
+        page_nums = acc_m.get(val)
+        if page_nums is None:
+            # return was none
+            # value not in the index yet
+            # then recreate the acc_m
+            # make a page
+            num_pages += 1
+            page_num = file.add_page(num_pages)
+            page_anchor = val
+            acc_m.set(page_anchor, page_num)
+            page_nums = acc_m.get(val)
+
+        for page_num in page_nums:
+            page = self.get_page_to_buffer(page_num, file)
+            # insert the tuple
+            print("INSERT insert tuple to page")
+            if page.add_tuple((c_id, val)) == 0:
+                # sucessful add to the page
+                return
+            # else  page was full
+        # need to add to a diff  page
+        num_pages += 1
+        page_num = file.add_page(num_pages)
+        page_anchor = val
+        acc_m.set(page_anchor, page_num)
+        page_nums = acc_m.get(val)
+
+        page = self.get_page_to_buffer(page_num, file)
+        print("INSERT insert tuple to page")
+        if page.add_tuple((c_id, val)) == 0:
+            # sucessful add to the page
+            return
+        # how to link  new one to  this  anmchor?
+        # since we are clustering we need  to check  if the tuple can fit on this page
+        # if it doesnt, we need to make a  new page.
+
         return
 
     # I table (t): Insert the new record t = (coffeeID, coffeeName, intensity, countryOfOrigin) into table. If table does not exist, this operation should create that table.
@@ -674,142 +749,53 @@ class DataManager(Component):
                     self.insert_intensity_tuple(table_id, c_id, val)
                 case "country_of_origin":
                     self.insert_coo_tuple(table_id, c_id, val)
-
-            # val = attr_tup[1]
-            file = table.attrs[attr]
-            print(f"INSERT c_id: {c_id}")
-            acc_m = self.catalog_manager.get_auxiliary(table_id, attr)
-            match (acc_m_type):
-                case AuxiliaryType.PRIMARY.value:
-                    anchor, page_num = acc_m.get(ID)
-                case AuxiliaryType.CLUSTERED.value:
-                    page_num = acc_m.get(attr_tup[1])
-
-            if page_num is None:
-                print("INSERT page num is none add a page")
-                # make a page
-                num_pages += 1
-                page_num = file.add_page(num_pages)
-                print(f"INSERT update the map c_id: {c_id} to page_num: {page_num}")
-                match (acc_m_type):
-                    case AuxiliaryType.PRIMARY.value:
-                        anchor = ID
-                        acc_m.set(anchor, page_num)
-                    case AuxiliaryType.CLUSTERED.value:
-                        key = attr_tup[1]
-
-                acc_m.set(c_id, page_num)
-
-            # check page table for page num
-            print(f"INSERT get entry from page table for page_num {page_num}")
-            entry_rec = self.pg_tbl.get_entry(page_num)
-            if entry_rec is None or entry_rec.valid == False:  # not in the buffer
-                # evict a page (LRU)
-                print("INSERT entry_rec is None\nCall LRU")
-                frame_num = self.lru()
-                print(f"INSERT evicted {frame_num}")
-                # update page table w that page num and frame num
-                print("INSERT create page table entry")
-                entry = PageTableEntry(frame_num)
-                print(f"INSERT set page table entry {page_num} {entry} ")
-                self.pg_tbl.set_entry(page_num, entry)
-                entry.valid = True
-                entry.dirty = True
-                if page_num in self.lru_arr:
-                    self.lru_arr.remove(page_num)
-                self.lru_arr.append(page_num)
-                # put page in buffer at mapping
-                # page = disc_mngr.get(File, page_num)
-                print(f"INSERT set page from file page num: {page_num}")
-                page = file.get_page(page_num)
-                print(f"INSERT set cache value {frame_num} {page_num}")
-                self.col_cache.set(frame_num, page)
-                # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
-                page = self.col_cache.get(frame_num)
-                print("INSERT col cache after set: ", self.col_cache)
-                if page is None:
-                    quit("INSERT 1: page is none")
-            else:
-                print(f"INSERT get page from cache {entry_rec.frame_num}")
-                page = self.col_cache.get(entry_rec.frame_num)
-                entry_rec.dirty = True
-                entry_rec.valid = True
-                if page_num in self.lru_arr:
-                    self.lru_arr.remove(page_num)
-                self.lru_arr.append(page_num)
-
-                if page is None:
-                    quit("INSERT 2: page is none")
-            # Now page is in buffer
-            # use page map to find correct position for tuple in the page
-
-            # insert the tuple
-            print("INSERT insert tuple to page")
-            page.add_tuple(attr_tup)
-
-            print("INSERT col cache after tuple insert: ", self.col_cache)
-            # update the map
-            print(f"INSERT update file map {c_id} {page_num}")
-            acc_m = self.catalog_manager.get_auxiliary(table_id, attr)
-            acc_m_type = self.catalog_manager.get_column_definition(
-                attr
-            ).access_methods.auxillary
-
-            match (acc_m_type):
-                case AuxiliaryType.PRIMARY.value:
-                    anchor = page.content[0]
-                    acc_m.set(anchor, page.id)
-                case AuxiliaryType.CLUSTERED.value:
-                    return
-
-            acc_m.set()
-            file.update_map(c_id, page_num)
             # update the access method if need be
             # update the bloom filter
-            table = self.get_table(table_id)
-            table.blm_fltr[c_id] = 1
-            print("\n")
-        print(self.col_cache)
+        table = self.get_table(table_id)
+
+        blm_fltr.add(c_id)
+        print("\n")
+
         return True
 
 
-ctlg_mngr = CatalogManager("final-project/schema.json")
-tables = {}
-dt_mngr = DataManager(ctlg_mngr, tables, 4)
+# ctlg_mngr = CatalogManager("schema.json")
+# tables = {}
+# dt_mngr = DataManager(ctlg_mngr, tables, 4)
 
-dt_mngr.insert("starbucks", 0, ("latte", 5, "USA"))
-print(dt_mngr.get_table("starbucks"))  # table print
-print(dt_mngr.col_cache)
+# dt_mngr.insert("starbucks", 0, ("latte", 5, "USA"))
+# print(dt_mngr.get_table("starbucks"))  # table print
+# print(dt_mngr.col_cache)
 
-dt_mngr.insert("starbucks", 0, ("mochiato", 10, "France"))
-print(dt_mngr.get_table("starbucks"))  # table print
+# dt_mngr.insert("starbucks", 0, ("mochiato", 10, "France"))
+# print(dt_mngr.get_table("starbucks"))  # table print
 
 
-dt_mngr.insert("starbucks", 1, ("nitro", 12, "USA"))
-print(dt_mngr.get_table("starbucks"))  # table print
+# dt_mngr.insert("starbucks", 1, ("nitro", 12, "USA"))
+# print(dt_mngr.get_table("starbucks"))  # table print
 
-dt_mngr.col_cache.flush(0)
-print(dt_mngr.get_table("starbucks"))  # table print
-print(dt_mngr.col_cache)
+# dt_mngr.col_cache.flush(0)
+# print(dt_mngr.get_table("starbucks"))  # table print
+# print(dt_mngr.col_cache)
 
-dt_mngr.update("starbucks", 1, 3)
-print(dt_mngr.get_table("starbucks"))  # table print
-print(dt_mngr.col_cache)
+# dt_mngr.update("starbucks", 1, 3)
+# print(dt_mngr.get_table("starbucks"))  # table print
+# print(dt_mngr.col_cache)
 
-print("\nSTART READ")
-x = dt_mngr.read("starbucks", 1)
-print("OUTPUT: ", x)
-print("END READ")
+# print("\nSTART READ")
+# x = dt_mngr.read("starbucks", 1)
+# print("OUTPUT: ", x)
+# print("END READ")
 
-dt_mngr.insert("starbucks", 2, ("latte", 5, "ITALLIIIAAA"))
-print(dt_mngr.get_table("starbucks"))  # table print
-print(dt_mngr.col_cache)
+# dt_mngr.insert("starbucks", 2, ("latte", 5, "ITALLIIIAAA"))
+# print(dt_mngr.get_table("starbucks"))  # table print
+# print(dt_mngr.col_cache)
 
-print("START TABLE READ")
-x = dt_mngr.table_read("starbucks")
-print("OUTPUT: ", x)
-print("END TABLE READ")
+# print("START TABLE READ")
+# x = dt_mngr.table_read("starbucks")
+# print("OUTPUT: ", x)
+# print("END TABLE READ")
 
-dt_mngr.col_cache.full_flush()
-print(dt_mngr.get_table("starbucks"))  # table print
-print(dt_mngr.col_cache)
+# dt_mngr.col_cache.full_flush()
+# print(dt_mngr.get_table("starbucks"))  # table print
+# print(dt_mngr.col_cache)

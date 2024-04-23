@@ -89,7 +89,8 @@ class Page:
     def get_tuple(self, c_id):
         if c_id in self.map.keys():
             idx = self.map[c_id]
-            print(f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            print(
+                f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
             return self.content[idx]
         else:
             print(f"coffee id {c_id} not in page")
@@ -116,7 +117,7 @@ class Page:
                         print(f"removed {_tup[0]}")
                 self.content = copy.deepcopy(temp)
                 print(f"content after insert {self.content}")
-                return
+                return 0
             else:
                 # do an update
                 idx = self.map[_tuple[0]]
@@ -124,7 +125,7 @@ class Page:
                     f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}"
                 )
                 self.content[idx] = _tuple
-                return
+                return 0
         print("searching content")
         i = 0
         for tuple_ent in self.content:
@@ -133,14 +134,16 @@ class Page:
                 tuple_ent[1] = _tuple[1]
                 self.map[tuple_ent[0]] = i
                 print("update map")
-                return
+                return 0
             i += 1
-
-        self.map[_tuple[0]] = len(self.content)
-        self.content.append(_tuple)
-        print(
-            f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}"
-        )
+        if not self.full():
+            self.map[_tuple[0]] = len(self.content)
+            self.content.append(_tuple)
+            print(
+                f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}"
+            )
+            return 0
+        return -1
 
     def __str__(self) -> str:
         return f"\n\t\tpage {self.id}: {self.content}"

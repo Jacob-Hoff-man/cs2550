@@ -16,6 +16,7 @@ class Catalog():
         self.filters = {}
         self.aggregates = {}
 
+
 class CatalogManager(Component):
     def get_auxiliary(self, table_key, column_key) -> Auxiliary:
         return self.catalogs.get(table_key).auxilaries.get(column_key)
@@ -57,7 +58,7 @@ class CatalogManager(Component):
                 case FilterType.BLOOM.value:
                     return BloomFilter()
                 case _:
-                   return None
+                    return None
 
         def get_catalog_aggregate(aggregate: AggregateType):
             match aggregate.value:
@@ -70,13 +71,16 @@ class CatalogManager(Component):
         for column_name, column_definition in self.schema.items():
             access_methods = column_definition.get('access_methods')
             if access_methods.get('filter') != None:
-                column_filter = get_catalog_filter(FilterType(access_methods.get('filter')))
+                column_filter = get_catalog_filter(
+                    FilterType(access_methods.get('filter')))
                 catalog.filters[column_name] = column_filter
             if access_methods.get('auxiliary') != None:
-                column_auxiliary = get_catalog_auxiliary(AuxiliaryType(access_methods.get('auxiliary')))
+                column_auxiliary = get_catalog_auxiliary(
+                    AuxiliaryType(access_methods.get('auxiliary')))
                 catalog.auxilaries[column_name] = column_auxiliary
             if access_methods.get('aggregate') != None:
-                column_aggregate = get_catalog_aggregate(AggregateType(access_methods.get('aggregate')))
+                column_aggregate = get_catalog_aggregate(
+                    AggregateType(access_methods.get('aggregate')))
                 catalog.aggregates[column_name] = column_aggregate
         self.catalogs[table_key] = catalog
 
@@ -98,5 +102,3 @@ class CatalogManager(Component):
         self.schema = schema
         self.catalogs = {}
         self.log('Catalog Manager component initialized.')
-            
-
