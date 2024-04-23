@@ -86,14 +86,14 @@ class Page:
         )
         return len(self.content) == self.max
 
-    def get_tuple(self, c_id):
+    def get_tuple(self, c_id) -> tuple | None:
         if c_id in self.map.keys():
             idx = self.map[c_id]
-            print(
-                f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            print(f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
             return self.content[idx]
         else:
             print(f"coffee id {c_id} not in page")
+            return None
 
     def add_tuple(self, _tuple) -> None:
         print("PAGE: adding a tuple")
@@ -145,6 +145,12 @@ class Page:
             return 0
         return -1
 
+    def get_anchor(self):
+        if len(self.content) == 0:
+            return None
+        else:
+            return self.content[0]
+
     def __str__(self) -> str:
         return f"\n\t\tpage {self.id}: {self.content}"
 
@@ -194,30 +200,31 @@ class Table:
 
 
 class OpType(Enum):
-    B = 'B'
-    C = 'C'
-    A = 'A'
-    Q = 'Q'
-    I = 'I'
-    U = 'U'
-    R = 'R'
-    T = 'T'
-    M = 'M'
-    G = 'G'
+    B = "B"
+    C = "C"
+    A = "A"
+    Q = "Q"
+    I = "I"
+    U = "U"
+    R = "R"
+    T = "T"
+    M = "M"
+    G = "G"
 
-class Operation():
+
+class Operation:
     def trim_operation_insert(self, line):
-        elements = line.split('(')
-        start = elements[0].split(' ')
+        elements = line.split("(")
+        start = elements[0].split(" ")
         end = elements[1]
-        args2 = [x.strip().replace(')', '') for x in end.split(',')]
+        args2 = [x.strip().replace(")", "") for x in end.split(",")]
         op = start[0]
         arg1 = start[1]
         return op, [arg1, args2]
 
     def to_txn_tuple(self, line):
-        elements = line.split(' ')
-        match(elements[0]):
+        elements = line.split(" ")
+        match (elements[0]):
             case OpType.B.value:
                 return (elements[0], elements[1])
             case OpType.C.value:
@@ -246,7 +253,7 @@ class Operation():
         self.op, self.args = self.to_txn_tuple(line)
 
     def __str__(self) -> str:
-        match(self.op):
+        match (self.op):
             case OpType.B.value:
                 return f"{self.op} {self.args}"
             case OpType.C.value:
@@ -270,19 +277,24 @@ class Operation():
                 return f"{self.op} {self.args[0]} {self.args[1]}"
             case _:
                 return f"{self.op} {self.args}"
-        
 
-class Transaction():
+
+class Transaction:
     def __init__(self, id) -> None:
         self.id = id
         self.ops = []
+
     def add(self, op: Operation):
         self.ops.append(op)
+
     def get(self):
         return self.ops.pop(0)
+
     def __len__(self):
         return len(self.ops)
+
     def pop(self, idx):
         return self.ops.pop(idx)
+
     def __str__(self) -> str:
-        return f'Transaction Id: {self.id}\n{[str(op) for op in self.ops]}'
+        return f"Transaction Id: {self.id}\n{[str(op) for op in self.ops]}"
