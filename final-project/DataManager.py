@@ -350,8 +350,7 @@ class DataManager(Component):
             if page is None:
                 quit("INSERT 2: page is none")
         return page
-        # Now page is in buffer
-        # use page map to find correct position for tuple in the page
+
     # G table val: Counts the number of coffees which have val as intensity in table. If table does not exist, the group-by-count is aborted
 
     def g_op(self, table_id: str, val):
@@ -488,19 +487,19 @@ class DataManager(Component):
         # return the tuple
 
     # U table (ID, val): Update the intensity of the coffeeID=ID to be val. If table does not exist, it is created
-    def update(self, table_id, ID, val):
+    def update(self, table_id, c_id, val):
         global num_pages
+
+        blm_fltr = self.catalog_manager.get_filter(table_id, "coffee_id")
+
         # raise NotImplementedError
         print("UPDATE UPDATEing a tuple")
-        table = self.get_table(table_id)
-        if val == None or table.blm_fltr[ID] == 0:  # if tuple is Null
+        if val == None or c_id not in blm_fltr:  # if tuple is Null
             return 0  # no op
-
         # check catalog for table
-
         # check catalog for table
         if table_id not in self.catalog_manager.catalogs.keys():
-            print("INSERT Create table")
+            print("UPDATE Create table")
             # if doesnt exist, Create
             self.catalog_manager.insert_catalog(table_id)
             # TODO should be connected to catalog manager/schema
@@ -514,82 +513,10 @@ class DataManager(Component):
             )
             self.set_table(table_id, table_new)
 
-        table = self.get_table(table_id)
-        attr_tup = (ID, val)
+        self.insert_intensity_tuple(table_id, c_id, val)
+        blm_fltr.add(c_id)
+
         print("\n")
-
-        print(f"UPDATE on 'Intensity' with tuple: {attr_tup}")
-        # use access method to get to page num for UPDATEing
-        c_id = attr_tup[0]
-        # val = attr_tup[1]
-        file = table.attrs["intensity"]
-        print(f"UPDATE c_id: {c_id}")
-        page_num = file.get_map(c_id)
-        if page_num is None:
-            print("UPDATE page num is none add a page")
-            # make a page
-            num_pages += 1
-            page_num = file.add_page(num_pages)
-            print(
-                f"UPDATE update the map c_id: {c_id} to page_num: {page_num}")
-            acc_m = self.catalog_manager.get_auxiliary(table_id, "intensity")
-            acc_m.set(c_id, page_num)
-
-        # check page table for page num
-        print(f"UPDATE get entry from page table for page_num {page_num}")
-        entry_rec = self.pg_tbl.get_entry(page_num)
-        if entry_rec is None or entry_rec.valid == False:  # not in the buffer
-            # evict a page (LRU)
-            print("UPDATE entry_rec is None\nCall LRU")
-            frame_num = self.lru()
-            print(f"UPDATE evicted {frame_num}")
-            # update page table w that page num and frame num
-            print("UPDATE create page table entry")
-            entry = PageTableEntry(frame_num)
-            print(f"UPDATE set page table entry {page_num} {entry} ")
-            self.pg_tbl.set_entry(page_num, entry)
-            entry.valid = True
-            entry.dirty = True
-            if page_num in self.lru_arr:
-                self.lru_arr.remove(page_num)
-            self.lru_arr.append(page_num)
-            # put page in buffer at mapping
-            # page = disc_mngr.get(File, page_num)
-            print(f"UPDATE set page from file page num: {page_num}")
-            page = file.get_page(page_num)
-            print(f"UPDATE set cache value {frame_num} {page_num}")
-            self.col_cache.set(frame_num, page)
-            # overwrite old page this is like pointer stuff. we want the deep copy version thats unchanged until we flush
-            page = self.col_cache.get(frame_num)
-            print("UPDATE col cache after set: ", self.col_cache)
-            if page is None:
-                quit("UPDATE 1: page is none")
-        else:
-            print(f"UPDATEget page from cache {entry_rec.frame_num}")
-            page = self.col_cache.get(entry_rec.frame_num)
-            entry_rec.dirty = True
-            entry_rec.valid = True
-            if page_num in self.lru_arr:
-                self.lru_arr.remove(page_num)
-            self.lru_arr.append(page_num)
-            if page is None:
-                quit("UPDATE 2: page is none")
-        # Now page is in buffer
-        # use page map to find correct position for tuple in the page
-
-        # UPDATE the tuple
-        print("UPDATE UPDATE tuple to page")
-        page.add_tuple(attr_tup)
-        print("UPDATE col cache after tuple UPDATE: ", self.col_cache)
-        # update the map
-        print(f"UPDATE update file map {c_id} {page_num}")
-        file.update_map(c_id, page_num)
-        # update the access method if need be
-        # update the bloom filter
-        table = self.get_table(table_id)
-        table.blm_fltr[c_id] = 1
-        print("\n")
-        print(self.col_cache)
         return True
 
     def insert_name_tuple(self, t_id, c_id, val):
@@ -624,8 +551,8 @@ class DataManager(Component):
         return
 
     def insert_intensity_tuple(self, t_id, c_id, val):
-        acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
         global num_pages
+
         table = self.get_table(t_id)
         file = table.attrs["intensity"]
         acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
@@ -721,7 +648,7 @@ class DataManager(Component):
             )
             self.set_table(table_id, table_new)
 
-        table = self.get_table(table_id)
+        # table = self.get_table(table_id)
         blm_fltr = self.catalog_manager.get_filter(table_id, "coffee_id")
         if tuple_i == None and ID in blm_fltr:  # if tuple is Null
             return 0  # no op
@@ -749,10 +676,7 @@ class DataManager(Component):
                     self.insert_intensity_tuple(table_id, c_id, val)
                 case "country_of_origin":
                     self.insert_coo_tuple(table_id, c_id, val)
-            # update the access method if need be
-            # update the bloom filter
-        table = self.get_table(table_id)
-
+        # update the bloom filter
         blm_fltr.add(c_id)
         print("\n")
 
