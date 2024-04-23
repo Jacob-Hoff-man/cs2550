@@ -1,7 +1,7 @@
 import sys
 
 from CatalogManager import CatalogManager
-from Common import Component, Page, Table
+from Common import Component
 from DataManager import DataManager
 from Logger import LogType
 from TransactionManager import TransactionManager
@@ -28,9 +28,13 @@ def main():
     transaction_processing_type = sys.argv[2]
     file_names = sys.argv[3:]
     dbms = DbmsSimulator(schema_file_name)
-    dbms.transaction_manager.read_files(file_names)
-    dbms.catalog_manager.insert_catalog("table_key_1")
-    print(dbms.catalog_manager.schema)
+    txns = dbms.transaction_manager.read_files(file_names)
+    for key, val in txns.items():
+        print(val)
+
+    
+    # dbms.catalog_manager.insert_catalog("table_key_1")
+    # print(dbms.catalog_manager.schema)
 
     # Count example
     # aggregate = dbms.catalog_manager.get_aggregate("table_key_1", "intensity")
@@ -67,9 +71,9 @@ def main():
     # print("page", primary_index.get(101))
 
     # Phase 2 - test data manager
-    dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
-    print(dbms.data_manager.get_table("starbucks"))  # table print
-    print(dbms.data_manager.col_cache)
+    # dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+    # print(dbms.data_manager.get_table("starbucks"))  # table print
+    # print(dbms.data_manager.col_cache)
 
     # dbms.data_manager.insert("starbucks", 0, ("mochiato", 10, "France"))
     # print(dbms.data_manager.get_table("starbucks"))  # table print
