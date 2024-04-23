@@ -31,7 +31,7 @@ def main():
     txns = dbms.transaction_manager.read_files(file_names)
     for key, val in txns.items():
         print(val)
-
+    
     
     # dbms.catalog_manager.insert_catalog("table_key_1")
     # print(dbms.catalog_manager.schema)

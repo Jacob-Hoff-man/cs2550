@@ -14,7 +14,7 @@ class TransactionManager(Component):
                 txn = txns[file_name]
                 if len(txn) > 0:
                     oper = txn.pop(0) # one operation   
-                    l.log(f"{os.path.splitext(os.path.split(file_name)[1])[0]}: {oper}")
+                    self.l.log(f"{os.path.splitext(os.path.split(file_name)[1])[0]}: {oper}")
                 else:
                     del txns[file_name]
     
@@ -36,14 +36,15 @@ class TransactionManager(Component):
     
     def read_files(self, raw_file_names):
         txns = {}
+        txn_id = 0
         for file_name in raw_file_names:
-            _id = 0
-            txn = Transaction(_id)
+            txn = Transaction(txn_id)
 
             with open(file_name) as f:
                 for line in f:
                     txn.add(Operation(line.replace("\n", "")))
                     # make a new transaction
             txns[file_name] = txn
+            txn_id += 1
 
         return txns
