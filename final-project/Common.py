@@ -252,7 +252,16 @@ class Operation:
 
     def __init__(self, line) -> None:
         self.op, self.args = self.to_txn_tuple(line)
+    
+    def is_write(self):
+        return self.op in [OpType.I.value, OpType.U.value]
 
+    def is_read(self):
+        return self.op in [OpType.R.value, OpType.T.value, OpType.M.value, OpType.G.value]
+
+    def is_commit(self):
+        return self.op in [OpType.C.value]
+    
     def __str__(self) -> str:
         match (self.op):
             case OpType.B.value:
