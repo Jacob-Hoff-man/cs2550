@@ -76,7 +76,8 @@ class DataManager(Component):
 
     def lru(self):
         # need a way to know that there is an invalid mapping and can therefore be overwritten
-        print(f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
+        print(
+            f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
         if len(self.col_cache.free) > 0:
             # empty slot!
             # fill it.
@@ -106,10 +107,12 @@ class DataManager(Component):
             # update page table w that page num and frame num
             print("INSERT create page table entry")
             entry = PageTableEntry(frame_num)
-            print(f"INSERT set page table entry {page_num} {entry} ")
-            self.pg_tbl.set_entry(page_num, entry)
             entry.valid = True
             entry.dirty = True
+            print(f"INSERT set page table entry {page_num} {entry} ")
+
+            self.pg_tbl.set_entry(page_num, entry)
+
             if page_num in self.lru_arr:
                 self.lru_arr.remove(page_num)
             self.lru_arr.append(page_num)
@@ -305,7 +308,7 @@ class DataManager(Component):
                 self.pg_tbl,
                 self.col_cache,
             )
-            self.set_table(t_id, table_new)
+            self.set_table(t_id, copy.deepcopy(table_new))
 
         self.insert_intensity_tuple(t_id, c_id, val)
         blm_fltr.add(c_id)
@@ -315,6 +318,7 @@ class DataManager(Component):
 
     def insert_name_tuple(self, t_id, c_id, val):
         global num_pages
+        print("INSERTING  NAME  TUPLE")
         table = self.get_table(t_id)
         file = table.attrs["coffee_name"]
         acc_m = self.catalog_manager.get_auxiliary(t_id, "coffee_name")
@@ -322,13 +326,13 @@ class DataManager(Component):
         try:
             page_anchor, page_num = acc_m.get(c_id)
         except:
+            print("Adding a  new  page")
             # return was none
             # create a new page where c_id will be the anchor
             # then recreate the acc_m
-
             # make a page
-            num_pages += 1
             page_num = file.add_page(num_pages)
+            num_pages += 1
             page_anchor = c_id
             index = acc_m.get_index()
             recreate_page_numbers = [(page_anchor, page_num)]
@@ -343,12 +347,12 @@ class DataManager(Component):
         page.add_tuple((c_id, val))
         anchor, _ = page.get_anchor()
         acc_m.set(anchor, page.id)
-
+        print("INSERTED  NAME  TUPLE\n\n")
         return
 
     def insert_intensity_tuple(self, t_id, c_id, val):
         global num_pages
-
+        print("INSERTING  INTENSITY  TUPLE")
         table = self.get_table(t_id)
         file = table.attrs["intensity"]
         acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
@@ -361,8 +365,9 @@ class DataManager(Component):
             # then recreate the acc_m
 
             # make a page
-            num_pages += 1
+
             page_num = file.add_page(num_pages)
+            num_pages += 1
             page_anchor = c_id
             index = acc_m.get_index()
             recreate_page_numbers = [(page_anchor, page_num)]
@@ -376,46 +381,66 @@ class DataManager(Component):
 
         # insert the tuple
         print("INSERT insert tuple to page")
-        _, old_val = page.get_tuple(c_id)
+        agg = self.catalog_manager.get_aggregate(t_id, "intensity")
+
+        try:
+            _, old_val = page.get_tuple(c_id)
+        except:
+            old_val = None
         if old_val is not None:
             agg.decrement(old_val)
+
         page.add_tuple((c_id, val))
-        agg = self.catalog_manager.get_aggregate(t_id, "intensity")
         agg.increment(val)
         anchor, _ = page.get_anchor()
         acc_m.set(anchor, page.id)
+        print("INSERTED  INTENSITY  TUPLE\n\n")
+        return
 
+    def update_coo_tuple(self, t_id, c_id, val):
         return
 
     def insert_coo_tuple(self, t_id, c_id, val):
         global num_pages
+        print("INSERTING  COO  TUPLE")
         table = self.get_table(t_id)
         file = table.attrs["country_of_origin"]
         acc_m = self.catalog_manager.get_auxiliary(t_id, "country_of_origin")
 
-        page_nums = acc_m.get(val)
+        page_nums = acc_m.get(val)  # this does work if this is an update.
+        # check bloom filter
+        blm_fltr = self.catalog_manager.get_filter(t_id, "coffee_id")
+        if c_id in blm_fltr:
+            # need to do an update
+            self.update_coo_tuple(t_id, c_id, val)
         if page_nums is None:
+            print("INSERT COO PAGE NUMS WAS  NULL")
             # return was none
             # value not in the index yet
             # then recreate the acc_m
             # make a page
-            num_pages += 1
+
             page_num = file.add_page(num_pages)
+            num_pages += 1
             page_anchor = val
             acc_m.set(page_anchor, page_num)
             page_nums = acc_m.get(val)
-
+        print(f"search pages in list:  {page_nums}")
         for page_num in page_nums:
             page = self.get_page_to_buffer(page_num, file)
             # insert the tuple
             print("INSERT insert tuple to page")
-            if page.add_tuple((c_id, val)) == 0:
+            rtrn = page.add_tuple((c_id, val))
+            print(f"attempted  to  add {c_id} to page: {page.id}")
+            if rtrn == 0:
+                print("INSERT tuple inserted")
                 # sucessful add to the page
                 return
             # else  page was full
         # need to add to a diff  page
-        num_pages += 1
+        print("need to add a page")
         page_num = file.add_page(num_pages)
+        num_pages += 1
         page_anchor = val
         acc_m.set(page_anchor, page_num)
         page_nums = acc_m.get(val)
@@ -428,7 +453,7 @@ class DataManager(Component):
         # how to link  new one to  this  anmchor?
         # since we are clustering we need  to check  if the tuple can fit on this page
         # if it doesnt, we need to make a  new page.
-
+        print("INSERTED COO TUPLE\n\n")
         return
 
     # I table (t): Insert the new record t = (coffeec_id, coffeeName, intensity, countryOfOrigin) into table. If table does not exist, this operation should create that table.
@@ -450,7 +475,7 @@ class DataManager(Component):
                 self.pg_tbl,
                 self.col_cache,
             )
-            self.set_table(t_id, table_new)
+            self.set_table(t_id, copy.deepcopy(table_new))
 
         # table = self.get_table(t_id)
         blm_fltr = self.catalog_manager.get_filter(t_id, "coffee_id")

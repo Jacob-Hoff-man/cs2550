@@ -31,8 +31,9 @@ def main():
     txns = dbms.transaction_manager.read_files(file_names)
     for key, val in txns.items():
         print(val)
-    
-    
+
+    # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+
     # dbms.catalog_manager.insert_catalog("table_key_1")
     # print(dbms.catalog_manager.schema)
 
@@ -71,12 +72,13 @@ def main():
     # print("page", primary_index.get(101))
 
     # Phase 2 - test data manager
-    # dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
-    # print(dbms.data_manager.get_table("starbucks"))  # table print
-    # print(dbms.data_manager.col_cache)
+    dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+    print(dbms.data_manager.col_cache)
 
-    # dbms.data_manager.insert("starbucks", 0, ("mochiato", 10, "France"))
-    # print(dbms.data_manager.get_table("starbucks"))  # table print
+    dbms.data_manager.insert("starbucks", 0, ("mochiato", 10, "France"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+    print(dbms.data_manager.col_cache)
 
     # dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     # print(dbms.data_manager.get_table("starbucks"))  # table print

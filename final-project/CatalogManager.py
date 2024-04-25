@@ -8,11 +8,13 @@ from Common import (AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
 from filters.BloomFilter import BloomFilter
 from Logger import LogType
 
+
 class Catalog():
     def __init__(self) -> None:
         self.auxilaries = {}
         self.filters = {}
         self.aggregates = {}
+
 
 class CatalogManager(Component):
     def get_auxiliary(self, table_key, column_key) -> Auxiliary:
@@ -67,6 +69,7 @@ class CatalogManager(Component):
         catalog = Catalog()
         for column_name, column_definition in self.schema.items():
             access_methods = column_definition.get('access_methods')
+            print(column_definition)
             if access_methods.get('filter') != None:
                 column_filter = get_catalog_filter(
                     FilterType(access_methods.get('filter')))

@@ -89,7 +89,8 @@ class Page:
     def get_tuple(self, c_id) -> tuple | None:
         if c_id in self.map.keys():
             idx = self.map[c_id]
-            print(f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            print(
+                f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
             return self.content[idx]
         else:
             print(f"coffee id {c_id} not in page")
@@ -104,18 +105,10 @@ class Page:
                 print("PAGE: insert is a delete, val is none")
                 idx = self.map[_tuple[0]]
                 print(f"Mapping is from c_id {_tuple[0]} to idx {idx}")
-                del self.map[idx]
-
                 print("PAGE: remove tuple and update maps")
-                temp = []
-                for _tup in self.content:
-                    if _tup[0] is not _tuple[0]:
-                        print(f"keep {_tup[0]}")
-                        temp.append(_tup)
-                        self.map[_tup[0]] = len(temp)
-                    else:
-                        print(f"removed {_tup[0]}")
-                self.content = copy.deepcopy(temp)
+                del self.map[idx]
+                self.content.remove(_tuple)
+
                 print(f"content after insert {self.content}")
                 return 0
             else:
@@ -140,7 +133,7 @@ class Page:
             self.map[_tuple[0]] = len(self.content)
             self.content.append(_tuple)
             print(
-                f"added tuple at {len(self.content)} and updated map of c_id {_tuple[0]} to {len(self.content)}"
+                f"added tuple at {len(self.content)-1} and updated map of c_id {_tuple[0]} to {len(self.content)-1}"
             )
             return 0
         return -1
