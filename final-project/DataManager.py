@@ -154,9 +154,12 @@ class DataManager(Component):
 
     # G table val: Counts the number of coffees which have val as intensity in table. If table does not exist, the group-by-count is aborted
     def op_g(self, t_id: str, val):
-        # return from aggregate thing on the file
+        if t_id not in self.catalog_manager.catalogs.keys():
+            # table does not exist
+            return 0  # no op
         
-        raise NotImplementedError
+        intensity_aggregate = self.catalog_manager.get_aggregate(t_id, 'intensity')
+        return intensity_aggregate.get(val)
 
     # M table val: Retrieve the coffee name(s) for all record(s) with countryOfOrigin=val in table. If table does not exist, the read is aborted.
     def op_m(self, t_id: str, val):

@@ -36,22 +36,71 @@ def main():
 
     
     ph2 = False
-    ph2_op_m = True
+    ph2_op_m = False
+    ph2_op_g = True
     test_aux = False
     
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+
+    if ph2_op_g:
+        print("INSERTING 0 LATTE 5 USA")
+        dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 1 MATTE 5 USA")
+        dbms.data_manager.insert("starbucks", 1, ("matte", 5, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 2 MACHIATO 10 FRANCE")
+        dbms.data_manager.insert("starbucks", 2, ("mochiato", 10, "France"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 3 NITRO 12 USA")
+        dbms.data_manager.insert("starbucks", 3, ("nitro", 12, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+
+        print("START G OP")
+        x = dbms.data_manager.op_g("starbucks", 5)
+        print("OUTPUT: ", x)
+        print("END G OP")
+
+        print("UPDATING C_ID 2 TO INTENSITY 5")
+        dbms.data_manager.update("starbucks", 2, 5)
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+
+        print("UPDATING C_ID 3 TO INTENSITY 5")
+        dbms.data_manager.update("starbucks", 3, 5)
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        
+        print("START G OP")
+        x = dbms.data_manager.op_g("starbucks", 5)
+        print("OUTPUT: ", x)
+        print("END G OP")
+
+        print("UPDATING C_ID 2 TO INTENSITY 3")
+        dbms.data_manager.update("starbucks", 2, 3)
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+
+        print("START G OP")
+        x = dbms.data_manager.op_g("starbucks", 5)
+        print("OUTPUT: ", x)
+        print("END G OP")
+
     if ph2_op_m:
         print("INSERTING 0 LATTE 5 USA")
         dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
         print(dbms.data_manager.get_table("starbucks"))  # table print
         print(dbms.data_manager.col_cache)
 
-        print("INSERTING 0 LATTE 5 USA")
+        print("INSERTING 3 MATTE 5 USA")
         dbms.data_manager.insert("starbucks", 3, ("matte", 5, "USA"))
         print(dbms.data_manager.get_table("starbucks"))  # table print
         print(dbms.data_manager.col_cache)
 
-        print("INSERTING 0 MACHIATO 10 FRANCE")
+        print("INSERTING 2 MACHIATO 10 FRANCE")
         dbms.data_manager.insert("starbucks", 2, ("mochiato", 10, "France"))
         print(dbms.data_manager.get_table("starbucks"))  # table print
         print(dbms.data_manager.col_cache)
@@ -59,12 +108,11 @@ def main():
         print("INSERTING 1 NITRO 12 USA")
         dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
         print(dbms.data_manager.get_table("starbucks"))  # table print
-
+            
         print("START G OP")
         x = dbms.data_manager.op_m("starbucks", "USA")
         print("OUTPUT: ", x)
         print("END G OP")
-        
 
     if ph2:
         # Phase 2 - test data manager
