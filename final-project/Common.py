@@ -251,8 +251,8 @@ class Operation:
                 quit("Op Type Not recognized...")
 
     def __init__(self, line) -> None:
-        self.op, self.args = self.to_txn_tuple(line)
-    
+        self.op, self.args = self.to_txn_tuple(line)   
+
     def is_write(self):
         return self.op in [OpType.I.value, OpType.U.value]
 
@@ -307,4 +307,5 @@ class Transaction:
         return self.ops.pop(idx)
 
     def __str__(self) -> str:
-        return f"Transaction Id: {self.id}\n{[str(op) for op in self.ops]}"
+        return f'Transaction Id: {self.id}\n{[str(op) for op in self.ops]}'
+

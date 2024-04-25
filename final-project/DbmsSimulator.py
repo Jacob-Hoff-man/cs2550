@@ -5,7 +5,7 @@ from Common import Component
 from DataManager import DataManager
 from Logger import LogType
 from TransactionManager import TransactionManager
-from filters.BloomFilter import BloomFilter
+from Scheduler import Scheduler
 
 
 class DbmsSimulator(Component):
@@ -19,6 +19,7 @@ class DbmsSimulator(Component):
         super().__init__(LogType.DBMS_SIMULATOR)
         self.tables = {}
         self.transaction_manager = TransactionManager()
+        self.scheduler = Scheduler()
         self.catalog_manager = CatalogManager(schema_file_name)
         self.data_manager = DataManager(self.catalog_manager, self.tables, 4)
         self.log("DBMS Simulator component initialized.")
@@ -29,9 +30,11 @@ def main():
     transaction_processing_type = sys.argv[2]
     file_names = sys.argv[3:]
     dbms = DbmsSimulator(schema_file_name)
-    txns = dbms.transaction_manager.read_files(file_names)
-    for key, val in txns.items():
-        print(val)
+    file_txns = dbms.transaction_manager.read_files(file_names)
+    # txns = [value for (key, value) in file_txns.items()]
+    # serialized_txns = dbms.scheduler.execute(txns)
+
+    
     ph2 = True
     test_aux = False
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
