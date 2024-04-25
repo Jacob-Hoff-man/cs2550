@@ -1,5 +1,6 @@
 from Common import Auxiliary, Page
 
+
 class PrimaryIndex(Auxiliary):
     def recreate(self, page_numbers):
         new_page_numbers = {}
@@ -17,13 +18,13 @@ class PrimaryIndex(Auxiliary):
         for (anchor, overflows) in self.overflows.items():
             overflow_count += len(overflows)
         return overflow_count >= self.overflow_limit
-    
+
     def get_index(self):
         index = list(self.page_numbers.keys())
         index.sort()
         return index
 
-    def get_closest_page_number(self, value, check_overflow = True):
+    def get_closest_page_number(self, value, check_overflow=True):
         page_number = self.page_numbers.get(value)
         if page_number == None:
             last_anchor = None
@@ -31,7 +32,7 @@ class PrimaryIndex(Auxiliary):
             for anchor in index_structure:
                 if anchor > value:
                     if last_anchor == None:
-                        return None
+                        return None,  None
                     closest_page = self.page_numbers.get(last_anchor)
                     overflows = self.overflows.get(last_anchor)
                     if overflows == None or not check_overflow:
@@ -51,10 +52,10 @@ class PrimaryIndex(Auxiliary):
                 last_anchor = anchor
         else:
             return (value, page_number)
-    
+
     def get(self, value):
         return self.get_closest_page_number(value)
-    
+
     def set(self, anchor, page_number):
         if self.page_numbers.get(anchor) != None:
             if page_number == None:
@@ -62,7 +63,8 @@ class PrimaryIndex(Auxiliary):
             else:
                 self.page_numbers[anchor] = page_number
         else:
-            (closest_anchor, closest_page_number) = self.get_closest_page_number(anchor, False)
+            (closest_anchor, closest_page_number) = self.get_closest_page_number(
+                anchor, False)
             overflow = self.overflows.get(closest_anchor)
             if overflow == None:
                 if page_number != None:
@@ -76,14 +78,15 @@ class PrimaryIndex(Auxiliary):
                     index = self.get_index()
                     for index_anchor in index:
                         index_page_number = self.page_numbers.get(index_anchor)
-                        recreate_page_numbers.append((index_anchor, index_page_number))
+                        recreate_page_numbers.append(
+                            (index_anchor, index_page_number))
                     self.recreate(recreate_page_numbers)
                 else:
                     new_overflow = [x for x in overflow if x[0] != anchor]
                     if page_number != None:
                         new_overflow.append((anchor, page_number))
                     self.overflows[closest_anchor] = new_overflow
-    
+
     def __init__(self) -> None:
         self.page_numbers = {}
         self.overflows = {}

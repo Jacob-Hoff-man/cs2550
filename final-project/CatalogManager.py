@@ -3,7 +3,7 @@ import json
 from aggregates.Count import Count
 from auxilaries.ClusteredIndex import ClusteredIndex
 from auxilaries.PrimaryIndex import PrimaryIndex
-from Common import (AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
+from Common import (Aggregate, AggregateType, Auxiliary, AuxiliaryType, Component, Filter,
                     FilterType)
 from filters.BloomFilter import BloomFilter
 from Logger import LogType
@@ -36,7 +36,7 @@ class CatalogManager(Component):
         self.catalogs[table_key].aggregates[column_key] = aggregate
 
     def insert_catalog(self, table_key):
-        def get_catalog_auxiliary(auxiliary: AuxiliaryType):
+        def get_catalog_auxiliary(auxiliary: AuxiliaryType) -> Auxiliary:
             match auxiliary.value:
                 case AuxiliaryType.CLUSTERED.value:
                     return ClusteredIndex()
@@ -52,14 +52,14 @@ class CatalogManager(Component):
                 case _:
                     return None
 
-        def get_catalog_filter(filter: FilterType):
+        def get_catalog_filter(filter: FilterType) -> Filter:
             match filter.value:
                 case FilterType.BLOOM.value:
                     return BloomFilter()
                 case _:
                     return None
 
-        def get_catalog_aggregate(aggregate: AggregateType):
+        def get_catalog_aggregate(aggregate: AggregateType) -> Aggregate:
             match aggregate.value:
                 case AggregateType.COUNT.value:
                     return Count()
@@ -69,7 +69,6 @@ class CatalogManager(Component):
         catalog = Catalog()
         for column_name, column_definition in self.schema.items():
             access_methods = column_definition.get('access_methods')
-            print(column_definition)
             if access_methods.get('filter') != None:
                 column_filter = get_catalog_filter(
                     FilterType(access_methods.get('filter')))
