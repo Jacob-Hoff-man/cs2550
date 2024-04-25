@@ -35,9 +35,36 @@ def main():
     # serialized_txns = dbms.scheduler.execute(txns)
 
     
-    ph2 = True
+    ph2 = False
+    ph2_op_m = True
     test_aux = False
+    
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+    if ph2_op_m:
+        print("INSERTING 0 LATTE 5 USA")
+        dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 0 LATTE 5 USA")
+        dbms.data_manager.insert("starbucks", 3, ("matte", 5, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 0 MACHIATO 10 FRANCE")
+        dbms.data_manager.insert("starbucks", 2, ("mochiato", 10, "France"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
+
+        print("INSERTING 1 NITRO 12 USA")
+        dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+
+        print("START G OP")
+        x = dbms.data_manager.op_m("starbucks", "USA")
+        print("OUTPUT: ", x)
+        print("END G OP")
+        
 
     if ph2:
         # Phase 2 - test data manager
