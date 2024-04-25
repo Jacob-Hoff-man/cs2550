@@ -153,14 +153,33 @@ class DataManager(Component):
         return page
 
     # G table val: Counts the number of coffees which have val as intensity in table. If table does not exist, the group-by-count is aborted
-
-    def g_op(self, t_id: str, val):
+    def op_g(self, t_id: str, val):
         # return from aggregate thing on the file
+        
         raise NotImplementedError
 
     # M table val: Retrieve the coffee name(s) for all record(s) with countryOfOrigin=val in table. If table does not exist, the read is aborted.
     def op_m(self, t_id: str, val):
-        raise NotImplementedError
+        if t_id not in self.catalog_manager.catalogs.keys():
+            # table does not exist
+            return 0  # no op
+
+        table = self.get_table(t_id)
+        coo_name_file = table.attrs["country_of_origin"]
+        coo_access_method = self.catalog_manager.get_auxiliary(t_id, 'country_of_origin')
+        page_numbers = coo_access_method.get(val)
+        c_ids = []
+        coo_names = []
+
+        for page_number in page_numbers:
+            page = self.get_page_to_buffer(page_number, coo_name_file)
+            for c_id, coo in page.content:
+                c_ids.append(c_id)
+        
+        for c_id in c_ids:
+            coo_names.append(self.read_name_tuple(t_id, c_id))
+        
+        return coo_names
 
     def read_name_tuple(self, t_id, c_id) -> tuple | None:
         global num_pages
@@ -214,7 +233,6 @@ class DataManager(Component):
         # acc_m = self.catalog_manager.get_auxiliary(t_id, "country_of_origin")
         for page_num in file.page_map.keys():
             page = self.get_page_to_buffer(page_num, file)
-
             _tuple = page.get_tuple(c_id)
             if _tuple is not None:
                 # tuple found
