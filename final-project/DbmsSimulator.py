@@ -32,13 +32,9 @@ def main():
     txns = dbms.transaction_manager.read_files(file_names)
     for key, val in txns.items():
         print(val)
-    ph2 = False
+    ph2 = True
     test_aux = False
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
-
-    blm_filter = BloomFilter()
-    blm_filter.add(1)
-    print(1 in blm_filter)
 
     if ph2:
         # Phase 2 - test data manager
@@ -70,6 +66,9 @@ def main():
         x = dbms.data_manager.read("starbucks", 1)
         print("OUTPUT: ", x)
         print("END READ")
+
+        print(dbms.data_manager.row_cache)
+        print(dbms.data_manager.get_table("starbucks"))
 
         print("INSERTING 2 LATTE 5 ITALLIA")
         dbms.data_manager.insert("starbucks", 2, ("latte", 5, "ITALLIIIAAA"))

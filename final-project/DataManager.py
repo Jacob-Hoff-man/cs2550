@@ -25,7 +25,7 @@ class PageTable:
     def __init__(self):
         self.map = {}
 
-    def get_entry(self, page_num):
+    def get_entry(self, page_num) -> PageTableEntry | None:
         if page_num not in self.map.keys():
             # NO MAPPING
             return None
@@ -33,6 +33,14 @@ class PageTable:
             # return mapping
             print(self.map.keys())
             return self.map[page_num]
+
+    def invalidate(self, page_num):
+        self.map[page_num].valid = False
+        return
+
+    def dirty_entry(self, page_num):
+        self.map[page_num].dirty = True
+        return
 
     def set_entry(self, page_num, page_table_entry):
         self.map[page_num] = page_table_entry
@@ -85,11 +93,13 @@ class DataManager(Component):
             print(f"LRU: empty slot in buffer return {idx}")
             return idx
 
-        evict = self.lru_arr.pop(0)
-        print(f"LRU: chose {evict} to evict")
-        self.col_cache.flush(evict)
+        evict_page = self.lru_arr.pop(0)
+        entry = self.pg_tbl.get_entry(evict_page)
 
-        return evict
+        print(f"LRU: chose {entry.frame_num} to evict")
+        self.col_cache.flush(entry.frame_num)
+
+        return entry.frame_num
         # except Exception as e:
         #     print(f"Exception: {e}")
         #     evict = random.randrange(len(self.col_cache.buffer))
@@ -100,6 +110,7 @@ class DataManager(Component):
     def get_page_to_buffer(self, page_num: int, file: File) -> Page:
         print(f"INSERT get entry from page table for page_num {page_num}")
         entry_rec = self.pg_tbl.get_entry(page_num)
+        print(entry_rec)
         if entry_rec is None or entry_rec.valid == False:  # not in the buffer
             # evict a page (LRU)
             print("INSERT entry_rec is None\nCall LRU")
@@ -109,7 +120,7 @@ class DataManager(Component):
             print("INSERT create page table entry")
             entry = PageTableEntry(frame_num)
             entry.valid = True
-            entry.dirty = True
+            # entry.dirty = True
             print(f"INSERT set page table entry {page_num} {entry} ")
 
             self.pg_tbl.set_entry(page_num, entry)
@@ -131,7 +142,7 @@ class DataManager(Component):
         else:
             print(f"INSERT get page from cache {entry_rec.frame_num}")
             page = self.col_cache.get(entry_rec.frame_num)
-            entry_rec.dirty = True
+            # entry_rec.dirty = True
             entry_rec.valid = True
             if page_num in self.lru_arr:
                 self.lru_arr.remove(page_num)
@@ -155,18 +166,21 @@ class DataManager(Component):
         global num_pages
         table = self.get_table(t_id)
 
-        file = table.attrs["intensity"]  # this is a File()
+        file = table.attrs["coffee_name"]  # this is a File()
         assert isinstance(file, File)
-        acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
-        page_num = acc_m.get(c_id)
+        acc_m = self.catalog_manager.get_auxiliary(t_id, "coffee_name")
+        anchor, page_num = acc_m.get(c_id)
         if page_num is None:
+            print("page  num   was none")
             return None
         else:
             page = self.get_page_to_buffer(page_num, file)
 
             _tuple = page.get_tuple(c_id)
             if _tuple is None:
+                print("tuple was none")
                 return None
+            print(_tuple)
             return _tuple
 
     def read_intensity_tuple(self, t_id, c_id) -> tuple | None:
@@ -176,14 +190,18 @@ class DataManager(Component):
         file = table.attrs["intensity"]  # this is a File()
         assert isinstance(file, File)
         acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
-        page_num = acc_m.get(c_id)
+        anchor, page_num = acc_m.get(c_id)
+        print(list(acc_m.get_index()))
         if page_num is None:
+            print("page_num  is none")
             return None
         else:
+            print(f"c_id: {c_id} is on page: {page_num}")
             page = self.get_page_to_buffer(page_num, file)
 
             _tuple = page.get_tuple(c_id)
             if _tuple is None:
+                print("tuple  is none")
                 return None
             return _tuple
 
@@ -200,7 +218,9 @@ class DataManager(Component):
             _tuple = page.get_tuple(c_id)
             if _tuple is not None:
                 # tuple found
+                print("Found the c_id")
                 return _tuple
+        print("Couldnt find the c_id")
         return None
 
     # T table: Retrieve all the record(s) from table. If table does not exist, the read is aborted
@@ -220,7 +240,9 @@ class DataManager(Component):
 
         str_r = ""
         for id in list_:
-            str_r += f"\n{self.read(t_id, id)}"
+            x = self.read(t_id, id)
+            if x is not None:
+                str_r += f"\n{x}"
         return str_r
 
     # R table val: Retrieve record(s) with coffeeID = val. If table does not exist, the read is aborted.
@@ -231,19 +253,37 @@ class DataManager(Component):
 
         # table = self.get_table(t_id)
         blm_fltr = self.catalog_manager.get_filter(t_id, "coffee_id")
-        if c_id in blm_fltr:  # if tuple is Null
+        if c_id not in blm_fltr:  # if tuple is Null
 
             print(f"READ c_id: {c_id} IS NOT IN THE TABLE")
             return 0  # no op
 
-        _, name_val = self.read_name_tuple(t_id, c_id)
-        self.col_cache.to_row(t_id, c_id, name_val)
+        rtrn = self.read_name_tuple(t_id, c_id)
+        if rtrn is None:
+            print(f"name RETURN NONE  t_id: {t_id}  c_id: {c_id}")
+            return None
+        _, name_val = rtrn
+        print("name returned  ", rtrn)
+        temp = Record(c_id, name_val, None, None)
+        self.col_cache.to_row(t_id, c_id, temp)
 
-        _, intensity_val = self.read_intensity_tuple(t_id, c_id)
-        self.col_cache.to_row(t_id, c_id, intensity_val)
+        rtrn = self.read_intensity_tuple(t_id, c_id)
+        if rtrn is None:
+            print(f"intensity RETURN NONE  t_id: {t_id}  c_id: {c_id}")
+            return None
+        _, intensity_val = rtrn
+        print("intensity returned  ", rtrn)
+        temp = Record(c_id, None, intensity_val, None)
+        self.col_cache.to_row(t_id, c_id, temp)
 
-        _, coo_val = self.read_coo_tuple(t_id, c_id)
-        self.col_cache.to_row(t_id, c_id, coo_val)
+        rtrn = self.read_coo_tuple(t_id, c_id)
+        if rtrn is None:
+            print(f"COO RETURN NONE  t_id: {t_id}  c_id: {c_id}")
+            return None
+        _, coo_val = rtrn
+        print("coo returned  ", rtrn)
+        temp = Record(c_id, None, None, coo_val)
+        self.col_cache.to_row(t_id, c_id, temp)
 
         # call to_row() and append the tuple into row buffer
         return self.row_cache.read(t_id, c_id)
@@ -311,6 +351,7 @@ class DataManager(Component):
         # insert the tuple
         print("INSERT insert tuple to page")
         page.add_tuple((c_id, val))
+        self.pg_tbl.dirty_entry(page_num)
         anchor, _ = page.get_anchor()
         acc_m.set(anchor, page.id)
         print("INSERTED  NAME  TUPLE\n\n")
@@ -353,9 +394,11 @@ class DataManager(Component):
             agg.decrement(old_val)
 
         page.add_tuple((c_id, val))
+        self.pg_tbl.dirty_entry(page_num)
         agg.increment(val)
         anchor, _ = page.get_anchor()
         acc_m.set(anchor, page.id)
+
         print("INSERTED  INTENSITY  TUPLE\n\n")
         return
 
@@ -371,6 +414,7 @@ class DataManager(Component):
             if rtrn == 0:
                 print("INSERT tuple inserted")
                 # sucessful add to the page
+                self.pg_tbl.dirty_entry(page_num)
                 return 0
         print("tuple not found")
         return 1
@@ -411,6 +455,7 @@ class DataManager(Component):
             if rtrn == 0:
                 print("INSERT tuple inserted")
                 # sucessful add to the page
+                self.pg_tbl.dirty_entry(page_num)
                 return 0
             # else  page was full
         # need to add to a diff  page
@@ -425,6 +470,7 @@ class DataManager(Component):
         print("INSERT insert tuple to page")
         if page.add_tuple((c_id, val)) == 0:
             # sucessful add to the page
+            self.pg_tbl.dirty_entry(page_num)
             return 0
         # how to link  new one to  this  anmchor?
         # since we are clustering we need  to check  if the tuple can fit on this page
@@ -461,8 +507,11 @@ class DataManager(Component):
         print("INSERT Create tuples from record")
 
         self.insert_name_tuple(t_id, c_id, tuple_i[0])
+        print("COLUMN  CACHE   AFTER INSERT NAME:   ", self.col_cache)
         self.insert_intensity_tuple(t_id, c_id, tuple_i[1])
+        print("COLUMN  CACHE   AFTER INSERT INTENSITY:   ", self.col_cache)
         self.insert_coo_tuple(t_id, c_id, tuple_i[2])
+        print("COLUMN  CACHE   AFTER INSERT COO:   ", self.col_cache)
 
         # update the bloom filter
         blm_fltr.add(c_id)
@@ -497,7 +546,7 @@ class ColBuffer:
         print(f"page selected is {page.id}")
         pg_entry = self.dt_mngr.pg_tbl.get_entry(page.id)
         print(f"got entry from page table: {pg_entry}")
-        pg_entry.valid = False
+        self.dt_mngr.pg_tbl.invalidate(page.id)
         print("make mapping false")
         if pg_entry.dirty:
             print("page is dirty, write it out")
@@ -542,9 +591,9 @@ class ColBuffer:
         self.dt_mngr.row_cache.add(t_id, c_id, record)
 
     def __str__(self) -> str:
-        # if len(self.buffer) == 0:
-        print("COLUMN BUFFER EMPTY")
-        return "BUFFER: " + "".join([str(x) for x in self.buffer.values()])
+        if len(self.buffer) == 0:
+            print("COLUMN BUFFER EMPTY")
+        return "COLUMN BUFFER: " + "".join([str(x) for x in self.buffer.values()])
 
 
 class RowBuffer:
@@ -559,16 +608,18 @@ class RowBuffer:
         # or sending to row buffer
         return
 
-    def read(self, t_id, c_id):
+    def read(self, t_id: int, c_id: int):
         # read a coffee id from the row buffer
-        if (t_id, c_id) not in self.map.keys():
+        if t_id not in self.map.keys():
             # c_id not in row buffer
             return None
         else:
-            page_n = self.map[c_id]
+            if c_id not in self.map[t_id].keys():
+                return None
+            page_n = self.map[t_id][c_id]
             page = self.buffer[page_n]
-            for tup in page.contents:
-                if tup[0] == t_id and tup[1][0] == c_id:
+            for tup in page.content:
+                if tup[0] == t_id and tup[1].coffee_id == c_id:
                     return tup[1]
 
     def flush(self, t_id, c_id):
@@ -579,13 +630,13 @@ class RowBuffer:
         page_n = self.map[key]
         page = self.buffer[page_n]
         del self.map[key]
-        for tup in page.contents:
-            if tup[1][0] == key:
+        for tup in page.content:
+            if tup[1].coffee_id == key:
                 # found the tuple
                 t_id = tup[0]
                 tup = tup[1]
-                id_ = tup[1][0]
-                self.dt_mngr.insert(t_id, id_, tup)
+                id_ = tup[1].coffee_id
+                self.dt_mngr.insert(t_id, id_, tup.tupl_mode())
                 # for each attr get page num and insert tup to that page num
 
     def flush_all(self):
@@ -606,7 +657,9 @@ class RowBuffer:
     def add(self, t_id: str, c_id: int, record: Record):
         # add the record to the buffer or update
         # if not in the buffer add it to buffer
-        if (t_id, c_id) not in self.map.keys():
+        if t_id not in self.map.keys():
+            print(f"key not in map t_id: {t_id}")
+            print(list(self.map.keys()))
             # c_id not in row buffer
             try:
                 last = max(self.buffer.keys())
@@ -632,20 +685,53 @@ class RowBuffer:
                 # can add to last page
                 self.buffer[last].add_tuple((t_id, record))
         else:
+            if c_id not in self.map[t_id].keys():
+                # need to add the c_id
+                try:
+                    last = max(self.buffer.keys())
+                except Exception as e:
+                    print(f"Exception: {e}")
+                    self.buffer[0] = Page(0)
+                    self.map[t_id] = {}
+                    self.map[t_id][record.coffee_id] = 0
+                    last = 0
+                if self.buffer[last].full():
+                    # need to add a page
+                    if len(self.buffer.keys()) + 1 > self.max:
+                        # cant add a page
+                        self.flush_all()
+                        self.buffer[0] = Page(0)
+                        self.buffer[0].add_tuple((t_id, record))
+                        self.map[t_id][record[0]] = 0
+                    else:
+                        idx = len(self.buffer.keys())
+                        self.buffer[idx] = Page(idx)
+                        self.buffer[idx].add_tuple((t_id, record))
+                        self.map[t_id][c_id] = idx
+                else:
+                    # can add to last page
+                    self.buffer[last].add_tuple((t_id, record))
+                return
             # self.coffee_id = coffee_id
             # self.coffee_name = coffee_name
             # self.intensity = intensity
             # self.country_of_origin = country_of_origin
-            page_n = self.map[c_id]
+            page_n = self.map[t_id][c_id]
             page = self.buffer[page_n]
-            for tup in page.contents:
-                if tup[0] == t_id and tup[1][0] == c_id:
-                    record_ = tup[1]
-                    # if record_.coffeeID is None:
-                    #     record_.coffeeID = record.coffeeID
+            for t_id_i, record_ in page.content:
+                if t_id_i == t_id and record_.coffee_id == c_id:
+
                     if record_.coffee_name is None:
                         record_.coffee_name = record.coffee_name
+
                     if record_.intensity is None:
                         record_.intensity = record.intensity
+
                     if record_.country_of_origin is None:
                         record_.country_of_origin = record.country_of_origin
+                    return
+
+    def __str__(self) -> str:
+        if len(self.buffer) == 0:
+            print("ROW BUFFER EMPTY")
+        return "ROW BUFFER: " + "".join([str(x) for x in self.buffer.values()])

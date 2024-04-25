@@ -32,7 +32,7 @@ class PrimaryIndex(Auxiliary):
             for anchor in index_structure:
                 if anchor > value:
                     if last_anchor == None:
-                        return None,  None
+                        return None
                     closest_page = self.page_numbers.get(last_anchor)
                     overflows = self.overflows.get(last_anchor)
                     if overflows == None or not check_overflow:

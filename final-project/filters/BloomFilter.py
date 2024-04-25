@@ -18,6 +18,7 @@ class BloomFilter(Filter):
         self.error_rate = error_rate  # desired maximum false positive rate
         self.num_bits = num_bits
         self.num_hashes = num_hashes
+        self.debug_arr = []
 
         # TODO: repair and make the input params optional
         # if num_hashes == None:
@@ -32,6 +33,7 @@ class BloomFilter(Filter):
         print('@@init bloom filter', self.num_hashes, self.num_bits)
 
     def add(self, key):
+        self.debug_arr.append(key)
         key_ = key.to_bytes(2, 'big')
         for i in range(self.num_hashes):
             # generates a hash value for the element and sets the corresponding bit to 1
@@ -71,3 +73,6 @@ class BloomFilter(Filter):
         '''
         num_hashes = (num_bits / capacity) * math.log(2)
         return int(num_hashes)
+
+    def debug(self):
+        print(self.debug_arr)

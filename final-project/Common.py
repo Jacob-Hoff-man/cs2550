@@ -40,6 +40,12 @@ class Record:
         self.intensity = intensity
         self.country_of_origin = country_of_origin
 
+    def tupl_mode(self):
+        return (self.coffee_id, self.coffee_name, self.intensity, self.country_of_origin)
+
+    def __str__(self):
+        return f"({self.coffee_id}, {self.coffee_name}, {self.intensity}, {self.country_of_origin})"
+
 
 class Component:
     def __init__(self, log_type: LogType) -> None:
@@ -74,67 +80,70 @@ class Aggregate(AccessMethod):
 
 class Page:
     def __init__(self, _id) -> None:
-        # print(f"\t\t\tMaking page {_id}")
+        print(f"\t\t\tMaking page {_id}")
         self.id = _id
         self.content = []
         self.map = {}  # each page has a map for getting tuples
         self.max = 2
 
     def full(self):
-        # print(
-        # f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}"
-        # )
+        print(
+            f"Page: {self.id} w len: {len(self.content)} and max {self.max} is full?: {len(self.content) == self.max}"
+        )
         return len(self.content) == self.max
 
     def get_tuple(self, c_id) -> tuple | None:
         if c_id in self.map.keys():
+            print("C_ID in  keys")
             idx = self.map[c_id]
-            # print(
-            # f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            print(
+                f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
             return self.content[idx]
         else:
-            # print(f"coffee id {c_id} not in page")
+            print(list(self.map.keys()))
+            print(f"C_ID not in keys: c_id {c_id}")
+            print(f"coffee id {c_id} not in page: {self.id}")
             return None
 
     def add_tuple(self, _tuple) -> None:
-        # print("PAGE: adding a tuple")
+        print("PAGE: adding a tuple")
         # will replace this w map for correct position in page
         if _tuple[0] in self.map.keys():
-            # print(f"PAGE: c_id {_tuple[0]} is in map keys: {self.map.keys()}")
+            print(f"PAGE: c_id {_tuple[0]} is in map keys: {self.map.keys()}")
             if _tuple[1] is None:
-                # print("PAGE: insert is a delete, val is none")
+                print("PAGE: insert is a delete, val is none")
                 idx = self.map[_tuple[0]]
-                # print(f"Mapping is from c_id {_tuple[0]} to idx {idx}")
-                # print("PAGE: remove tuple and update maps")
+                print(f"Mapping is from c_id {_tuple[0]} to idx {idx}")
+                print("PAGE: remove tuple and update maps")
                 del self.map[idx]
                 self.content.remove(_tuple)
 
-                # print(f"content after insert {self.content}")
+                print(f"content after insert {self.content}")
                 return 0
             else:
                 # do an update
                 idx = self.map[_tuple[0]]
-                # print(
-                # f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}"
-                # )
+                print(
+                    f"Do an update c_id {_tuple[0]} to idx {idx} with content: {self.content}"
+                )
                 self.content[idx] = _tuple
                 return 0
-        # print("searching content")
+        print("searching content")
         i = 0
         for tuple_ent in self.content:
             if tuple_ent[0] == _tuple[0]:
-                # print(f"found tuple at {i}")
+                print(f"found tuple at {i}")
                 tuple_ent[1] = _tuple[1]
                 self.map[tuple_ent[0]] = i
-                # print("update map")
+                print("update map")
                 return 0
             i += 1
         if not self.full():
             self.map[_tuple[0]] = len(self.content)
             self.content.append(_tuple)
-            # print(
-            # f"added tuple at {len(self.content)-1} and updated map of c_id {_tuple[0]} to {len(self.content)-1}"
-            # )
+            print(
+                f"added tuple at {len(self.content)-1} and updated map of c_id {_tuple[0]} to {len(self.content)-1}"
+            )
             return 0
         return -1
 
@@ -145,14 +154,14 @@ class Page:
             return self.content[0]
 
     def __str__(self) -> str:
-        return f"\n\t\tpage {self.id}: {self.content}"
+        return f"\n\t\tpage {self.id}: {[str(x) for x in self.content]}"
 
 
 class File:
     def __init__(self, name, page_table, col_cache) -> None:
-        # print(f"\t\tmaking file: {name}")
+        print(f"\t\tmaking file: {name}")
         self.attr = name
-        self.page_map = {}  # page_num to page
+        self.page_map = {}  # page_num to page idx
         self.pages = []
         self.col_cache = col_cache
 
@@ -174,12 +183,12 @@ class Table:
     def __init__(
         self, name: str, PK: str, attrs: list, page_table, column_cache
     ) -> None:
-        # print(f"make table: {name}")
+        print(f"make table: {name}")
         self.name = name
         self.PK = PK
         self.attrs = {}
         for attr in attrs:
-            # print(f"\tTABLE Making attr file: {attr}")
+            print(f"\tTABLE Making attr file: {attr}")
             self.attrs[attr] = File(attr, page_table, column_cache)
 
     def get_file(self, name):
@@ -238,7 +247,7 @@ class Operation:
             case OpType.G.value:
                 return (elements[0], elements[1])
             case _:
-                # print(elements[0])
+                print(elements[0])
                 quit("Op Type Not recognized...")
 
     def __init__(self, line) -> None:
