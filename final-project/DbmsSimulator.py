@@ -4,8 +4,8 @@ from CatalogManager import CatalogManager
 from Common import Component
 from DataManager import DataManager
 from Logger import LogType
-from TransactionManager import TransactionManager
 from Scheduler import Scheduler
+from TransactionManager import TransactionManager
 
 
 class DbmsSimulator(Component):
@@ -34,12 +34,11 @@ def main():
     # txns = [value for (key, value) in file_txns.items()]
     # serialized_txns = dbms.scheduler.execute(txns)
 
-    
-    ph2 = False
+    ph2 = True
     ph2_op_m = False
-    ph2_op_g = True
+    ph2_op_g = False
     test_aux = False
-    
+
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
 
     if ph2_op_g:
@@ -74,7 +73,7 @@ def main():
         print("UPDATING C_ID 3 TO INTENSITY 5")
         dbms.data_manager.update("starbucks", 3, 5)
         print(dbms.data_manager.get_table("starbucks"))  # table print
-        
+
         print("START G OP")
         x = dbms.data_manager.op_g("starbucks", 5)
         print("OUTPUT: ", x)
@@ -108,7 +107,7 @@ def main():
         print("INSERTING 1 NITRO 12 USA")
         dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
         print(dbms.data_manager.get_table("starbucks"))  # table print
-            
+
         print("START G OP")
         x = dbms.data_manager.op_m("starbucks", "USA")
         print("OUTPUT: ", x)
@@ -165,8 +164,7 @@ def main():
         # dbms.catalog_manager.insert_catalog("table_key_1")
         print(dbms.catalog_manager.schema)
 
-        aggregate = dbms.catalog_manager.get_aggregate(
-            "table_key_1", "intensity")
+        aggregate = dbms.catalog_manager.get_aggregate("table_key_1", "intensity")
         aggregate.increment(5)
         aggregate.decrement(5)
         print("aggr result", aggregate.get(5))
@@ -182,8 +180,7 @@ def main():
         page_4 = (1000, 620)
         page_5 = (10000, 21)
         page_6 = (100000, 57)
-        primary_index = dbms.catalog_manager.get_auxiliary(
-            "table_key_1", "intensity")
+        primary_index = dbms.catalog_manager.get_auxiliary("table_key_1", "intensity")
 
         primary_index.recreate([page_1, page_2, page_3, page_4, page_5])
         primary_index.set(101, 50)

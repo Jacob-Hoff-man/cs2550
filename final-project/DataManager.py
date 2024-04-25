@@ -84,8 +84,8 @@ class DataManager(Component):
 
     def lru(self):
         # need a way to know that there is an invalid mapping and can therefore be overwritten
-        print(
-            f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
+        print(f"LRU: len: {len(self.col_cache.buffer)} max: {self.col_cache.max}")
+        print(f"LRU free list: {self.col_cache.free}")
         if len(self.col_cache.free) > 0:
             # empty slot!
             # fill it.
@@ -157,8 +157,8 @@ class DataManager(Component):
         if t_id not in self.catalog_manager.catalogs.keys():
             # table does not exist
             return 0  # no op
-        
-        intensity_aggregate = self.catalog_manager.get_aggregate(t_id, 'intensity')
+
+        intensity_aggregate = self.catalog_manager.get_aggregate(t_id, "intensity")
         return intensity_aggregate.get(val)
 
     # M table val: Retrieve the coffee name(s) for all record(s) with countryOfOrigin=val in table. If table does not exist, the read is aborted.
@@ -169,7 +169,9 @@ class DataManager(Component):
 
         table = self.get_table(t_id)
         coo_name_file = table.attrs["country_of_origin"]
-        coo_access_method = self.catalog_manager.get_auxiliary(t_id, 'country_of_origin')
+        coo_access_method = self.catalog_manager.get_auxiliary(
+            t_id, "country_of_origin"
+        )
         page_numbers = coo_access_method.get(val)
         c_ids = []
         coo_names = []
@@ -178,10 +180,10 @@ class DataManager(Component):
             page = self.get_page_to_buffer(page_number, coo_name_file)
             for c_id, coo in page.content:
                 c_ids.append(c_id)
-        
+
         for c_id in c_ids:
             coo_names.append(self.read_name_tuple(t_id, c_id))
-        
+
         return coo_names
 
     def read_name_tuple(self, t_id, c_id) -> tuple | None:
@@ -214,6 +216,7 @@ class DataManager(Component):
         acc_m = self.catalog_manager.get_auxiliary(t_id, "intensity")
         anchor, page_num = acc_m.get(c_id)
         print(list(acc_m.get_index()))
+        print(f"Get page num: {page_num}")
         if page_num is None:
             print("page_num  is none")
             return None
@@ -259,25 +262,27 @@ class DataManager(Component):
             for c_id, _ in page.content:
                 list_.append(c_id)
 
+        print("list of c_ids: ", list_)
         str_r = ""
-        for id in list_:
-            x = self.read(t_id, id)
+        for id_ in list_:
+            x = self.read(t_id, id_)
+            print(f"read returned x: {x}")
             if x is not None:
-                str_r += f"\n{x}"
+                str_r += str(x) + "\n"
         return str_r
 
     # R table val: Retrieve record(s) with coffeeID = val. If table does not exist, the read is aborted.
     def read(self, t_id: str, c_id: int) -> str:
         if t_id not in self.catalog_manager.catalogs.keys():
             # table does not exist
-            return 0  # no op
+            return None  # no op
 
         # table = self.get_table(t_id)
         blm_fltr = self.catalog_manager.get_filter(t_id, "coffee_id")
         if c_id not in blm_fltr:  # if tuple is Null
 
             print(f"READ c_id: {c_id} IS NOT IN THE TABLE")
-            return 0  # no op
+            return None  # no op
 
         rtrn = self.read_name_tuple(t_id, c_id)
         if rtrn is None:
@@ -586,6 +591,7 @@ class ColBuffer:
             #     self.buffer[last] = copy.deepcopy(page)
             # else:
             self.buffer[idx] = copy.deepcopy(page)
+            self.free.remove(idx)
             print(f"COL BUFFER Successful set {idx} to {page.id}")
             return True
         except Exception as e:
@@ -614,7 +620,10 @@ class ColBuffer:
     def __str__(self) -> str:
         if len(self.buffer) == 0:
             print("COLUMN BUFFER EMPTY")
-        return "COLUMN BUFFER: " + "".join([str(x) for x in self.buffer.values()])
+        str_ = "\nCOLUMN BUFFER: \n"
+        for key, value in sorted(self.buffer.items(), key=lambda x: x[0]):
+            str_ += "key: {} page: {}\n".format(key, value)
+        return str_
 
 
 class RowBuffer:
@@ -632,15 +641,18 @@ class RowBuffer:
     def read(self, t_id: int, c_id: int):
         # read a coffee id from the row buffer
         if t_id not in self.map.keys():
-            # c_id not in row buffer
+            # t_id not in row buffer
+            print(f"t_id: {t_id} not in self.map keys: {self.map.keys()}")
             return None
         else:
             if c_id not in self.map[t_id].keys():
+                print(f"C_id is not in the page: {c_id} and t_id: {t_id}")
                 return None
             page_n = self.map[t_id][c_id]
             page = self.buffer[page_n]
             for tup in page.content:
                 if tup[0] == t_id and tup[1].coffee_id == c_id:
+                    print(f"returning: {tup[1]}")
                     return tup[1]
 
     def flush(self, t_id, c_id):
@@ -696,7 +708,7 @@ class RowBuffer:
                     # cant add a page
                     self.flush_all()
                     self.buffer[0] = Page(0)
-                    self.buffer[0].add_tuple(record)
+                    self.buffer[0].add_tuple((t_id, record))
                     self.map[t_id][record[0]] = 0
                 else:
                     idx = len(self.buffer.keys())
@@ -733,6 +745,7 @@ class RowBuffer:
                     # can add to last page
                     self.buffer[last].add_tuple((t_id, record))
                 return
+
             # self.coffee_id = coffee_id
             # self.coffee_name = coffee_name
             # self.intensity = intensity
@@ -741,7 +754,8 @@ class RowBuffer:
             page = self.buffer[page_n]
             for t_id_i, record_ in page.content:
                 if t_id_i == t_id and record_.coffee_id == c_id:
-
+                    print(f"FOUND THE RECORD {record_}")
+                    print(f"inserting: {record}")
                     if record_.coffee_name is None:
                         record_.coffee_name = record.coffee_name
 
@@ -750,9 +764,16 @@ class RowBuffer:
 
                     if record_.country_of_origin is None:
                         record_.country_of_origin = record.country_of_origin
+                    print(f"RECORD AFTER {record_}")
                     return
 
     def __str__(self) -> str:
         if len(self.buffer) == 0:
             print("ROW BUFFER EMPTY")
-        return "ROW BUFFER: " + "".join([str(x) for x in self.buffer.values()])
+        str_ = "\nROW BUFFER: \n"
+        for key, value in sorted(self.buffer.items(), key=lambda x: x[0]):
+            str__ = ""
+            for _, rec in value.content:
+                str__ += str(rec)
+            str_ += "key: {} page: {}\n".format(key, str__)
+        return str_

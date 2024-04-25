@@ -18,16 +18,21 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 0 max: 4
+LRU free list: [0, 1, 2, 3]
 LRU: empty slot in buffer return 0
 INSERT evicted 0
 INSERT create page table entry
 INSERT set page table entry 0 False False True 0 
 INSERT set page from file page num: 0
 INSERT set cache value 0 0
-COL BUFFER Successful set 0 to 0
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 0 at 0 with buffer len: 1
 COL BUFFER getting 0 from 1 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: []
+
 INSERT insert tuple to page
 PAGE: adding a tuple
 searching content
@@ -36,8 +41,11 @@ added tuple at 0 and updated map of c_id 0 to 0
 INSERTED  NAME  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT NAME:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT NAME:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+
 INSERTING  INTENSITY  TUPLE
 			Making page 1
 INSERT get entry from page table for page_num 1
@@ -45,20 +53,26 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 1 max: 4
+LRU free list: [1, 2, 3]
 LRU: empty slot in buffer return 1
 INSERT evicted 1
 INSERT create page table entry
 INSERT set page table entry 1 False False True 1 
 INSERT set page from file page num: 1
 INSERT set cache value 1 1
-COL BUFFER Successful set 1 to 1
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 1 at 1 with buffer len: 2
 COL BUFFER getting 1 from 2 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+key: 1 page: 
 		page 1: []
+
 INSERT insert tuple to page
 []
-C_ID not in keys: c_id 0
+C_ID not in keys: c_id 0, page id: 1
 coffee id 0 not in page: 1
 PAGE: adding a tuple
 searching content
@@ -67,9 +81,13 @@ added tuple at 0 and updated map of c_id 0 to 0
 INSERTED  INTENSITY  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT INTENSITY:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT INTENSITY:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+key: 1 page: 
 		page 1: ['(0, 5)']
+
 INSERTING  COO  TUPLE
 INSERT COO PAGE NUMS WAS  NULL
 			Making page 2
@@ -79,18 +97,25 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 2 max: 4
+LRU free list: [2, 3]
 LRU: empty slot in buffer return 2
 INSERT evicted 2
 INSERT create page table entry
 INSERT set page table entry 2 False False True 2 
 INSERT set page from file page num: 2
 INSERT set cache value 2 2
-COL BUFFER Successful set 2 to 2
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 2 at 2 with buffer len: 3
 COL BUFFER getting 2 from 3 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+key: 1 page: 
 		page 1: ['(0, 5)']
+key: 2 page: 
 		page 2: []
+
 INSERT insert tuple to page
 PAGE: adding a tuple
 searching content
@@ -98,10 +123,15 @@ Page: 2 w len: 0 and max 2 is full?: False
 added tuple at 0 and updated map of c_id 0 to 0
 attempted  to  add 0 to page: 2
 INSERT tuple inserted
-COLUMN  CACHE   AFTER INSERT COO:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT COO:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+key: 1 page: 
 		page 1: ['(0, 5)']
+key: 2 page: 
 		page 2: ["(0, 'USA')"]
+
 
 
 starbucks PK: coffee_id
@@ -111,10 +141,15 @@ starbucks PK: coffee_id
 		page 1: []
 	country_of_origin 
 		page 2: []
+
 COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'latte')"]
+key: 1 page: 
 		page 1: ['(0, 5)']
+key: 2 page: 
 		page 2: ["(0, 'USA')"]
+
 INSERTING 0 MACHIATO 10 FRANCE
 INSERT inserting a tuple
 INSERT Create tuples from record
@@ -131,10 +166,15 @@ Do an update c_id 0 to idx 0 with content: [(0, 'latte')]
 INSERTED  NAME  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT NAME:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT NAME:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 5)']
+key: 2 page: 
 		page 2: ["(0, 'USA')"]
+
 INSERTING  INTENSITY  TUPLE
 INSERT get entry from page table for page_num 1
 dict_keys([0, 1, 2])
@@ -150,10 +190,15 @@ Do an update c_id 0 to idx 0 with content: [(0, 5)]
 INSERTED  INTENSITY  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT INTENSITY:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT INTENSITY:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 10)']
+key: 2 page: 
 		page 2: ["(0, 'USA')"]
+
 INSERTING  COO  TUPLE
 INSERT get entry from page table for page_num 2
 dict_keys([0, 1, 2])
@@ -166,10 +211,15 @@ PAGE: c_id 0 is in map keys: dict_keys([0])
 Do an update c_id 0 to idx 0 with content: [(0, 'USA')]
 attempted  to  add 0 to page: 2
 INSERT tuple inserted
-COLUMN  CACHE   AFTER INSERT COO:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT COO:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 10)']
+key: 2 page: 
 		page 2: ["(0, 'France')"]
+
 
 
 starbucks PK: coffee_id
@@ -179,10 +229,15 @@ starbucks PK: coffee_id
 		page 1: []
 	country_of_origin 
 		page 2: []
+
 COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 10)']
+key: 2 page: 
 		page 2: ["(0, 'France')"]
+
 INSERTING 1 NITRO 12 USA
 INSERT inserting a tuple
 INSERT Create tuples from record
@@ -194,19 +249,27 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 3 max: 4
+LRU free list: [3]
 LRU: empty slot in buffer return 3
 INSERT evicted 3
 INSERT create page table entry
 INSERT set page table entry 3 False False True 3 
 INSERT set page from file page num: 3
 INSERT set cache value 3 3
-COL BUFFER Successful set 3 to 3
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 3 at 3 with buffer len: 4
 COL BUFFER getting 3 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 10)']
+key: 2 page: 
 		page 2: ["(0, 'France')"]
+key: 3 page: 
 		page 3: []
+
 INSERT insert tuple to page
 PAGE: adding a tuple
 searching content
@@ -215,11 +278,17 @@ added tuple at 0 and updated map of c_id 1 to 0
 INSERTED  NAME  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT NAME:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT NAME:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 1: ['(0, 10)']
+key: 2 page: 
 		page 2: ["(0, 'France')"]
+key: 3 page: 
 		page 3: ["(1, 'nitro')"]
+
 INSERTING  INTENSITY  TUPLE
 			Making page 4
 INSERT get entry from page table for page_num 4
@@ -227,6 +296,7 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 4 max: 4
+LRU free list: []
 dict_keys([0, 1, 2, 3])
 LRU: chose 0 to evict
 Flushing frame: 0
@@ -245,14 +315,20 @@ INSERT set page from file page num: 4
 INSERT set cache value 0 4
 COL BUFFER Successful set 0 to 4
 COL BUFFER getting 0 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
-		page 1: ['(0, 10)']
-		page 2: ["(0, 'France')"]
-		page 3: ["(1, 'nitro')"]
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: []
+key: 1 page: 
+		page 1: ['(0, 10)']
+key: 2 page: 
+		page 2: ["(0, 'France')"]
+key: 3 page: 
+		page 3: ["(1, 'nitro')"]
+
 INSERT insert tuple to page
 []
-C_ID not in keys: c_id 1
+C_ID not in keys: c_id 1, page id: 4
 coffee id 1 not in page: 4
 PAGE: adding a tuple
 searching content
@@ -261,11 +337,17 @@ added tuple at 0 and updated map of c_id 1 to 0
 INSERTED  INTENSITY  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT INTENSITY:    COLUMN BUFFER: 
-		page 1: ['(0, 10)']
-		page 2: ["(0, 'France')"]
-		page 3: ["(1, 'nitro')"]
+COLUMN  CACHE   AFTER INSERT INTENSITY:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 12)']
+key: 1 page: 
+		page 1: ['(0, 10)']
+key: 2 page: 
+		page 2: ["(0, 'France')"]
+key: 3 page: 
+		page 3: ["(1, 'nitro')"]
+
 INSERTING  COO  TUPLE
 search pages in list:  [2]
 INSERT get entry from page table for page_num 2
@@ -280,11 +362,17 @@ Page: 2 w len: 1 and max 2 is full?: False
 added tuple at 1 and updated map of c_id 1 to 1
 attempted  to  add 1 to page: 2
 INSERT tuple inserted
-COLUMN  CACHE   AFTER INSERT COO:    COLUMN BUFFER: 
-		page 1: ['(0, 10)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 3: ["(1, 'nitro')"]
+COLUMN  CACHE   AFTER INSERT COO:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 12)']
+key: 1 page: 
+		page 1: ['(0, 10)']
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 3: ["(1, 'nitro')"]
+
 
 
 starbucks PK: coffee_id
@@ -343,7 +431,9 @@ starbucks PK: coffee_id
 	country_of_origin 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
 COLUMN BUFFER EMPTY
+
 COLUMN BUFFER: 
+
 UPDATING C_ID 1 TO INTENSITY 3
 UPDATE UPDATEing a tuple
 INSERTING  INTENSITY  TUPLE
@@ -353,16 +443,21 @@ True False False 0
 INSERT entry_rec is None
 Call LRU
 LRU: len: 0 max: 4
+LRU free list: [0, 1, 2, 3]
 LRU: empty slot in buffer return 0
 INSERT evicted 0
 INSERT create page table entry
 INSERT set page table entry 4 False False True 0 
 INSERT set page from file page num: 4
 INSERT set cache value 0 4
-COL BUFFER Successful set 0 to 4
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 4 at 0 with buffer len: 1
 COL BUFFER getting 0 from 1 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 12)']
+
 INSERT insert tuple to page
 C_ID in  keys
 Do an update c_id 1 to idx 0 with content: [(1, 12)]
@@ -383,8 +478,11 @@ starbucks PK: coffee_id
 		page 4: ['(1, 12)']
 	country_of_origin 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
+
 COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
+
 
 START READ
 INSERT get entry from page table for page_num 3
@@ -393,17 +491,23 @@ True False False 3
 INSERT entry_rec is None
 Call LRU
 LRU: len: 1 max: 4
+LRU free list: [1, 2, 3]
 LRU: empty slot in buffer return 1
 INSERT evicted 1
 INSERT create page table entry
 INSERT set page table entry 3 False False True 1 
 INSERT set page from file page num: 3
 INSERT set cache value 1 3
-COL BUFFER Successful set 1 to 3
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 3 at 1 with buffer len: 2
 COL BUFFER getting 1 from 2 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
+key: 1 page: 
 		page 3: ["(1, 'nitro')"]
+
 C_ID in  keys
 Do an update c_id 1 to idx 0 with content: [(1, 'nitro')]
 (1, 'nitro')
@@ -419,6 +523,7 @@ searching content
 Page: 0 w len: 0 and max 2 is full?: False
 added tuple at 0 and updated map of c_id starbucks to 0
 [0, 1]
+Get page num: 4
 c_id: 1 is on page: 4
 INSERT get entry from page table for page_num 4
 dict_keys([0, 1, 2, 3, 4])
@@ -429,33 +534,49 @@ C_ID in  keys
 Do an update c_id 1 to idx 0 with content: [(1, 3)]
 intensity returned   (1, 3)
 TO ROW table: starbucks c_id: 1
+FOUND THE RECORD (1, nitro, None, None)
+inserting: (1, None, 3, None)
+RECORD AFTER (1, nitro, 3, None)
 INSERT get entry from page table for page_num 2
 dict_keys([0, 1, 2, 3, 4])
 True False False 2
 INSERT entry_rec is None
 Call LRU
 LRU: len: 2 max: 4
+LRU free list: [2, 3]
 LRU: empty slot in buffer return 2
 INSERT evicted 2
 INSERT create page table entry
 INSERT set page table entry 2 False False True 2 
 INSERT set page from file page num: 2
 INSERT set cache value 2 2
-COL BUFFER Successful set 2 to 2
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 2 at 2 with buffer len: 3
 COL BUFFER getting 2 from 3 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
+key: 1 page: 
 		page 3: ["(1, 'nitro')"]
+key: 2 page: 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
+
 C_ID in  keys
 Do an update c_id 1 to idx 1 with content: [(0, 'France'), (1, 'USA')]
 Found the c_id
 coo returned   (1, 'USA')
 TO ROW table: starbucks c_id: 1
+FOUND THE RECORD (1, nitro, 3, None)
+inserting: (1, None, None, USA)
+RECORD AFTER (1, nitro, 3, USA)
+returning: (1, nitro, 3, USA)
 OUTPUT:  (1, nitro, 3, USA)
 END READ
+
 ROW BUFFER: 
-		page 0: ["('starbucks', <Common.Record object at 0x000001FBEB329A10>)"]
+key: 0 page: (1, nitro, 3, USA)
+
 starbucks PK: coffee_id
 	coffee_name 
 		page 0: ["(0, 'mochiato')"]
@@ -476,19 +597,27 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 3 max: 4
+LRU free list: [3]
 LRU: empty slot in buffer return 3
 INSERT evicted 3
 INSERT create page table entry
 INSERT set page table entry 5 False False True 3 
 INSERT set page from file page num: 5
 INSERT set cache value 3 5
-COL BUFFER Successful set 3 to 5
+Exception: list.remove(x): x not in list
+COL BUFFER failure to add 5 at 3 with buffer len: 4
 COL BUFFER getting 3 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
+key: 1 page: 
 		page 3: ["(1, 'nitro')"]
+key: 2 page: 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
 		page 5: []
+
 INSERT insert tuple to page
 PAGE: adding a tuple
 searching content
@@ -497,11 +626,17 @@ added tuple at 0 and updated map of c_id 2 to 0
 INSERTED  NAME  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT NAME:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT NAME:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
+key: 1 page: 
 		page 3: ["(1, 'nitro')"]
+key: 2 page: 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
 		page 5: ["(2, 'latte')"]
+
 INSERTING  INTENSITY  TUPLE
 			Making page 6
 INSERT get entry from page table for page_num 6
@@ -509,6 +644,7 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 4 max: 4
+LRU free list: []
 dict_keys([0, 1, 2, 3, 4, 5])
 LRU: chose 1 to evict
 Flushing frame: 1
@@ -524,14 +660,20 @@ INSERT set page from file page num: 6
 INSERT set cache value 1 6
 COL BUFFER Successful set 1 to 6
 COL BUFFER getting 1 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 1 page: 
 		page 6: []
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
 INSERT insert tuple to page
 []
-C_ID not in keys: c_id 2
+C_ID not in keys: c_id 2, page id: 6
 coffee id 2 not in page: 6
 PAGE: adding a tuple
 searching content
@@ -540,11 +682,17 @@ added tuple at 0 and updated map of c_id 2 to 0
 INSERTED  INTENSITY  TUPLE
 
 
-COLUMN  CACHE   AFTER INSERT INTENSITY:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT INTENSITY:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 1 page: 
 		page 6: ['(2, 5)']
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
 INSERTING  COO  TUPLE
 INSERT COO PAGE NUMS WAS  NULL
 			Making page 7
@@ -554,7 +702,18 @@ None
 INSERT entry_rec is None
 Call LRU
 LRU: len: 4 max: 4
-LRU: empty slot in buffer return 1
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6])
+LRU: chose 1 to evict
+Flushing frame: 1
+page selected is 6
+dict_keys([0, 1, 2, 3, 4, 5, 6])
+got entry from page table: True False True 1
+make mapping false
+page is dirty, write it out
+writing out page w id 6
+Found the page on disc
+deleting 1 from dict_keys([0, 2, 3, 1])
 INSERT evicted 1
 INSERT create page table entry
 INSERT set page table entry 7 False False True 1 
@@ -562,11 +721,17 @@ INSERT set page from file page num: 7
 INSERT set cache value 1 7
 COL BUFFER Successful set 1 to 7
 COL BUFFER getting 1 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 1 page: 
 		page 7: []
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
 INSERT insert tuple to page
 PAGE: adding a tuple
 searching content
@@ -574,11 +739,17 @@ Page: 7 w len: 0 and max 2 is full?: False
 added tuple at 0 and updated map of c_id 2 to 0
 attempted  to  add 2 to page: 7
 INSERT tuple inserted
-COLUMN  CACHE   AFTER INSERT COO:    COLUMN BUFFER: 
+COLUMN  CACHE   AFTER INSERT COO:    
+COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 1 page: 
 		page 7: ["(2, 'ITALLIIIAAA')"]
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
 
 
 starbucks PK: coffee_id
@@ -589,15 +760,21 @@ starbucks PK: coffee_id
 	intensity 
 		page 1: ['(0, 10)']
 		page 4: ['(1, 12)']
-		page 6: []
+		page 6: ['(2, 5)']
 	country_of_origin 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
 		page 7: []
+
 COLUMN BUFFER: 
+key: 0 page: 
 		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 1 page: 
 		page 7: ["(2, 'ITALLIIIAAA')"]
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
 START TABLE READ
 INSERT get entry from page table for page_num 0
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
@@ -605,6 +782,99 @@ True False False 0
 INSERT entry_rec is None
 Call LRU
 LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 0 to evict
+Flushing frame: 0
+page selected is 4
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: True False True 0
+make mapping false
+page is dirty, write it out
+writing out page w id 4
+Found the page on disc
+deleting 0 from dict_keys([0, 2, 3, 1])
+INSERT evicted 0
+INSERT create page table entry
+INSERT set page table entry 0 False False True 0 
+INSERT set page from file page num: 0
+INSERT set cache value 0 0
+COL BUFFER Successful set 0 to 0
+COL BUFFER getting 0 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
+		page 7: ["(2, 'ITALLIIIAAA')"]
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
+INSERT get entry from page table for page_num 3
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+False False False 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 2 to evict
+Flushing frame: 2
+page selected is 2
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 2
+make mapping false
+deleting 2 from dict_keys([2, 3, 1, 0])
+INSERT evicted 2
+INSERT create page table entry
+INSERT set page table entry 3 False False True 2 
+INSERT set page from file page num: 3
+INSERT set cache value 2 3
+COL BUFFER Successful set 2 to 3
+COL BUFFER getting 2 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
+		page 7: ["(2, 'ITALLIIIAAA')"]
+key: 2 page: 
+		page 3: ["(1, 'nitro')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
+INSERT get entry from page table for page_num 5
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+True False True 3
+INSERT get page from cache 3
+COL BUFFER getting 3 from 4 size buffer
+list of c_ids:  [0, 1, 2]
+INSERT get entry from page table for page_num 0
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+False False True 0
+INSERT get page from cache 0
+COL BUFFER getting 0 from 4 size buffer
+C_ID in  keys
+Do an update c_id 0 to idx 0 with content: [(0, 'mochiato')]
+(0, 'mochiato')
+name returned   (0, 'mochiato')
+TO ROW table: starbucks c_id: 0
+Page: 0 w len: 1 and max 2 is full?: False
+PAGE: adding a tuple
+PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dc9d0>)]
+[0, 1, 2]
+Get page num: 1
+c_id: 0 is on page: 1
+INSERT get entry from page table for page_num 1
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+True False False 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
 LRU: chose 1 to evict
 Flushing frame: 1
@@ -615,89 +885,174 @@ make mapping false
 page is dirty, write it out
 writing out page w id 7
 Found the page on disc
-deleting 1 from dict_keys([0, 2, 3, 1])
+deleting 1 from dict_keys([3, 1, 0, 2])
 INSERT evicted 1
 INSERT create page table entry
-INSERT set page table entry 0 False False True 1 
-INSERT set page from file page num: 0
-INSERT set cache value 1 0
-COL BUFFER Successful set 1 to 0
+INSERT set page table entry 1 False False True 1 
+INSERT set page from file page num: 1
+INSERT set cache value 1 1
+COL BUFFER Successful set 1 to 1
 COL BUFFER getting 1 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
-		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
 		page 0: ["(0, 'mochiato')"]
-INSERT get entry from page table for page_num 3
+key: 1 page: 
+		page 1: ['(0, 10)']
+key: 2 page: 
+		page 3: ["(1, 'nitro')"]
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
+C_ID in  keys
+Do an update c_id 0 to idx 0 with content: [(0, 10)]
+intensity returned   (0, 10)
+TO ROW table: starbucks c_id: 0
+Page: 0 w len: 1 and max 2 is full?: False
+PAGE: adding a tuple
+PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dc8e0>)]
+INSERT get entry from page table for page_num 2
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-False False False 1
+False False False 2
 INSERT entry_rec is None
 Call LRU
 LRU: len: 4 max: 4
-LRU: empty slot in buffer return 1
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 1 to evict
+Flushing frame: 1
+page selected is 1
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 1
+make mapping false
+deleting 1 from dict_keys([3, 0, 2, 1])
 INSERT evicted 1
 INSERT create page table entry
-INSERT set page table entry 3 False False True 1 
-INSERT set page from file page num: 3
-INSERT set cache value 1 3
-COL BUFFER Successful set 1 to 3
+INSERT set page table entry 2 False False True 1 
+INSERT set page from file page num: 2
+INSERT set cache value 1 2
+COL BUFFER Successful set 1 to 2
 COL BUFFER getting 1 from 4 size buffer
-INSERT col cache after set:  COLUMN BUFFER: 
-		page 4: ['(1, 3)']
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
-		page 5: ["(2, 'latte')"]
+key: 2 page: 
 		page 3: ["(1, 'nitro')"]
-INSERT get entry from page table for page_num 5
-dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-True False True 3
-INSERT get page from cache 3
-COL BUFFER getting 3 from 4 size buffer
-INSERT get entry from page table for page_num 0
-dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-False False True 1
-INSERT get page from cache 1
-COL BUFFER getting 1 from 4 size buffer
-[1]
-C_ID not in keys: c_id 0
-coffee id 0 not in page: 3
-tuple was none
-name RETURN NONE  t_id: starbucks  c_id: 0
+key: 3 page: 
+		page 5: ["(2, 'latte')"]
+
+C_ID in  keys
+Do an update c_id 0 to idx 0 with content: [(0, 'France'), (1, 'USA')]
+Found the c_id
+coo returned   (0, 'France')
+TO ROW table: starbucks c_id: 0
+Page: 0 w len: 1 and max 2 is full?: False
+PAGE: adding a tuple
+PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dd150>)]
+C_id is not in the page: 0 and t_id: starbucks
+read returned x: None
 INSERT get entry from page table for page_num 3
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-False False True 1
-INSERT get page from cache 1
-COL BUFFER getting 1 from 4 size buffer
+False False True 2
+INSERT get page from cache 2
+COL BUFFER getting 2 from 4 size buffer
 C_ID in  keys
 Do an update c_id 1 to idx 0 with content: [(1, 'nitro')]
 (1, 'nitro')
 name returned   (1, 'nitro')
 TO ROW table: starbucks c_id: 1
 [0, 1, 2]
+Get page num: 4
 c_id: 1 is on page: 4
 INSERT get entry from page table for page_num 4
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-True False True 0
-INSERT get page from cache 0
-COL BUFFER getting 0 from 4 size buffer
+True False False 0
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 3 to evict
+Flushing frame: 3
+page selected is 5
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: True False True 3
+make mapping false
+page is dirty, write it out
+writing out page w id 5
+Found the page on disc
+deleting 3 from dict_keys([3, 0, 2, 1])
+INSERT evicted 3
+INSERT create page table entry
+INSERT set page table entry 4 False False True 3 
+INSERT set page from file page num: 4
+INSERT set cache value 3 4
+COL BUFFER Successful set 3 to 4
+COL BUFFER getting 3 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 0: ["(0, 'mochiato')"]
+key: 1 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 2 page: 
+		page 3: ["(1, 'nitro')"]
+key: 3 page: 
+		page 4: ['(1, 3)']
+
 C_ID in  keys
 Do an update c_id 1 to idx 0 with content: [(1, 3)]
 intensity returned   (1, 3)
 TO ROW table: starbucks c_id: 1
 INSERT get entry from page table for page_num 2
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-False False True 2
-INSERT get page from cache 2
-COL BUFFER getting 2 from 4 size buffer
+False False True 1
+INSERT get page from cache 1
+COL BUFFER getting 1 from 4 size buffer
 C_ID in  keys
 Do an update c_id 1 to idx 1 with content: [(0, 'France'), (1, 'USA')]
 Found the c_id
 coo returned   (1, 'USA')
 TO ROW table: starbucks c_id: 1
+read returned x: None
 INSERT get entry from page table for page_num 5
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-True False True 3
-INSERT get page from cache 3
-COL BUFFER getting 3 from 4 size buffer
+True False False 3
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 0 to evict
+Flushing frame: 0
+page selected is 0
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 0
+make mapping false
+deleting 0 from dict_keys([0, 2, 1, 3])
+INSERT evicted 0
+INSERT create page table entry
+INSERT set page table entry 5 False False True 0 
+INSERT set page from file page num: 5
+INSERT set cache value 0 5
+COL BUFFER Successful set 0 to 5
+COL BUFFER getting 0 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 5: ["(2, 'latte')"]
+key: 1 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 2 page: 
+		page 3: ["(1, 'nitro')"]
+key: 3 page: 
+		page 4: ['(1, 3)']
+
 C_ID in  keys
 Do an update c_id 2 to idx 0 with content: [(2, 'latte')]
 (2, 'latte')
@@ -706,36 +1061,153 @@ TO ROW table: starbucks c_id: 2
 Page: 0 w len: 1 and max 2 is full?: False
 PAGE: adding a tuple
 PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
-Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x000001FBEB329A10>)]
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dc9a0>)]
 [0, 1, 2]
+Get page num: 6
 c_id: 2 is on page: 6
 INSERT get entry from page table for page_num 6
 dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
-True False True 1
-INSERT get page from cache 1
+True False False 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 1 to evict
+Flushing frame: 1
+page selected is 2
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 1
+make mapping false
+deleting 1 from dict_keys([2, 1, 3, 0])
+INSERT evicted 1
+INSERT create page table entry
+INSERT set page table entry 6 False False True 1 
+INSERT set page from file page num: 6
+INSERT set cache value 1 6
+COL BUFFER Successful set 1 to 6
 COL BUFFER getting 1 from 4 size buffer
-[1]
-C_ID not in keys: c_id 2
-coffee id 2 not in page: 3
-tuple  is none
-intensity RETURN NONE  t_id: starbucks  c_id: 2
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 5: ["(2, 'latte')"]
+key: 1 page: 
+		page 6: ['(2, 5)']
+key: 2 page: 
+		page 3: ["(1, 'nitro')"]
+key: 3 page: 
+		page 4: ['(1, 3)']
+
+C_ID in  keys
+Do an update c_id 2 to idx 0 with content: [(2, 5)]
+intensity returned   (2, 5)
+TO ROW table: starbucks c_id: 2
+Page: 0 w len: 1 and max 2 is full?: False
+PAGE: adding a tuple
+PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dcd00>)]
+INSERT get entry from page table for page_num 2
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+False False False 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 2 to evict
+Flushing frame: 2
+page selected is 3
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 2
+make mapping false
+deleting 2 from dict_keys([2, 3, 0, 1])
+INSERT evicted 2
+INSERT create page table entry
+INSERT set page table entry 2 False False True 2 
+INSERT set page from file page num: 2
+INSERT set cache value 2 2
+COL BUFFER Successful set 2 to 2
+COL BUFFER getting 2 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 5: ["(2, 'latte')"]
+key: 1 page: 
+		page 6: ['(2, 5)']
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 4: ['(1, 3)']
+
+[0, 1]
+C_ID not in keys: c_id 2, page id: 2
+coffee id 2 not in page: 2
+INSERT get entry from page table for page_num 7
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+True False False 1
+INSERT entry_rec is None
+Call LRU
+LRU: len: 4 max: 4
+LRU free list: []
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+LRU: chose 3 to evict
+Flushing frame: 3
+page selected is 4
+dict_keys([0, 1, 2, 3, 4, 5, 6, 7])
+got entry from page table: False False True 3
+make mapping false
+deleting 3 from dict_keys([3, 0, 1, 2])
+INSERT evicted 3
+INSERT create page table entry
+INSERT set page table entry 7 False False True 3 
+INSERT set page from file page num: 7
+INSERT set cache value 3 7
+COL BUFFER Successful set 3 to 7
+COL BUFFER getting 3 from 4 size buffer
+INSERT col cache after set:  
+COLUMN BUFFER: 
+key: 0 page: 
+		page 5: ["(2, 'latte')"]
+key: 1 page: 
+		page 6: ['(2, 5)']
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 7: ["(2, 'ITALLIIIAAA')"]
+
+C_ID in  keys
+Do an update c_id 2 to idx 0 with content: [(2, 'ITALLIIIAAA')]
+Found the c_id
+coo returned   (2, 'ITALLIIIAAA')
+TO ROW table: starbucks c_id: 2
+Page: 0 w len: 1 and max 2 is full?: False
+PAGE: adding a tuple
+PAGE: c_id starbucks is in map keys: dict_keys(['starbucks'])
+Do an update c_id starbucks to idx 0 with content: [('starbucks', <Common.Record object at 0x1017dd420>)]
+C_id is not in the page: 2 and t_id: starbucks
+read returned x: None
 OUTPUT:  
-(1, nitro, 3, USA)
 END TABLE READ
 starbucks PK: coffee_id
 	coffee_name 
 		page 0: ["(0, 'mochiato')"]
 		page 3: ["(1, 'nitro')"]
-		page 5: []
+		page 5: ["(2, 'latte')"]
 	intensity 
 		page 1: ['(0, 10)']
-		page 4: ['(1, 12)']
-		page 6: []
+		page 4: ['(1, 3)']
+		page 6: ['(2, 5)']
 	country_of_origin 
 		page 2: ["(0, 'France')", "(1, 'USA')"]
 		page 7: ["(2, 'ITALLIIIAAA')"]
+
 COLUMN BUFFER: 
-		page 4: ['(1, 3)']
-		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 0 page: 
 		page 5: ["(2, 'latte')"]
-		page 3: ["(1, 'nitro')"]
+key: 1 page: 
+		page 6: ['(2, 5)']
+key: 2 page: 
+		page 2: ["(0, 'France')", "(1, 'USA')"]
+key: 3 page: 
+		page 7: ["(2, 'ITALLIIIAAA')"]
+

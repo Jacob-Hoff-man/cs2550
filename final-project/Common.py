@@ -41,7 +41,12 @@ class Record:
         self.country_of_origin = country_of_origin
 
     def tupl_mode(self):
-        return (self.coffee_id, self.coffee_name, self.intensity, self.country_of_origin)
+        return (
+            self.coffee_id,
+            self.coffee_name,
+            self.intensity,
+            self.country_of_origin,
+        )
 
     def __str__(self):
         return f"({self.coffee_id}, {self.coffee_name}, {self.intensity}, {self.country_of_origin})"
@@ -79,11 +84,12 @@ class Aggregate(AccessMethod):
 
 
 class Page:
-    def __init__(self, _id) -> None:
+    def __init__(self, _id, row_page=False) -> None:
         print(f"\t\t\tMaking page {_id}")
         self.id = _id
         self.content = []
         self.map = {}  # each page has a map for getting tuples
+        self.row_page = row_page
         self.max = 2
 
     def full(self):
@@ -92,18 +98,46 @@ class Page:
         )
         return len(self.content) == self.max
 
+    def get_row_tuple(self, t_id, c_id) -> tuple | None:
+        if self.row_page is False:
+            return self.get_tuple(c_id)
+
     def get_tuple(self, c_id) -> tuple | None:
+        if self.row_page:
+            t_id, c_id = c_id
+            return self.get_row_tuple(t_id, c_id)
         if c_id in self.map.keys():
             print("C_ID in  keys")
             idx = self.map[c_id]
-            print(
-                f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
+            print(f"Do an update c_id {c_id} to idx {idx} with content: {self.content}")
             return self.content[idx]
         else:
             print(list(self.map.keys()))
-            print(f"C_ID not in keys: c_id {c_id}")
+            print(f"C_ID not in keys: c_id {c_id}, page id: {self.id}")
             print(f"coffee id {c_id} not in page: {self.id}")
             return None
+
+    def add_row_tuple(self, t_id, c_id, record):
+        if self.full():
+            return
+        self.content.append(record)
+        if t_id not in self.map.keys():
+            self.map[t_id] = {}
+        if c_id in self.map[t_id].keys():
+            record_ = self.content[self.map[t_id][c_id]]
+            print(f"FOUND THE RECORD {record_}")
+            print(f"inserting: {record}")
+            if record_.coffee_name is None:
+                record_.coffee_name = record.coffee_name
+
+            if record_.intensity is None:
+                record_.intensity = record.intensity
+
+            if record_.country_of_origin is None:
+                record_.country_of_origin = record.country_of_origin
+            print(f"RECORD AFTER {record_}")
+            return
+        self.map[t_id][c_id] = len(self.content)
 
     def add_tuple(self, _tuple) -> None:
         print("PAGE: adding a tuple")
@@ -251,17 +285,22 @@ class Operation:
                 quit("Op Type Not recognized...")
 
     def __init__(self, line) -> None:
-        self.op, self.args = self.to_txn_tuple(line)   
+        self.op, self.args = self.to_txn_tuple(line)
 
     def is_write(self):
         return self.op in [OpType.I.value, OpType.U.value]
 
     def is_read(self):
-        return self.op in [OpType.R.value, OpType.T.value, OpType.M.value, OpType.G.value]
+        return self.op in [
+            OpType.R.value,
+            OpType.T.value,
+            OpType.M.value,
+            OpType.G.value,
+        ]
 
     def is_commit(self):
         return self.op in [OpType.C.value]
-    
+
     def __str__(self) -> str:
         match (self.op):
             case OpType.B.value:
@@ -307,5 +346,4 @@ class Transaction:
         return self.ops.pop(idx)
 
     def __str__(self) -> str:
-        return f'Transaction Id: {self.id}\n{[str(op) for op in self.ops]}'
-
+        return f"Transaction Id: {self.id}\n{[str(op) for op in self.ops]}"
