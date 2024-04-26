@@ -383,25 +383,6 @@ def test_Q():
 
 def test_I(schema_file_name):
     dbms = DbmsSimulator(schema_file_name)
-
-    ph3 = True
-    ph2 = False
-    ph2_op_m = False
-    ph2_op_g = False
-    test_aux = False
-
-    # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
-    if ph3:
-        file_txns = dbms.transaction_manager.read_files(file_names)
-        txns = [value for (key, value) in file_txns.items()]
-        print("TXNS", txns)
-        serialized_txns = dbms.scheduler.get_serialized_history(txns)
-
-    if ph2_op_g:
-        print("INSERTING 0 LATTE 5 USA")
-        dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
-        print(dbms.data_manager.get_table("starbucks"))  # table print
-        print(dbms.data_manager.col_cache)
     print("INSERTING 1 NITRO 12 USA")
     dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
@@ -619,7 +600,24 @@ def main():
     # serialized_txns = dbms.scheduler.execute(txns)
 
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+    ph3 = True
+    ph2 = False
+    ph2_op_m = False
+    ph2_op_g = False
+    test_aux = False
 
+    # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+    if ph3:
+        file_txns = dbms.transaction_manager.read_files(file_names)
+        txns = [value for (key, value) in file_txns.items()]
+        print("TXNS", txns)
+        serialized_txns = dbms.scheduler.get_serialized_history(txns)
+
+    if ph2_op_g:
+        print("INSERTING 0 LATTE 5 USA")
+        dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+        print(dbms.data_manager.get_table("starbucks"))  # table print
+        print(dbms.data_manager.col_cache)
     # txns = txn_mgr.read_files(file_names)
     # if txn_processing_type == 'rr':
     #     txn_mgr.round_robin(txns)
