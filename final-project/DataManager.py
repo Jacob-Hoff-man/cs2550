@@ -1,11 +1,10 @@
 import copy
 import logging
+import pickle
 import random
 
 from CatalogManager import CatalogManager
-from Common import AuxiliaryType, Component, File, Lock, Operation, Page, Record, Table
-
-# from Common import Component
+from Common import Component, File, Lock, Operation, OpType, Page, Record, Table
 from Logger import LogType
 
 num_pages = 0
@@ -52,18 +51,63 @@ class DataManager(Component):
         self, catalog_manager: CatalogManager, tables: dict, buff_size: int
     ) -> None:
         super().__init__(LogType.DATA_MANAGER)
+
         self.catalog_manager = catalog_manager
         self.tables = tables
-        self.recovery_log = {}
+        self.recovery_log = []
         self.pg_tbl = PageTable()
         self.col_cache = ColBuffer(self, buff_size)
         self.row_cache = RowBuffer(self, buff_size)
         self.lru_arr = []
         self.log("DATA MANAGER INTIALIZED")
 
-    def do_operation(self, txn_id: int, op_or_lock: Operation | Lock):
-        if txn_id not in self.recover_log.keys():
-            pass
+    def commit(self, txn_id):
+        new = []
+        for txn_id_, x in self.recovery_log:
+            if txn_id_ != txn_id:
+                new.append(x)
+        self.recovery_log = new
+        return 0
+
+    def abort(self, txn_id):
+        new = []
+        for txn_id_, x in self.recovery_log:
+            if txn_id_ != txn_id:
+                new.append(x)
+        self.recovery_log = new
+        return 0
+
+    def quit(self):
+        with open("database_objs.pkl", "wb") as outp:
+            pickle.dump(self, outp, pickle.HIGHEST_PROTOCOL)
+
+    def __call__(self, txn_id: int, op: Operation | Lock):
+        if isinstance(op, Lock):
+            return
+        match (op.op):
+            case OpType.B.value:
+                pass
+            case OpType.C.value:
+                return self.commit(txn_id)
+            case OpType.A.value:
+                return self.abort(txn_id)
+            case OpType.Q.value:
+                return self.quit()
+            case OpType.I.value:
+                return self.insert(op.args[0], op.args[1][0], op.args[1][1:])
+
+            case OpType.U.value:
+                return self.update(op.args[0], op.args[1][0], op.args[1][1])
+
+            case OpType.R.value:
+                return self.read(op.args[0], op.args[1])
+            case OpType.T.value:
+                return self.table_read(op.args[0], op.args[1])
+            case OpType.M.value:
+                return self.op_m(op.args[0], op.args[1])
+
+            case OpType.G.value:
+                return self.op_g(op.args[0], op.args[1])
         raise NotImplementedError
 
     def write_out(self, page: Page):
