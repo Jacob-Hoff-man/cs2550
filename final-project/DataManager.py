@@ -3,8 +3,8 @@ import logging
 import random
 
 from CatalogManager import CatalogManager
-from Common import (AuxiliaryType, Component, File, Lock, Operation, Page,
-                    Record, Table)
+from Common import AuxiliaryType, Component, File, Lock, Operation, Page, Record, Table
+
 # from Common import Component
 from Logger import LogType
 
@@ -60,8 +60,10 @@ class DataManager(Component):
         self.row_cache = RowBuffer(self, buff_size)
         self.lru_arr = []
         self.log("DATA MANAGER INTIALIZED")
-    
-    def do_operation(self, txn_id:int, op_or_lock:Operation | Lock):
+
+    def do_operation(self, txn_id: int, op_or_lock: Operation | Lock):
+        if txn_id not in self.recover_log.keys():
+            pass
         raise NotImplementedError
 
     def write_out(self, page: Page):
