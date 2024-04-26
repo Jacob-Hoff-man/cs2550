@@ -603,7 +603,7 @@ def stress_test(schema_file_name):
     for i in range(512):
         dbms.data_manager.insert(
             t_id,
-            i,
+            random.randint(0, 63999),
             (
                 coffee_list[random.randint(0, len(coffee_list) - 1)],
                 random.randint(0, 12),

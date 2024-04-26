@@ -437,2747 +437,1324 @@ SWAP IN T-starbucks P-39
 SWAP IN T-starbucks P-40
 SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-42
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-43
 SWAP IN T-starbucks P-44
 SWAP IN T-starbucks P-45
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-36
 SWAP IN T-starbucks P-47
 SWAP IN T-starbucks P-48
 SWAP IN T-starbucks P-49
 SWAP IN T-starbucks P-50
 SWAP IN T-starbucks P-51
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-52
 SWAP IN T-starbucks P-53
 SWAP IN T-starbucks P-54
 SWAP IN T-starbucks P-55
 SWAP IN T-starbucks P-56
 SWAP IN T-starbucks P-57
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-58
 SWAP IN T-starbucks P-59
 SWAP IN T-starbucks P-60
 SWAP IN T-starbucks P-61
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
 SWAP IN T-starbucks P-62
 SWAP IN T-starbucks P-63
 SWAP IN T-starbucks P-64
 SWAP IN T-starbucks P-65
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-67
 SWAP IN T-starbucks P-68
+SWAP IN T-starbucks P-43
 SWAP IN T-starbucks P-69
 SWAP IN T-starbucks P-70
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-71
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-72
+SWAP IN T-starbucks P-57
 SWAP IN T-starbucks P-73
 SWAP IN T-starbucks P-74
 SWAP IN T-starbucks P-75
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
 SWAP IN T-starbucks P-76
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-47
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-77
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-72
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-78
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-65
 SWAP IN T-starbucks P-79
 SWAP IN T-starbucks P-80
 SWAP IN T-starbucks P-81
 SWAP IN T-starbucks P-82
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-83
 SWAP IN T-starbucks P-84
 SWAP IN T-starbucks P-85
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-86
 SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-88
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-89
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-90
 SWAP IN T-starbucks P-91
 SWAP IN T-starbucks P-92
 SWAP IN T-starbucks P-93
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-94
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-95
 SWAP IN T-starbucks P-96
 SWAP IN T-starbucks P-97
+SWAP IN T-starbucks P-72
 SWAP IN T-starbucks P-98
 SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-52
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-100
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-101
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-102
+SWAP IN T-starbucks P-52
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-103
 SWAP IN T-starbucks P-104
-SWAP IN T-starbucks P-36
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-105
+SWAP IN T-starbucks P-54
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-106
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-107
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-108
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-109
+SWAP IN T-starbucks P-106
+SWAP IN T-starbucks P-44
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-110
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-111
+SWAP IN T-starbucks P-80
+SWAP IN T-starbucks P-81
 SWAP IN T-starbucks P-112
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-113
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-114
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-115
+SWAP IN T-starbucks P-79
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-116
+SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-117
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-47
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-118
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-119
+SWAP IN T-starbucks P-117
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-120
 SWAP IN T-starbucks P-121
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-122
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-67
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-115
 SWAP IN T-starbucks P-123
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-124
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-125
+SWAP IN T-starbucks P-76
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-104
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-126
 SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-128
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-105
+SWAP IN T-starbucks P-80
+SWAP IN T-starbucks P-81
 SWAP IN T-starbucks P-129
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-130
 SWAP IN T-starbucks P-131
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-116
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-89
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-132
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-133
-SWAP IN T-starbucks P-78
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-131
 SWAP IN T-starbucks P-134
 SWAP IN T-starbucks P-135
 SWAP IN T-starbucks P-136
+SWAP IN T-starbucks P-116
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-137
+SWAP IN T-starbucks P-91
 SWAP IN T-starbucks P-138
 SWAP IN T-starbucks P-139
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-104
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-140
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-141
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-142
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-71
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-143
+SWAP IN T-starbucks P-85
 SWAP IN T-starbucks P-144
 SWAP IN T-starbucks P-145
 SWAP IN T-starbucks P-146
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-96
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-138
 SWAP IN T-starbucks P-147
+SWAP IN T-starbucks P-65
 SWAP IN T-starbucks P-148
+SWAP IN T-starbucks P-139
+SWAP IN T-starbucks P-145
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-77
 SWAP IN T-starbucks P-149
+SWAP IN T-starbucks P-118
+SWAP IN T-starbucks P-65
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-150
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-122
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-138
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-151
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-59
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-133
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-105
+SWAP IN T-starbucks P-112
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-152
 SWAP IN T-starbucks P-153
+SWAP IN T-starbucks P-94
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-154
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-100
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-98
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-124
 SWAP IN T-starbucks P-155
+SWAP IN T-starbucks P-125
 SWAP IN T-starbucks P-156
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-157
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-158
 SWAP IN T-starbucks P-159
-SWAP IN T-starbucks P-81
+SWAP IN T-starbucks P-114
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-54
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
 SWAP IN T-starbucks P-160
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-108
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-106
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-108
+SWAP IN T-starbucks P-80
+SWAP IN T-starbucks P-81
+SWAP IN T-starbucks P-36
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-69
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-161
-SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-57
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-108
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-162
+SWAP IN T-starbucks P-77
 SWAP IN T-starbucks P-163
+SWAP IN T-starbucks P-89
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-164
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-139
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-165
+SWAP IN T-starbucks P-164
+SWAP IN T-starbucks P-146
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-76
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-166
-SWAP IN T-starbucks P-96
+SWAP IN T-starbucks P-90
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-167
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-154
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-168
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-102
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-169
+SWAP IN T-starbucks P-153
+SWAP IN T-starbucks P-123
+SWAP IN T-starbucks P-112
+SWAP IN T-starbucks P-53
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-52
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-170
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-156
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-148
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-170
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-171
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-172
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-173
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-109
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-174
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-106
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-175
+SWAP IN T-starbucks P-151
 SWAP IN T-starbucks P-176
 SWAP IN T-starbucks P-177
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-52
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-157
+SWAP IN T-starbucks P-108
+SWAP IN T-starbucks P-156
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-60
+SWAP IN T-starbucks P-47
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-62
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-178
+SWAP IN T-starbucks P-46
+SWAP IN T-starbucks P-94
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-111
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-143
+SWAP IN T-starbucks P-152
 SWAP IN T-starbucks P-179
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-180
-SWAP IN T-starbucks P-128
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-62
 SWAP IN T-starbucks P-181
+SWAP IN T-starbucks P-116
+SWAP IN T-starbucks P-131
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-85
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-154
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-182
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-183
+SWAP IN T-starbucks P-83
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-184
+SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-170
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-83
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-71
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-59
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-174
 SWAP IN T-starbucks P-185
+SWAP IN T-starbucks P-169
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-186
 SWAP IN T-starbucks P-187
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-109
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-48
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-150
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-188
+SWAP IN T-starbucks P-124
 SWAP IN T-starbucks P-189
+SWAP IN T-starbucks P-115
 SWAP IN T-starbucks P-190
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-191
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-192
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-177
+SWAP IN T-starbucks P-88
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-92
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-72
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-155
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-61
+SWAP IN T-starbucks P-104
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-193
+SWAP IN T-starbucks P-80
+SWAP IN T-starbucks P-81
+SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-96
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-179
+SWAP IN T-starbucks P-61
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-194
 SWAP IN T-starbucks P-195
 SWAP IN T-starbucks P-196
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
 SWAP IN T-starbucks P-197
-SWAP IN T-starbucks P-66
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-45
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-168
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-155
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-198
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-160
+SWAP IN T-starbucks P-86
 SWAP IN T-starbucks P-199
+SWAP IN T-starbucks P-148
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-42
+SWAP IN T-starbucks P-74
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-158
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-193
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-117
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-82
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-157
+SWAP IN T-starbucks P-139
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-90
+SWAP IN T-starbucks P-194
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-60
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-167
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-147
+SWAP IN T-starbucks P-88
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-93
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-200
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-201
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-119
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-202
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-192
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-203
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-178
+SWAP IN T-starbucks P-153
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-51
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-172
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-204
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-116
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-54
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-158
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-120
 SWAP IN T-starbucks P-205
+SWAP IN T-starbucks P-109
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
 SWAP IN T-starbucks P-206
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-207
+SWAP IN T-starbucks P-175
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-165
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-111
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-208
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-157
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-36
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-167
+SWAP IN T-starbucks P-95
+SWAP IN T-starbucks P-173
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-96
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-58
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-171
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-209
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-185
+SWAP IN T-starbucks P-102
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-89
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-166
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-210
+SWAP IN T-starbucks P-196
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-211
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-195
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-160
+SWAP IN T-starbucks P-189
+SWAP IN T-starbucks P-72
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-195
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-111
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-212
+SWAP IN T-starbucks P-179
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-209
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-189
 SWAP IN T-starbucks P-213
+SWAP IN T-starbucks P-93
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-162
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-98
 SWAP IN T-starbucks P-214
+SWAP IN T-starbucks P-193
 SWAP IN T-starbucks P-215
+SWAP IN T-starbucks P-166
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-186
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-145
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-140
+SWAP IN T-starbucks P-114
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-216
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-195
+SWAP IN T-starbucks P-69
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-161
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-194
+SWAP IN T-starbucks P-154
+SWAP IN T-starbucks P-86
+SWAP IN T-starbucks P-209
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-89
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-91
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-99
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-196
+SWAP IN T-starbucks P-43
+SWAP IN T-starbucks P-80
+SWAP IN T-starbucks P-81
+SWAP IN T-starbucks P-188
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-217
+SWAP IN T-starbucks P-186
 SWAP IN T-starbucks P-218
+SWAP IN T-starbucks P-44
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-143
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-94
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
 SWAP IN T-starbucks P-219
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-76
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-119
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-67
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-216
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-48
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-166
+SWAP IN T-starbucks P-152
 SWAP IN T-starbucks P-220
 SWAP IN T-starbucks P-221
+SWAP IN T-starbucks P-77
+SWAP IN T-starbucks P-143
+SWAP IN T-starbucks P-100
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
+SWAP IN T-starbucks P-115
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-103
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-181
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-161
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-107
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-71
+SWAP IN T-starbucks P-186
+SWAP IN T-starbucks P-61
+SWAP IN T-starbucks P-162
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-171
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-176
 SWAP IN T-starbucks P-222
+SWAP IN T-starbucks P-55
+SWAP IN T-starbucks P-56
+SWAP IN T-starbucks P-42
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-51
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-165
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-43
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-153
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-131
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-189
+SWAP IN T-starbucks P-90
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-169
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-223
+SWAP IN T-starbucks P-155
+SWAP IN T-starbucks P-110
+SWAP IN T-starbucks P-161
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-217
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-159
+SWAP IN T-starbucks P-86
+SWAP IN T-starbucks P-65
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-152
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-188
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-216
 SWAP IN T-starbucks P-224
+SWAP IN T-starbucks P-204
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-57
+SWAP IN T-starbucks P-43
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-112
+SWAP IN T-starbucks P-90
+SWAP IN T-starbucks P-36
+SWAP IN T-starbucks P-113
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-149
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-127
+SWAP IN T-starbucks P-165
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-200
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-220
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-139
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-125
 SWAP IN T-starbucks P-225
 SWAP IN T-starbucks P-226
+SWAP IN T-starbucks P-128
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-177
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-178
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-218
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-65
 SWAP IN T-starbucks P-227
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-181
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-218
+SWAP IN T-starbucks P-86
+SWAP IN T-starbucks P-36
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-87
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-220
+SWAP IN T-starbucks P-43
+SWAP IN T-starbucks P-171
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-77
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-228
-SWAP IN T-starbucks P-229
-SWAP IN T-starbucks P-230
-SWAP IN T-starbucks P-231
-SWAP IN T-starbucks P-232
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-234
-SWAP IN T-starbucks P-235
-SWAP IN T-starbucks P-236
-SWAP IN T-starbucks P-237
-SWAP IN T-starbucks P-238
-SWAP IN T-starbucks P-239
-SWAP IN T-starbucks P-240
-SWAP IN T-starbucks P-241
+SWAP IN T-starbucks P-67
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-170
+SWAP IN T-starbucks P-83
+SWAP IN T-starbucks P-62
+SWAP IN T-starbucks P-176
+SWAP IN T-starbucks P-107
+SWAP IN T-starbucks P-205
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-190
+SWAP IN T-starbucks P-79
+SWAP IN T-starbucks P-104
+SWAP IN T-starbucks P-206
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-95
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-141
 SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-242
-SWAP IN T-starbucks P-243
-SWAP IN T-starbucks P-244
-SWAP IN T-starbucks P-245
-SWAP IN T-starbucks P-246
-SWAP IN T-starbucks P-247
-SWAP IN T-starbucks P-248
-SWAP IN T-starbucks P-249
-SWAP IN T-starbucks P-250
-SWAP IN T-starbucks P-251
-SWAP IN T-starbucks P-252
-SWAP IN T-starbucks P-253
-SWAP IN T-starbucks P-254
-SWAP IN T-starbucks P-255
-SWAP IN T-starbucks P-244
-SWAP IN T-starbucks P-256
-SWAP IN T-starbucks P-257
-SWAP IN T-starbucks P-258
-SWAP IN T-starbucks P-259
-SWAP IN T-starbucks P-260
-SWAP IN T-starbucks P-209
-SWAP IN T-starbucks P-261
-SWAP IN T-starbucks P-262
-SWAP IN T-starbucks P-263
-SWAP IN T-starbucks P-264
-SWAP IN T-starbucks P-265
-SWAP IN T-starbucks P-266
-SWAP IN T-starbucks P-267
-SWAP IN T-starbucks P-268
-SWAP IN T-starbucks P-269
-SWAP IN T-starbucks P-270
-SWAP IN T-starbucks P-271
-SWAP IN T-starbucks P-239
-SWAP IN T-starbucks P-272
-SWAP IN T-starbucks P-273
-SWAP IN T-starbucks P-274
-SWAP IN T-starbucks P-275
-SWAP IN T-starbucks P-276
-SWAP IN T-starbucks P-51
-SWAP IN T-starbucks P-277
-SWAP IN T-starbucks P-278
-SWAP IN T-starbucks P-279
-SWAP IN T-starbucks P-280
-SWAP IN T-starbucks P-281
-SWAP IN T-starbucks P-282
-SWAP IN T-starbucks P-283
-SWAP IN T-starbucks P-284
-SWAP IN T-starbucks P-72
-SWAP IN T-starbucks P-285
-SWAP IN T-starbucks P-286
-SWAP IN T-starbucks P-287
-SWAP IN T-starbucks P-288
-SWAP IN T-starbucks P-289
-SWAP IN T-starbucks P-290
-SWAP IN T-starbucks P-291
-SWAP IN T-starbucks P-292
-SWAP IN T-starbucks P-266
-SWAP IN T-starbucks P-293
-SWAP IN T-starbucks P-294
-SWAP IN T-starbucks P-295
-SWAP IN T-starbucks P-296
-SWAP IN T-starbucks P-297
-SWAP IN T-starbucks P-139
-SWAP IN T-starbucks P-298
-SWAP IN T-starbucks P-299
-SWAP IN T-starbucks P-300
-SWAP IN T-starbucks P-301
-SWAP IN T-starbucks P-302
-SWAP IN T-starbucks P-303
-SWAP IN T-starbucks P-304
-SWAP IN T-starbucks P-305
-SWAP IN T-starbucks P-306
-SWAP IN T-starbucks P-307
-SWAP IN T-starbucks P-308
-SWAP IN T-starbucks P-266
-SWAP IN T-starbucks P-309
-SWAP IN T-starbucks P-310
-SWAP IN T-starbucks P-311
-SWAP IN T-starbucks P-312
-SWAP IN T-starbucks P-313
-SWAP IN T-starbucks P-69
-SWAP IN T-starbucks P-314
-SWAP IN T-starbucks P-315
-SWAP IN T-starbucks P-81
-SWAP IN T-starbucks P-316
-SWAP IN T-starbucks P-317
-SWAP IN T-starbucks P-318
-SWAP IN T-starbucks P-319
-SWAP IN T-starbucks P-320
+SWAP IN T-starbucks P-42
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-39
+SWAP IN T-starbucks P-224
+SWAP IN T-starbucks P-151
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-142
-SWAP IN T-starbucks P-321
-SWAP IN T-starbucks P-322
-SWAP IN T-starbucks P-323
-SWAP IN T-starbucks P-324
-SWAP IN T-starbucks P-325
-SWAP IN T-starbucks P-326
-SWAP IN T-starbucks P-327
-SWAP IN T-starbucks P-328
-SWAP IN T-starbucks P-323
-SWAP IN T-starbucks P-329
-SWAP IN T-starbucks P-330
-SWAP IN T-starbucks P-331
-SWAP IN T-starbucks P-332
-SWAP IN T-starbucks P-333
-SWAP IN T-starbucks P-239
-SWAP IN T-starbucks P-334
-SWAP IN T-starbucks P-335
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-337
-SWAP IN T-starbucks P-338
-SWAP IN T-starbucks P-116
-SWAP IN T-starbucks P-339
-SWAP IN T-starbucks P-340
-SWAP IN T-starbucks P-341
-SWAP IN T-starbucks P-342
-SWAP IN T-starbucks P-343
-SWAP IN T-starbucks P-344
-SWAP IN T-starbucks P-345
-SWAP IN T-starbucks P-346
-SWAP IN T-starbucks P-274
-SWAP IN T-starbucks P-347
-SWAP IN T-starbucks P-348
-SWAP IN T-starbucks P-206
-SWAP IN T-starbucks P-349
-SWAP IN T-starbucks P-350
-SWAP IN T-starbucks P-230
-SWAP IN T-starbucks P-351
-SWAP IN T-starbucks P-352
-SWAP IN T-starbucks P-353
-SWAP IN T-starbucks P-354
-SWAP IN T-starbucks P-355
-SWAP IN T-starbucks P-131
-SWAP IN T-starbucks P-356
-SWAP IN T-starbucks P-357
-SWAP IN T-starbucks P-203
-SWAP IN T-starbucks P-358
-SWAP IN T-starbucks P-359
-SWAP IN T-starbucks P-218
-SWAP IN T-starbucks P-360
-SWAP IN T-starbucks P-361
-SWAP IN T-starbucks P-362
-SWAP IN T-starbucks P-363
-SWAP IN T-starbucks P-364
-SWAP IN T-starbucks P-72
-SWAP IN T-starbucks P-365
-SWAP IN T-starbucks P-366
-SWAP IN T-starbucks P-344
-SWAP IN T-starbucks P-367
-SWAP IN T-starbucks P-368
-SWAP IN T-starbucks P-369
-SWAP IN T-starbucks P-370
-SWAP IN T-starbucks P-371
-SWAP IN T-starbucks P-269
-SWAP IN T-starbucks P-372
-SWAP IN T-starbucks P-373
-SWAP IN T-starbucks P-374
-SWAP IN T-starbucks P-375
-SWAP IN T-starbucks P-376
-SWAP IN T-starbucks P-377
-SWAP IN T-starbucks P-378
-SWAP IN T-starbucks P-379
-SWAP IN T-starbucks P-290
-SWAP IN T-starbucks P-380
-SWAP IN T-starbucks P-381
-SWAP IN T-starbucks P-66
-SWAP IN T-starbucks P-382
-SWAP IN T-starbucks P-383
-SWAP IN T-starbucks P-384
-SWAP IN T-starbucks P-385
-SWAP IN T-starbucks P-386
-SWAP IN T-starbucks P-224
-SWAP IN T-starbucks P-387
-SWAP IN T-starbucks P-388
-SWAP IN T-starbucks P-389
-SWAP IN T-starbucks P-390
-SWAP IN T-starbucks P-391
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-392
-SWAP IN T-starbucks P-393
-SWAP IN T-starbucks P-394
-SWAP IN T-starbucks P-395
-SWAP IN T-starbucks P-396
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-398
-SWAP IN T-starbucks P-399
-SWAP IN T-starbucks P-400
-SWAP IN T-starbucks P-401
-SWAP IN T-starbucks P-402
-SWAP IN T-starbucks P-403
-SWAP IN T-starbucks P-404
-SWAP IN T-starbucks P-405
-SWAP IN T-starbucks P-406
-SWAP IN T-starbucks P-407
-SWAP IN T-starbucks P-408
-SWAP IN T-starbucks P-409
-SWAP IN T-starbucks P-410
-SWAP IN T-starbucks P-411
-SWAP IN T-starbucks P-145
-SWAP IN T-starbucks P-412
-SWAP IN T-starbucks P-413
-SWAP IN T-starbucks P-119
-SWAP IN T-starbucks P-414
-SWAP IN T-starbucks P-415
-SWAP IN T-starbucks P-416
-SWAP IN T-starbucks P-417
-SWAP IN T-starbucks P-418
-SWAP IN T-starbucks P-419
-SWAP IN T-starbucks P-420
-SWAP IN T-starbucks P-421
-SWAP IN T-starbucks P-422
-SWAP IN T-starbucks P-423
-SWAP IN T-starbucks P-424
-SWAP IN T-starbucks P-425
-SWAP IN T-starbucks P-426
-SWAP IN T-starbucks P-427
-SWAP IN T-starbucks P-428
-SWAP IN T-starbucks P-429
-SWAP IN T-starbucks P-430
-SWAP IN T-starbucks P-125
-SWAP IN T-starbucks P-431
-SWAP IN T-starbucks P-432
-SWAP IN T-starbucks P-433
-SWAP IN T-starbucks P-434
-SWAP IN T-starbucks P-435
-SWAP IN T-starbucks P-436
-SWAP IN T-starbucks P-437
-SWAP IN T-starbucks P-438
-SWAP IN T-starbucks P-192
-SWAP IN T-starbucks P-439
-SWAP IN T-starbucks P-440
-SWAP IN T-starbucks P-441
-SWAP IN T-starbucks P-442
-SWAP IN T-starbucks P-443
-SWAP IN T-starbucks P-353
-SWAP IN T-starbucks P-444
-SWAP IN T-starbucks P-445
-SWAP IN T-starbucks P-384
-SWAP IN T-starbucks P-446
-SWAP IN T-starbucks P-447
-SWAP IN T-starbucks P-448
-SWAP IN T-starbucks P-449
-SWAP IN T-starbucks P-450
-SWAP IN T-starbucks P-451
-SWAP IN T-starbucks P-452
-SWAP IN T-starbucks P-453
-SWAP IN T-starbucks P-454
-SWAP IN T-starbucks P-455
-SWAP IN T-starbucks P-456
-SWAP IN T-starbucks P-102
-SWAP IN T-starbucks P-457
-SWAP IN T-starbucks P-458
-SWAP IN T-starbucks P-459
-SWAP IN T-starbucks P-460
-SWAP IN T-starbucks P-461
-SWAP IN T-starbucks P-462
-SWAP IN T-starbucks P-463
-SWAP IN T-starbucks P-464
-SWAP IN T-starbucks P-465
-SWAP IN T-starbucks P-466
-SWAP IN T-starbucks P-467
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-468
-SWAP IN T-starbucks P-469
-SWAP IN T-starbucks P-470
-SWAP IN T-starbucks P-471
-SWAP IN T-starbucks P-472
-SWAP IN T-starbucks P-54
-SWAP IN T-starbucks P-473
-SWAP IN T-starbucks P-474
-SWAP IN T-starbucks P-475
-SWAP IN T-starbucks P-476
-SWAP IN T-starbucks P-477
-SWAP IN T-starbucks P-51
-SWAP IN T-starbucks P-478
-SWAP IN T-starbucks P-479
-SWAP IN T-starbucks P-480
-SWAP IN T-starbucks P-481
-SWAP IN T-starbucks P-482
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-483
-SWAP IN T-starbucks P-484
-SWAP IN T-starbucks P-485
-SWAP IN T-starbucks P-486
-SWAP IN T-starbucks P-487
-SWAP IN T-starbucks P-488
-SWAP IN T-starbucks P-489
-SWAP IN T-starbucks P-490
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-491
-SWAP IN T-starbucks P-492
-SWAP IN T-starbucks P-493
-SWAP IN T-starbucks P-494
-SWAP IN T-starbucks P-495
-SWAP IN T-starbucks P-183
-SWAP IN T-starbucks P-496
-SWAP IN T-starbucks P-497
-SWAP IN T-starbucks P-57
-SWAP IN T-starbucks P-498
-SWAP IN T-starbucks P-499
-SWAP IN T-starbucks P-139
-SWAP IN T-starbucks P-500
-SWAP IN T-starbucks P-501
-SWAP IN T-starbucks P-250
-SWAP IN T-starbucks P-502
-SWAP IN T-starbucks P-503
+SWAP IN T-starbucks P-49
+SWAP IN T-starbucks P-50
 SWAP IN T-starbucks P-200
-SWAP IN T-starbucks P-504
-SWAP IN T-starbucks P-505
-SWAP IN T-starbucks P-45
-SWAP IN T-starbucks P-506
-SWAP IN T-starbucks P-507
-SWAP IN T-starbucks P-110
-SWAP IN T-starbucks P-508
-SWAP IN T-starbucks P-509
-SWAP IN T-starbucks P-84
-SWAP IN T-starbucks P-510
-SWAP IN T-starbucks P-511
-SWAP IN T-starbucks P-512
-SWAP IN T-starbucks P-513
-SWAP IN T-starbucks P-514
-SWAP IN T-starbucks P-515
-SWAP IN T-starbucks P-516
-SWAP IN T-starbucks P-517
-SWAP IN T-starbucks P-416
-SWAP IN T-starbucks P-518
-SWAP IN T-starbucks P-519
-SWAP IN T-starbucks P-157
-SWAP IN T-starbucks P-520
-SWAP IN T-starbucks P-521
-SWAP IN T-starbucks P-403
-SWAP IN T-starbucks P-522
-SWAP IN T-starbucks P-523
-SWAP IN T-starbucks P-192
-SWAP IN T-starbucks P-524
-SWAP IN T-starbucks P-525
-SWAP IN T-starbucks P-526
-SWAP IN T-starbucks P-527
-SWAP IN T-starbucks P-528
-SWAP IN T-starbucks P-306
-SWAP IN T-starbucks P-529
-SWAP IN T-starbucks P-530
-SWAP IN T-starbucks P-531
-SWAP IN T-starbucks P-532
-SWAP IN T-starbucks P-533
-SWAP IN T-starbucks P-183
-SWAP IN T-starbucks P-534
-SWAP IN T-starbucks P-535
-SWAP IN T-starbucks P-536
-SWAP IN T-starbucks P-537
-SWAP IN T-starbucks P-538
-SWAP IN T-starbucks P-113
-SWAP IN T-starbucks P-539
-SWAP IN T-starbucks P-540
-SWAP IN T-starbucks P-541
-SWAP IN T-starbucks P-542
-SWAP IN T-starbucks P-543
-SWAP IN T-starbucks P-544
-SWAP IN T-starbucks P-545
-SWAP IN T-starbucks P-546
-SWAP IN T-starbucks P-541
-SWAP IN T-starbucks P-547
-SWAP IN T-starbucks P-548
-SWAP IN T-starbucks P-549
-SWAP IN T-starbucks P-550
-SWAP IN T-starbucks P-551
-SWAP IN T-starbucks P-552
-SWAP IN T-starbucks P-553
-SWAP IN T-starbucks P-554
-SWAP IN T-starbucks P-63
-SWAP IN T-starbucks P-555
-SWAP IN T-starbucks P-556
-SWAP IN T-starbucks P-557
-SWAP IN T-starbucks P-558
-SWAP IN T-starbucks P-559
-SWAP IN T-starbucks P-374
-SWAP IN T-starbucks P-560
-SWAP IN T-starbucks P-561
-SWAP IN T-starbucks P-116
-SWAP IN T-starbucks P-562
-SWAP IN T-starbucks P-563
-SWAP IN T-starbucks P-369
-SWAP IN T-starbucks P-564
-SWAP IN T-starbucks P-565
-SWAP IN T-starbucks P-90
-SWAP IN T-starbucks P-566
-SWAP IN T-starbucks P-567
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-568
-SWAP IN T-starbucks P-569
-SWAP IN T-starbucks P-570
-SWAP IN T-starbucks P-571
-SWAP IN T-starbucks P-572
-SWAP IN T-starbucks P-573
-SWAP IN T-starbucks P-574
-SWAP IN T-starbucks P-575
-SWAP IN T-starbucks P-206
-SWAP IN T-starbucks P-576
-SWAP IN T-starbucks P-577
-SWAP IN T-starbucks P-578
-SWAP IN T-starbucks P-579
-SWAP IN T-starbucks P-580
-SWAP IN T-starbucks P-581
-SWAP IN T-starbucks P-582
-SWAP IN T-starbucks P-583
-SWAP IN T-starbucks P-394
-SWAP IN T-starbucks P-584
-SWAP IN T-starbucks P-585
-SWAP IN T-starbucks P-586
-SWAP IN T-starbucks P-587
-SWAP IN T-starbucks P-588
-SWAP IN T-starbucks P-589
-SWAP IN T-starbucks P-590
-SWAP IN T-starbucks P-591
-SWAP IN T-starbucks P-592
-SWAP IN T-starbucks P-593
-SWAP IN T-starbucks P-594
-SWAP IN T-starbucks P-595
-SWAP IN T-starbucks P-596
-SWAP IN T-starbucks P-597
-SWAP IN T-starbucks P-39
-SWAP IN T-starbucks P-598
-SWAP IN T-starbucks P-599
-SWAP IN T-starbucks P-485
-SWAP IN T-starbucks P-600
-SWAP IN T-starbucks P-601
-SWAP IN T-starbucks P-258
-SWAP IN T-starbucks P-602
-SWAP IN T-starbucks P-603
-SWAP IN T-starbucks P-451
-SWAP IN T-starbucks P-604
-SWAP IN T-starbucks P-605
-SWAP IN T-starbucks P-515
-SWAP IN T-starbucks P-606
-SWAP IN T-starbucks P-607
-SWAP IN T-starbucks P-608
-SWAP IN T-starbucks P-609
-SWAP IN T-starbucks P-610
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-611
-SWAP IN T-starbucks P-612
-SWAP IN T-starbucks P-613
-SWAP IN T-starbucks P-614
-SWAP IN T-starbucks P-615
-SWAP IN T-starbucks P-274
-SWAP IN T-starbucks P-616
-SWAP IN T-starbucks P-617
-SWAP IN T-starbucks P-618
-SWAP IN T-starbucks P-619
-SWAP IN T-starbucks P-620
-SWAP IN T-starbucks P-621
-SWAP IN T-starbucks P-622
-SWAP IN T-starbucks P-623
-SWAP IN T-starbucks P-624
-SWAP IN T-starbucks P-625
-SWAP IN T-starbucks P-626
-SWAP IN T-starbucks P-627
-SWAP IN T-starbucks P-628
-SWAP IN T-starbucks P-629
-SWAP IN T-starbucks P-192
-SWAP IN T-starbucks P-630
-SWAP IN T-starbucks P-631
-SWAP IN T-starbucks P-632
-SWAP IN T-starbucks P-633
-SWAP IN T-starbucks P-634
-SWAP IN T-starbucks P-377
-SWAP IN T-starbucks P-635
-SWAP IN T-starbucks P-636
-SWAP IN T-starbucks P-107
-SWAP IN T-starbucks P-637
-SWAP IN T-starbucks P-638
-SWAP IN T-starbucks P-96
-SWAP IN T-starbucks P-639
-SWAP IN T-starbucks P-640
-SWAP IN T-starbucks P-641
-SWAP IN T-starbucks P-642
-SWAP IN T-starbucks P-643
-SWAP IN T-starbucks P-227
-SWAP IN T-starbucks P-644
-SWAP IN T-starbucks P-645
-SWAP IN T-starbucks P-250
-SWAP IN T-starbucks P-646
-SWAP IN T-starbucks P-647
-SWAP IN T-starbucks P-428
-SWAP IN T-starbucks P-648
-SWAP IN T-starbucks P-649
-SWAP IN T-starbucks P-206
-SWAP IN T-starbucks P-650
-SWAP IN T-starbucks P-651
-SWAP IN T-starbucks P-475
-SWAP IN T-starbucks P-652
-SWAP IN T-starbucks P-653
-SWAP IN T-starbucks P-250
-SWAP IN T-starbucks P-654
-SWAP IN T-starbucks P-655
-SWAP IN T-starbucks P-119
-SWAP IN T-starbucks P-656
-SWAP IN T-starbucks P-657
-SWAP IN T-starbucks P-42
-SWAP IN T-starbucks P-658
-SWAP IN T-starbucks P-659
-SWAP IN T-starbucks P-57
-SWAP IN T-starbucks P-660
-SWAP IN T-starbucks P-661
-SWAP IN T-starbucks P-45
-SWAP IN T-starbucks P-662
-SWAP IN T-starbucks P-663
-SWAP IN T-starbucks P-664
-SWAP IN T-starbucks P-665
-SWAP IN T-starbucks P-666
-SWAP IN T-starbucks P-87
-SWAP IN T-starbucks P-667
-SWAP IN T-starbucks P-668
-SWAP IN T-starbucks P-669
-SWAP IN T-starbucks P-670
-SWAP IN T-starbucks P-671
-SWAP IN T-starbucks P-300
-SWAP IN T-starbucks P-672
-SWAP IN T-starbucks P-673
-SWAP IN T-starbucks P-369
-SWAP IN T-starbucks P-674
-SWAP IN T-starbucks P-675
-SWAP IN T-starbucks P-87
-SWAP IN T-starbucks P-676
-SWAP IN T-starbucks P-677
-SWAP IN T-starbucks P-678
-SWAP IN T-starbucks P-679
-SWAP IN T-starbucks P-680
-SWAP IN T-starbucks P-681
-SWAP IN T-starbucks P-682
-SWAP IN T-starbucks P-683
-SWAP IN T-starbucks P-172
-SWAP IN T-starbucks P-684
-SWAP IN T-starbucks P-685
-SWAP IN T-starbucks P-686
-SWAP IN T-starbucks P-687
-SWAP IN T-starbucks P-688
-SWAP IN T-starbucks P-400
-SWAP IN T-starbucks P-689
-SWAP IN T-starbucks P-690
-SWAP IN T-starbucks P-192
-SWAP IN T-starbucks P-691
-SWAP IN T-starbucks P-692
-SWAP IN T-starbucks P-45
-SWAP IN T-starbucks P-693
-SWAP IN T-starbucks P-694
-SWAP IN T-starbucks P-110
-SWAP IN T-starbucks P-695
-SWAP IN T-starbucks P-696
-SWAP IN T-starbucks P-113
-SWAP IN T-starbucks P-697
-SWAP IN T-starbucks P-698
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-699
-SWAP IN T-starbucks P-700
-SWAP IN T-starbucks P-279
-SWAP IN T-starbucks P-701
-SWAP IN T-starbucks P-702
-SWAP IN T-starbucks P-459
-SWAP IN T-starbucks P-703
-SWAP IN T-starbucks P-704
-SWAP IN T-starbucks P-480
-SWAP IN T-starbucks P-705
-SWAP IN T-starbucks P-706
-SWAP IN T-starbucks P-627
-SWAP IN T-starbucks P-707
-SWAP IN T-starbucks P-708
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-709
-SWAP IN T-starbucks P-710
-SWAP IN T-starbucks P-42
-SWAP IN T-starbucks P-711
-SWAP IN T-starbucks P-712
-SWAP IN T-starbucks P-470
-SWAP IN T-starbucks P-713
-SWAP IN T-starbucks P-714
-SWAP IN T-starbucks P-578
-SWAP IN T-starbucks P-715
-SWAP IN T-starbucks P-716
-SWAP IN T-starbucks P-51
-SWAP IN T-starbucks P-717
-SWAP IN T-starbucks P-718
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-719
-SWAP IN T-starbucks P-720
-SWAP IN T-starbucks P-253
-SWAP IN T-starbucks P-721
-SWAP IN T-starbucks P-722
-SWAP IN T-starbucks P-526
-SWAP IN T-starbucks P-723
-SWAP IN T-starbucks P-724
-SWAP IN T-starbucks P-253
-SWAP IN T-starbucks P-725
-SWAP IN T-starbucks P-726
-SWAP IN T-starbucks P-406
-SWAP IN T-starbucks P-727
-SWAP IN T-starbucks P-728
-SWAP IN T-starbucks P-729
-SWAP IN T-starbucks P-730
-SWAP IN T-starbucks P-731
-SWAP IN T-starbucks P-732
-SWAP IN T-starbucks P-733
-SWAP IN T-starbucks P-734
-SWAP IN T-starbucks P-341
-SWAP IN T-starbucks P-735
-SWAP IN T-starbucks P-736
-SWAP IN T-starbucks P-81
-SWAP IN T-starbucks P-737
-SWAP IN T-starbucks P-738
-SWAP IN T-starbucks P-377
-SWAP IN T-starbucks P-739
-SWAP IN T-starbucks P-740
-SWAP IN T-starbucks P-741
-SWAP IN T-starbucks P-742
-SWAP IN T-starbucks P-743
-SWAP IN T-starbucks P-586
-SWAP IN T-starbucks P-744
-SWAP IN T-starbucks P-745
-SWAP IN T-starbucks P-746
-SWAP IN T-starbucks P-747
-SWAP IN T-starbucks P-748
-SWAP IN T-starbucks P-425
-SWAP IN T-starbucks P-749
-SWAP IN T-starbucks P-750
-SWAP IN T-starbucks P-400
-SWAP IN T-starbucks P-751
-SWAP IN T-starbucks P-752
-SWAP IN T-starbucks P-394
-SWAP IN T-starbucks P-753
-SWAP IN T-starbucks P-754
-SWAP IN T-starbucks P-515
-SWAP IN T-starbucks P-755
-SWAP IN T-starbucks P-756
-SWAP IN T-starbucks P-451
-SWAP IN T-starbucks P-757
-SWAP IN T-starbucks P-758
-SWAP IN T-starbucks P-759
-SWAP IN T-starbucks P-760
-SWAP IN T-starbucks P-761
-SWAP IN T-starbucks P-627
-SWAP IN T-starbucks P-762
-SWAP IN T-starbucks P-763
-SWAP IN T-starbucks P-263
-SWAP IN T-starbucks P-764
-SWAP IN T-starbucks P-765
-SWAP IN T-starbucks P-766
-SWAP IN T-starbucks P-767
-SWAP IN T-starbucks P-768
-SWAP IN T-starbucks P-769
-SWAP IN T-starbucks P-770
-SWAP IN T-starbucks P-771
-SWAP IN T-starbucks P-311
-SWAP IN T-starbucks P-772
-SWAP IN T-starbucks P-773
-SWAP IN T-starbucks P-295
-SWAP IN T-starbucks P-774
-SWAP IN T-starbucks P-775
-SWAP IN T-starbucks P-759
-SWAP IN T-starbucks P-776
-SWAP IN T-starbucks P-777
-SWAP IN T-starbucks P-116
-SWAP IN T-starbucks P-778
-SWAP IN T-starbucks P-779
-SWAP IN T-starbucks P-436
-SWAP IN T-starbucks P-780
-SWAP IN T-starbucks P-781
-SWAP IN T-starbucks P-441
-SWAP IN T-starbucks P-782
-SWAP IN T-starbucks P-783
-SWAP IN T-starbucks P-618
-SWAP IN T-starbucks P-784
-SWAP IN T-starbucks P-785
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-47
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
 SWAP IN T-starbucks P-72
-SWAP IN T-starbucks P-786
-SWAP IN T-starbucks P-787
-SWAP IN T-starbucks P-45
-SWAP IN T-starbucks P-788
-SWAP IN T-starbucks P-789
-SWAP IN T-starbucks P-485
-SWAP IN T-starbucks P-790
-SWAP IN T-starbucks P-791
+SWAP IN T-starbucks P-129
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-216
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
 SWAP IN T-starbucks P-107
-SWAP IN T-starbucks P-792
-SWAP IN T-starbucks P-793
-SWAP IN T-starbucks P-573
-SWAP IN T-starbucks P-794
-SWAP IN T-starbucks P-795
-SWAP IN T-starbucks P-122
-SWAP IN T-starbucks P-796
-SWAP IN T-starbucks P-797
-SWAP IN T-starbucks P-282
-SWAP IN T-starbucks P-798
-SWAP IN T-starbucks P-799
-SWAP IN T-starbucks P-800
-SWAP IN T-starbucks P-801
-SWAP IN T-starbucks P-802
-SWAP IN T-starbucks P-400
-SWAP IN T-starbucks P-803
-SWAP IN T-starbucks P-804
-SWAP IN T-starbucks P-759
-SWAP IN T-starbucks P-805
-SWAP IN T-starbucks P-806
-SWAP IN T-starbucks P-419
-SWAP IN T-starbucks P-807
-SWAP IN T-starbucks P-808
-SWAP IN T-starbucks P-377
-SWAP IN T-starbucks P-809
-SWAP IN T-starbucks P-810
-SWAP IN T-starbucks P-470
-SWAP IN T-starbucks P-811
-SWAP IN T-starbucks P-812
-SWAP IN T-starbucks P-60
-SWAP IN T-starbucks P-813
-SWAP IN T-starbucks P-814
-SWAP IN T-starbucks P-287
-SWAP IN T-starbucks P-815
-SWAP IN T-starbucks P-816
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-817
-SWAP IN T-starbucks P-818
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-819
-SWAP IN T-starbucks P-820
-SWAP IN T-starbucks P-250
-SWAP IN T-starbucks P-821
-SWAP IN T-starbucks P-822
-SWAP IN T-starbucks P-215
-SWAP IN T-starbucks P-823
-SWAP IN T-starbucks P-824
-SWAP IN T-starbucks P-303
-SWAP IN T-starbucks P-825
-SWAP IN T-starbucks P-826
-SWAP IN T-starbucks P-400
-SWAP IN T-starbucks P-827
-SWAP IN T-starbucks P-828
-SWAP IN T-starbucks P-172
-SWAP IN T-starbucks P-829
-SWAP IN T-starbucks P-830
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-831
-SWAP IN T-starbucks P-832
-SWAP IN T-starbucks P-746
-SWAP IN T-starbucks P-833
-SWAP IN T-starbucks P-834
-SWAP IN T-starbucks P-224
-SWAP IN T-starbucks P-835
-SWAP IN T-starbucks P-836
-SWAP IN T-starbucks P-541
-SWAP IN T-starbucks P-837
-SWAP IN T-starbucks P-838
-SWAP IN T-starbucks P-51
-SWAP IN T-starbucks P-839
-SWAP IN T-starbucks P-840
-SWAP IN T-starbucks P-244
-SWAP IN T-starbucks P-841
-SWAP IN T-starbucks P-842
-SWAP IN T-starbucks P-678
-SWAP IN T-starbucks P-843
-SWAP IN T-starbucks P-844
-SWAP IN T-starbucks P-394
-SWAP IN T-starbucks P-845
-SWAP IN T-starbucks P-846
-SWAP IN T-starbucks P-573
-SWAP IN T-starbucks P-847
-SWAP IN T-starbucks P-848
-SWAP IN T-starbucks P-42
-SWAP IN T-starbucks P-849
-SWAP IN T-starbucks P-850
-SWAP IN T-starbucks P-746
-SWAP IN T-starbucks P-851
-SWAP IN T-starbucks P-852
-SWAP IN T-starbucks P-853
-SWAP IN T-starbucks P-854
-SWAP IN T-starbucks P-855
-SWAP IN T-starbucks P-488
-SWAP IN T-starbucks P-856
-SWAP IN T-starbucks P-857
-SWAP IN T-starbucks P-741
-SWAP IN T-starbucks P-858
-SWAP IN T-starbucks P-859
-SWAP IN T-starbucks P-541
-SWAP IN T-starbucks P-860
-SWAP IN T-starbucks P-861
-SWAP IN T-starbucks P-862
-SWAP IN T-starbucks P-863
-SWAP IN T-starbucks P-864
-SWAP IN T-starbucks P-531
-SWAP IN T-starbucks P-865
-SWAP IN T-starbucks P-866
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-867
-SWAP IN T-starbucks P-868
-SWAP IN T-starbucks P-353
-SWAP IN T-starbucks P-869
-SWAP IN T-starbucks P-870
-SWAP IN T-starbucks P-581
-SWAP IN T-starbucks P-871
-SWAP IN T-starbucks P-872
-SWAP IN T-starbucks P-122
-SWAP IN T-starbucks P-873
-SWAP IN T-starbucks P-874
-SWAP IN T-starbucks P-875
-SWAP IN T-starbucks P-876
-SWAP IN T-starbucks P-877
-SWAP IN T-starbucks P-384
-SWAP IN T-starbucks P-878
-SWAP IN T-starbucks P-879
-SWAP IN T-starbucks P-247
-SWAP IN T-starbucks P-880
-SWAP IN T-starbucks P-881
-SWAP IN T-starbucks P-573
-SWAP IN T-starbucks P-882
-SWAP IN T-starbucks P-883
-SWAP IN T-starbucks P-374
-SWAP IN T-starbucks P-884
-SWAP IN T-starbucks P-885
-SWAP IN T-starbucks P-422
-SWAP IN T-starbucks P-886
-SWAP IN T-starbucks P-887
-SWAP IN T-starbucks P-557
-SWAP IN T-starbucks P-888
-SWAP IN T-starbucks P-889
-SWAP IN T-starbucks P-589
-SWAP IN T-starbucks P-890
-SWAP IN T-starbucks P-891
-SWAP IN T-starbucks P-169
-SWAP IN T-starbucks P-892
-SWAP IN T-starbucks P-893
-SWAP IN T-starbucks P-465
-SWAP IN T-starbucks P-894
-SWAP IN T-starbucks P-895
-SWAP IN T-starbucks P-110
-SWAP IN T-starbucks P-896
-SWAP IN T-starbucks P-897
-SWAP IN T-starbucks P-172
-SWAP IN T-starbucks P-898
-SWAP IN T-starbucks P-899
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-900
-SWAP IN T-starbucks P-901
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-193
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-229
+SWAP IN T-starbucks P-40
+SWAP IN T-starbucks P-41
+SWAP IN T-starbucks P-205
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-65
 SWAP IN T-starbucks P-230
-SWAP IN T-starbucks P-902
-SWAP IN T-starbucks P-903
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-904
-SWAP IN T-starbucks P-905
-SWAP IN T-starbucks P-624
-SWAP IN T-starbucks P-906
-SWAP IN T-starbucks P-907
-SWAP IN T-starbucks P-908
-SWAP IN T-starbucks P-909
-SWAP IN T-starbucks P-910
-SWAP IN T-starbucks P-189
-SWAP IN T-starbucks P-911
-SWAP IN T-starbucks P-912
-SWAP IN T-starbucks P-215
-SWAP IN T-starbucks P-913
-SWAP IN T-starbucks P-914
-SWAP IN T-starbucks P-212
-SWAP IN T-starbucks P-915
-SWAP IN T-starbucks P-916
-SWAP IN T-starbucks P-186
-SWAP IN T-starbucks P-917
-SWAP IN T-starbucks P-918
-SWAP IN T-starbucks P-63
-SWAP IN T-starbucks P-919
-SWAP IN T-starbucks P-920
-SWAP IN T-starbucks P-441
-SWAP IN T-starbucks P-921
-SWAP IN T-starbucks P-922
-SWAP IN T-starbucks P-69
-SWAP IN T-starbucks P-923
-SWAP IN T-starbucks P-924
-SWAP IN T-starbucks P-925
-SWAP IN T-starbucks P-926
-SWAP IN T-starbucks P-927
-SWAP IN T-starbucks P-608
-SWAP IN T-starbucks P-928
-SWAP IN T-starbucks P-929
-SWAP IN T-starbucks P-186
-SWAP IN T-starbucks P-930
-SWAP IN T-starbucks P-931
-SWAP IN T-starbucks P-932
-SWAP IN T-starbucks P-933
-SWAP IN T-starbucks P-934
-SWAP IN T-starbucks P-908
-SWAP IN T-starbucks P-935
-SWAP IN T-starbucks P-936
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-937
-SWAP IN T-starbucks P-938
-SWAP IN T-starbucks P-318
-SWAP IN T-starbucks P-939
-SWAP IN T-starbucks P-940
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-941
-SWAP IN T-starbucks P-942
-SWAP IN T-starbucks P-186
-SWAP IN T-starbucks P-943
-SWAP IN T-starbucks P-944
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-945
-SWAP IN T-starbucks P-946
-SWAP IN T-starbucks P-512
-SWAP IN T-starbucks P-947
-SWAP IN T-starbucks P-948
-SWAP IN T-starbucks P-183
-SWAP IN T-starbucks P-949
-SWAP IN T-starbucks P-950
-SWAP IN T-starbucks P-951
-SWAP IN T-starbucks P-952
-SWAP IN T-starbucks P-953
-SWAP IN T-starbucks P-954
-SWAP IN T-starbucks P-955
-SWAP IN T-starbucks P-956
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-957
-SWAP IN T-starbucks P-958
-SWAP IN T-starbucks P-480
-SWAP IN T-starbucks P-959
-SWAP IN T-starbucks P-960
-SWAP IN T-starbucks P-961
-SWAP IN T-starbucks P-962
-SWAP IN T-starbucks P-963
-SWAP IN T-starbucks P-48
-SWAP IN T-starbucks P-964
-SWAP IN T-starbucks P-965
-SWAP IN T-starbucks P-686
-SWAP IN T-starbucks P-966
-SWAP IN T-starbucks P-967
-SWAP IN T-starbucks P-968
-SWAP IN T-starbucks P-969
-SWAP IN T-starbucks P-970
-SWAP IN T-starbucks P-971
-SWAP IN T-starbucks P-972
-SWAP IN T-starbucks P-973
-SWAP IN T-starbucks P-451
-SWAP IN T-starbucks P-974
-SWAP IN T-starbucks P-975
-SWAP IN T-starbucks P-470
-SWAP IN T-starbucks P-976
-SWAP IN T-starbucks P-977
-SWAP IN T-starbucks P-215
-SWAP IN T-starbucks P-978
-SWAP IN T-starbucks P-979
-SWAP IN T-starbucks P-428
-SWAP IN T-starbucks P-980
-SWAP IN T-starbucks P-981
-SWAP IN T-starbucks P-982
-SWAP IN T-starbucks P-983
-SWAP IN T-starbucks P-984
-SWAP IN T-starbucks P-985
-SWAP IN T-starbucks P-986
-SWAP IN T-starbucks P-987
-SWAP IN T-starbucks P-175
-SWAP IN T-starbucks P-988
-SWAP IN T-starbucks P-989
-SWAP IN T-starbucks P-433
-SWAP IN T-starbucks P-990
-SWAP IN T-starbucks P-991
-SWAP IN T-starbucks P-992
-SWAP IN T-starbucks P-993
-SWAP IN T-starbucks P-994
-SWAP IN T-starbucks P-157
-SWAP IN T-starbucks P-995
-SWAP IN T-starbucks P-996
-SWAP IN T-starbucks P-128
-SWAP IN T-starbucks P-997
-SWAP IN T-starbucks P-998
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-999
-SWAP IN T-starbucks P-1000
-SWAP IN T-starbucks P-1001
-SWAP IN T-starbucks P-1002
-SWAP IN T-starbucks P-1003
-SWAP IN T-starbucks P-1004
-SWAP IN T-starbucks P-1005
-SWAP IN T-starbucks P-1006
-SWAP IN T-starbucks P-206
-SWAP IN T-starbucks P-1007
-SWAP IN T-starbucks P-1008
-SWAP IN T-starbucks P-331
-SWAP IN T-starbucks P-1009
-SWAP IN T-starbucks P-1010
-SWAP IN T-starbucks P-323
-SWAP IN T-starbucks P-1011
-SWAP IN T-starbucks P-1012
-SWAP IN T-starbucks P-269
-SWAP IN T-starbucks P-1013
-SWAP IN T-starbucks P-1014
-SWAP IN T-starbucks P-595
-SWAP IN T-starbucks P-1015
-SWAP IN T-starbucks P-1016
-SWAP IN T-starbucks P-122
-SWAP IN T-starbucks P-1017
-SWAP IN T-starbucks P-1018
-SWAP IN T-starbucks P-266
-SWAP IN T-starbucks P-1019
-SWAP IN T-starbucks P-1020
-SWAP IN T-starbucks P-239
-SWAP IN T-starbucks P-1021
-SWAP IN T-starbucks P-1022
-SWAP IN T-starbucks P-99
-SWAP IN T-starbucks P-1023
-SWAP IN T-starbucks P-1024
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-1025
-SWAP IN T-starbucks P-1026
-SWAP IN T-starbucks P-436
-SWAP IN T-starbucks P-1027
-SWAP IN T-starbucks P-1028
-SWAP IN T-starbucks P-60
-SWAP IN T-starbucks P-1029
-SWAP IN T-starbucks P-1030
-SWAP IN T-starbucks P-403
-SWAP IN T-starbucks P-1031
-SWAP IN T-starbucks P-1032
-SWAP IN T-starbucks P-1004
-SWAP IN T-starbucks P-1033
-SWAP IN T-starbucks P-1034
-SWAP IN T-starbucks P-107
-SWAP IN T-starbucks P-1035
-SWAP IN T-starbucks P-1036
-SWAP IN T-starbucks P-224
-SWAP IN T-starbucks P-1037
-SWAP IN T-starbucks P-1038
-SWAP IN T-starbucks P-613
-SWAP IN T-starbucks P-1039
-SWAP IN T-starbucks P-1040
-SWAP IN T-starbucks P-462
-SWAP IN T-starbucks P-1041
-SWAP IN T-starbucks P-1042
-SWAP IN T-starbucks P-586
-SWAP IN T-starbucks P-1043
-SWAP IN T-starbucks P-1044
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-1045
-SWAP IN T-starbucks P-1046
-SWAP IN T-starbucks P-459
-SWAP IN T-starbucks P-1047
-SWAP IN T-starbucks P-1048
-SWAP IN T-starbucks P-57
-SWAP IN T-starbucks P-1049
-SWAP IN T-starbucks P-1050
-SWAP IN T-starbucks P-203
-SWAP IN T-starbucks P-1051
-SWAP IN T-starbucks P-1052
-SWAP IN T-starbucks P-57
-SWAP IN T-starbucks P-1053
-SWAP IN T-starbucks P-1054
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-1055
-SWAP IN T-starbucks P-1056
-SWAP IN T-starbucks P-139
-SWAP IN T-starbucks P-1057
-SWAP IN T-starbucks P-1058
-SWAP IN T-starbucks P-369
-SWAP IN T-starbucks P-1059
-SWAP IN T-starbucks P-1060
-SWAP IN T-starbucks P-218
-SWAP IN T-starbucks P-1061
-SWAP IN T-starbucks P-1062
-SWAP IN T-starbucks P-729
-SWAP IN T-starbucks P-1063
-SWAP IN T-starbucks P-1064
-SWAP IN T-starbucks P-300
-SWAP IN T-starbucks P-1065
-SWAP IN T-starbucks P-1066
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-1067
-SWAP IN T-starbucks P-1068
-SWAP IN T-starbucks P-741
-SWAP IN T-starbucks P-1069
-SWAP IN T-starbucks P-1070
-SWAP IN T-starbucks P-1071
-SWAP IN T-starbucks P-1072
-SWAP IN T-starbucks P-1073
-SWAP IN T-starbucks P-1074
-SWAP IN T-starbucks P-1075
-SWAP IN T-starbucks P-1076
-SWAP IN T-starbucks P-236
-SWAP IN T-starbucks P-1077
-SWAP IN T-starbucks P-1078
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-1079
-SWAP IN T-starbucks P-1080
-SWAP IN T-starbucks P-183
-SWAP IN T-starbucks P-1081
-SWAP IN T-starbucks P-1082
-SWAP IN T-starbucks P-344
-SWAP IN T-starbucks P-1083
-SWAP IN T-starbucks P-1084
-SWAP IN T-starbucks P-1004
-SWAP IN T-starbucks P-1085
-SWAP IN T-starbucks P-1086
-SWAP IN T-starbucks P-239
-SWAP IN T-starbucks P-1087
-SWAP IN T-starbucks P-1088
-SWAP IN T-starbucks P-512
-SWAP IN T-starbucks P-1089
-SWAP IN T-starbucks P-1090
-SWAP IN T-starbucks P-258
-SWAP IN T-starbucks P-1091
-SWAP IN T-starbucks P-1092
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-1093
-SWAP IN T-starbucks P-1094
-SWAP IN T-starbucks P-1095
-SWAP IN T-starbucks P-1096
-SWAP IN T-starbucks P-1097
-SWAP IN T-starbucks P-75
-SWAP IN T-starbucks P-1098
-SWAP IN T-starbucks P-1099
-SWAP IN T-starbucks P-175
-SWAP IN T-starbucks P-1100
-SWAP IN T-starbucks P-1101
-SWAP IN T-starbucks P-621
-SWAP IN T-starbucks P-1102
-SWAP IN T-starbucks P-1103
-SWAP IN T-starbucks P-589
-SWAP IN T-starbucks P-1104
-SWAP IN T-starbucks P-1105
-SWAP IN T-starbucks P-641
-SWAP IN T-starbucks P-1106
-SWAP IN T-starbucks P-1107
-SWAP IN T-starbucks P-480
-SWAP IN T-starbucks P-1108
-SWAP IN T-starbucks P-1109
-SWAP IN T-starbucks P-406
-SWAP IN T-starbucks P-1110
-SWAP IN T-starbucks P-1111
-SWAP IN T-starbucks P-128
-SWAP IN T-starbucks P-1112
-SWAP IN T-starbucks P-1113
-SWAP IN T-starbucks P-131
-SWAP IN T-starbucks P-1114
-SWAP IN T-starbucks P-1115
-SWAP IN T-starbucks P-353
-SWAP IN T-starbucks P-1116
-SWAP IN T-starbucks P-1117
-SWAP IN T-starbucks P-295
-SWAP IN T-starbucks P-1118
-SWAP IN T-starbucks P-1119
-SWAP IN T-starbucks P-119
-SWAP IN T-starbucks P-1120
-SWAP IN T-starbucks P-1121
-SWAP IN T-starbucks P-36
-SWAP IN T-starbucks P-1122
-SWAP IN T-starbucks P-1123
-SWAP IN T-starbucks P-515
-SWAP IN T-starbucks P-1124
-SWAP IN T-starbucks P-1125
-SWAP IN T-starbucks P-1126
-SWAP IN T-starbucks P-1127
-SWAP IN T-starbucks P-1128
-SWAP IN T-starbucks P-303
-SWAP IN T-starbucks P-1129
-SWAP IN T-starbucks P-1130
-SWAP IN T-starbucks P-209
-SWAP IN T-starbucks P-1131
-SWAP IN T-starbucks P-1132
-SWAP IN T-starbucks P-362
-SWAP IN T-starbucks P-1133
-SWAP IN T-starbucks P-1134
-SWAP IN T-starbucks P-1135
-SWAP IN T-starbucks P-1136
-SWAP IN T-starbucks P-1137
-SWAP IN T-starbucks P-451
-SWAP IN T-starbucks P-1138
-SWAP IN T-starbucks P-1139
-SWAP IN T-starbucks P-39
-SWAP IN T-starbucks P-1140
-SWAP IN T-starbucks P-1141
-SWAP IN T-starbucks P-263
-SWAP IN T-starbucks P-1142
-SWAP IN T-starbucks P-1143
-SWAP IN T-starbucks P-178
-SWAP IN T-starbucks P-1144
-SWAP IN T-starbucks P-1145
-SWAP IN T-starbucks P-557
-SWAP IN T-starbucks P-1146
-SWAP IN T-starbucks P-1147
-SWAP IN T-starbucks P-549
-SWAP IN T-starbucks P-1148
-SWAP IN T-starbucks P-1149
-SWAP IN T-starbucks P-1150
-SWAP IN T-starbucks P-1151
-SWAP IN T-starbucks P-1152
-SWAP IN T-starbucks P-233
-SWAP IN T-starbucks P-1153
-SWAP IN T-starbucks P-1154
-SWAP IN T-starbucks P-236
-SWAP IN T-starbucks P-1155
-SWAP IN T-starbucks P-1156
-SWAP IN T-starbucks P-1157
-SWAP IN T-starbucks P-1158
-SWAP IN T-starbucks P-1159
-SWAP IN T-starbucks P-465
-SWAP IN T-starbucks P-1160
-SWAP IN T-starbucks P-1161
-SWAP IN T-starbucks P-125
-SWAP IN T-starbucks P-1162
-SWAP IN T-starbucks P-1163
-SWAP IN T-starbucks P-154
-SWAP IN T-starbucks P-1164
-SWAP IN T-starbucks P-1165
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-1166
-SWAP IN T-starbucks P-1167
-SWAP IN T-starbucks P-1168
-SWAP IN T-starbucks P-1169
-SWAP IN T-starbucks P-1170
-SWAP IN T-starbucks P-419
-SWAP IN T-starbucks P-1171
-SWAP IN T-starbucks P-1172
-SWAP IN T-starbucks P-1150
-SWAP IN T-starbucks P-1173
-SWAP IN T-starbucks P-1174
-SWAP IN T-starbucks P-362
-SWAP IN T-starbucks P-1175
-SWAP IN T-starbucks P-1176
-SWAP IN T-starbucks P-389
-SWAP IN T-starbucks P-1177
-SWAP IN T-starbucks P-1178
-SWAP IN T-starbucks P-512
-SWAP IN T-starbucks P-1179
-SWAP IN T-starbucks P-1180
-SWAP IN T-starbucks P-1181
-SWAP IN T-starbucks P-1182
-SWAP IN T-starbucks P-1183
-SWAP IN T-starbucks P-493
-SWAP IN T-starbucks P-1184
-SWAP IN T-starbucks P-1185
-SWAP IN T-starbucks P-389
-SWAP IN T-starbucks P-1186
-SWAP IN T-starbucks P-1187
-SWAP IN T-starbucks P-985
-SWAP IN T-starbucks P-1188
-SWAP IN T-starbucks P-1189
-SWAP IN T-starbucks P-746
-SWAP IN T-starbucks P-1190
-SWAP IN T-starbucks P-1191
-SWAP IN T-starbucks P-669
-SWAP IN T-starbucks P-1192
-SWAP IN T-starbucks P-1193
-SWAP IN T-starbucks P-1071
-SWAP IN T-starbucks P-1194
-SWAP IN T-starbucks P-1195
-SWAP IN T-starbucks P-269
-SWAP IN T-starbucks P-1196
-SWAP IN T-starbucks P-1197
-SWAP IN T-starbucks P-1198
-SWAP IN T-starbucks P-1199
-SWAP IN T-starbucks P-1200
-SWAP IN T-starbucks P-1201
-SWAP IN T-starbucks P-1202
-SWAP IN T-starbucks P-1203
-SWAP IN T-starbucks P-448
-SWAP IN T-starbucks P-1204
-SWAP IN T-starbucks P-1205
-SWAP IN T-starbucks P-436
-SWAP IN T-starbucks P-1206
-SWAP IN T-starbucks P-1207
-SWAP IN T-starbucks P-669
-SWAP IN T-starbucks P-1208
-SWAP IN T-starbucks P-1209
-SWAP IN T-starbucks P-336
-SWAP IN T-starbucks P-1210
-SWAP IN T-starbucks P-1211
-SWAP IN T-starbucks P-362
-SWAP IN T-starbucks P-1212
-SWAP IN T-starbucks P-1213
-SWAP IN T-starbucks P-60
-SWAP IN T-starbucks P-1214
-SWAP IN T-starbucks P-1215
-SWAP IN T-starbucks P-227
-SWAP IN T-starbucks P-1216
-SWAP IN T-starbucks P-1217
-SWAP IN T-starbucks P-512
-SWAP IN T-starbucks P-1218
-SWAP IN T-starbucks P-1219
-SWAP IN T-starbucks P-212
-SWAP IN T-starbucks P-1220
-SWAP IN T-starbucks P-1221
-SWAP IN T-starbucks P-766
-SWAP IN T-starbucks P-1222
-SWAP IN T-starbucks P-1223
-SWAP IN T-starbucks P-60
-SWAP IN T-starbucks P-1224
-SWAP IN T-starbucks P-1225
-SWAP IN T-starbucks P-681
-SWAP IN T-starbucks P-1226
-SWAP IN T-starbucks P-1227
-SWAP IN T-starbucks P-613
-SWAP IN T-starbucks P-1228
-SWAP IN T-starbucks P-1229
-SWAP IN T-starbucks P-541
-SWAP IN T-starbucks P-1230
-SWAP IN T-starbucks P-1231
-SWAP IN T-starbucks P-178
-SWAP IN T-starbucks P-1232
-SWAP IN T-starbucks P-1233
-SWAP IN T-starbucks P-96
-SWAP IN T-starbucks P-1234
-SWAP IN T-starbucks P-1235
-SWAP IN T-starbucks P-75
-SWAP IN T-starbucks P-1236
-SWAP IN T-starbucks P-1237
-SWAP IN T-starbucks P-608
-SWAP IN T-starbucks P-1238
-SWAP IN T-starbucks P-1239
-SWAP IN T-starbucks P-397
-SWAP IN T-starbucks P-1240
-SWAP IN T-starbucks P-1241
-SWAP IN T-starbucks P-425
-SWAP IN T-starbucks P-1242
-SWAP IN T-starbucks P-1243
-SWAP IN T-starbucks P-480
-SWAP IN T-starbucks P-1244
-SWAP IN T-starbucks P-1245
-SWAP IN T-starbucks P-985
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-151
+SWAP IN T-starbucks P-211
+SWAP IN T-starbucks P-34
+SWAP IN T-starbucks P-35
+SWAP IN T-starbucks P-78
+SWAP IN T-starbucks P-37
+SWAP IN T-starbucks P-38
+SWAP IN T-starbucks P-68
 starbucks PK: coffee_id
 	coffee_name 
-		page 34: ["(0, 'Apple Cider Donut Flavored Coffee')"]
-		page 37: ["(1, 'Chocolate-Covered Easter Egg Flavored Coffee')"]
-		page 40: ["(2, 'Dulce de Leche Flavored Coffee')"]
-		page 43: ["(3, 'Hawaiian Macadamia Nut Flavored Coffee')"]
-		page 46: ["(4, 'Cranberry Cream Flavored Coffee')"]
-		page 49: ["(5, 'Blackberry Merlot Flavored Coffee')"]
-		page 52: ["(6, 'Coconut Fudge Flavored Coffee')"]
-		page 55: ["(7, 'Chocolate Raspberry Flavored Coffee')"]
-		page 58: ["(8, 'Brazilian Nut Crunch Flavored Coffee')"]
-		page 61: ["(9, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 64: ["(10, 'Cinnamon Almond Macaroon Flavored Coffee')"]
-		page 67: ["(11, 'Hazelnut Cream Flavored Coffee')"]
-		page 70: ["(12, 'Chocolate Nightmare Flavored Coffee')"]
-		page 73: ["(13, 'Coconut Cream Flavored Coffee')"]
-		page 76: ["(14, 'Chocolate Cherry Kiss Flavored Coffee')"]
-		page 79: ["(15, 'Fair Trade Organic Coffee')"]
-		page 82: ["(16, 'Cherry Cheesecake Flavored Coffee')"]
-		page 85: ["(17, 'Fair Trade Organic Coffee')"]
-		page 88: ['(18, "Grandpa\'s Cinnamon Snicker Cookies Flavored Coffee")']
-		page 91: ["(19, 'French Caramel Fudge Flavored Coffee')"]
-		page 94: ["(20, 'Chocolate Fudge Flavored Coffee')"]
-		page 97: ["(21, 'Banana Cream Pie Flavored Coffee')"]
-		page 100: ["(22, 'Dark Roasted Coffee')"]
-		page 103: ["(23, 'Chocolate Pretzel Stick Flavored Coffee')"]
-		page 105: ["(24, 'Blueberry Cinnamon Crumble Flavored Coffee')"]
-		page 108: ["(25, 'French Vanilla Flavored Coffee')"]
-		page 111: ["(26, 'English Toffee Flavored Coffee')"]
-		page 114: ["(27, 'Costa Rican Tarrazu Coffee')"]
-		page 117: ["(28, 'Espresso Cafe Milano #5 Blend Coffee')"]
-		page 120: ["(29, 'Cranberry Nut Cream Flavored Coffee')"]
-		page 123: ["(30, 'Big City Blend Coffee')"]
-		page 126: ["(31, 'Caramel Smooches Flavored Coffee')"]
-		page 129: ["(32, 'Breakfast Blend Coffee')"]
-		page 132: ['(33, "Bob\'s Page")']
-		page 134: ["(34, 'Apricot Cream Flavored Coffee')"]
-		page 137: ["(35, 'Hazelnut Strong & Nutty Flavored Coffee')"]
-		page 140: ["(36, 'Chocolate Mint Flavored Coffee')"]
-		page 143: ["(37, 'Brazilian Santos Coffee')"]
-		page 146: ["(38, 'Cinnabun Flavored Coffee')"]
-		page 149: ["(39, 'Espresso Capri Blend Coffee')"]
-		page 152: ["(40, 'Chocolate Marshmallow Flavored Coffee')"]
-		page 155: ["(41, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 158: ["(42, 'Cinnamon Stick Flavored Coffee')"]
-		page 160: ["(43, 'Cranberry Cream Flavored Coffee')"]
-		page 162: ["(44, 'Caramel Candy Apple Flavored Coffee')"]
-		page 165: ["(45, 'Hawaiian Coconut Flavored Coffee')"]
-		page 167: ["(46, 'Hawaiian Coconut Flavored Coffee')"]
-		page 170: ["(47, 'Chocolate Caramel Flavored Coffee')"]
-		page 173: ["(48, 'Fair Trade Organic Colombian Coffee')"]
-		page 176: ["(49, 'Dulce de Leche Flavored Coffee')"]
-		page 179: ["(50, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 181: ["(51, 'Chocolate Fudge Flavored Coffee')"]
-		page 184: ["(52, 'Chocolate Marshmallow Flavored Coffee')"]
-		page 187: ["(53, 'Chocolate Macadamia Nut Flavored Coffee')"]
-		page 190: ["(54, 'Grand Marnier Flavored Coffee')"]
-		page 193: ["(55, 'Chocolate Macadamia Nut Flavored Coffee')"]
-		page 196: ['(56, "Bob\'s Page")']
-		page 198: ["(57, 'Creme Brulee Flavored Coffee')"]
-		page 201: ["(58, 'Costa Rican Tarrazu Coffee')"]
-		page 204: ["(59, 'Hawaiian Coconut Flavored Coffee')"]
-		page 207: ["(60, 'Funkee Monkee Flavored Coffee')"]
-		page 210: ["(61, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 213: ["(62, 'Celebes Kalossi Coffee')"]
-		page 216: ["(63, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 219: ["(64, 'Almond Joy Flavored Coffee')"]
-		page 222: ["(65, 'Chocolate Pretzel Stick Flavored Coffee')"]
-		page 225: ["(66, 'French Vanilla Flavored Coffee')"]
-		page 228: ["(67, 'English Toffee Flavored Coffee')"]
-		page 231: ["(68, 'Caramel Candy Apple Flavored Coffee')"]
-		page 234: ["(69, 'Amaretto Flavored Coffee')"]
-		page 237: ["(70, 'Blackberry Merlot Flavored Coffee')"]
-		page 240: ["(71, 'Caramel Candy Apple Flavored Coffee')"]
-		page 242: ["(72, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 245: ["(73, 'Creme Brulee Flavored Coffee')"]
-		page 248: ["(74, 'Black Forest Cake Flavored Coffee')"]
-		page 251: ["(75, 'Hazelnut Strong & Nutty Flavored Coffee')"]
-		page 254: ["(76, 'Caramel Flavored Coffee')"]
-		page 256: ["(77, 'Dark Roasted Coffee')"]
-		page 259: ["(78, 'Costa Rican Tarrazu Coffee')"]
-		page 261: ["(79, 'Almond Joy Flavored Coffee')"]
-		page 264: ["(80, 'Coffee Cake Flavored Coffee')"]
-		page 267: ["(81, 'Black Forest Cake Flavored Coffee')"]
-		page 270: ["(82, 'Breakfast in a Cup Flavored Coffee')"]
-		page 272: ["(83, 'Chocolate Raspberry Flavored Coffee')"]
-		page 275: ["(84, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 277: ["(85, 'Fair Trade Organic Coffee')"]
-		page 280: ["(86, 'Guatemalan Antiqua')"]
-		page 283: ["(87, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 285: ["(88, 'French Vanilla Flavored Coffee')"]
-		page 288: ["(89, 'Fair Trade Organic Papua New Guinea Coffee')"]
-		page 291: ["(90, 'Chocolate Peanut Butter Cup Flavored Coffee')"]
-		page 293: ["(91, 'Cinnabun Flavored Coffee')"]
-		page 296: ["(92, 'Chocolate Cherry Kiss Flavored Coffee')"]
-		page 298: ["(93, 'German Chocolate Cake Flavored Coffee')"]
-		page 301: ["(94, 'Banana Cream Pie Flavored Coffee')"]
-		page 304: ["(95, 'French Caramel Fudge Flavored Coffee')"]
-		page 307: ["(96, 'Google Search Results')"]
-		page 309: ["(97, 'Fair Trade Organic Three Eyed Buddha Blend Coffee')"]
-		page 312: ["(98, 'Fair Trade Organic Peruvian Coffee')"]
-		page 314: ["(99, 'Amaretto Flavored Coffee')"]
-		page 316: ["(100, 'Chocolate Caramel Flavored Coffee')"]
-		page 319: ["(101, 'Coconut Fudge Flavored Coffee')"]
-		page 321: ["(102, 'Google Search Results')"]
-		page 324: ["(103, 'Holiday Spice Flavored Coffee')"]
-		page 327: ["(104, 'Graham Cracker Suite Flavored Coffee')"]
-		page 329: ["(105, 'Bourbon Whiskey Flavored Coffee')"]
-		page 332: ["(106, 'Espresso Rocky Mountain Blend Coffee')"]
-		page 334: ["(107, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 337: ["(108, 'Atlantic Blend Coffee')"]
-		page 339: ["(109, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 342: ["(110, 'Apple Cider Donut Flavored Coffee')"]
-		page 345: ["(111, 'Dutch Chocolate Flavored Coffee')"]
-		page 347: ["(112, 'Chocolate Malt Flavored Coffee')"]
-		page 349: ["(113, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')"]
-		page 351: ["(114, 'Hawaiian Hazelnut Flavored Coffee')"]
-		page 354: ["(115, 'Celebes Kalossi Coffee')"]
-		page 356: ["(116, 'Harvest Spice Flavored Coffee')"]
-		page 358: ["(117, 'Cinnamon Almond Macaroon Flavored Coffee')"]
-		page 360: ["(118, 'French Toast Flavored Coffee')"]
-		page 363: ["(119, 'Espresso Coffee')"]
-		page 365: ["(120, 'Coffee Cake Flavored Coffee')"]
-		page 367: ["(121, 'Chocolate Caramel Flavored Coffee')"]
-		page 370: ["(122, 'Cinnamon Stick Flavored Coffee')"]
-		page 372: ["(123, 'Chocolate Raspberry Flavored Coffee')"]
-		page 375: ["(124, 'Dark Chocolate Ecstasy Flavored Coffee')"]
-		page 378: ["(125, 'Holiday Magic Flavored Coffee')"]
-		page 380: ["(126, 'Chocolate Mint Flavored Coffee')"]
-		page 382: ["(127, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 385: ["(128, 'Cherry Vanilla Flavored Coffee')"]
-		page 387: ["(129, 'Banana Nut Bread Flavored Coffee')"]
-		page 390: ["(130, 'American Spirit Coffees')"]
-		page 392: ["(131, 'Chocolate Pretzel Stick Flavored Coffee')"]
-		page 395: ["(132, 'Black Satin Blend Coffee')"]
-		page 398: ['(133, "Grandma\'s Chocolate Cinnamon Snicker Cookies Flavored Coffee")']
-		page 401: ["(134, 'Blueberry Cream Flavored Coffee')"]
-		page 404: ["(135, 'Chocolate Raspberry Flavored Coffee')"]
-		page 407: ["(136, 'Creme Brulee Flavored Coffee')"]
-		page 410: ["(137, 'Holiday Spice Flavored Coffee')"]
-		page 412: ["(138, 'Cherry Vanilla Flavored Coffee')"]
-		page 414: ["(139, 'Bourbon Whiskey Flavored Coffee')"]
-		page 417: ["(140, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')"]
-		page 420: ["(141, 'Coffee List A to Z')"]
-		page 423: ["(142, 'Espresso Cafe Milano #5 Blend Coffee')"]
-		page 426: ["(143, 'Chocolate-Covered Easter Egg Flavored Coffee')"]
-		page 429: ["(144, 'Chunky Monkey Flavored Coffee')"]
-		page 431: ["(145, 'Fair Trade Organic Papua New Guinea Coffee')"]
-		page 434: ["(146, 'Decaf Coffee')"]
-		page 437: ["(147, 'Highlander Grog Flavored Coffee')"]
-		page 439: ["(148, 'Gingerbread Spice Flavored Coffee')"]
-		page 442: ["(149, 'Holiday Magic Flavored Coffee')"]
-		page 444: ["(150, 'Colombian Supremo Coffee')"]
-		page 446: ["(151, 'Apple Cider Donut Flavored Coffee')"]
-		page 449: ["(152, 'Cinnabun Flavored Coffee')"]
-		page 452: ["(153, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')"]
-		page 455: ["(154, 'Fair Trade Organic Three Eyed Buddha Blend Coffee')"]
-		page 457: ['(155, "Bob\'s Page")']
-		page 460: ["(156, 'Colombian Decaf Coffee')"]
-		page 463: ["(157, 'Dark Chocolate Ecstasy Flavored Coffee')"]
-		page 466: ["(158, 'Chocolate Nightmare Flavored Coffee')"]
-		page 468: ["(159, 'Espresso Coffee')"]
-		page 471: ["(160, 'Banana Cream Pie Flavored Coffee')"]
-		page 473: ["(161, 'Chocolate Cappuccino Flavored Coffee')"]
-		page 476: ["(162, 'Fair Trade Organic Papua New Guinea Coffee')"]
-		page 478: ["(163, 'Brazilian Nut Crunch Flavored Coffee')"]
-		page 481: ["(164, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 483: ["(165, 'Espresso Coffee')"]
-		page 486: ['(166, "Goblin\'s Grogg Flavored Coffee")']
-		page 489: ["(167, 'Banana Nut Bread Flavored Coffee')"]
-		page 491: ["(168, 'Espresso Coffee')"]
-		page 494: ["(169, 'French Roast Blend Coffee')"]
-		page 496: ["(170, 'Hawaiian Macadamia Nut Flavored Coffee')"]
-		page 498: ["(171, 'Hawaiian Hazelnut Flavored Coffee')"]
-		page 500: ["(172, 'Cafe Reserva Coffee')"]
-		page 502: ['(173, "Grandpa\'s Cinnamon Snicker Cookies Flavored Coffee")']
-		page 504: ["(174, 'Apple Cider Donut Flavored Coffee')"]
-		page 506: ["(175, 'Cranberry Nut Cream Flavored Coffee')"]
-		page 508: ['(176, "Goblin\'s Grogg Flavored Coffee")']
-		page 510: ["(177, 'Hazelnut Flavored Coffee')"]
-		page 513: ["(178, 'Highlander Grog Flavored Coffee')"]
-		page 516: ["(179, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 518: ["(180, 'Cherry Cheesecake Flavored Coffee')"]
-		page 520: ["(181, 'French Caramel Fudge Flavored Coffee')"]
-		page 522: ["(182, 'Espresso Coffee')"]
-		page 524: ["(183, 'Cookies and Cream Flavored Coffee')"]
-		page 527: ["(184, 'Cafe Reserva Coffee')"]
-		page 529: ["(185, 'Chocolate Peanut Butter Cup Flavored Coffee')"]
-		page 532: ['(186, "Bob\'s Page")']
-		page 534: ["(187, 'After Dinner Blend Coffee')"]
-		page 537: ["(188, 'Ethiopian Harrar Coffee')"]
-		page 539: ["(189, 'Apple Cider Donut Flavored Coffee')"]
-		page 542: ["(190, 'Chocolate Mint Flavored Coffee')"]
-		page 545: ["(191, 'Chocolate Malt Flavored Coffee')"]
-		page 547: ['(192, "Grandpa\'s Cinnamon Snicker Cookies Flavored Coffee")']
-		page 550: ["(193, 'Gingerbread Spice Flavored Coffee')"]
-		page 553: ["(194, 'Dutch Chocolate Flavored Coffee')"]
-		page 555: ["(195, 'Christmas Blend Flavored Coffee')"]
-		page 558: ["(196, 'Fair Trade Organic Colombian Coffee')"]
-		page 560: ["(197, 'Candy Corn Flavored Coffee')"]
-		page 562: ["(198, 'Cinnabun Flavored Coffee')"]
-		page 564: ["(199, 'Funkee Monkee Flavored Coffee')"]
-		page 566: ["(200, 'Espresso Coffee')"]
-		page 568: ["(201, 'Chunky Monkey Flavored Coffee')"]
-		page 571: ["(202, 'Cinnabun Flavored Coffee')"]
-		page 574: ["(203, 'Chocolate Mint Flavored Coffee')"]
-		page 576: ["(204, 'French Caramel Fudge Flavored Coffee')"]
-		page 579: ["(205, 'Creme Brulee Flavored Coffee')"]
-		page 582: ["(206, 'Funkee Monkee Flavored Coffee')"]
-		page 584: ["(207, 'Coffee List A to Z')"]
-		page 587: ["(208, 'Christmas Blend Flavored Coffee')"]
-		page 590: ["(209, 'Chocolate Cappuccino Flavored Coffee')"]
-		page 593: ["(210, 'Amaretto Flavored Coffee')"]
-		page 596: ["(211, 'Blackberry Cream Flavored Coffee')"]
-		page 598: ["(212, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 600: ["(213, 'Butter Pecan Flavored Coffee')"]
-		page 602: ['(214, "Grandma\'s Chocolate Cinnamon Snicker Cookies Flavored Coffee")']
-		page 604: ["(215, 'All-American Apple Pie Flavored Coffee')"]
-		page 606: ["(216, 'Flavored Coffee')"]
-		page 609: ["(217, 'English Toffee Flavored Coffee')"]
-		page 611: ["(218, 'Butter Pecan Flavored Coffee')"]
-		page 614: ["(219, 'Dark Roasted Coffee')"]
-		page 616: ["(220, 'Hazelnut Strong & Nutty Flavored Coffee')"]
-		page 619: ["(221, 'Fair Trade Organic Papua New Guinea Coffee')"]
-		page 622: ["(222, 'Cookies and Cream Flavored Coffee')"]
-		page 625: ["(223, 'Cafe Reserva Coffee')"]
-		page 628: ["(224, 'Hawaiian Coconut Flavored Coffee')"]
-		page 630: ["(225, 'Chocolate Raspberry Flavored Coffee')"]
-		page 633: ["(226, 'Cafe Mocha Flavored Coffee')"]
-		page 635: ["(227, 'Golden Peanut Brittle Flavored Coffee')"]
-		page 637: ["(228, 'Espresso Coffee')"]
-		page 639: ['(229, "Grandma\'s Chocolate Cinnamon Snicker Cookies Flavored Coffee")']
-		page 642: ["(230, 'Apple Strudel Flavored Coffee')"]
-		page 644: ["(231, 'Cranberry Nut Cream Flavored Coffee')"]
-		page 646: ["(232, 'Blue Ridge Mountain Blend Coffee')"]
-		page 648: ["(233, 'Emerald Isle Delight Flavored Coffee')"]
-		page 650: ["(234, 'Holiday Magic Flavored Coffee')"]
-		page 652: ["(235, 'Hawaiian Coconut Flavored Coffee')"]
-		page 654: ["(236, 'Chocolate Malt Flavored Coffee')"]
-		page 656: ["(237, 'Caramel Smooches Flavored Coffee')"]
-		page 658: ["(238, 'Apple Strudel Flavored Coffee')"]
-		page 660: ["(239, 'Bananas Foster Flavored Coffee')"]
-		page 662: ["(240, 'California Gold Flavored Coffee')"]
-		page 665: ["(241, 'Harvest Spice Flavored Coffee')"]
-		page 667: ["(242, 'Cherry Vanilla Flavored Coffee')"]
-		page 670: ["(243, 'French Roast Blend Coffee')"]
-		page 672: ['(244, "Goblin\'s Grogg Flavored Coffee")']
-		page 674: ["(245, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 676: ["(246, 'Emerald Isle Delight Flavored Coffee')"]
-		page 679: ["(247, 'Holiday Spice Flavored Coffee')"]
-		page 682: ["(248, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')"]
-		page 684: ["(249, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 687: ["(250, 'Cafe Reserva Coffee')"]
-		page 689: ["(251, 'French Vanilla Flavored Coffee')"]
-		page 691: ["(252, 'Brazilian Santos Coffee')"]
-		page 693: ["(253, 'Cinnamon Hazelnut Flavored Coffee')"]
-		page 695: ["(254, 'Cafe Mocha Flavored Coffee')"]
-		page 697: ["(255, 'Chocolate Orange Flavored Coffee')"]
-		page 699: ["(256, 'Holiday Spice Flavored Coffee')"]
-		page 701: ["(257, 'Bananas Foster Flavored Coffee')"]
-		page 703: ["(258, 'Cafe Mocha Flavored Coffee')"]
-		page 705: ["(259, 'Dutch Chocolate Flavored Coffee')"]
-		page 707: ["(260, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 709: ["(261, 'Coffee List A to Z')"]
-		page 711: ["(262, 'Ethiopian Harrar Coffee')"]
-		page 713: ["(263, 'Blueberry Cream Flavored Coffee')"]
-		page 715: ["(264, 'Flavored Coffee')"]
-		page 717: ["(265, 'Caramel Smooches Flavored Coffee')"]
-		page 719: ["(266, 'Big City Blend Coffee')"]
-		page 721: ["(267, 'Chunky Monkey Flavored Coffee')"]
-		page 723: ["(268, 'Dutch Chocolate Flavored Coffee')"]
-		page 725: ["(269, 'Caramel Candy Apple Flavored Coffee')"]
-		page 727: ["(270, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 730: ['(271, "Goblin\'s Grogg Flavored Coffee")']
-		page 733: ['(272, "Gimme a S\'mores Flavored Coffee")']
-		page 735: ["(273, 'Coffee List A to Z')"]
-		page 737: ["(274, 'Chocolate Cherry Kiss Flavored Coffee')"]
-		page 739: ["(275, 'Chocolate Nightmare Flavored Coffee')"]
-		page 742: ["(276, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 744: ["(277, 'Colombian Supremo Coffee')"]
-		page 747: ["(278, 'Hawaiian Coconut Flavored Coffee')"]
-		page 749: ["(279, 'Blueberry Cream Flavored Coffee')"]
-		page 751: ["(280, 'Apricot Cream Flavored Coffee')"]
-		page 753: ["(281, 'Chocolate-Covered Easter Egg Flavored Coffee')"]
-		page 755: ["(282, 'Espresso Coffee')"]
-		page 757: ["(283, 'Dark Chocolate Ecstasy Flavored Coffee')"]
-		page 760: ["(284, 'Black Satin Blend Coffee')"]
-		page 762: ["(285, 'Butter Nut Flavored Coffee')"]
-		page 764: ['(286, "Grandma\'s Chocolate Cinnamon Snicker Cookies Flavored Coffee")']
-		page 767: ["(287, 'Cranberry Cream Flavored Coffee')"]
-		page 770: ["(288, 'Grand Marnier Flavored Coffee')"]
-		page 772: ["(289, 'Apple Cider Donut Flavored Coffee')"]
-		page 774: ["(290, 'Apple Cider Donut Flavored Coffee')"]
-		page 776: ["(291, 'Chocolate Raspberry Flavored Coffee')"]
-		page 778: ["(292, 'Chocolate Pretzel Stick Flavored Coffee')"]
-		page 780: ["(293, 'German Chocolate Cake Flavored Coffee')"]
-		page 782: ["(294, 'Cinnabun Flavored Coffee')"]
-		page 784: ["(295, 'Harvest Spice Flavored Coffee')"]
-		page 786: ["(296, 'Blueberry Cinnamon Crumble Flavored Coffee')"]
-		page 788: ['(297, "Bob\'s Page")']
-		page 790: ["(298, 'Classic Salted Caramel Flavored Coffee')"]
-		page 792: ["(299, 'Colombian Decaf Coffee')"]
-		page 794: ["(300, 'Blackberry Cream Flavored Coffee')"]
-		page 796: ["(301, 'Dutch Chocolate Flavored Coffee')"]
-		page 798: ["(302, 'Coconut Fudge Flavored Coffee')"]
-		page 801: ["(303, 'Brazilian Nut Crunch Flavored Coffee')"]
-		page 803: ['(304, "Baked Apple Dumplin\' Flavored Coffee")']
-		page 805: ["(305, 'English Toffee Flavored Coffee')"]
-		page 807: ["(306, 'English Toffee Flavored Coffee')"]
-		page 809: ["(307, 'Flavored Coffee')"]
-		page 811: ["(308, 'Dulce de Leche Flavored Coffee')"]
-		page 813: ["(309, 'Dulce de Leche Flavored Coffee')"]
-		page 815: ["(310, 'Atlantic Blend Coffee')"]
-		page 817: ["(311, 'Espresso Coffee')"]
-		page 819: ["(312, 'Fair Trade Organic Coffee')"]
-		page 821: ["(313, 'Cinnamon Almond Macaroon Flavored Coffee')"]
-		page 823: ["(314, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 825: ["(315, 'Fair Trade Organic El Toro Loco Blend Coffee')"]
-		page 827: ['(316, "Grandpa\'s Cinnamon Snicker Cookies Flavored Coffee")']
-		page 829: ["(317, 'Harvest Spice Flavored Coffee')"]
-		page 831: ["(318, 'Chocolate Malt Flavored Coffee')"]
-		page 833: ["(319, 'Chocolate Almond Flavored Coffee')"]
-		page 835: ["(320, 'Chocolate Marshmallow Flavored Coffee')"]
-		page 837: ["(321, 'Candy Corn Flavored Coffee')"]
-		page 839: ["(322, 'Apricot Cream Flavored Coffee')"]
-		page 841: ["(323, 'Cinnamon Stick Flavored Coffee')"]
-		page 843: ["(324, 'Chocolate-Covered Easter Egg Flavored Coffee')"]
-		page 845: ["(325, 'Blueberry Cream Flavored Coffee')"]
-		page 847: ["(326, 'Fair Trade Organic El Toro Loco Blend Coffee')"]
-		page 849: ["(327, 'Chocolate Raspberry Flavored Coffee')"]
-		page 851: ["(328, 'Chunky Monkey Flavored Coffee')"]
-		page 854: ["(329, 'Google Search Results')"]
-		page 856: ["(330, 'Espresso Coffee')"]
-		page 858: ["(331, 'Chocolate Mint Flavored Coffee')"]
-		page 860: ["(332, 'Celebes Kalossi Coffee')"]
-		page 863: ['(333, "Bob\'s Page")']
-		page 865: ["(334, 'Dutch Chocolate Flavored Coffee')"]
-		page 867: ["(335, 'Almond Joy Flavored Coffee')"]
-		page 869: ["(336, 'Dark Chocolate Ecstasy Flavored Coffee')"]
-		page 871: ["(337, 'Caramel Smooches Flavored Coffee')"]
-		page 873: ["(338, 'French Vanilla Flavored Coffee')"]
-		page 876: ['(339, "Goblin\'s Grogg Flavored Coffee")']
-		page 878: ["(340, 'Ethiopian Harrar Coffee')"]
-		page 880: ["(341, 'French Toast Flavored Coffee')"]
-		page 882: ["(342, 'Cookies and Cream Flavored Coffee')"]
-		page 884: ["(343, 'Chocolate Malt Flavored Coffee')"]
-		page 886: ["(344, 'Ethiopian Harrar Coffee')"]
-		page 888: ["(345, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 890: ["(346, 'Cocoa Mocha Twist Flavored Coffee')"]
-		page 892: ["(347, 'Chocolate Cappuccino Flavored Coffee')"]
-		page 894: ["(348, 'German Chocolate Cake Flavored Coffee')"]
-		page 896: ["(349, 'Coconut Cream Flavored Coffee')"]
-		page 898: ["(350, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 900: ["(351, 'Cafe Reserva Coffee')"]
-		page 902: ["(352, 'Harvest Spice Flavored Coffee')"]
-		page 904: ["(353, 'Chocolate Hazelnut Flavored Coffee')"]
-		page 906: ["(354, 'Chocolate Almond Flavored Coffee')"]
-		page 909: ["(355, 'Classic Salted Caramel Flavored Coffee')"]
-		page 911: ["(356, 'Cranberry Cream Flavored Coffee')"]
-		page 913: ["(357, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 915: ["(358, 'Blackberry Brandy Flavored Coffee')"]
-		page 917: ["(359, 'Blueberry Cinnamon Crumble Flavored Coffee')"]
-		page 919: ["(360, 'Fair Trade Organic Coffee')"]
-		page 921: ["(361, 'French Roast Blend Coffee')"]
-		page 923: ["(362, 'Emerald Isle Delight Flavored Coffee')"]
-		page 926: ["(363, 'Cherry Cheesecake Flavored Coffee')"]
-		page 928: ["(364, 'Banana Nut Bread Flavored Coffee')"]
-		page 930: ["(365, 'Candy Corn Flavored Coffee')"]
-		page 933: ["(366, 'Cinnabun Flavored Coffee')"]
-		page 935: ["(367, 'Christmas Blend Flavored Coffee')"]
-		page 937: ["(368, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 939: ["(369, 'Candy Corn Flavored Coffee')"]
-		page 941: ["(370, 'Chocolate Malt Flavored Coffee')"]
-		page 943: ["(371, 'Espresso Capri Blend Coffee')"]
-		page 945: ['(372, "Gimme a S\'mores Flavored Coffee")']
-		page 947: ["(373, 'Dark Chocolate Ecstasy Flavored Coffee')"]
-		page 949: ["(374, 'English Toffee Flavored Coffee')"]
-		page 952: ["(375, 'Creme Brulee Flavored Coffee')"]
-		page 955: ["(376, 'Candy Corn Flavored Coffee')"]
-		page 957: ["(377, 'Black Forest Cake Flavored Coffee')"]
-		page 959: ["(378, 'Fair Trade Organic Papua New Guinea Coffee')"]
-		page 962: ["(379, 'Banana Nut Bread Flavored Coffee')"]
-		page 964: ["(380, 'Chocolate Hazelnut Flavored Coffee')"]
-		page 966: ["(381, 'Caramel Candy Apple Flavored Coffee')"]
-		page 969: ["(382, 'Bananas Foster Flavored Coffee')"]
-		page 972: ["(383, 'Christmas Blend Flavored Coffee')"]
-		page 974: ["(384, 'Hazelnut Strong & Nutty Flavored Coffee')"]
-		page 976: ["(385, 'German Chocolate Cake Flavored Coffee')"]
-		page 978: ["(386, 'Cherry Vanilla Flavored Coffee')"]
-		page 980: ["(387, 'Fair Trade Organic Three Eyed Buddha Blend Coffee')"]
-		page 983: ["(388, 'French Vanilla Flavored Coffee')"]
-		page 986: ["(389, 'Black Forest Cake Flavored Coffee')"]
-		page 988: ["(390, 'Golden Peanut Brittle Flavored Coffee')"]
-		page 990: ['(391, "Gimme a S\'mores Flavored Coffee")']
-		page 993: ["(392, 'Hawaiian Coconut Flavored Coffee')"]
-		page 995: ["(393, 'Holiday Magic Flavored Coffee')"]
-		page 997: ["(394, 'Fair Trade Organic Coffee')"]
-		page 999: ["(395, 'French Toast Flavored Coffee')"]
-		page 1002: ["(396, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 1005: ["(397, 'Espresso Rocky Mountain Blend Coffee')"]
-		page 1007: ["(398, 'Cherry Vanilla Flavored Coffee')"]
-		page 1009: ["(399, 'All-American Apple Pie Flavored Coffee')"]
-		page 1011: ["(400, 'Breakfast Blend Coffee')"]
-		page 1013: ["(401, 'All-American Apple Pie Flavored Coffee')"]
-		page 1015: ['(402, "Goblin\'s Grogg Flavored Coffee")']
-		page 1017: ["(403, 'Almond Joy Flavored Coffee')"]
-		page 1019: ["(404, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 1021: ["(405, 'Gingerbread Spice Flavored Coffee')"]
-		page 1023: ["(406, 'Chunky Monkey Flavored Coffee')"]
-		page 1025: ["(407, 'Candy Corn Flavored Coffee')"]
-		page 1027: ["(408, 'Hawaiian Coconut Flavored Coffee')"]
-		page 1029: ["(409, 'Decaf Coffee')"]
-		page 1031: ["(410, 'Chocolate Malt Flavored Coffee')"]
-		page 1033: ["(411, 'Espresso Cafe Milano #5 Blend Coffee')"]
-		page 1035: ["(412, 'English Toffee Flavored Coffee')"]
-		page 1037: ["(413, 'Espresso Cafe Milano #5 Blend Coffee')"]
-		page 1039: ["(414, 'Black Satin Blend Coffee')"]
-		page 1041: ["(415, 'After Dinner Blend Coffee')"]
-		page 1043: ["(416, 'Espresso Capri Blend Coffee')"]
-		page 1045: ["(417, 'Guatemalan Antiqua')"]
-		page 1047: ["(418, 'Espresso Mugello Blend Decaf Coffee')"]
-		page 1049: ["(419, 'Fair Trade Organic Midnight in Macau Blend Coffee')"]
-		page 1051: ["(420, 'Holiday Magic Flavored Coffee')"]
-		page 1053: ["(421, 'Big City Blend Coffee')"]
-		page 1055: ["(422, 'Fair Trade Organic El Toro Loco Blend Coffee')"]
-		page 1057: ['(423, "Goblin\'s Grogg Flavored Coffee")']
-		page 1059: ["(424, 'Cafe Mocha Flavored Coffee')"]
-		page 1061: ["(425, 'Dark Roasted Coffee')"]
-		page 1063: ["(426, 'Cinnamon Almond Macaroon Flavored Coffee')"]
-		page 1065: ["(427, 'Cookies and Cream Flavored Coffee')"]
-		page 1067: ["(428, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 1069: ["(429, 'Apricot Cream Flavored Coffee')"]
-		page 1072: ["(430, 'Chocolate Caramel Flavored Coffee')"]
-		page 1075: ["(431, 'Caramel Smooches Flavored Coffee')"]
-		page 1077: ["(432, 'Flavored Coffee')"]
-		page 1079: ["(433, 'Blue Ridge Mountain Blend Coffee')"]
-		page 1081: ["(434, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 1083: ["(435, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 1085: ["(436, 'Colombian Decaf Coffee')"]
-		page 1087: ["(437, 'Funkee Monkee Flavored Coffee')"]
-		page 1089: ["(438, 'Cinnabun Flavored Coffee')"]
-		page 1091: ["(439, 'Ethiopian Harrar Coffee')"]
-		page 1093: ["(440, 'Celebes Kalossi Coffee')"]
-		page 1096: ["(441, 'Cherry Vanilla Flavored Coffee')"]
-		page 1098: ["(442, 'Colombian Decaf Coffee')"]
-		page 1100: ["(443, 'Chocolate Pretzel Stick Flavored Coffee')"]
-		page 1102: ["(444, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 1104: ['(445, "Gimme a S\'mores Flavored Coffee")']
-		page 1106: ['(446, "Gimme a S\'mores Flavored Coffee")']
-		page 1108: ["(447, 'Black Satin Blend Coffee')"]
-		page 1110: ["(448, 'Dulce de Leche Flavored Coffee')"]
-		page 1112: ["(449, 'Candy Corn Flavored Coffee')"]
-		page 1114: ["(450, 'Hazelnut Flavored Coffee')"]
-		page 1116: ["(451, 'Fair Trade Organic Mystic Mojo Blend Coffee')"]
-		page 1118: ["(452, 'Chocolate Almond Flavored Coffee')"]
-		page 1120: ["(453, 'Cafe Femenino Fair Trade Organic Brazilian Coffee')"]
-		page 1122: ["(454, 'Coconut Fudge Flavored Coffee')"]
-		page 1124: ["(455, 'Apricot Cream Flavored Coffee')"]
-		page 1127: ["(456, 'Fair Trade Organic Big Easy Blend Coffee')"]
-		page 1129: ["(457, 'Fair Trade Organic Colombian Coffee')"]
-		page 1131: ["(458, 'Harvest Spice Flavored Coffee')"]
-		page 1133: ["(459, 'Grand Marnier Flavored Coffee')"]
-		page 1136: ["(460, 'Chocolate Mint Flavored Coffee')"]
-		page 1138: ["(461, 'Gooey Caramel Fudge Brownie Flavored Coffee')"]
-		page 1140: ["(462, 'Holiday Spice Flavored Coffee')"]
-		page 1142: ["(463, 'Almond Joy Flavored Coffee')"]
-		page 1144: ["(464, 'Google Search Results')"]
-		page 1146: ["(465, 'Coffee Cake Flavored Coffee')"]
-		page 1148: ["(466, 'Caramel Flavored Coffee')"]
-		page 1151: ["(467, 'Caramel Candy Apple Flavored Coffee')"]
-		page 1153: ["(468, 'Espresso Regalo Blend Coffee')"]
-		page 1155: ["(469, 'Hawaiian Hazelnut Flavored Coffee')"]
-		page 1158: ["(470, 'Cranberry Cream Flavored Coffee')"]
-		page 1160: ["(471, 'Dutch Chocolate Flavored Coffee')"]
-		page 1162: ["(472, 'Chocolate Orange Flavored Coffee')"]
-		page 1164: ["(473, 'All-American Apple Pie Flavored Coffee')"]
-		page 1166: ["(474, 'Espresso Regalo Blend Coffee')"]
-		page 1169: ["(475, 'Apple Strudel Flavored Coffee')"]
-		page 1171: ["(476, 'Chocolate Cinnamon Hazelnut Flavored Coffee')"]
-		page 1173: ["(477, 'Guatemalan Antiqua')"]
-		page 1175: ["(478, 'Holiday Magic Flavored Coffee')"]
-		page 1177: ["(479, 'Chocolate Nightmare Flavored Coffee')"]
-		page 1179: ['(480, "Grandma\'s Chocolate Cinnamon Snicker Cookies Flavored Coffee")']
-		page 1182: ["(481, 'Coffee Cake Flavored Coffee')"]
-		page 1184: ["(482, 'Google Search Results')"]
-		page 1186: ["(483, 'Cookies and Cream Flavored Coffee')"]
-		page 1188: ["(484, 'Coconut Cream Flavored Coffee')"]
-		page 1190: ["(485, 'Emerald Isle Delight Flavored Coffee')"]
-		page 1192: ["(486, 'Colombian Decaf Coffee')"]
-		page 1194: ["(487, 'Butterscotch Flavored Coffee')"]
-		page 1196: ["(488, 'Espresso Coffee')"]
-		page 1199: ["(489, 'American Spirit Coffees')"]
-		page 1202: ["(490, 'Hazelnut Flavored Coffee')"]
-		page 1204: ["(491, 'Golden Peanut Brittle Flavored Coffee')"]
-		page 1206: ["(492, 'Blueberry Cinnamon Crumble Flavored Coffee')"]
-		page 1208: ["(493, 'Google Search Results')"]
-		page 1210: ["(494, 'Amaretto Flavored Coffee')"]
-		page 1212: ["(495, 'Banana Cream Pie Flavored Coffee')"]
-		page 1214: ["(496, 'Apple Strudel Flavored Coffee')"]
-		page 1216: ["(497, 'Banana Nut Bread Flavored Coffee')"]
-		page 1218: ["(498, 'Breakfast in a Cup Flavored Coffee')"]
-		page 1220: ["(499, 'Blackberry Merlot Flavored Coffee')"]
-		page 1222: ["(500, 'Harvest Spice Flavored Coffee')"]
-		page 1224: ["(501, 'Emerald Isle Delight Flavored Coffee')"]
-		page 1226: ["(502, 'Butter Nut Flavored Coffee')"]
-		page 1228: ["(503, 'French Toast Flavored Coffee')"]
-		page 1230: ["(504, 'Colombian Supremo Coffee')"]
-		page 1232: ["(505, 'Banana Cream Pie Flavored Coffee')"]
-		page 1234: ["(506, 'Coconut Cream Flavored Coffee')"]
-		page 1236: ["(507, 'Espresso Rocky Mountain Blend Coffee')"]
-		page 1238: ["(508, 'Cherry Vanilla Flavored Coffee')"]
-		page 1240: ["(509, 'Coconut Cream Flavored Coffee')"]
-		page 1242: ["(510, 'Caramel Smooches Flavored Coffee')"]
-		page 1244: []
+		page 34: ["(3206, 'Highlander Grog Flavored Coffee')", "(28271, 'Fair Trade Organic Midnight in Macau Blend Coffee')", "(25189, 'Banana Nut Bread Flavored Coffee')", "(35329, 'Chocolate Nightmare Flavored Coffee')", "(14728, 'Breakfast Blend Coffee')", '(6857, "Goblin\'s Grogg Flavored Coffee")', "(16078, 'Guatemalan Antiqua')", "(4869, 'Fair Trade Organic Midnight in Macau Blend Coffee')", "(7355, 'Chocolate Cappuccino Flavored Coffee')", "(3740, 'French Caramel Fudge Flavored Coffee')"]
+		page 37: ["(40624, 'Black Satin Blend Coffee')", "(51546, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')", "(52244, 'Cocoa Mocha Twist Flavored Coffee')", "(55565, 'Chocolate Cherry Kiss Flavored Coffee')", "(55801, 'French Caramel Fudge Flavored Coffee')", "(49803, 'Chocolate Pretzel Stick Flavored Coffee')", "(51370, 'Celebes Kalossi Coffee')", "(41213, 'Cafe Mocha Flavored Coffee')", "(41591, 'Dulce de Leche Flavored Coffee')", "(55491, 'Google Search Results')"]
+		page 40: ["(56750, 'Coffee List A to Z')", "(56764, 'Dark Roasted Coffee')", "(62306, 'Fair Trade Organic Colombian Coffee')", "(62957, 'Emerald Isle Delight Flavored Coffee')", "(57485, 'Harvest Spice Flavored Coffee')", "(57586, 'Coconut Cream Flavored Coffee')", "(62482, 'Hazelnut Flavored Coffee')", "(58853, 'Blackberry Cream Flavored Coffee')", "(62403, 'Fair Trade Organic Mystic Mojo Blend Coffee')", "(60218, 'Fair Trade Organic Peruvian Coffee')"]
+		page 49: ["(1698, 'French Roast Blend Coffee')", "(2697, 'Cinnabun Flavored Coffee')", "(2033, 'Holiday Magic Flavored Coffee')", "(2322, 'Blackberry Cream Flavored Coffee')", "(2811, 'Chocolate Marshmallow Flavored Coffee')", "(3125, 'Banana Cream Pie Flavored Coffee')", "(3010, 'Cranberry Nut Cream Flavored Coffee')", "(1772, 'Chunky Monkey Flavored Coffee')", "(3201, 'Brazilian Nut Crunch Flavored Coffee')", "(3054, 'French Vanilla Flavored Coffee')"]
+		page 55: ["(691, 'Hawaiian Hazelnut Flavored Coffee')", "(1473, 'Cafe Femenino Fair Trade Organic Dominican Republic Coffee')", "(1686, 'Chocolate Almond Flavored Coffee')", "(1311, 'Chocolate Macadamia Nut Flavored Coffee')", "(1609, 'Coffee List A to Z')", "(762, 'Flavored Coffee')", "(1593, 'Breakfast in a Cup Flavored Coffee')", "(926, 'Chocolate-Covered Easter Egg Flavored Coffee')", "(1212, 'Caramel Smooches Flavored Coffee')", "(1447, 'Cinnamon Hazelnut Flavored Coffee')"]
+		page 63: ["(63940, 'Espresso Capri Blend Coffee')"]
+		page 80: ["(293, 'Brazilian Santos Coffee')", "(429, 'Fair Trade Organic Coffee')", "(327, 'Cookies and Cream Flavored Coffee')", "(294, 'Cherry Vanilla Flavored Coffee')", "(338, 'Fair Trade Organic Papua New Guinea Coffee')", "(658, 'Hazelnut Strong & Nutty Flavored Coffee')"]
+		page 135: ["(273, 'Chocolate Mint Flavored Coffee')"]
+		page 225: ["(225, 'Harvest Spice Flavored Coffee')"]
 	intensity 
-		page 35: ['(0, 8)']
-		page 38: ['(1, 10)']
-		page 41: ['(2, 5)']
-		page 44: ['(3, 10)']
-		page 47: ['(4, 11)']
-		page 50: ['(5, 4)']
-		page 53: ['(6, 12)']
-		page 56: ['(7, 6)']
-		page 59: ['(8, 2)']
-		page 62: ['(9, 8)']
-		page 65: ['(10, 10)']
-		page 68: ['(11, 3)']
-		page 71: ['(12, 12)']
-		page 74: ['(13, 4)']
-		page 77: ['(14, 12)']
-		page 80: ['(15, 11)']
-		page 83: ['(16, 11)']
-		page 86: ['(17, 2)']
-		page 89: ['(18, 3)']
-		page 92: ['(19, 8)']
-		page 95: ['(20, 11)']
-		page 98: ['(21, 6)']
-		page 101: ['(22, 7)']
-		page 104: ['(23, 10)']
-		page 106: ['(24, 0)']
-		page 109: ['(25, 5)']
-		page 112: ['(26, 8)']
-		page 115: ['(27, 0)']
-		page 118: ['(28, 4)']
-		page 121: ['(29, 7)']
-		page 124: ['(30, 11)']
-		page 127: ['(31, 8)']
-		page 130: ['(32, 7)']
-		page 133: ['(33, 6)']
-		page 135: ['(34, 8)']
-		page 138: ['(35, 7)']
-		page 141: ['(36, 10)']
-		page 144: ['(37, 1)']
-		page 147: ['(38, 9)']
-		page 150: ['(39, 8)']
-		page 153: ['(40, 1)']
-		page 156: ['(41, 7)']
-		page 159: ['(42, 7)']
-		page 161: ['(43, 6)']
-		page 163: ['(44, 7)']
-		page 166: ['(45, 11)']
-		page 168: ['(46, 4)']
-		page 171: ['(47, 12)']
-		page 174: ['(48, 5)']
-		page 177: ['(49, 3)']
-		page 180: ['(50, 3)']
-		page 182: ['(51, 8)']
-		page 185: ['(52, 4)']
-		page 188: ['(53, 12)']
-		page 191: ['(54, 5)']
-		page 194: ['(55, 9)']
-		page 197: ['(56, 12)']
-		page 199: ['(57, 3)']
-		page 202: ['(58, 7)']
-		page 205: ['(59, 1)']
-		page 208: ['(60, 6)']
-		page 211: ['(61, 8)']
-		page 214: ['(62, 5)']
-		page 217: ['(63, 9)']
-		page 220: ['(64, 5)']
-		page 223: ['(65, 0)']
-		page 226: ['(66, 7)']
-		page 229: ['(67, 2)']
-		page 232: ['(68, 8)']
-		page 235: ['(69, 6)']
-		page 238: ['(70, 10)']
-		page 241: ['(71, 9)']
-		page 243: ['(72, 7)']
-		page 246: ['(73, 5)']
-		page 249: ['(74, 4)']
-		page 252: ['(75, 7)']
-		page 255: ['(76, 4)']
-		page 257: ['(77, 10)']
-		page 260: ['(78, 11)']
-		page 262: ['(79, 11)']
-		page 265: ['(80, 12)']
-		page 268: ['(81, 7)']
-		page 271: ['(82, 9)']
-		page 273: ['(83, 9)']
-		page 276: ['(84, 12)']
-		page 278: ['(85, 1)']
-		page 281: ['(86, 4)']
-		page 284: ['(87, 8)']
-		page 286: ['(88, 1)']
-		page 289: ['(89, 12)']
-		page 292: ['(90, 5)']
-		page 294: ['(91, 6)']
-		page 297: ['(92, 12)']
-		page 299: ['(93, 2)']
-		page 302: ['(94, 8)']
-		page 305: ['(95, 3)']
-		page 308: ['(96, 3)']
-		page 310: ['(97, 1)']
-		page 313: ['(98, 5)']
-		page 315: ['(99, 9)']
-		page 317: ['(100, 8)']
-		page 320: ['(101, 12)']
-		page 322: ['(102, 1)']
-		page 325: ['(103, 12)']
-		page 328: ['(104, 6)']
-		page 330: ['(105, 1)']
-		page 333: ['(106, 8)']
-		page 335: ['(107, 12)']
-		page 338: ['(108, 0)']
-		page 340: ['(109, 4)']
-		page 343: ['(110, 7)']
-		page 346: ['(111, 7)']
-		page 348: ['(112, 1)']
-		page 350: ['(113, 5)']
-		page 352: ['(114, 5)']
-		page 355: ['(115, 6)']
-		page 357: ['(116, 12)']
-		page 359: ['(117, 7)']
-		page 361: ['(118, 10)']
-		page 364: ['(119, 0)']
-		page 366: ['(120, 8)']
-		page 368: ['(121, 8)']
-		page 371: ['(122, 5)']
-		page 373: ['(123, 0)']
-		page 376: ['(124, 2)']
-		page 379: ['(125, 4)']
-		page 381: ['(126, 12)']
-		page 383: ['(127, 4)']
-		page 386: ['(128, 11)']
-		page 388: ['(129, 10)']
-		page 391: ['(130, 10)']
-		page 393: ['(131, 6)']
-		page 396: ['(132, 4)']
-		page 399: ['(133, 5)']
-		page 402: ['(134, 12)']
-		page 405: ['(135, 7)']
-		page 408: ['(136, 10)']
-		page 411: ['(137, 10)']
-		page 413: ['(138, 4)']
-		page 415: ['(139, 3)']
-		page 418: ['(140, 2)']
-		page 421: ['(141, 7)']
-		page 424: ['(142, 5)']
-		page 427: ['(143, 5)']
-		page 430: ['(144, 3)']
-		page 432: ['(145, 9)']
-		page 435: ['(146, 8)']
-		page 438: ['(147, 1)']
-		page 440: ['(148, 5)']
-		page 443: ['(149, 8)']
-		page 445: ['(150, 2)']
-		page 447: ['(151, 9)']
-		page 450: ['(152, 7)']
-		page 453: ['(153, 1)']
-		page 456: ['(154, 4)']
-		page 458: ['(155, 11)']
-		page 461: ['(156, 4)']
-		page 464: ['(157, 10)']
-		page 467: ['(158, 0)']
-		page 469: ['(159, 6)']
-		page 472: ['(160, 1)']
-		page 474: ['(161, 11)']
-		page 477: ['(162, 4)']
-		page 479: ['(163, 7)']
-		page 482: ['(164, 8)']
-		page 484: ['(165, 5)']
-		page 487: ['(166, 9)']
-		page 490: ['(167, 3)']
-		page 492: ['(168, 7)']
-		page 495: ['(169, 6)']
-		page 497: ['(170, 10)']
-		page 499: ['(171, 1)']
-		page 501: ['(172, 10)']
-		page 503: ['(173, 0)']
-		page 505: ['(174, 5)']
-		page 507: ['(175, 0)']
-		page 509: ['(176, 4)']
-		page 511: ['(177, 12)']
-		page 514: ['(178, 4)']
-		page 517: ['(179, 7)']
-		page 519: ['(180, 5)']
-		page 521: ['(181, 1)']
-		page 523: ['(182, 0)']
-		page 525: ['(183, 7)']
-		page 528: ['(184, 11)']
-		page 530: ['(185, 0)']
-		page 533: ['(186, 1)']
-		page 535: ['(187, 1)']
-		page 538: ['(188, 0)']
-		page 540: ['(189, 5)']
-		page 543: ['(190, 2)']
-		page 546: ['(191, 6)']
-		page 548: ['(192, 0)']
-		page 551: ['(193, 5)']
-		page 554: ['(194, 12)']
-		page 556: ['(195, 8)']
-		page 559: ['(196, 6)']
-		page 561: ['(197, 5)']
-		page 563: ['(198, 12)']
-		page 565: ['(199, 0)']
-		page 567: ['(200, 3)']
-		page 569: ['(201, 1)']
-		page 572: ['(202, 7)']
-		page 575: ['(203, 7)']
-		page 577: ['(204, 10)']
-		page 580: ['(205, 6)']
-		page 583: ['(206, 9)']
-		page 585: ['(207, 9)']
-		page 588: ['(208, 5)']
-		page 591: ['(209, 12)']
-		page 594: ['(210, 8)']
-		page 597: ['(211, 8)']
-		page 599: ['(212, 12)']
-		page 601: ['(213, 9)']
-		page 603: ['(214, 10)']
-		page 605: ['(215, 6)']
-		page 607: ['(216, 7)']
-		page 610: ['(217, 3)']
-		page 612: ['(218, 8)']
-		page 615: ['(219, 7)']
-		page 617: ['(220, 12)']
-		page 620: ['(221, 4)']
-		page 623: ['(222, 1)']
-		page 626: ['(223, 3)']
-		page 629: ['(224, 7)']
-		page 631: ['(225, 11)']
-		page 634: ['(226, 10)']
-		page 636: ['(227, 9)']
-		page 638: ['(228, 2)']
-		page 640: ['(229, 7)']
-		page 643: ['(230, 0)']
-		page 645: ['(231, 0)']
-		page 647: ['(232, 4)']
-		page 649: ['(233, 7)']
-		page 651: ['(234, 10)']
-		page 653: ['(235, 1)']
-		page 655: ['(236, 1)']
-		page 657: ['(237, 5)']
-		page 659: ['(238, 9)']
-		page 661: ['(239, 11)']
-		page 663: ['(240, 0)']
-		page 666: ['(241, 10)']
-		page 668: ['(242, 2)']
-		page 671: ['(243, 7)']
-		page 673: ['(244, 4)']
-		page 675: ['(245, 3)']
-		page 677: ['(246, 11)']
-		page 680: ['(247, 1)']
-		page 683: ['(248, 0)']
-		page 685: ['(249, 2)']
-		page 688: ['(250, 1)']
-		page 690: ['(251, 0)']
-		page 692: ['(252, 7)']
-		page 694: ['(253, 6)']
-		page 696: ['(254, 0)']
-		page 698: ['(255, 10)']
-		page 700: ['(256, 10)']
-		page 702: ['(257, 4)']
-		page 704: ['(258, 4)']
-		page 706: ['(259, 1)']
-		page 708: ['(260, 10)']
-		page 710: ['(261, 6)']
-		page 712: ['(262, 12)']
-		page 714: ['(263, 9)']
-		page 716: ['(264, 5)']
-		page 718: ['(265, 4)']
-		page 720: ['(266, 4)']
-		page 722: ['(267, 2)']
-		page 724: ['(268, 3)']
-		page 726: ['(269, 12)']
-		page 728: ['(270, 2)']
-		page 731: ['(271, 11)']
-		page 734: ['(272, 2)']
-		page 736: ['(273, 4)']
-		page 738: ['(274, 6)']
-		page 740: ['(275, 12)']
-		page 743: ['(276, 7)']
-		page 745: ['(277, 10)']
-		page 748: ['(278, 11)']
-		page 750: ['(279, 3)']
-		page 752: ['(280, 0)']
-		page 754: ['(281, 2)']
-		page 756: ['(282, 9)']
-		page 758: ['(283, 6)']
-		page 761: ['(284, 4)']
-		page 763: ['(285, 8)']
-		page 765: ['(286, 0)']
-		page 768: ['(287, 12)']
-		page 771: ['(288, 9)']
-		page 773: ['(289, 11)']
-		page 775: ['(290, 9)']
-		page 777: ['(291, 1)']
-		page 779: ['(292, 4)']
-		page 781: ['(293, 7)']
-		page 783: ['(294, 5)']
-		page 785: ['(295, 9)']
-		page 787: ['(296, 5)']
-		page 789: ['(297, 5)']
-		page 791: ['(298, 2)']
-		page 793: ['(299, 0)']
-		page 795: ['(300, 8)']
-		page 797: ['(301, 5)']
-		page 799: ['(302, 7)']
-		page 802: ['(303, 9)']
-		page 804: ['(304, 4)']
-		page 806: ['(305, 7)']
-		page 808: ['(306, 5)']
-		page 810: ['(307, 4)']
-		page 812: ['(308, 1)']
-		page 814: ['(309, 6)']
-		page 816: ['(310, 2)']
-		page 818: ['(311, 3)']
-		page 820: ['(312, 2)']
-		page 822: ['(313, 8)']
-		page 824: ['(314, 2)']
-		page 826: ['(315, 3)']
-		page 828: ['(316, 1)']
-		page 830: ['(317, 6)']
-		page 832: ['(318, 6)']
-		page 834: ['(319, 5)']
-		page 836: ['(320, 1)']
-		page 838: ['(321, 9)']
-		page 840: ['(322, 10)']
-		page 842: ['(323, 0)']
-		page 844: ['(324, 10)']
-		page 846: ['(325, 1)']
-		page 848: ['(326, 8)']
-		page 850: ['(327, 6)']
-		page 852: ['(328, 12)']
-		page 855: ['(329, 10)']
-		page 857: ['(330, 10)']
-		page 859: ['(331, 12)']
-		page 861: ['(332, 6)']
-		page 864: ['(333, 2)']
-		page 866: ['(334, 1)']
-		page 868: ['(335, 3)']
-		page 870: ['(336, 7)']
-		page 872: ['(337, 3)']
-		page 874: ['(338, 11)']
-		page 877: ['(339, 1)']
-		page 879: ['(340, 3)']
-		page 881: ['(341, 12)']
-		page 883: ['(342, 7)']
-		page 885: ['(343, 4)']
-		page 887: ['(344, 0)']
-		page 889: ['(345, 5)']
-		page 891: ['(346, 5)']
-		page 893: ['(347, 6)']
-		page 895: ['(348, 8)']
-		page 897: ['(349, 4)']
-		page 899: ['(350, 8)']
-		page 901: ['(351, 1)']
-		page 903: ['(352, 7)']
-		page 905: ['(353, 3)']
-		page 907: ['(354, 7)']
-		page 910: ['(355, 8)']
-		page 912: ['(356, 7)']
-		page 914: ['(357, 0)']
-		page 916: ['(358, 0)']
-		page 918: ['(359, 6)']
-		page 920: ['(360, 1)']
-		page 922: ['(361, 6)']
-		page 924: ['(362, 12)']
-		page 927: ['(363, 11)']
-		page 929: ['(364, 10)']
-		page 931: ['(365, 11)']
-		page 934: ['(366, 7)']
-		page 936: ['(367, 8)']
-		page 938: ['(368, 0)']
-		page 940: ['(369, 2)']
-		page 942: ['(370, 9)']
-		page 944: ['(371, 2)']
-		page 946: ['(372, 4)']
-		page 948: ['(373, 5)']
-		page 950: ['(374, 4)']
-		page 953: ['(375, 7)']
-		page 956: ['(376, 10)']
-		page 958: ['(377, 0)']
-		page 960: ['(378, 1)']
-		page 963: ['(379, 1)']
-		page 965: ['(380, 12)']
-		page 967: ['(381, 1)']
-		page 970: ['(382, 11)']
-		page 973: ['(383, 2)']
-		page 975: ['(384, 0)']
-		page 977: ['(385, 1)']
-		page 979: ['(386, 5)']
-		page 981: ['(387, 7)']
-		page 984: ['(388, 1)']
-		page 987: ['(389, 10)']
-		page 989: ['(390, 7)']
-		page 991: ['(391, 11)']
-		page 994: ['(392, 4)']
-		page 996: ['(393, 3)']
-		page 998: ['(394, 12)']
-		page 1000: ['(395, 10)']
-		page 1003: ['(396, 9)']
-		page 1006: ['(397, 10)']
-		page 1008: ['(398, 4)']
-		page 1010: ['(399, 5)']
-		page 1012: ['(400, 2)']
-		page 1014: ['(401, 0)']
-		page 1016: ['(402, 3)']
-		page 1018: ['(403, 7)']
-		page 1020: ['(404, 4)']
-		page 1022: ['(405, 10)']
-		page 1024: ['(406, 10)']
-		page 1026: ['(407, 8)']
-		page 1028: ['(408, 10)']
-		page 1030: ['(409, 0)']
-		page 1032: ['(410, 11)']
-		page 1034: ['(411, 11)']
-		page 1036: ['(412, 0)']
-		page 1038: ['(413, 0)']
-		page 1040: ['(414, 11)']
-		page 1042: ['(415, 10)']
-		page 1044: ['(416, 6)']
-		page 1046: ['(417, 0)']
-		page 1048: ['(418, 1)']
-		page 1050: ['(419, 4)']
-		page 1052: ['(420, 7)']
-		page 1054: ['(421, 5)']
-		page 1056: ['(422, 11)']
-		page 1058: ['(423, 3)']
-		page 1060: ['(424, 3)']
-		page 1062: ['(425, 9)']
-		page 1064: ['(426, 8)']
-		page 1066: ['(427, 0)']
-		page 1068: ['(428, 8)']
-		page 1070: ['(429, 10)']
-		page 1073: ['(430, 5)']
-		page 1076: ['(431, 6)']
-		page 1078: ['(432, 5)']
-		page 1080: ['(433, 1)']
-		page 1082: ['(434, 8)']
-		page 1084: ['(435, 8)']
-		page 1086: ['(436, 11)']
-		page 1088: ['(437, 4)']
-		page 1090: ['(438, 0)']
-		page 1092: ['(439, 11)']
-		page 1094: ['(440, 7)']
-		page 1097: ['(441, 9)']
-		page 1099: ['(442, 11)']
-		page 1101: ['(443, 4)']
-		page 1103: ['(444, 0)']
-		page 1105: ['(445, 3)']
-		page 1107: ['(446, 4)']
-		page 1109: ['(447, 3)']
-		page 1111: ['(448, 5)']
-		page 1113: ['(449, 0)']
-		page 1115: ['(450, 1)']
-		page 1117: ['(451, 1)']
-		page 1119: ['(452, 5)']
-		page 1121: ['(453, 1)']
-		page 1123: ['(454, 0)']
-		page 1125: ['(455, 3)']
-		page 1128: ['(456, 12)']
-		page 1130: ['(457, 6)']
-		page 1132: ['(458, 7)']
-		page 1134: ['(459, 4)']
-		page 1137: ['(460, 11)']
-		page 1139: ['(461, 12)']
-		page 1141: ['(462, 6)']
-		page 1143: ['(463, 2)']
-		page 1145: ['(464, 9)']
-		page 1147: ['(465, 8)']
-		page 1149: ['(466, 7)']
-		page 1152: ['(467, 5)']
-		page 1154: ['(468, 12)']
-		page 1156: ['(469, 12)']
-		page 1159: ['(470, 3)']
-		page 1161: ['(471, 9)']
-		page 1163: ['(472, 8)']
-		page 1165: ['(473, 1)']
-		page 1167: ['(474, 8)']
-		page 1170: ['(475, 4)']
-		page 1172: ['(476, 10)']
-		page 1174: ['(477, 9)']
-		page 1176: ['(478, 6)']
-		page 1178: ['(479, 2)']
-		page 1180: ['(480, 1)']
-		page 1183: ['(481, 10)']
-		page 1185: ['(482, 1)']
-		page 1187: ['(483, 0)']
-		page 1189: ['(484, 8)']
-		page 1191: ['(485, 3)']
-		page 1193: ['(486, 12)']
-		page 1195: ['(487, 7)']
-		page 1197: ['(488, 0)']
-		page 1200: ['(489, 5)']
-		page 1203: ['(490, 8)']
-		page 1205: ['(491, 5)']
-		page 1207: ['(492, 0)']
-		page 1209: ['(493, 11)']
-		page 1211: ['(494, 0)']
-		page 1213: ['(495, 12)']
-		page 1215: ['(496, 10)']
-		page 1217: ['(497, 12)']
-		page 1219: ['(498, 4)']
-		page 1221: ['(499, 4)']
-		page 1223: ['(500, 1)']
-		page 1225: ['(501, 11)']
-		page 1227: ['(502, 2)']
-		page 1229: ['(503, 6)']
-		page 1231: ['(504, 6)']
-		page 1233: ['(505, 6)']
-		page 1235: ['(506, 7)']
-		page 1237: ['(507, 1)']
-		page 1239: ['(508, 0)']
-		page 1241: ['(509, 7)']
-		page 1243: ['(510, 1)']
-		page 1245: []
+		page 35: ['(3206, 8)', '(28271, 11)', '(25189, 10)', '(35329, 2)', '(14728, 5)', '(6857, 3)', '(16078, 7)', '(4869, 11)', '(7355, 9)', '(3740, 6)']
+		page 38: ['(40624, 9)', '(51546, 11)', '(52244, 2)', '(55565, 7)', '(55801, 3)', '(49803, 9)', '(51370, 7)', '(41213, 7)', '(41591, 9)', '(55491, 11)']
+		page 41: ['(56750, 9)', '(56764, 6)', '(62306, 11)', '(62957, 2)', '(57485, 3)', '(57586, 4)', '(62482, 7)', '(58853, 8)', '(62403, 1)', '(60218, 5)']
+		page 50: ['(1698, 4)', '(2697, 4)', '(2033, 8)', '(2322, 3)', '(2811, 4)', '(3125, 2)', '(3010, 12)', '(1772, 11)', '(3201, 8)', '(3054, 11)']
+		page 56: ['(691, 3)', '(1473, 0)', '(1686, 12)', '(1311, 8)', '(1609, 4)', '(762, 5)', '(1593, 11)', '(926, 0)', '(1212, 9)', '(1447, 8)']
+		page 64: ['(63940, 4)']
+		page 81: ['(293, 3)', '(429, 12)', '(327, 2)', '(294, 9)', '(338, 10)', '(658, 5)']
+		page 136: ['(273, 12)']
+		page 226: ['(225, 3)']
 	country_of_origin 
-		page 36: ["(0, 'Vatican City')", "(23, 'Vatican City')", "(71, 'Vatican City')", "(317, 'Saudi Arabia')", "(334, 'Vatican City')", "(376, 'Vatican City')", "(416, 'Vatican City')", "(421, 'Iceland')", "(432, 'Vatican City')", "(453, 'South Africa')"]
-		page 39: ["(1, 'Croatia')", "(211, 'Croatia')", "(461, 'Croatia')"]
-		page 42: ["(2, 'Malawi')", "(237, 'Malawi')", "(261, 'Malawi')", "(326, 'Malawi')"]
-		page 45: ["(3, 'Lesotho')", "(174, 'Lesotho')", "(239, 'Lesotho')", "(252, 'Lesotho')", "(296, 'Lesotho')"]
-		page 48: ["(4, 'Montenegro')", "(379, 'Montenegro')"]
-		page 51: ["(5, 'Mali')", "(84, 'Mali')", "(162, 'Mali')", "(264, 'Mali')", "(321, 'Mali')"]
-		page 54: ["(6, 'United Arab Emirates')", "(160, 'United Arab Emirates')"]
-		page 57: ["(7, 'Papua New Guinea')", "(170, 'Papua New Guinea')", "(238, 'Papua New Guinea')", "(418, 'Papua New Guinea')", "(420, 'Papua New Guinea')"]
-		page 60: ["(8, 'North Macedonia')", "(308, 'North Macedonia')", "(408, 'North Macedonia')", "(495, 'North Macedonia')", "(500, 'North Macedonia')"]
-		page 63: ["(9, 'Iraq')", "(194, 'Iraq')", "(359, 'Iraq')"]
-		page 66: ["(10, 'Zambia')", "(43, 'Zambia')", "(56, 'Zambia')", "(126, 'Zambia')"]
-		page 69: ["(11, 'Switzerland')", "(98, 'Switzerland')", "(361, 'Switzerland')"]
-		page 72: ["(12, 'Singapore')", "(87, 'Singapore')", "(119, 'Singapore')", "(295, 'Singapore')"]
-		page 75: ["(13, 'Liechtenstein')", "(441, 'Liechtenstein')", "(506, 'Liechtenstein')"]
-		page 78: ["(14, 'Cameroon')", "(33, 'Cameroon')"]
-		page 81: ["(15, 'Kazakhstan')", "(42, 'Kazakhstan')", "(99, 'Kazakhstan')", "(273, 'Kazakhstan')"]
-		page 84: ["(16, 'Libya')", "(176, 'Libya')"]
-		page 87: ["(17, 'Thailand')", "(241, 'Thailand')", "(245, 'Thailand')"]
-		page 90: ["(18, 'Congo, Republic of the')", "(199, 'Congo, Republic of the')"]
-		page 93: ["(19, 'Philippines')"]
-		page 96: ["(20, 'Serbia')", "(45, 'Serbia')", "(228, 'Serbia')", "(505, 'Serbia')"]
-		page 99: ["(21, 'Eritrea')", "(405, 'Eritrea')"]
-		page 102: ["(22, 'Malta')", "(154, 'Malta')"]
-		page 107: ["(24, 'South Sudan')", "(227, 'South Sudan')", "(298, 'South Sudan')", "(411, 'South Sudan')"]
-		page 110: ["(25, 'Micronesia')", "(175, 'Micronesia')", "(253, 'Micronesia')", "(348, 'Micronesia')"]
-		page 113: ["(26, 'Nepal')", "(188, 'Nepal')", "(254, 'Nepal')"]
-		page 116: ["(27, 'Samoa')", "(108, 'Samoa')", "(197, 'Samoa')", "(291, 'Samoa')"]
-		page 119: ["(28, 'San Marino')", "(138, 'San Marino')", "(236, 'San Marino')", "(452, 'San Marino')"]
-		page 122: ["(29, 'India')", "(300, 'India')", "(337, 'India')", "(402, 'India')"]
-		page 125: ["(30, 'Angola')", "(144, 'Angola')", "(471, 'Angola')"]
-		page 128: ["(31, 'Kosovo')", "(50, 'Kosovo')", "(393, 'Kosovo')", "(448, 'Kosovo')"]
-		page 131: ["(32, 'Panama')", "(115, 'Panama')", "(449, 'Panama')"]
-		page 136: ["(34, 'Lithuania')"]
-		page 139: ["(35, 'Germany')", "(92, 'Germany')", "(171, 'Germany')", "(422, 'Germany')"]
-		page 142: ["(36, 'Palestine')", "(101, 'Palestine')"]
-		page 145: ["(37, 'Marshall Islands')", "(137, 'Marshall Islands')"]
-		page 148: ["(38, 'Peru')"]
-		page 151: ["(39, 'Dominican Republic')"]
-		page 154: ["(40, 'North Korea')", "(167, 'North Korea')", "(260, 'North Korea')", "(369, 'North Korea')", "(406, 'North Korea')", "(427, 'North Korea')", "(472, 'North Korea')"]
-		page 157: ["(41, 'Djibouti')", "(180, 'Djibouti')", "(392, 'Djibouti')"]
-		page 164: ["(44, 'Saint Kitts and Nevis')"]
-		page 169: ["(46, 'Romania')", "(346, 'Romania')"]
-		page 172: ["(47, 'Madagascar')", "(248, 'Madagascar')", "(316, 'Madagascar')", "(349, 'Madagascar')"]
-		page 175: ["(48, 'France')", "(389, 'France')", "(442, 'France')"]
-		page 178: ["(49, 'Belarus')", "(463, 'Belarus')", "(504, 'Belarus')"]
-		page 183: ["(51, 'Kiribati')", "(169, 'Kiribati')", "(186, 'Kiribati')", "(373, 'Kiribati')", "(433, 'Kiribati')"]
-		page 186: ["(52, 'Ecuador')", "(358, 'Ecuador')", "(364, 'Ecuador')", "(370, 'Ecuador')"]
-		page 189: ["(53, 'Trinidad and Tobago')", "(355, 'Trinidad and Tobago')"]
-		page 192: ["(54, 'Haiti')", "(147, 'Haiti')", "(182, 'Haiti')", "(224, 'Haiti')", "(251, 'Haiti')"]
-		page 195: ["(55, 'Tanzania')"]
-		page 200: ["(57, 'Equatorial Guinea')", "(173, 'Equatorial Guinea')"]
-		page 203: ["(58, 'Finland')", "(116, 'Finland')", "(419, 'Finland')"]
-		page 206: ["(59, 'Kenya')", "(112, 'Kenya')", "(203, 'Kenya')", "(233, 'Kenya')", "(397, 'Kenya')"]
-		page 209: ["(60, 'Czechia')", "(78, 'Czechia')", "(457, 'Czechia')"]
-		page 212: ["(61, 'Congo, Democratic Republic of the')", "(357, 'Congo, Democratic Republic of the')", "(498, 'Congo, Democratic Republic of the')"]
-		page 215: ["(62, 'Colombia')", "(313, 'Colombia')", "(356, 'Colombia')", "(385, 'Colombia')"]
-		page 218: ["(63, 'Saudi Arabia')", "(117, 'Saudi Arabia')", "(424, 'Saudi Arabia')"]
-		page 221: ["(64, 'Namibia')"]
-		page 224: ["(65, 'Costa Rica')", "(128, 'Costa Rica')", "(319, 'Costa Rica')", "(412, 'Costa Rica')"]
-		page 227: ["(66, 'Gambia')", "(230, 'Gambia')", "(496, 'Gambia')"]
-		page 230: ["(67, 'Algeria')", "(113, 'Algeria')", "(351, 'Algeria')"]
-		page 233: ["(68, 'Nicaragua')", "(130, 'Nicaragua')", "(164, 'Nicaragua')", "(310, 'Nicaragua')", "(352, 'Nicaragua')", "(367, 'Nicaragua')", "(371, 'Nicaragua')", "(394, 'Nicaragua')", "(467, 'Nicaragua')"]
-		page 236: ["(69, 'Senegal')", "(431, 'Senegal')", "(468, 'Senegal')"]
-		page 239: ["(70, 'Turkmenistan')", "(82, 'Turkmenistan')", "(106, 'Turkmenistan')", "(404, 'Turkmenistan')", "(436, 'Turkmenistan')"]
-		page 244: ["(72, 'Venezuela')", "(76, 'Venezuela')", "(322, 'Venezuela')"]
-		page 247: ["(73, 'Suriname')", "(340, 'Suriname')"]
-		page 250: ["(74, 'Australia')", "(172, 'Australia')", "(231, 'Australia')", "(235, 'Australia')", "(312, 'Australia')"]
-		page 253: ["(75, 'Jordan')", "(266, 'Jordan')", "(268, 'Jordan')"]
-		page 258: ["(77, 'Russia')", "(213, 'Russia')", "(438, 'Russia')"]
-		page 263: ["(79, 'Albania')", "(285, 'Albania')", "(462, 'Albania')"]
-		page 266: ["(80, 'Myanmar')", "(90, 'Myanmar')", "(96, 'Myanmar')", "(403, 'Myanmar')"]
-		page 269: ["(81, 'Belgium')", "(122, 'Belgium')", "(400, 'Belgium')", "(487, 'Belgium')"]
-		page 274: ["(83, 'Poland')", "(111, 'Poland')", "(219, 'Poland')"]
-		page 279: ["(85, 'Kyrgyzstan')", "(256, 'Kyrgyzstan')"]
-		page 282: ["(86, 'Netherlands')", "(301, 'Netherlands')"]
-		page 287: ["(88, 'Argentina')", "(309, 'Argentina')"]
-		page 290: ["(89, 'Dominica')", "(125, 'Dominica')"]
-		page 295: ["(91, 'Norway')", "(289, 'Norway')", "(451, 'Norway')"]
-		page 300: ["(93, 'Fiji')", "(243, 'Fiji')", "(426, 'Fiji')"]
-		page 303: ["(94, 'Ukraine')", "(314, 'Ukraine')", "(456, 'Ukraine')"]
-		page 306: ["(95, 'Togo')", "(184, 'Togo')"]
-		page 311: ["(97, 'Gabon')", "(288, 'Gabon')"]
-		page 318: ["(100, 'Cambodia')", "(368, 'Cambodia')"]
-		page 323: ["(102, 'Tuvalu')", "(104, 'Tuvalu')", "(399, 'Tuvalu')"]
-		page 326: ["(103, 'Sweden')"]
-		page 331: ["(105, 'Guyana')", "(398, 'Guyana')"]
-		page 336: ["(107, 'Mexico')", "(158, 'Mexico')", "(200, 'Mexico')", "(217, 'Mexico')", "(350, 'Mexico')", "(439, 'Mexico')", "(493, 'Mexico')"]
-		page 341: ["(109, 'Armenia')", "(272, 'Armenia')"]
-		page 344: ["(110, 'Cyprus')", "(120, 'Cyprus')", "(434, 'Cyprus')"]
-		page 353: ["(114, 'Brazil')", "(149, 'Brazil')", "(335, 'Brazil')", "(450, 'Brazil')"]
-		page 362: ["(118, 'Saint Vincent and the Grenadines')", "(458, 'Saint Vincent and the Grenadines')", "(477, 'Saint Vincent and the Grenadines')", "(494, 'Saint Vincent and the Grenadines')"]
-		page 369: ["(121, 'Indonesia')", "(198, 'Indonesia')", "(244, 'Indonesia')", "(423, 'Indonesia')"]
-		page 374: ["(123, 'Slovakia')", "(196, 'Slovakia')", "(342, 'Slovakia')"]
-		page 377: ["(124, 'Laos')", "(226, 'Laos')", "(274, 'Laos')", "(306, 'Laos')"]
-		page 384: ["(127, 'Chile')", "(150, 'Chile')", "(339, 'Chile')"]
-		page 389: ["(129, 'Iceland')", "(478, 'Iceland')", "(482, 'Iceland')"]
-		page 394: ["(131, 'Bosnia and Herzegovina')", "(206, 'Bosnia and Herzegovina')", "(280, 'Bosnia and Herzegovina')", "(324, 'Bosnia and Herzegovina')"]
-		page 397: ["(132, 'Uganda')", "(255, 'Uganda')", "(265, 'Uganda')", "(311, 'Uganda')", "(473, 'Uganda')", "(508, 'Uganda')"]
-		page 400: ["(133, 'Honduras')", "(250, 'Honduras')", "(279, 'Honduras')", "(303, 'Honduras')", "(315, 'Honduras')"]
-		page 403: ["(134, 'Portugal')", "(181, 'Portugal')", "(409, 'Portugal')"]
-		page 406: ["(135, 'Moldova')", "(269, 'Moldova')", "(447, 'Moldova')"]
-		page 409: ["(136, 'El Salvador')"]
-		page 416: ["(139, 'China')", "(179, 'China')"]
-		page 419: ["(140, 'Azerbaijan')", "(305, 'Azerbaijan')", "(475, 'Azerbaijan')"]
-		page 422: ["(141, 'Antigua and Barbuda')", "(343, 'Antigua and Barbuda')"]
-		page 425: ["(142, 'United Kingdom')", "(278, 'United Kingdom')", "(509, 'United Kingdom')"]
-		page 428: ["(143, 'Bahamas')", "(232, 'Bahamas')", "(386, 'Bahamas')"]
-		page 433: ["(145, 'Ireland')", "(390, 'Ireland')"]
-		page 436: ["(146, 'Bangladesh')", "(292, 'Bangladesh')", "(407, 'Bangladesh')", "(491, 'Bangladesh')"]
-		page 441: ["(148, 'Pakistan')", "(293, 'Pakistan')", "(360, 'Pakistan')"]
-		page 448: ["(151, 'Guatemala')", "(490, 'Guatemala')"]
-		page 451: ["(152, 'Nauru')", "(214, 'Nauru')", "(282, 'Nauru')", "(383, 'Nauru')", "(460, 'Nauru')"]
-		page 454: ["(153, 'Sierra Leone')"]
-		page 459: ["(155, 'Austria')", "(257, 'Austria')", "(417, 'Austria')"]
-		page 462: ['(156, "Cote d\'Ivoire")', '(414, "Cote d\'Ivoire")']
-		page 465: ["(157, 'Guinea')", "(347, 'Guinea')", "(470, 'Guinea')"]
-		page 470: ["(159, 'Georgia')", "(262, 'Georgia')", "(307, 'Georgia')", "(384, 'Georgia')"]
-		page 475: ["(161, 'Guinea-Bissau')", "(234, 'Guinea-Bissau')"]
-		page 480: ["(163, 'Eswatini')", "(258, 'Eswatini')", "(377, 'Eswatini')", "(446, 'Eswatini')"]
-		page 485: ["(165, 'Barbados')", "(212, 'Barbados')", "(297, 'Barbados')"]
-		page 488: ["(166, 'Hungary')", "(329, 'Hungary')"]
-		page 493: ["(168, 'Kuwait')", "(481, 'Kuwait')"]
-		page 512: ["(177, 'Central African Republic')", "(372, 'Central African Republic')", "(437, 'Central African Republic')", "(479, 'Central African Republic')", "(497, 'Central African Republic')"]
-		page 515: ["(178, 'Nigeria')", "(215, 'Nigeria')", "(281, 'Nigeria')", "(454, 'Nigeria')"]
-		page 526: ["(183, 'Ghana')", "(267, 'Ghana')"]
-		page 531: ["(185, 'Iran')", "(333, 'Iran')"]
-		page 536: ["(187, 'Zimbabwe')"]
-		page 541: ["(189, 'Saint Lucia')", "(191, 'Saint Lucia')", "(320, 'Saint Lucia')", "(331, 'Saint Lucia')", "(503, 'Saint Lucia')"]
-		page 544: ["(190, 'South Africa')"]
-		page 549: ["(192, 'Afghanistan')", "(465, 'Afghanistan')"]
-		page 552: ["(193, 'Turkey')"]
-		page 557: ["(195, 'Brunei')", "(344, 'Brunei')", "(464, 'Brunei')"]
-		page 570: ["(201, 'Andorra')"]
-		page 573: ["(202, 'Paraguay')", "(299, 'Paraguay')", "(325, 'Paraguay')", "(341, 'Paraguay')"]
-		page 578: ["(204, 'Somalia')", "(263, 'Somalia')"]
-		page 581: ["(205, 'Seychelles')", "(336, 'Seychelles')"]
-		page 586: ["(207, 'Bahrain')", "(276, 'Bahrain')", "(415, 'Bahrain')"]
-		page 589: ["(208, 'Cuba')", "(345, 'Cuba')", "(444, 'Cuba')"]
-		page 592: ["(209, 'Sudan')"]
-		page 595: ["(210, 'Slovenia')", "(401, 'Slovenia')"]
-		page 608: ["(216, 'Denmark')", "(363, 'Denmark')", "(507, 'Denmark')"]
-		page 613: ["(218, 'Ethiopia')", "(413, 'Ethiopia')", "(502, 'Ethiopia')"]
-		page 618: ["(220, 'Burundi')", "(294, 'Burundi')"]
-		page 621: ["(221, 'Taiwan')", "(443, 'Taiwan')"]
-		page 624: ["(222, 'Yemen')", "(353, 'Yemen')"]
-		page 627: ["(223, 'United States of America')", "(259, 'United States of America')", "(284, 'United States of America')"]
-		page 632: ["(225, 'Mongolia')"]
-		page 641: ["(229, 'Niger')", "(445, 'Niger')"]
-		page 664: ["(240, 'Uruguay')"]
-		page 669: ["(242, 'Japan')", "(485, 'Japan')", "(492, 'Japan')"]
-		page 678: ["(246, 'Estonia')", "(323, 'Estonia')"]
-		page 681: ["(247, 'Vanuatu')", "(501, 'Vanuatu')"]
-		page 686: ["(249, 'Egypt')", "(380, 'Egypt')"]
-		page 729: ["(270, 'Bolivia')", "(425, 'Bolivia')"]
-		page 732: ["(271, 'South Korea')"]
-		page 741: ["(275, 'Lebanon')", "(330, 'Lebanon')", "(428, 'Lebanon')"]
-		page 746: ["(277, 'Comoros')", "(318, 'Comoros')", "(327, 'Comoros')", "(484, 'Comoros')"]
-		page 759: ["(283, 'Mauritius')", "(290, 'Mauritius')", "(304, 'Mauritius')"]
-		page 766: ["(286, 'Luxembourg')", "(499, 'Luxembourg')"]
-		page 769: ["(287, 'New Zealand')"]
-		page 800: ["(302, 'Italy')"]
-		page 853: ["(328, 'Cabo Verde')"]
-		page 862: ["(332, 'Syria')"]
-		page 875: ["(338, 'Maldives')"]
-		page 908: ["(354, 'Grenada')", "(366, 'Grenada')"]
-		page 925: ["(362, 'Vietnam')"]
-		page 932: ["(365, 'Liberia')"]
-		page 951: ["(374, 'Belize')"]
-		page 954: ["(375, 'Timor-Leste')"]
-		page 961: ["(378, 'Bulgaria')"]
-		page 968: ["(381, 'Rwanda')"]
-		page 971: ["(382, 'Israel')"]
-		page 982: ["(387, 'Monaco')"]
-		page 985: ["(388, 'Uzbekistan')", "(483, 'Uzbekistan')"]
-		page 992: ["(391, 'Solomon Islands')"]
-		page 1001: ["(395, 'Mauritania')"]
-		page 1004: ["(396, 'Qatar')", "(410, 'Qatar')", "(435, 'Qatar')"]
-		page 1071: ["(429, 'Sri Lanka')", "(486, 'Sri Lanka')"]
-		page 1074: ["(430, 'Latvia')"]
-		page 1095: ["(440, 'Mozambique')"]
-		page 1126: ["(455, 'Jamaica')"]
-		page 1135: ["(459, 'Chad')"]
-		page 1150: ["(466, 'Tonga')", "(476, 'Tonga')"]
-		page 1157: ["(469, 'Palau')"]
-		page 1168: ["(474, 'Bhutan')"]
-		page 1181: ["(480, 'Benin')"]
-		page 1198: ["(488, 'Oman')"]
-		page 1201: ["(489, 'Canada')"]
+		page 36: ["(3206, 'Liechtenstein')", "(14728, 'Liechtenstein')", "(294, 'Liechtenstein')", "(59899, 'Netherlands')", "(33742, 'Liechtenstein')", "(21566, 'South Africa')", "(44700, 'Barbados')"]
+		page 39: ["(40624, 'Serbia')", "(39470, 'Serbia')", "(39762, 'Serbia')", "(61957, 'Serbia')", "(46970, 'Serbia')", "(46979, 'Serbia')", "(63653, 'Serbia')"]
+		page 42: ["(56750, 'Taiwan')", "(18260, 'Taiwan')", "(1447, 'Taiwan')", "(50886, 'Taiwan')"]
+		page 43: ["(28271, 'Malta')", "(34733, 'Malta')", "(38556, 'Malta')", "(27256, 'Malta')", "(53430, 'Malta')", "(24447, 'Malta')"]
+		page 44: ["(25189, 'Myanmar')", "(17069, 'Myanmar')", "(18046, 'Myanmar')"]
+		page 45: ["(35329, 'Antigua and Barbuda')", "(25326, 'Antigua and Barbuda')"]
+		page 46: ["(51546, 'Brunei')", "(1686, 'Brunei')", "(62482, 'Brunei')", "(32466, 'Brunei')", "(1311, 'Brunei')", "(33290, 'Brunei')"]
+		page 47: ["(6857, 'Tonga')", "(5411, 'Tonga')", "(19125, 'Tonga')", "(36393, 'Tonga')", "(46985, 'Tonga')"]
+		page 48: ["(16078, 'San Marino')", "(56722, 'San Marino')", "(53352, 'San Marino')"]
+		page 51: ["(1698, 'Belize')", "(14263, 'Belize')", "(3734, 'Belize')"]
+		page 52: ["(4869, 'Bahrain')", "(35963, 'Bahrain')", "(27533, 'Bahrain')", "(47944, 'Bahrain')", "(43768, 'Bahrain')"]
+		page 53: ["(7355, 'Mali')", "(21235, 'Mali')"]
+		page 54: ["(3740, 'Central African Republic')", "(48332, 'Central African Republic')", "(47224, 'Central African Republic')", "(39283, 'Central African Republic')"]
+		page 57: ["(691, 'Gambia')", "(15817, 'Gambia')", "(9726, 'Gambia')", "(51869, 'Gambia')"]
+		page 58: ["(22778, 'Palau')", "(8541, 'Palau')"]
+		page 59: ["(3560, 'Peru')", "(3670, 'Peru')", "(45121, 'Peru')"]
+		page 60: ["(21109, 'Malawi')", "(14514, 'Malawi')", "(1212, 'Malawi')"]
+		page 61: ["(28807, 'Fiji')", "(47028, 'Fiji')", "(42749, 'Fiji')", "(29885, 'Fiji')"]
+		page 62: ["(1473, 'Uganda')", "(48376, 'Uganda')", "(13445, 'Uganda')", "(9146, 'Uganda')"]
+		page 65: ["(63940, 'Kazakhstan')", "(32519, 'Kazakhstan')", "(5710, 'Kazakhstan')", "(15703, 'Kazakhstan')", "(42950, 'Kazakhstan')", "(21281, 'Kazakhstan')", "(20949, 'Kazakhstan')"]
+		page 66: ["(52244, 'Palestine')", "(17847, 'Palestine')", "(11109, 'Palestine')", "(338, 'Palestine')"]
+		page 67: ["(16062, 'Belgium')", "(62403, 'Belgium')", "(55817, 'Belgium')", "(43874, 'Belgium')"]
+		page 68: ["(4367, 'Greece')"]
+		page 69: ["(16664, 'Georgia')", "(31796, 'Georgia')", "(6468, 'Georgia')"]
+		page 70: ["(6530, 'India')"]
+		page 71: ["(55565, 'Jamaica')", "(50422, 'Jamaica')", "(59899, 'Jamaica')", "(33824, 'Jamaica')"]
+		page 72: ["(10449, 'Trinidad and Tobago')", "(32539, 'Trinidad and Tobago')", "(37857, 'Trinidad and Tobago')", "(48300, 'Trinidad and Tobago')", "(4014, 'Trinidad and Tobago')", "(6365, 'Trinidad and Tobago')"]
+		page 73: ["(27989, 'Ireland')"]
+		page 74: ["(4234, 'Chad')", "(16118, 'Chad')"]
+		page 75: ["(35030, 'Comoros')"]
+		page 76: ["(2697, 'Burkina Faso')", "(34176, 'Burkina Faso')", "(42679, 'Burkina Faso')", "(52379, 'Burkina Faso')"]
+		page 77: ["(56764, 'North Korea')", "(14769, 'North Korea')", "(4806, 'North Korea')", "(17859, 'North Korea')", "(60997, 'North Korea')"]
+		page 78: ["(55801, 'Colombia')"]
+		page 79: ["(34133, 'Haiti')", "(3954, 'Haiti')", "(50089, 'Haiti')"]
+		page 82: ["(293, 'Japan')", "(48892, 'Japan')"]
+		page 83: ["(10818, 'Guyana')", "(57243, 'Guyana')", "(50257, 'Guyana')", "(30329, 'Guyana')"]
+		page 84: ["(21579, 'Philippines')"]
+		page 85: ["(13953, 'Estonia')", "(20534, 'Estonia')", "(47074, 'Estonia')"]
+		page 86: ["(49803, 'El Salvador')", "(18530, 'El Salvador')", "(10286, 'El Salvador')", "(44042, 'El Salvador')", "(34968, 'El Salvador')"]
+		page 87: ["(51370, 'Afghanistan')", "(48947, 'Afghanistan')", "(23716, 'Afghanistan')", "(9589, 'Afghanistan')", "(19728, 'Afghanistan')", "(48529, 'Afghanistan')"]
+		page 88: ["(34395, 'Suriname')", "(48369, 'Suriname')", "(24125, 'Suriname')"]
+		page 89: ["(41213, 'Nauru')", "(18552, 'Nauru')", "(39761, 'Nauru')", "(1772, 'Nauru')", "(61750, 'Nauru')"]
+		page 90: ["(29931, 'Pakistan')", "(21963, 'Pakistan')", "(45939, 'Pakistan')", "(55151, 'Pakistan')", "(20568, 'Pakistan')"]
+		page 91: ["(17306, 'Switzerland')", "(25484, 'Switzerland')", "(10948, 'Switzerland')"]
+		page 92: ["(23010, 'Gabon')", "(29520, 'Gabon')"]
+		page 93: ["(15657, 'Saint Kitts and Nevis')", "(47773, 'Saint Kitts and Nevis')", "(31323, 'Saint Kitts and Nevis')"]
+		page 94: ["(41591, 'South Sudan')", "(51565, 'South Sudan')", "(28201, 'South Sudan')", "(3201, 'South Sudan')"]
+		page 95: ["(34498, 'Cambodia')", "(23749, 'Cambodia')", "(9193, 'Cambodia')"]
+		page 96: ["(15284, 'Mongolia')", "(61891, 'Mongolia')", "(23491, 'Mongolia')", "(54665, 'Mongolia')"]
+		page 97: ["(37733, 'Bosnia and Herzegovina')"]
+		page 98: ["(32163, 'Mauritania')", "(43081, 'Mauritania')", "(26104, 'Mauritania')", "(3555, 'Mauritania')"]
+		page 99: ["(13661, 'Moldova')", "(29984, 'Moldova')", "(61825, 'Moldova')", "(16731, 'Moldova')", "(41702, 'Moldova')", "(49372, 'Moldova')", "(62333, 'Moldova')"]
+		page 100: ["(62306, 'Turkmenistan')", "(30828, 'Turkmenistan')", "(6617, 'Turkmenistan')"]
+		page 101: ["(55491, 'Tanzania')"]
+		page 102: ["(24302, 'Burundi')", "(57074, 'Burundi')", "(6983, 'Burundi')"]
+		page 103: ["(20802, 'Slovenia')", "(61290, 'Slovenia')"]
+		page 104: ["(28102, 'Romania')", "(60218, 'Romania')", "(63357, 'Romania')", "(51212, 'Romania')", "(51963, 'Romania')"]
+		page 105: ["(45394, 'Kiribati')", "(7248, 'Kiribati')", "(14153, 'Kiribati')"]
+		page 106: ["(8194, 'South Korea')", "(37838, 'South Korea')", "(57031, 'South Korea')", "(52776, 'South Korea')"]
+		page 107: ["(62957, 'Vatican City')", "(41643, 'Vatican City')", "(40179, 'Vatican City')", "(45557, 'Vatican City')"]
+		page 108: ["(41493, 'Thailand')", "(14161, 'Thailand')", "(8661, 'Thailand')", "(48264, 'Thailand')", "(51711, 'Thailand')"]
+		page 109: ["(12975, 'Latvia')", "(2033, 'Latvia')", "(2811, 'Latvia')", "(8110, 'Latvia')"]
+		page 110: ["(57485, 'Eswatini')", "(13809, 'Eswatini')"]
+		page 111: ["(49726, 'Iceland')", "(53408, 'Iceland')", "(51165, 'Iceland')", "(13582, 'Iceland')"]
+		page 112: ["(429, 'Sao Tome and Principe')", "(7962, 'Sao Tome and Principe')", "(37520, 'Sao Tome and Principe')", "(34182, 'Sao Tome and Principe')"]
+		page 113: ["(29449, 'Micronesia')", "(9225, 'Micronesia')"]
+		page 114: ["(57586, 'Dominica')", "(18581, 'Dominica')", "(4583, 'Dominica')"]
+		page 115: ["(39132, 'Panama')", "(21835, 'Panama')", "(34030, 'Panama')", "(3054, 'Panama')"]
+		page 116: ["(18728, 'Lesotho')", "(61480, 'Lesotho')", "(273, 'Lesotho')", "(40584, 'Lesotho')", "(55820, 'Lesotho')"]
+		page 117: ["(49947, 'Czechia')", "(30480, 'Czechia')", "(26617, 'Czechia')"]
+		page 118: ["(58853, 'North Macedonia')", "(12576, 'North Macedonia')"]
+		page 119: ["(24543, 'Algeria')", "(11153, 'Algeria')", "(28064, 'Algeria')"]
+		page 120: ["(55719, 'Costa Rica')", "(33425, 'Costa Rica')"]
+		page 121: ["(51480, 'United States of America')"]
+		page 122: ["(4412, 'Austria')", "(61031, 'Austria')"]
+		page 123: ["(20040, 'Belarus')", "(33659, 'Belarus')"]
+		page 124: ["(50176, 'Mauritius')", "(23521, 'Mauritius')", "(31898, 'Mauritius')"]
+		page 125: ["(34794, 'Denmark')", "(22153, 'Denmark')", "(59458, 'Denmark')"]
+		page 126: ["(44700, 'Cabo Verde')"]
+		page 127: ["(50440, 'Eritrea')", "(32454, 'Eritrea')", "(37301, 'Eritrea')", "(11258, 'Eritrea')", "(5653, 'Eritrea')", "(27849, 'Eritrea')", "(9499, 'Eritrea')", "(10080, 'Eritrea')"]
+		page 128: ["(48635, 'Ethiopia')", "(225, 'Ethiopia')"]
+		page 129: ["(327, 'Grenada')", "(8474, 'Grenada')"]
+		page 130: ["(54037, 'Chile')"]
+		page 131: ["(47047, 'Congo, Democratic Republic of the')", "(29624, 'Congo, Democratic Republic of the')", "(19297, 'Congo, Democratic Republic of the')", "(60720, 'Congo, Democratic Republic of the')"]
+		page 132: ["(59556, 'Bahamas')"]
+		page 133: ["(51917, 'Kyrgyzstan')", "(45879, 'Kyrgyzstan')"]
+		page 134: ["(24577, 'Dominican Republic')"]
+		page 137: ["(8553, 'Montenegro')"]
+		page 138: ["(27571, 'Seychelles')", "(26741, 'Seychelles')", "(10446, 'Seychelles')"]
+		page 139: ["(18510, 'Guatemala')", "(32159, 'Guatemala')", "(41377, 'Guatemala')", "(36608, 'Guatemala')", "(52405, 'Guatemala')"]
+		page 140: ["(30253, 'Uzbekistan')", "(33046, 'Uzbekistan')"]
+		page 141: ["(61177, 'Senegal')", "(56618, 'Senegal')"]
+		page 142: ["(14530, 'Netherlands')", "(31874, 'Netherlands')"]
+		page 143: ["(11827, 'Malaysia')", "(16471, 'Malaysia')", "(57206, 'Malaysia')", "(28572, 'Malaysia')"]
+		page 144: ["(28735, 'Canada')"]
+		page 145: ["(4193, 'Bulgaria')", "(15619, 'Bulgaria')", "(47494, 'Bulgaria')"]
+		page 146: ["(16165, 'Djibouti')", "(37046, 'Djibouti')"]
+		page 147: ["(26935, 'Zimbabwe')", "(25779, 'Zimbabwe')"]
+		page 148: ["(9514, 'Kuwait')", "(9649, 'Kuwait')", "(37841, 'Kuwait')"]
+		page 149: ["(23597, 'Luxembourg')", "(50612, 'Luxembourg')"]
+		page 150: ["(45174, 'Sweden')", "(62593, 'Sweden')"]
+		page 151: ["(41794, 'Cuba')", "(16845, 'Cuba')", "(60249, 'Cuba')", "(42368, 'Cuba')"]
+		page 152: ["(43097, 'Sri Lanka')", "(34596, 'Sri Lanka')", "(16310, 'Sri Lanka')", "(58488, 'Sri Lanka')"]
+		page 153: ["(51603, 'Poland')", "(9479, 'Poland')", "(46203, 'Poland')", "(52631, 'Poland')"]
+		page 154: ["(9550, 'Indonesia')", "(53550, 'Indonesia')", "(762, 'Indonesia')", "(11328, 'Indonesia')"]
+		page 155: ["(25942, 'Armenia')", "(3125, 'Armenia')", "(27040, 'Armenia')", "(22145, 'Armenia')"]
+		page 156: ["(23603, 'Libya')", "(54445, 'Libya')", "(47421, 'Libya')"]
+		page 157: ["(63219, 'Timor-Leste')", "(12376, 'Timor-Leste')", "(41358, 'Timor-Leste')", "(15000, 'Timor-Leste')", "(47053, 'Timor-Leste')"]
+		page 158: ["(11353, 'Cameroon')", "(926, 'Cameroon')", "(47477, 'Cameroon')"]
+		page 159: ["(11026, 'Saudi Arabia')", "(42657, 'Saudi Arabia')"]
+		page 160: ["(1609, 'Croatia')", "(33994, 'Croatia')", "(31589, 'Croatia')", "(35904, 'Croatia')"]
+		page 161: ["(44074, 'Saint Vincent and the Grenadines')", "(59086, 'Saint Vincent and the Grenadines')", "(62055, 'Saint Vincent and the Grenadines')", "(34190, 'Saint Vincent and the Grenadines')"]
+		page 162: ["(10377, 'Italy')", "(60503, 'Italy')", "(27941, 'Italy')"]
+		page 163: ["(34723, 'Monaco')"]
+		page 164: ["(62029, 'Botswana')", "(40108, 'Botswana')"]
+		page 165: ["(30175, 'Madagascar')", "(38896, 'Madagascar')", "(43279, 'Madagascar')", "(6296, 'Madagascar')"]
+		page 166: ["(13028, 'Israel')", "(56888, 'Israel')", "(39362, 'Israel')", "(3737, 'Israel')"]
+		page 167: ["(57680, 'Syria')", "(49760, 'Syria')", "(32571, 'Syria')"]
+		page 168: ["(37067, 'Bolivia')", "(57930, 'Bolivia')"]
+		page 169: ["(31879, 'Slovakia')", "(47881, 'Slovakia')", "(59148, 'Slovakia')"]
+		page 170: ["(12176, 'Ecuador')", "(57497, 'Ecuador')", "(2322, 'Ecuador')", "(21018, 'Ecuador')"]
+		page 171: ["(34685, 'South Africa')", "(44429, 'South Africa')", "(45851, 'South Africa')", "(23829, 'South Africa')"]
+		page 172: ["(57324, 'Bangladesh')", "(54689, 'Bangladesh')"]
+		page 173: ["(16320, 'Albania')", "(26550, 'Albania')"]
+		page 174: ["(6423, 'Iran')", "(51994, 'Iran')"]
+		page 175: ["(36879, 'Spain')", "(19516, 'Spain')"]
+		page 176: ["(19935, 'Uruguay')", "(41895, 'Uruguay')", "(24097, 'Uruguay')", "(27967, 'Uruguay')", "(37509, 'Uruguay')", "(15140, 'Uruguay')", "(60063, 'Uruguay')", "(18814, 'Uruguay')"]
+		page 177: ["(34910, 'Tuvalu')", "(51481, 'Tuvalu')", "(40190, 'Tuvalu')"]
+		page 178: ["(36246, 'Paraguay')", "(48401, 'Paraguay')", "(48239, 'Paraguay')"]
+		page 179: ["(39319, 'Oman')", "(47444, 'Oman')", "(43229, 'Oman')"]
+		page 180: ["(57495, 'Portugal')"]
+		page 181: ["(31406, 'Honduras')", "(52648, 'Honduras')", "(56883, 'Honduras')"]
+		page 182: ["(54730, 'Lebanon')"]
+		page 183: ["(62713, 'Zambia')"]
+		page 184: ["(6367, 'Rwanda')"]
+		page 185: ["(56585, 'Samoa')", "(33529, 'Samoa')"]
+		page 186: ["(7054, 'Vietnam')", "(60745, 'Vietnam')", "(10056, 'Vietnam')", "(17223, 'Vietnam')"]
+		page 187: ["(24963, 'Vanuatu')"]
+		page 188: ["(11150, 'Norway')", "(658, 'Norway')", "(55673, 'Norway')"]
+		page 189: ["(3507, 'United Arab Emirates')", "(21797, 'United Arab Emirates')", "(36878, 'United Arab Emirates')", "(46722, 'United Arab Emirates')"]
+		page 190: ["(8217, 'Venezuela')", "(52974, 'Venezuela')"]
+		page 191: ["(51870, 'Sudan')"]
+		page 192: ["(15334, 'Turkey')", "(47227, 'Turkey')"]
+		page 193: ["(59280, 'Benin')", "(49408, 'Benin')", "(19120, 'Benin')", "(10163, 'Benin')"]
+		page 194: ["(19772, 'Sierra Leone')", "(45494, 'Sierra Leone')", "(28161, 'Sierra Leone')"]
+		page 195: ["(5993, 'Nicaragua')", "(49689, 'Nicaragua')", "(60525, 'Nicaragua')", "(31379, 'Nicaragua')"]
+		page 196: ["(33105, 'Equatorial Guinea')", "(23572, 'Equatorial Guinea')", "(39196, 'Equatorial Guinea')"]
+		page 197: ["(1593, 'Germany')"]
+		page 198: ["(50941, 'France')"]
+		page 199: ["(30043, 'Iraq')"]
+		page 200: ["(38522, 'Qatar')", "(42792, 'Qatar')", "(2277, 'Qatar')"]
+		page 201: ["(61572, 'Togo')"]
+		page 202: ["(62341, 'Australia')"]
+		page 203: ["(13768, 'Yemen')"]
+		page 204: ["(38583, 'Egypt')", "(37101, 'Egypt')"]
+		page 205: ["(5562, 'United Kingdom')", "(19459, 'United Kingdom')", "(61105, 'United Kingdom')"]
+		page 206: ["(3010, 'Mozambique')", "(54298, 'Mozambique')"]
+		page 207: ["(5626, 'Liberia')"]
+		page 208: ["(31792, 'Tajikistan')"]
+		page 209: ["(61249, 'Brazil')", "(5984, 'Brazil')", "(33180, 'Brazil')"]
+		page 210: ["(40348, 'Morocco')"]
+		page 211: ["(63190, 'Singapore')", "(44519, 'Singapore')"]
+		page 212: ["(48228, 'Jordan')"]
+		page 213: ["(19517, 'Russia')"]
+		page 214: ["(13155, 'Solomon Islands')"]
+		page 215: ["(39087, 'Bhutan')"]
+		page 216: ["(53096, 'Nigeria')", "(56995, 'Nigeria')", "(7392, 'Nigeria')", "(62785, 'Nigeria')"]
+		page 217: ["(7906, 'Cyprus')", "(59987, 'Cyprus')"]
+		page 218: ["(14482, 'Azerbaijan')", "(52708, 'Azerbaijan')", "(4743, 'Azerbaijan')"]
+		page 219: ["(56928, 'Angola')"]
+		page 220: ['(5766, "Cote d\'Ivoire")', '(14550, "Cote d\'Ivoire")', '(12556, "Cote d\'Ivoire")']
+		page 221: ["(8813, 'Namibia')"]
+		page 222: ["(25669, 'Finland')"]
+		page 223: ["(25809, 'Lithuania')"]
+		page 224: ["(15123, 'Kosovo')", "(57227, 'Kosovo')"]
+		page 227: ["(37880, 'Ghana')"]
+		page 228: ["(55945, 'Nepal')"]
+		page 229: ["(50387, 'Maldives')"]
+		page 230: ["(34448, 'Congo, Republic of the')"]
 END STREES TEST
