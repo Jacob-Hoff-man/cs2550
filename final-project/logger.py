@@ -1,16 +1,21 @@
 import logging
 import os
 from enum import Enum
+
 from Constants import *
 
-class LogType(Enum):
-    CATALOG_MANAGER = 'Catalog Manager'
-    DATA_MANAGER = 'Data Manager'
-    DBMS_SIMULATOR = 'DBMS Simulator'
-    TRANSACTION_MANAGER = 'Transaction Manager'
 
-class Logger():
- 
+class LogType(Enum):
+    CATALOG_MANAGER = "Catalog Manager"
+    DATA_MANAGER = "Data Manager"
+    DBMS_SIMULATOR = "DBMS Simulator"
+    TRANSACTION_MANAGER = "Transaction Manager"
+
+
+class Logger:
+    def __init__(self, log_type):
+        self.logger = self.get_logger(log_type)
+
     def get_log_name(self, log_type: LogType):
         return log_type.value
 
@@ -26,9 +31,9 @@ class Logger():
                 base_file_path = LOG_TRXN_MGR_OUTPUT_FILE_PATH
             case _:
                 raise ValueError
-            
-        return os.path.join(base_file_path, f'{TIME_INIT}.{LOG_OUTPUT_FILE_EXTENSION}')
-        
+
+        return os.path.join(base_file_path, f"{TIME_INIT}.{LOG_OUTPUT_FILE_EXTENSION}")
+
     def get_target_logger(self, log_name, file_name, level=logging.INFO):
         handler = logging.FileHandler(file_name)
         specified_logger = logging.getLogger(log_name)
@@ -41,16 +46,17 @@ class Logger():
         file_name = self.get_log_file_name(log_type)
         return self.get_target_logger(log_name, file_name)
 
-    def log(self, log_type: LogType, message: str):
-        logger = self.get_logger(log_type)
-        logger.info(message)
-    
-    def log_error(self, log_type: LogType, message: str):
-        logger = self.get_logger(log_type)
-        logger.error(message)
+    def log(self, message: str):
+        # logger = self.get_logger(log_type)
+        self.logger.info(message)
 
-    def log_alert(self, log_type: LogType, message: str):
-        logger = self.get_logger(log_type)
-        logger.warning(message)
+    def log_error(self, message: str):
+        # logger = self.get_logger(log_type)
+        self.logger.error(message)
 
-LoggerSingleton = Logger()
+    def log_alert(self, message: str):
+        # logger = self.get_logger(log_type)
+        self.logger.warning(message)
+
+
+# LoggerSingleton = Logger()
