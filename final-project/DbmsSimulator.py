@@ -605,9 +605,9 @@ def stress_test(schema_file_name):
             t_id,
             i,
             (
-                coffee_list[i % len(coffee_list) - 1],
-                random.sample(range(0, 12 + 1), 1)[0],
-                countries[i % len(countries) - 1],
+                coffee_list[random.randint(0, len(coffee_list) - 1)],
+                random.randint(0, 12),
+                countries[random.randint(0, len(countries) - 1)],
             ),
         )
     print(dbms.data_manager.get_table("starbucks"))
