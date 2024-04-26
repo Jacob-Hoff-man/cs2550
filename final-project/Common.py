@@ -306,11 +306,11 @@ class Operation:
 
     def get_resource(self):
         if self.is_write():
-            return "w"
+            return self.args[0]
         elif self.is_read():
-            return "r"
+            return self.args[0]
         elif self.is_commit():
-            return "c"
+            return None
         else:
             raise ValueError
 
@@ -345,6 +345,7 @@ class Transaction:
     def __init__(self, id) -> None:
         self.id = id
         self.ops = []
+        self.is_growing = True
 
     def add(self, op: Operation):
         self.ops.append(op)
@@ -370,9 +371,9 @@ class Lock:
         self.released = released
 
     def format_as_history(self):
-        operation = "l" if not self.released else "u"
-        lock_type = "x" if self.exclusive else "s"
-        return f"{operation}{lock_type}{self.transaction}[{self.resource}]"
+        operation = 'l' if not self.released else 'u'
+        lock_type = 'x' if self.is_exclusive else 's'
+        return f"{operation}{lock_type}{self.tid}[{self.resource}]"
 
     def __str__(self):
-        return f"Lock - {self.transaction} - {self.exclusive} - {self.resource}"
+        return f"Lock - {self.tid} - {self.is_exclusive} - {self.resource}"

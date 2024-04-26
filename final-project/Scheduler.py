@@ -3,7 +3,7 @@ from DeadlockDetector import DeadlockDetector
 from Common import Operation, Lock
 
 class Scheduler():
-    def __init__(self, txns):
+    def __init__(self):
         self.operations = []
         self.delayed_operations = []
         self.transactions = {}
@@ -12,16 +12,7 @@ class Scheduler():
         self.final_history = []
         self.counter = 0
         self.dld = DeadlockDetector()
-
-        self.parse_txns(txns)
-        print('unserialized history: ')
-        for op in self.operations:
-            print('@@ op', op)
-        print('--------------------')
-        self.get_serialized_history()
-
-        print('--------------------')
-
+    
     def parse_txns(self, txns):
         for txn in txns:
             self.transactions[txn.id] = txn
@@ -62,29 +53,29 @@ class Scheduler():
 
     def insert_lock(self, op):
         is_exclusive = True if op[1].is_write() else False
-        lock = Lock(op[0], is_exclusive, op[1].resource())
+        lock = Lock(op[0], is_exclusive, op[1].get_resource())
         self.locks.append(lock)
 
     def remove_locks(self, tid):
         original_locks = list(self.locks)
         self.locks[:] = [lock for lock in self.locks if lock.tid != tid]
         for released_lock in set(original_locks).difference(set(self.locks)):
-            lock = Lock(released_lock.tid, released_lock.exclusive, released_lock.resource(), True)
+            lock = Lock(released_lock.tid, released_lock.is_exclusive, released_lock.resource, True)
             self.final_history.append(lock)
         
     def has_lock(self, op):
         for lock in self.locks:
             is_tid_match = lock.tid == op[0]
-            is_resource_match = lock.resource == op[1].resource()
-            is_proper_lock = ((lock.exclusive and op[1].is_write()) or (not lock.exclusive and op[1].is_read()))
+            is_resource_match = lock.resource == op[1].get_resource()
+            is_proper_lock = ((lock.is_exclusive and op[1].is_write()) or (not lock.is_exclusive and op[1].is_read()))
             if is_tid_match and is_resource_match and is_proper_lock:
                 return True
         return False
 
     def can_lock(self, op):
-        matching_locks = [lock for lock in self.locks if lock.resource == op[1].resource()]
+        matching_locks = [lock for lock in self.locks if lock.resource == op[1].get_resource()]
         for lock in matching_locks:
-            if not lock.exclusive:
+            if not lock.is_exclusive:
                 if lock.tid == op[0] and op[1].is_write() and op[1] and len(matching_locks) == 1:
                     return True
                 elif lock.tid != op[0] and op[1].is_read():
@@ -121,7 +112,6 @@ class Scheduler():
             self.delayed_operations = ops
 
     def run_operation(self, op):
-
         if op[1].is_write() or op[1].is_read():
             if self.can_grow_transaction(op[0]):
                 if self.has_lock(op):
@@ -136,7 +126,22 @@ class Scheduler():
                 self.remove_locks(op[0])
                 self.transactions[op[0]].is_growing = False
 
-    def get_serialized_history(self):
+
+    def print_final_history(self):
+        operations_text = ''
+        for op in self.final_history:
+            if isinstance(op, Lock):
+                operations_text += f'{op} \n'
+            else:
+                operations_text += f'{op[0]} :: {op[1]} \n'
+        if operations_text:
+            print(f'Final history: \n{operations_text}')
+
+    def get_serialized_history(self, txns):
+        self.parse_txns(txns)
+        print('unserialized history: ')
+        for op in self.operations:
+            print('@@ op', op)
         self.execution_list = self.operations
         while self.counter < len(self.execution_list):
             if self.has_delayed_operation(self.execution_list[self.counter]):
@@ -154,15 +159,9 @@ class Scheduler():
                     for op in self.delayed_operations:
                         self.execution_list.append(op)
                     self.delayed_operations = []
-
+        print('--------------------')
+        self.print_final_history()
+        print('--------------------')
         return self.final_history
-
-    def print_final_history(self):
-        operations_text = ''
-        for op in self.final_history:
-            if isinstance(op, Operation) or isinstance(op, Lock):
-                operations_text += f'{op}, '
-        if operations_text:
-            print(f'Final history: {operations_text.strip(", ")}')
 
         

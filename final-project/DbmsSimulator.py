@@ -30,16 +30,19 @@ def main():
     transaction_processing_type = sys.argv[2]
     file_names = sys.argv[3:]
     dbms = DbmsSimulator(schema_file_name)
-    file_txns = dbms.transaction_manager.read_files(file_names)
-    # txns = [value for (key, value) in file_txns.items()]
-    # serialized_txns = dbms.scheduler.execute(txns)
 
-    ph2 = True
+    ph3 = True
+    ph2 = False
     ph2_op_m = False
     ph2_op_g = False
     test_aux = False
 
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
+    if ph3:
+        file_txns = dbms.transaction_manager.read_files(file_names)
+        txns = [value for (key, value) in file_txns.items()]
+        print('TXNS', txns)
+        serialized_txns = dbms.scheduler.get_serialized_history(txns)
 
     if ph2_op_g:
         print("INSERTING 0 LATTE 5 USA")
