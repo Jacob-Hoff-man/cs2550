@@ -357,11 +357,11 @@ class DbmsSimulator(Component):
         self.transaction_manager = TransactionManager()
         self.scheduler = Scheduler()
         self.catalog_manager = CatalogManager(schema_file_name)
-        if load_from_mem:
-            with open("company_data.pkl", "rb") as inp:
-                self.data_manager = pickle.load(inp)
-        else:
-            self.data_manager = DataManager(self.catalog_manager, self.tables, 4)
+        # if load_from_mem:
+        #     with open("company_data.pkl", "rb") as inp:
+        #         self.data_manager = pickle.load(inp)
+
+        self.data_manager = DataManager(self.catalog_manager, self.tables, 4)
         self.log("DBMS Simulator component initialized.")
 
 
@@ -382,7 +382,9 @@ def test_Q():
 
 
 def test_I(schema_file_name):
+    print("START INSERT TEST")
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     print("INSERTING 1 NITRO 12 USA")
     dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
@@ -397,11 +399,14 @@ def test_I(schema_file_name):
     dbms.data_manager.insert("starbucks", 2, ("latte", 5, "ITALLIIIAAA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
     print(dbms.data_manager.col_cache)
+    print("END INSERT TEST")
     pass
 
 
 def test_U(schema_file_name):
+    print("START UPDATE TEST")
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     print("INSERTING 1 NITRO 12 USA")
     dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
@@ -411,17 +416,19 @@ def test_U(schema_file_name):
     dbms.data_manager.update("starbucks", 1, 3)
     print(dbms.data_manager.get_table("starbucks"))  # table print
     print(dbms.data_manager.col_cache)
+    print("END UPDATE TEST")
     pass
 
 
 def test_R(schema_file_name):
+    print("\nSTART READ")
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     print("INSERTING 1 NITRO 12 USA")
     dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
     print(dbms.data_manager.col_cache)
 
-    print("\nSTART READ")
     x = dbms.data_manager.read("starbucks", 1)
     print("OUTPUT: ", x)
     print("END READ")
@@ -429,7 +436,9 @@ def test_R(schema_file_name):
 
 
 def test_T(schema_file_name):
+    print("START TABLE READ")
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     print("INSERTING 1 NITRO 12 USA")
     dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
@@ -445,7 +454,6 @@ def test_T(schema_file_name):
     print(dbms.data_manager.get_table("starbucks"))  # table print
     print(dbms.data_manager.col_cache)
 
-    print("START TABLE READ")
     x = dbms.data_manager.table_read("starbucks")
     print("OUTPUT: ", x)
     print("END TABLE READ")
@@ -453,7 +461,39 @@ def test_T(schema_file_name):
 
 
 def test_M(schema_file_name):
+    print("START M OP TEST")
+
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
+    print("INSERTING 0 LATTE 5 USA")
+    dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+    print(dbms.data_manager.col_cache)
+
+    print("INSERTING 3 MATTE 5 USA")
+    dbms.data_manager.insert("starbucks", 3, ("matte", 5, "USA"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+    print(dbms.data_manager.col_cache)
+
+    print("INSERTING 2 MACHIATO 10 FRANCE")
+    dbms.data_manager.insert("starbucks", 2, ("mochiato", 10, "France"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+    print(dbms.data_manager.col_cache)
+
+    print("INSERTING 1 NITRO 12 USA")
+    dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
+    print(dbms.data_manager.get_table("starbucks"))  # table print
+
+    x = dbms.data_manager.op_m("starbucks", "USA")
+    print("OUTPUT: ", x)
+    print("END M OP")
+    pass
+
+
+def test_G(schema_file_name):
+    print("START G OP TEST")
+    dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     print("INSERTING 0 LATTE 5 USA")
     dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
     print(dbms.data_manager.get_table("starbucks"))  # table print
@@ -474,49 +514,23 @@ def test_M(schema_file_name):
     print(dbms.data_manager.get_table("starbucks"))  # table print
 
     print("START G OP")
-    x = dbms.data_manager.op_m("starbucks", "USA")
+    x = dbms.data_manager.op_g("starbucks", 5)
     print("OUTPUT: ", x)
     print("END G OP")
     pass
 
 
-def test_G(schema_file_name):
-    dbms = DbmsSimulator(schema_file_name)
-    print("INSERTING 0 LATTE 5 USA")
-    dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
-    print(dbms.data_manager.get_table("starbucks"))  # table print
-    print(dbms.data_manager.col_cache)
-
-    print("INSERTING 3 MATTE 5 USA")
-    dbms.data_manager.insert("starbucks", 3, ("matte", 5, "USA"))
-    print(dbms.data_manager.get_table("starbucks"))  # table print
-    print(dbms.data_manager.col_cache)
-
-    print("INSERTING 2 MACHIATO 10 FRANCE")
-    dbms.data_manager.insert("starbucks", 2, ("mochiato", 10, "France"))
-    print(dbms.data_manager.get_table("starbucks"))  # table print
-    print(dbms.data_manager.col_cache)
-
-    print("INSERTING 1 NITRO 12 USA")
-    dbms.data_manager.insert("starbucks", 1, ("nitro", 12, "USA"))
-    print(dbms.data_manager.get_table("starbucks"))  # table print
-
-    print("START M OP")
-    x = dbms.data_manager.op_m("starbucks", "USA")
-    print("OUTPUT: ", x)
-    print("END M OP")
-    pass
-
-
 def test_prim_idx(schema_file_name):
+    print("START PRIM INDEX TEST")
     dbms = DbmsSimulator(schema_file_name)
+    dbms.catalog_manager.insert_catalog("t_1")
     page_1 = (1, 20)
     page_2 = (10, 23)
     page_3 = (100, 41)
     page_4 = (1000, 620)
     page_5 = (10000, 21)
     page_6 = (100000, 57)
-    primary_index = dbms.catalog_manager.get_auxiliary("table_key_1", "intensity")
+    primary_index = dbms.catalog_manager.get_auxiliary("t_1", "intensity")
 
     primary_index.recreate([page_1, page_2, page_3, page_4, page_5])
     primary_index.set(101, 50)
@@ -531,27 +545,31 @@ def test_prim_idx(schema_file_name):
     primary_index.recreate([page_2, page_3, page_5])
     print("pages!", primary_index.page_numbers)
     print("page", primary_index.get(101))
+    print("END PRIM INDEX TEST")
     pass
 
 
 def test_cluster_idx(schema_file_name):
+    print("START CLUSTER TEST")
     dbms = DbmsSimulator(schema_file_name)
+    dbms.catalog_manager.insert_catalog("t_1")
+    clstr_index = dbms.catalog_manager.get_auxiliary("t_1", "country_of_origin")
 
-    clstr_index = dbms.catalog_manager.get_auxiliary("table_key_1", "country_of_origin")
-
-    clstr_index.set(("USA", 0))
+    clstr_index.set("USA", 0)
     print(clstr_index.page_numbers.values())
-    clstr_index.set(("France", 1))
+    clstr_index.set("France", 1)
     print(clstr_index.page_numbers.values())
-    clstr_index(("USA", 2))
+    clstr_index.set("USA", 2)
     print(clstr_index.page_numbers.values())
-
+    print("END CLUSTER TEST")
     pass
 
 
 def test_agg(schema_file_name):
+    print("START AGGREGATE TEST")
     dbms = DbmsSimulator(schema_file_name)
-    aggregate = dbms.catalog_manager.get_aggregate("table_key_1", "intensity")
+    dbms.catalog_manager.insert_catalog("t1")
+    aggregate = dbms.catalog_manager.get_aggregate("t1", "intensity")
     print("Increment 5")
     aggregate.increment(5)
     print("aggr result", aggregate.get(5))
@@ -561,32 +579,39 @@ def test_agg(schema_file_name):
     print("Decrement 5 again")
     aggregate.decrement(5)
     print("aggr result", aggregate.get(5))
+    print("END AGGREGATE TEST")
 
 
 def test_blm_fltr(schema_file_name):
+    print("START BLOOM FILTER TEST")
     dbms = DbmsSimulator(schema_file_name)
+    dbms.catalog_manager.insert_catalog("t1")
     blm_filter = dbms.catalog_manager.get_filter("t1", "coffee_id")
     blm_filter.add(1)
     print("Added one")
     print(" one is in bloom filter: ", 1 in blm_filter)
     print("zero in bloom filter: ", 0 in blm_filter)
+    print("END BLOOM FILTER TEST")
     pass
 
 
 def stress_test(schema_file_name):
+    print("START STREES TEST")
     dbms = DbmsSimulator(schema_file_name)
+    # dbms.catalog_manager.insert_catalog("starbucks")
     t_id = "starbucks"
     for i in range(512):
         dbms.data_manager.insert(
             t_id,
             i,
             (
-                i,
                 coffee_list[i % len(coffee_list) - 1],
-                random.sample(range(0, 12 + 1), 1),
+                random.sample(range(0, 12 + 1), 1)[0],
                 countries[i % len(countries) - 1],
             ),
         )
+    print(dbms.data_manager.get_table("starbucks"))
+    print("END STREES TEST")
     pass
 
 
@@ -594,26 +619,41 @@ def main():
     schema_file_name = sys.argv[1]
     transaction_processing_type = sys.argv[2]
     file_names = sys.argv[3:]
-    dbms = DbmsSimulator(schema_file_name)
-    file_txns = dbms.transaction_manager.read_files(file_names)
+
     # txns = [value for (key, value) in file_txns.items()]
     # serialized_txns = dbms.scheduler.execute(txns)
 
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
-    ph3 = True
-    ph2 = False
-    ph2_op_m = False
+    ph3 = False
     ph2_op_g = False
-    test_aux = False
 
+    test_A()
+    test_Q()
+    test_B()
+    test_C()
+    test_I(schema_file_name)
+    test_U(schema_file_name)
+    test_R(schema_file_name)
+    test_T(schema_file_name)
+    test_G(schema_file_name)
+    test_M(schema_file_name)
+    test_prim_idx(schema_file_name)
+    test_cluster_idx(schema_file_name)
+    test_agg(schema_file_name)
+    test_blm_fltr(schema_file_name)
+    test_cluster_idx(schema_file_name)
+    stress_test(schema_file_name)
     # python final-project/DbmsSimulator.py final-project/schema.json final-project/files/sample1.txt > final-project/out.txt
     if ph3:
+        dbms = DbmsSimulator(schema_file_name)
         file_txns = dbms.transaction_manager.read_files(file_names)
         txns = [value for (key, value) in file_txns.items()]
         print("TXNS", txns)
         serialized_txns = dbms.scheduler.get_serialized_history(txns)
 
     if ph2_op_g:
+        dbms = DbmsSimulator(schema_file_name)
+        file_txns = dbms.transaction_manager.read_files(file_names)
         print("INSERTING 0 LATTE 5 USA")
         dbms.data_manager.insert("starbucks", 0, ("latte", 5, "USA"))
         print(dbms.data_manager.get_table("starbucks"))  # table print

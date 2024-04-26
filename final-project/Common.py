@@ -90,7 +90,7 @@ class Page:
         self.content = []
         self.map = {}  # each page has a map for getting tuples
         self.row_page = row_page
-        self.max = 2
+        self.max = 10
 
     def full(self):
         # print(
@@ -371,8 +371,8 @@ class Lock:
         self.released = released
 
     def format_as_history(self):
-        operation = 'l' if not self.released else 'u'
-        lock_type = 'x' if self.is_exclusive else 's'
+        operation = "l" if not self.released else "u"
+        lock_type = "x" if self.is_exclusive else "s"
         return f"{operation}{lock_type}{self.tid}[{self.resource}]"
 
     def __str__(self):
