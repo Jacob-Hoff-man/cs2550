@@ -55,6 +55,7 @@ class Record:
 class Component:
     def __init__(self, log_type: LogType) -> None:
         self.log_type = log_type
+        self.log = Logger()
 
     def log(self, message):
         l.log(self.log_type, message)
@@ -300,6 +301,16 @@ class Operation:
 
     def is_commit(self):
         return self.op in [OpType.C.value]
+    
+    def get_resource(self):
+        if self.is_write():
+            return 'w'
+        elif self.is_read():
+            return 'r'
+        elif self.is_commit():
+            return 'c'
+        else:
+            raise ValueError
 
     def __str__(self) -> str:
         match (self.op):
@@ -346,4 +357,19 @@ class Transaction:
         return self.ops.pop(idx)
 
     def __str__(self) -> str:
-        return f"Transaction Id: {self.id}\n{[str(op) for op in self.ops]}"
+        return f'Transaction Id: {self.id}\n{[str(op) for op in self.ops]}'
+
+class Lock():
+    def __init__(self, tid, is_exclusive, resource, released=False):
+        self.tid = tid
+        self.is_exclusive = is_exclusive
+        self.resource = resource
+        self.released = released
+
+    def format_as_history(self):
+        operation = 'l' if not self.released else 'u'
+        lock_type = 'x' if self.exclusive else 's'
+        return f'{operation}{lock_type}{self.transaction}[{self.resource}]'
+
+    def __str__(self):
+        return f'Lock - {self.transaction} - {self.exclusive} - {self.resource}'
