@@ -4,7 +4,7 @@
 - Phase 1:
     - [Python must be installed on the host machine to run this project](https://www.python.org/downloads/)
 
-    - use the following command to run the phase 1 script, and then view the results in the `logs/final-project/` directory:
+    - use the following command to run final-project, and then view the results in the `logs/final-project/` directory:
         ```
             bash run-ran.sh  // read transaction files in random order
 
