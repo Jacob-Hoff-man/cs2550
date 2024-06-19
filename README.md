@@ -4,15 +4,14 @@
 - Phase 1:
     - [Python must be installed on the host machine to run this project](https://www.python.org/downloads/)
 
-    - use the following command to run the phase 1 script, and then view the results in the `logs/final-project/transaction-manager/` directory:
+    - use the following command to run the phase 1 script, and then view the results in the `logs/final-project/` directory:
         ```
-            bash run-phase-1.sh
-        ```
-- Phase 2:
-    - TBD
+            bash run-ran.sh  // read transaction files in random order
 
-- Phase 3:
-    - TBD
+            // or
+
+            bash run-rr.sh   // read transaction files in round-robin order
+        ```
 
 ## HW 2
 ### How To Run
