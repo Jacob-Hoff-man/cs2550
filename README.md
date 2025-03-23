@@ -1,3 +1,11 @@
+# Database System Simulator (Python)
+- A database management system simulator with transactional (OLTP) and aggregate query (OLAP) capabilities. Data tables are stored
+in column-oriented fashion and internal table data are organized as pages.
+- The system logic is decoupled into various components: transaction manager, catalog manager, scheduler, and data manager (with row and
+column buffers).
+- The system implements various access methods using custom data structures: bloom filter, primary ISAM, secondary index, clustered index, and a
+count aggregation.
+
 # CS2550
 ## Final Project
 ### How To Run
